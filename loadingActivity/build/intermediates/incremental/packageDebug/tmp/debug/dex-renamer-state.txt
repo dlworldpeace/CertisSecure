@@ -1,0 +1,4 @@
+#Sun Dec 30 15:26:11 CST 2018
+base.0=D\:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

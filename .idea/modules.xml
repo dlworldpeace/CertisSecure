@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/LivenessProject.iml" filepath="$PROJECT_DIR$/LivenessProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/livenessLib/livenessLib.iml" filepath="$PROJECT_DIR$/livenessLib/livenessLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loadingActivity/loadingActivity.iml" filepath="$PROJECT_DIR$/loadingActivity/loadingActivity.iml" />
+    </modules>
+  </component>
+</project>

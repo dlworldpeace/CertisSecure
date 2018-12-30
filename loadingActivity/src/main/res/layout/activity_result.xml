@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loading_background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dip"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.example.livenessproject.view.RotaterView
+                android:id="@+id/result_rotater"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/result_status"
+                android:layout_width="83dp"
+                android:layout_height="83dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/result_success" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/result_text_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="success"
+            android:textColor="#ffffffff"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_result_bottomLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:orientation="vertical"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp" >
+
+        <Button
+            android:id="@+id/result_next"
+            style="@style/custom_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:text="返回首页" />
+
+        <Button
+            android:id="@+id/result_redolivenessdetection"
+            style="@style/custom_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="重新验证活体"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>
