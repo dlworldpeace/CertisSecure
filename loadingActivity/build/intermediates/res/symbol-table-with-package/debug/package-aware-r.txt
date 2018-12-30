@@ -68,6 +68,7 @@ drawable bg_nothing
 drawable btn_backselect
 drawable btn_n
 drawable btn_p
+drawable certis_security_plus_slider_mobile
 drawable circle
 drawable faceid
 drawable facepp
@@ -109,6 +110,7 @@ drawable red
 drawable result_failded
 drawable result_img_background
 drawable result_success
+drawable welcomeimg_bg
 id action0
 id action_container
 id action_divider
@@ -144,6 +146,7 @@ id icon
 id icon_group
 id info
 id italic
+id iv_entry
 id left
 id line1
 id line3
@@ -188,6 +191,7 @@ id top
 integer cancel_button_image_alpha
 integer status_bar_notification_info_maxnum
 layout activity_result
+layout activity_welcome
 layout liveness_detection_step
 layout liveness_layout
 layout loading_layout

@@ -25,23 +25,22 @@
         android:testOnly="true"
         android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
         <activity android:name="com.megvii.livenesslib.LivenessActivity" />
-        <activity android:name="com.example.livenessproject.LoadingActivity" >
+        <activity android:name="com.example.livenessproject.LoadingActivity" />
+        <activity android:name="com.example.livenessproject.ResultActivity" />
+        <activity android:name="com.example.livenessproject.WelcomeActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.livenessproject.ResultActivity" />
 
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="54defc56fd98c52a330004be" >
-        </meta-data>
+            android:value="54defc56fd98c52a330004be" />
         <meta-data
             android:name="UMENG_CHANNEL"
-            android:value="UMENG_DEFAULT_CHANNEL" >
-        </meta-data>
+            android:value="UMENG_DEFAULT_CHANNEL" />
     </application>
 
 </manifest>

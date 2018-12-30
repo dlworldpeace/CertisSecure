@@ -5,7 +5,7 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_time.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\layout\\notification_template_part_time.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\layout\\notification_template_part_time.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_liveness_layout_head_mask.png.flat",
@@ -33,15 +33,15 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_icon_group.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\layout\\notification_template_icon_group.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\layout\\notification_template_icon_group.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\8a78640555c47656058fced21718068c\\res\\layout\\notification_media_cancel_action.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\e706078ba679810dfabf951c2b0bc5fe\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable_liveness_eye_open_closed.xml.flat",
@@ -49,7 +49,7 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg_low.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable\\notification_bg_low.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable\\notification_bg_low.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable_liveness_head_pitch.xml.flat",
@@ -77,7 +77,7 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media_custom.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\8a78640555c47656058fced21718068c\\res\\layout\\notification_template_media_custom.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\e706078ba679810dfabf951c2b0bc5fe\\res\\layout\\notification_template_media_custom.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_facepp.png.flat",
@@ -89,11 +89,11 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable_liveness_mouth_open_closed.xml.flat",
@@ -113,15 +113,15 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout-v16_notification_template_custom_big.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\layout-v16\\notification_template_custom_big.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\layout-v16\\notification_template_custom_big.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\raw_meglive_yaw.mp3.flat",
@@ -129,11 +129,11 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_liveness_layout_camera_mask.png.flat",
@@ -141,7 +141,7 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\raw_meglive_mouth_open.mp3.flat",
@@ -168,8 +168,12 @@
         "source": "D:\\CertisApp\\demo\\LivenessProject\\livenessLib\\build\\intermediates\\packaged_res\\debug\\anim\\liveness_rightin.xml"
     },
     {
+        "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_activity_welcome.xml.flat",
+        "source": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\src\\main\\res\\layout\\activity_welcome.xml"
+    },
+    {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\menu_main.xml.flat",
@@ -205,7 +209,7 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_custom.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\8a78640555c47656058fced21718068c\\res\\layout\\notification_template_big_media_custom.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\e706078ba679810dfabf951c2b0bc5fe\\res\\layout\\notification_template_big_media_custom.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
@@ -229,31 +233,39 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow_custom.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\8a78640555c47656058fced21718068c\\res\\layout\\notification_template_big_media_narrow_custom.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\e706078ba679810dfabf951c2b0bc5fe\\res\\layout\\notification_template_big_media_narrow_custom.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable_welcomeimg_bg.xml.flat",
+        "source": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\src\\main\\res\\drawable\\welcomeimg_bg.xml"
+    },
+    {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_action.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\8a78640555c47656058fced21718068c\\res\\layout\\notification_media_action.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\e706078ba679810dfabf951c2b0bc5fe\\res\\layout\\notification_media_action.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_notification_action.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\layout\\notification_action.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\layout\\notification_action.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_custom_big.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\layout\\notification_template_custom_big.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\layout\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_certis_security_plus_slider_mobile.png.flat",
+        "source": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\src\\main\\res\\drawable-xhdpi\\certis_security_plus_slider_mobile.png"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -269,7 +281,7 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\layout-v21\\notification_action.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\layout-v21\\notification_action.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\raw_meglive_failed.mp3.flat",
@@ -301,11 +313,11 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-v21_notification_action_background.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable-v21\\notification_action_background.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_liveness_phoneimage.png.flat",
@@ -317,7 +329,7 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_liveness_faceppinside.png.flat",
@@ -329,15 +341,15 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_template_custom_big.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\layout-v21\\notification_template_custom_big.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_template_icon_group.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\layout-v21\\notification_template_icon_group.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\8a78640555c47656058fced21718068c\\res\\layout\\notification_template_big_media_narrow.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\e706078ba679810dfabf951c2b0bc5fe\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_liveness_layout_gradient_back.png.flat",
@@ -345,15 +357,15 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable\\notification_bg.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable\\notification_bg.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\8a78640555c47656058fced21718068c\\res\\layout\\notification_template_big_media.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\e706078ba679810dfabf951c2b0bc5fe\\res\\layout\\notification_template_big_media.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -365,7 +377,7 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable_notification_tile_bg.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable\\notification_tile_bg.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable\\notification_tile_bg.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_liveness_head_up.png.flat",
@@ -373,7 +385,7 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_chronometer.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\layout\\notification_template_part_chronometer.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
@@ -385,19 +397,19 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable_notification_icon_background.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable\\notification_icon_background.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable\\notification_icon_background.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action_tombstone.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\layout-v21\\notification_action_tombstone.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_notification_action_tombstone.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\3953d0c826aa55f92b190716416a0b6e\\res\\layout\\notification_action_tombstone.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\layout\\notification_action_tombstone.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
@@ -417,7 +429,7 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_lines_media.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\8a78640555c47656058fced21718068c\\res\\layout\\notification_template_lines_media.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\e706078ba679810dfabf951c2b0bc5fe\\res\\layout\\notification_template_lines_media.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\drawable_btn_p.xml.flat",
@@ -425,7 +437,7 @@
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media.xml.flat",
-        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\8a78640555c47656058fced21718068c\\res\\layout\\notification_template_media.xml"
+        "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\e706078ba679810dfabf951c2b0bc5fe\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\res\\merged\\debug\\layout_activity_result.xml.flat",

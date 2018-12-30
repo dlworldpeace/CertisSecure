@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Dec 30 17:17:59 CST 2018
+#Sun Dec 30 23:21:45 CST 2018
 2.base=D\:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 5.set=NATIVE_RESOURCE
 0.path=lib/x86/liblivenessdetection_v2.4.1.so
