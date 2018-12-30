@@ -89,47 +89,47 @@ public final class R {
     public static final class raw {
         private raw() {}
 
-        public static final int meglive_eye_blink = 0x7f0b0000;
-        public static final int meglive_failed = 0x7f0b0001;
-        public static final int meglive_mouth_open = 0x7f0b0002;
-        public static final int meglive_pitch_down = 0x7f0b0003;
-        public static final int meglive_success = 0x7f0b0004;
-        public static final int meglive_well_done = 0x7f0b0005;
-        public static final int meglive_yaw = 0x7f0b0006;
-        public static final int model = 0x7f0b0007;
+        public static final int meglive_eye_blink = 0x7f0c0000;
+        public static final int meglive_failed = 0x7f0c0001;
+        public static final int meglive_mouth_open = 0x7f0c0002;
+        public static final int meglive_pitch_down = 0x7f0c0003;
+        public static final int meglive_success = 0x7f0c0004;
+        public static final int meglive_well_done = 0x7f0c0005;
+        public static final int meglive_yaw = 0x7f0c0006;
+        public static final int model = 0x7f0c0007;
     }
     public static final class string {
         private string() {}
 
-        public static final int app_name = 0x7f0c0001;
-        public static final int aufail = 0x7f0c0002;
-        public static final int authok = 0x7f0c0003;
-        public static final int blink_detection = 0x7f0c0004;
-        public static final int facelost = 0x7f0c0005;
-        public static final int liveness_detection_failed = 0x7f0c0007;
-        public static final int liveness_detection_failed_action_blend = 0x7f0c0008;
-        public static final int liveness_detection_failed_not_video = 0x7f0c0009;
-        public static final int liveness_detection_failed_timeout = 0x7f0c000a;
-        public static final int loading_confirm = 0x7f0c000b;
-        public static final int loading_text = 0x7f0c000c;
-        public static final int mouth_detection = 0x7f0c000d;
-        public static final int netowrk_parse_failed = 0x7f0c000e;
-        public static final int network_error = 0x7f0c000f;
-        public static final int novalidframe = 0x7f0c0010;
-        public static final int pos_detection = 0x7f0c0011;
-        public static final int steps = 0x7f0c0013;
-        public static final int timeout = 0x7f0c0014;
-        public static final int tipblink = 0x7f0c0015;
-        public static final int tippose = 0x7f0c0016;
-        public static final int tipsmouth = 0x7f0c0017;
-        public static final int verify_error = 0x7f0c0018;
-        public static final int verify_success = 0x7f0c0019;
+        public static final int app_name = 0x7f0d0001;
+        public static final int aufail = 0x7f0d0002;
+        public static final int authok = 0x7f0d0003;
+        public static final int blink_detection = 0x7f0d0004;
+        public static final int facelost = 0x7f0d0005;
+        public static final int liveness_detection_failed = 0x7f0d0007;
+        public static final int liveness_detection_failed_action_blend = 0x7f0d0008;
+        public static final int liveness_detection_failed_not_video = 0x7f0d0009;
+        public static final int liveness_detection_failed_timeout = 0x7f0d000a;
+        public static final int loading_confirm = 0x7f0d000b;
+        public static final int loading_text = 0x7f0d000c;
+        public static final int mouth_detection = 0x7f0d000d;
+        public static final int netowrk_parse_failed = 0x7f0d000e;
+        public static final int network_error = 0x7f0d000f;
+        public static final int novalidframe = 0x7f0d0010;
+        public static final int pos_detection = 0x7f0d0011;
+        public static final int steps = 0x7f0d0013;
+        public static final int timeout = 0x7f0d0014;
+        public static final int tipblink = 0x7f0d0015;
+        public static final int tippose = 0x7f0d0016;
+        public static final int tipsmouth = 0x7f0d0017;
+        public static final int verify_error = 0x7f0d0018;
+        public static final int verify_success = 0x7f0d0019;
     }
     public static final class style {
         private style() {}
 
-        public static final int AppBaseTheme = 0x7f0d0000;
-        public static final int AppTheme = 0x7f0d0001;
+        public static final int AppBaseTheme = 0x7f0e0000;
+        public static final int AppTheme = 0x7f0e0001;
     }
     public static final class styleable {
         private styleable() {}

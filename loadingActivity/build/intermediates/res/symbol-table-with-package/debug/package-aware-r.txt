@@ -27,6 +27,7 @@ attr prefer
 attr ratio
 attr statusBarBackground
 attr ttcIndex
+color ic_launcher_background
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
@@ -206,6 +207,9 @@ layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 menu main
+mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
 raw meglive_eye_blink
 raw meglive_failed
 raw meglive_mouth_open

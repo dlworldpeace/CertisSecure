@@ -152,7 +152,7 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\dlwor\.gra
 	android:label
 		ADDED from D:\CertisApp\demo\LivenessProject\loadingActivity\src\main\AndroidManifest.xml:20:9-41
 	android:icon
-		ADDED from D:\CertisApp\demo\LivenessProject\loadingActivity\src\main\AndroidManifest.xml:19:9-45
+		ADDED from D:\CertisApp\demo\LivenessProject\loadingActivity\src\main\AndroidManifest.xml:19:9-43
 	android:allowBackup
 		ADDED from D:\CertisApp\demo\LivenessProject\loadingActivity\src\main\AndroidManifest.xml:18:9-35
 	android:theme

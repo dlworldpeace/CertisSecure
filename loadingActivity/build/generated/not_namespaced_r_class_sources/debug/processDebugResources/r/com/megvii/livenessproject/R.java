@@ -277,13 +277,14 @@ public final class R {
     public static final int ttcIndex=0x7f030016;
   }
   public static final class color {
-    public static final int notification_action_color_filter=0x7f040000;
-    public static final int notification_icon_bg_color=0x7f040001;
-    public static final int notification_material_background_media_default_color=0x7f040002;
-    public static final int primary_text_default_material_dark=0x7f040003;
-    public static final int ripple_material_light=0x7f040004;
-    public static final int secondary_text_default_material_dark=0x7f040005;
-    public static final int secondary_text_default_material_light=0x7f040006;
+    public static final int ic_launcher_background=0x7f040000;
+    public static final int notification_action_color_filter=0x7f040001;
+    public static final int notification_icon_bg_color=0x7f040002;
+    public static final int notification_material_background_media_default_color=0x7f040003;
+    public static final int primary_text_default_material_dark=0x7f040004;
+    public static final int ripple_material_light=0x7f040005;
+    public static final int secondary_text_default_material_dark=0x7f040006;
+    public static final int secondary_text_default_material_light=0x7f040007;
   }
   public static final class dimen {
     public static final int activity_horizontal_margin=0x7f050000;
@@ -469,61 +470,66 @@ public final class R {
   public static final class menu {
     public static final int main=0x7f0a0000;
   }
+  public static final class mipmap {
+    public static final int ic_launcher=0x7f0b0000;
+    public static final int ic_launcher_foreground=0x7f0b0001;
+    public static final int ic_launcher_round=0x7f0b0002;
+  }
   public static final class raw {
-    public static final int meglive_eye_blink=0x7f0b0000;
-    public static final int meglive_failed=0x7f0b0001;
-    public static final int meglive_mouth_open=0x7f0b0002;
-    public static final int meglive_pitch_down=0x7f0b0003;
-    public static final int meglive_success=0x7f0b0004;
-    public static final int meglive_well_done=0x7f0b0005;
-    public static final int meglive_yaw=0x7f0b0006;
-    public static final int model=0x7f0b0007;
+    public static final int meglive_eye_blink=0x7f0c0000;
+    public static final int meglive_failed=0x7f0c0001;
+    public static final int meglive_mouth_open=0x7f0c0002;
+    public static final int meglive_pitch_down=0x7f0c0003;
+    public static final int meglive_success=0x7f0c0004;
+    public static final int meglive_well_done=0x7f0c0005;
+    public static final int meglive_yaw=0x7f0c0006;
+    public static final int model=0x7f0c0007;
   }
   public static final class string {
-    public static final int action_settings=0x7f0c0000;
-    public static final int app_name=0x7f0c0001;
-    public static final int aufail=0x7f0c0002;
-    public static final int authok=0x7f0c0003;
-    public static final int blink_detection=0x7f0c0004;
-    public static final int facelost=0x7f0c0005;
-    public static final int hello_world=0x7f0c0006;
-    public static final int liveness_detection_failed=0x7f0c0007;
-    public static final int liveness_detection_failed_action_blend=0x7f0c0008;
-    public static final int liveness_detection_failed_not_video=0x7f0c0009;
-    public static final int liveness_detection_failed_timeout=0x7f0c000a;
-    public static final int loading_confirm=0x7f0c000b;
-    public static final int loading_text=0x7f0c000c;
-    public static final int mouth_detection=0x7f0c000d;
-    public static final int netowrk_parse_failed=0x7f0c000e;
-    public static final int network_error=0x7f0c000f;
-    public static final int novalidframe=0x7f0c0010;
-    public static final int pos_detection=0x7f0c0011;
-    public static final int status_bar_notification_info_overflow=0x7f0c0012;
-    public static final int steps=0x7f0c0013;
-    public static final int timeout=0x7f0c0014;
-    public static final int tipblink=0x7f0c0015;
-    public static final int tippose=0x7f0c0016;
-    public static final int tipsmouth=0x7f0c0017;
-    public static final int verify_error=0x7f0c0018;
-    public static final int verify_success=0x7f0c0019;
+    public static final int action_settings=0x7f0d0000;
+    public static final int app_name=0x7f0d0001;
+    public static final int aufail=0x7f0d0002;
+    public static final int authok=0x7f0d0003;
+    public static final int blink_detection=0x7f0d0004;
+    public static final int facelost=0x7f0d0005;
+    public static final int hello_world=0x7f0d0006;
+    public static final int liveness_detection_failed=0x7f0d0007;
+    public static final int liveness_detection_failed_action_blend=0x7f0d0008;
+    public static final int liveness_detection_failed_not_video=0x7f0d0009;
+    public static final int liveness_detection_failed_timeout=0x7f0d000a;
+    public static final int loading_confirm=0x7f0d000b;
+    public static final int loading_text=0x7f0d000c;
+    public static final int mouth_detection=0x7f0d000d;
+    public static final int netowrk_parse_failed=0x7f0d000e;
+    public static final int network_error=0x7f0d000f;
+    public static final int novalidframe=0x7f0d0010;
+    public static final int pos_detection=0x7f0d0011;
+    public static final int status_bar_notification_info_overflow=0x7f0d0012;
+    public static final int steps=0x7f0d0013;
+    public static final int timeout=0x7f0d0014;
+    public static final int tipblink=0x7f0d0015;
+    public static final int tippose=0x7f0d0016;
+    public static final int tipsmouth=0x7f0d0017;
+    public static final int verify_error=0x7f0d0018;
+    public static final int verify_success=0x7f0d0019;
   }
   public static final class style {
-    public static final int AppBaseTheme=0x7f0d0000;
-    public static final int AppTheme=0x7f0d0001;
-    public static final int TextAppearance_Compat_Notification=0x7f0d0002;
-    public static final int TextAppearance_Compat_Notification_Info=0x7f0d0003;
-    public static final int TextAppearance_Compat_Notification_Info_Media=0x7f0d0004;
-    public static final int TextAppearance_Compat_Notification_Line2=0x7f0d0005;
-    public static final int TextAppearance_Compat_Notification_Line2_Media=0x7f0d0006;
-    public static final int TextAppearance_Compat_Notification_Media=0x7f0d0007;
-    public static final int TextAppearance_Compat_Notification_Time=0x7f0d0008;
-    public static final int TextAppearance_Compat_Notification_Time_Media=0x7f0d0009;
-    public static final int TextAppearance_Compat_Notification_Title=0x7f0d000a;
-    public static final int TextAppearance_Compat_Notification_Title_Media=0x7f0d000b;
-    public static final int Widget_Compat_NotificationActionContainer=0x7f0d000c;
-    public static final int Widget_Compat_NotificationActionText=0x7f0d000d;
-    public static final int Widget_Support_CoordinatorLayout=0x7f0d000e;
-    public static final int custom_button=0x7f0d000f;
+    public static final int AppBaseTheme=0x7f0e0000;
+    public static final int AppTheme=0x7f0e0001;
+    public static final int TextAppearance_Compat_Notification=0x7f0e0002;
+    public static final int TextAppearance_Compat_Notification_Info=0x7f0e0003;
+    public static final int TextAppearance_Compat_Notification_Info_Media=0x7f0e0004;
+    public static final int TextAppearance_Compat_Notification_Line2=0x7f0e0005;
+    public static final int TextAppearance_Compat_Notification_Line2_Media=0x7f0e0006;
+    public static final int TextAppearance_Compat_Notification_Media=0x7f0e0007;
+    public static final int TextAppearance_Compat_Notification_Time=0x7f0e0008;
+    public static final int TextAppearance_Compat_Notification_Time_Media=0x7f0e0009;
+    public static final int TextAppearance_Compat_Notification_Title=0x7f0e000a;
+    public static final int TextAppearance_Compat_Notification_Title_Media=0x7f0e000b;
+    public static final int Widget_Compat_NotificationActionContainer=0x7f0e000c;
+    public static final int Widget_Compat_NotificationActionText=0x7f0e000d;
+    public static final int Widget_Support_CoordinatorLayout=0x7f0e000e;
+    public static final int custom_button=0x7f0e000f;
   }
   public static final class styleable {
     /**
