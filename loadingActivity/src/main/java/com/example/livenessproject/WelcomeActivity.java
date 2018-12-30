@@ -6,9 +6,14 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.AnimationSet;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.megvii.livenessproject.R;
 
@@ -21,12 +26,20 @@ import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 
+import static android.os.SystemClock.sleep;
+
 public class WelcomeActivity extends Activity {
 
     @Bind(R.id.iv_entry)
     ImageView mIVEntry;
 
-    private static final int ANIM_TIME = 2500;
+    @Bind(R.id.logo)
+    ImageView logo;
+
+    @Bind(R.id.slogan)
+    TextView slogan;
+
+    private static final int ANIM_TIME = 2000;
 
     private static final float SCALE_END = 1.15F;
 
@@ -42,12 +55,20 @@ public class WelcomeActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_welcome);
         ButterKnife.bind(this);
 
 //        Random random = new Random(SystemClock.elapsedRealtime());//SystemClock.elapsedRealtime() 从开机到现在的毫秒数（手机睡眠(sleep)的时间也包括在内）
 //        mIVEntry.setImageResource(Imgs[random.nextInt(Imgs.length)]);
         mIVEntry.setImageResource(R.drawable.certis_security_plus_slider_mobile);
+
+        AnimationSet aset=new AnimationSet(true);
+        AlphaAnimation aa=new AlphaAnimation(0,1);
+        aa.setDuration(3000);
+        aset.addAnimation(aa);
+        logo.startAnimation(aset);
+        slogan.startAnimation(aset);
 
         Observable.timer(1000, TimeUnit.MILLISECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -78,6 +99,7 @@ public class WelcomeActivity extends Activity {
             @Override
             public void onAnimationEnd(Animator animation)
             {
+                sleep(1000);
                 startActivity(new Intent(WelcomeActivity.this, LoadingActivity.class));
                 WelcomeActivity.this.finish();
             }

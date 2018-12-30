@@ -24,8 +24,8 @@ public final class R {
     public static final class attr {
         private attr() {}
 
-        public static final int prefer = 0x7f030013;
-        public static final int ratio = 0x7f030014;
+        public static final int prefer = 0x7f03004c;
+        public static final int ratio = 0x7f03004d;
     }
     public static final class dimen {
         private dimen() {}
@@ -59,26 +59,26 @@ public final class R {
         public static final int liveness_phoneimage = 0x7f06001a;
         public static final int liveness_right = 0x7f06001b;
         public static final int liveness_surfacemask = 0x7f06001c;
-        public static final int red = 0x7f06002a;
+        public static final int red = 0x7f06002b;
     }
     public static final class id {
         private id() {}
 
-        public static final int detection_step_image = 0x7f070014;
-        public static final int detection_step_linear = 0x7f070015;
-        public static final int detection_step_name = 0x7f070016;
-        public static final int detection_step_timeout = 0x7f070017;
-        public static final int detection_step_timeoutLinear = 0x7f070018;
-        public static final int liveness_layout_bottom_tips_head = 0x7f070027;
-        public static final int liveness_layout_facemask = 0x7f070028;
-        public static final int liveness_layout_first_layout = 0x7f070029;
-        public static final int liveness_layout_head_mask = 0x7f07002a;
-        public static final int liveness_layout_progressbar = 0x7f07002b;
-        public static final int liveness_layout_promptText = 0x7f07002c;
-        public static final int liveness_layout_rootRel = 0x7f07002d;
-        public static final int liveness_layout_second_layout = 0x7f07002e;
-        public static final int liveness_layout_textureview = 0x7f07002f;
-        public static final int main_pos_layout = 0x7f070034;
+        public static final int detection_step_image = 0x7f070016;
+        public static final int detection_step_linear = 0x7f070017;
+        public static final int detection_step_name = 0x7f070018;
+        public static final int detection_step_timeout = 0x7f070019;
+        public static final int detection_step_timeoutLinear = 0x7f07001a;
+        public static final int liveness_layout_bottom_tips_head = 0x7f07002e;
+        public static final int liveness_layout_facemask = 0x7f07002f;
+        public static final int liveness_layout_first_layout = 0x7f070030;
+        public static final int liveness_layout_head_mask = 0x7f070031;
+        public static final int liveness_layout_progressbar = 0x7f070032;
+        public static final int liveness_layout_promptText = 0x7f070033;
+        public static final int liveness_layout_rootRel = 0x7f070034;
+        public static final int liveness_layout_second_layout = 0x7f070035;
+        public static final int liveness_layout_textureview = 0x7f070036;
+        public static final int main_pos_layout = 0x7f07003c;
     }
     public static final class layout {
         private layout() {}
@@ -134,7 +134,7 @@ public final class R {
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] AutoRatioImageView = { 0x7f030013, 0x7f030014 };
+        public static final int[] AutoRatioImageView = { 0x7f03004c, 0x7f03004d };
         public static final int AutoRatioImageView_prefer = 0;
         public static final int AutoRatioImageView_ratio = 1;
     }
