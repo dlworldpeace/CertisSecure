@@ -84,6 +84,8 @@ attr prefer
 attr ratio
 attr statusBarBackground
 attr ttcIndex
+color colorPrimary
+color colorSecondary
 color ic_launcher_background
 color notification_action_color_filter
 color notification_icon_bg_color
@@ -122,6 +124,8 @@ dimen subtitle_shadow_offset
 dimen subtitle_shadow_radius
 dimen title_hight
 drawable bg_nothing
+drawable bkgd_left
+drawable bkgd_right
 drawable btn_backselect
 drawable btn_n
 drawable btn_p
@@ -130,6 +134,9 @@ drawable circle
 drawable faceid
 drawable facepp
 drawable ic_launcher
+drawable icon_email
+drawable icon_face_recognition
+drawable icon_lock
 drawable liveness_eye
 drawable liveness_eye_open_closed
 drawable liveness_faceppinside
@@ -164,6 +171,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable radius_drawable_bg
 drawable red
 drawable result_failded
 drawable result_img_background
@@ -207,6 +215,8 @@ id gone
 id groups
 id icon
 id icon_group
+id imageView
+id imageView2
 id info
 id invisible
 id italic
@@ -224,7 +234,9 @@ id liveness_layout_rootRel
 id liveness_layout_second_layout
 id liveness_layout_textureview
 id loading_layout_icon
+id loading_layout_linearLayout2
 id loading_layout_livenessBtn
+id loading_layout_loginBtn
 id loading_layout_version
 id loading_layout_versionLinear
 id logo
@@ -258,6 +270,7 @@ id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id text
 id text2
+id textView2
 id time
 id title
 id top
