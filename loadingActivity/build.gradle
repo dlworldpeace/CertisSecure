@@ -11,7 +11,7 @@ android {
     defaultConfig {
         applicationId "com.certissecurity.certissecure_com.megvii"
         minSdkVersion 14
-        targetSdkVersion 21
+        targetSdkVersion 26
         javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
     }
 
@@ -21,14 +21,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
 }
 
 dependencies {
     // inherited from demo app
     implementation project(':livenessLib')
-    api files('libs/android-async-http-1.4.6.jar')
-    api files('libs/umeng-analytics-v5.4.1.jar')
-    api files('libs/universal-image-loader-1.9.3.jar')
+    implementation files('libs/android-async-http-1.4.6.jar')
+    implementation files('libs/umeng-analytics-v5.4.1.jar')
+    implementation files('libs/universal-image-loader-1.9.3.jar')
     implementation 'com.android.support:support-v4:28.0.0'
     // kotlin support
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"

@@ -9,27 +9,23 @@
     android:background="@color/colorPrimary">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/layout_bkgd_imgleft"
         android:layout_width="230dip"
         android:layout_height="250dip"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
         android:src="@drawable/bkgd_left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/layout_bkgd_imgright"
         android:layout_width="300dip"
         android:layout_height="230dip"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginBottom="0dp"
         android:src="@drawable/bkgd_right"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -109,11 +105,11 @@
 
 
         <EditText
+            android:id="@+id/loading_layout_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dip"
             android:background="#00000000"
-            android:drawableLeft="@drawable/icon_email"
             android:drawablePadding="20dip"
             android:hint="username"
             android:padding="5dip"
@@ -128,11 +124,11 @@
 
 
         <EditText
+            android:id="@+id/loading_layout_password"
             android:layout_width="197dp"
             android:layout_height="46dp"
             android:layout_marginLeft="10dip"
             android:background="#00000000"
-            android:drawableLeft="@drawable/icon_lock"
             android:drawablePadding="20dip"
             android:hint="password"
             android:inputType="textPassword"
@@ -176,8 +172,8 @@
 
     <TextView
         android:id="@+id/loading_layout_version"
-        android:layout_width="94dp"
-        android:layout_height="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"

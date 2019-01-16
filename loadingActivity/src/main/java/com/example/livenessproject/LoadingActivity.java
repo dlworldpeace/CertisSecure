@@ -3,17 +3,27 @@ package com.example.livenessproject;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.StrictMode;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import com.megvii.livenesslib.LivenessActivity;
 import com.megvii.livenessproject.R;
 import com.megvii.livenessdetection.Detector;
 import com.umeng.analytics.MobclickAgent;
 
-/**
- * Created by binghezhouke on 14-7-25.
- */
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 public class LoadingActivity extends Activity implements View.OnClickListener {
 
 	@Override
@@ -22,12 +32,40 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		setContentView(R.layout.loading_layout);
 		init();
+
+		// Allow Network Connection to be made on main thread
+		if (android.os.Build.VERSION.SDK_INT > 9) {
+			StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+			StrictMode.setThreadPolicy(policy);
+		}
 	}
 
 	private void init() {
 		findViewById(R.id.loading_layout_livenessBtn).setOnClickListener(this);
-		TextView versionNameView = ((TextView) findViewById(R.id.loading_layout_version));
+		TextView versionNameView = findViewById(R.id.loading_layout_version);
 		versionNameView.setText(Detector.getVersion());
+
+		// init textbox icons
+		EditText username = findViewById(R.id.loading_layout_username);
+		Drawable drawable=getResources().getDrawable(R.drawable.icon_email);
+		drawable.setBounds(0,0,64,64);//max size
+		username.setCompoundDrawables(drawable,null,null,null);//drawableLeft
+		EditText password = findViewById(R.id.loading_layout_password);
+		Drawable drawable2=getResources().getDrawable(R.drawable.icon_lock);
+		drawable2.setBounds(0,0,64,64);//max size
+		password.setCompoundDrawables(drawable2,null,null,null);//drawableLeft
+
+		// init login with password
+		Button loginWithPassword = findViewById(R.id.loading_layout_loginBtn);
+		loginWithPassword.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				EditText username = findViewById(R.id.loading_layout_username);
+				EditText password = findViewById(R.id.loading_layout_password);
+				String result = loginWithPassword_Post(username.getText().toString(), password.getText().toString());
+				Log.d("loginWithPasswordResult", "_____________________" + result + "_____________________");
+			}
+		});
 	}
 
 	@Override
@@ -59,5 +97,54 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 			String result = data.getStringExtra("result");
 			ResultActivity.startActivity(this, result);
 		}
+	}
+
+	private String loginWithPassword_Post(String username, String password) {
+		// HttpClient 6.0被抛弃了
+		String result = "";
+		BufferedReader reader = null;
+		try {
+			URL url = new URL("http://3.0.121.132:3000/auth/login");
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setRequestMethod("POST");
+			conn.setDoOutput(true);
+			conn.setDoInput(true);
+			conn.setUseCaches(false);
+			conn.setRequestProperty("Connection", "Keep-Alive");
+			conn.setRequestProperty("Charset", "UTF-8");
+			// 设置文件类型:
+			conn.setRequestProperty("Content-Type","application/json");
+			// 设置接收类型否则返回415错误
+			//conn.setRequestProperty("accept","*/*")此处为暴力方法设置接受所有类型，以此来防范返回415;
+			conn.setRequestProperty("accept","application/json");
+			// 往服务器里面发送数据
+//			if (Json != null && !TextUtils.isEmpty(Json)) {
+				String Json = "{\"username\":\""+ username +"\", \"password\":\"" + password + "\"}";
+				byte[] writebytes = Json.getBytes();
+				// 设置文件长度
+				conn.setRequestProperty("Content-Length", String.valueOf(writebytes.length));
+				OutputStream outwritestream = conn.getOutputStream();
+				outwritestream.write(Json.getBytes());
+				outwritestream.flush();
+				outwritestream.close();
+				Log.d("hlhupload", "doJsonPost: conn"+conn.getResponseCode());
+//			}
+			if (conn.getResponseCode() == 200) {
+				reader = new BufferedReader(
+						new InputStreamReader(conn.getInputStream()));
+				result = reader.readLine();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (reader != null) {
+				try {
+					reader.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		return result;
 	}
 }
