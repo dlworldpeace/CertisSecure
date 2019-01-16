@@ -49,11 +49,11 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 		EditText username = findViewById(R.id.loading_layout_username);
 		Drawable drawable=getResources().getDrawable(R.drawable.icon_email);
 		drawable.setBounds(0,0,64,64);//max size
-		username.setCompoundDrawables(drawable,null,null,null);//drawableLeft
+		username.setCompoundDrawables(drawable,null,null,null);// use as drawableLeft
 		EditText password = findViewById(R.id.loading_layout_password);
 		Drawable drawable2=getResources().getDrawable(R.drawable.icon_lock);
 		drawable2.setBounds(0,0,64,64);//max size
-		password.setCompoundDrawables(drawable2,null,null,null);//drawableLeft
+		password.setCompoundDrawables(drawable2,null,null,null);// use as drawableLeft
 
 		// init login with password
 		Button loginWithPassword = findViewById(R.id.loading_layout_loginBtn);
@@ -100,9 +100,10 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 	}
 
 	private String loginWithPassword_Post(String username, String password) {
-		// HttpClient 6.0被抛弃了
+		// HttpClient 6.0 is already outdated
 		String result = "";
 		BufferedReader reader = null;
+
 		try {
 			URL url = new URL("http://3.0.121.132:3000/auth/login");
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -112,23 +113,20 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 			conn.setUseCaches(false);
 			conn.setRequestProperty("Connection", "Keep-Alive");
 			conn.setRequestProperty("Charset", "UTF-8");
-			// 设置文件类型:
 			conn.setRequestProperty("Content-Type","application/json");
-			// 设置接收类型否则返回415错误
-			//conn.setRequestProperty("accept","*/*")此处为暴力方法设置接受所有类型，以此来防范返回415;
+			// Set accept type here, if not will receive Error 415
+			// You can use conn.setRequestProperty("accept","*/*") to accept all types
 			conn.setRequestProperty("accept","application/json");
-			// 往服务器里面发送数据
-//			if (Json != null && !TextUtils.isEmpty(Json)) {
-				String Json = "{\"username\":\""+ username +"\", \"password\":\"" + password + "\"}";
-				byte[] writebytes = Json.getBytes();
-				// 设置文件长度
-				conn.setRequestProperty("Content-Length", String.valueOf(writebytes.length));
-				OutputStream outwritestream = conn.getOutputStream();
-				outwritestream.write(Json.getBytes());
-				outwritestream.flush();
-				outwritestream.close();
-				Log.d("hlhupload", "doJsonPost: conn"+conn.getResponseCode());
-//			}
+
+            String Json = "{\"username\":\""+ username +"\", \"password\":\"" + password + "\"}";
+            byte[] writebytes = Json.getBytes();
+            conn.setRequestProperty("Content-Length", String.valueOf(writebytes.length));
+            OutputStream outwritestream = conn.getOutputStream();
+            outwritestream.write(Json.getBytes());
+            outwritestream.flush();
+            outwritestream.close();
+            Log.d("Login_usrnm&pswd", "doJsonPost: conn"+conn.getResponseCode());
+
 			if (conn.getResponseCode() == 200) {
 				reader = new BufferedReader(
 						new InputStreamReader(conn.getInputStream()));
