@@ -42,26 +42,26 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 
 	private void init() {
 		findViewById(R.id.loading_layout_livenessBtn).setOnClickListener(this);
-		TextView versionNameView = findViewById(R.id.loading_layout_version);
+		TextView versionNameView = (TextView) findViewById(R.id.loading_layout_version);
 		versionNameView.setText(Detector.getVersion());
 
 		// init textbox icons
-		EditText username = findViewById(R.id.loading_layout_username);
+		EditText username = (EditText) findViewById(R.id.loading_layout_username);
 		Drawable drawable=getResources().getDrawable(R.drawable.icon_email);
 		drawable.setBounds(0,0,64,64);//max size
 		username.setCompoundDrawables(drawable,null,null,null);// use as drawableLeft
-		EditText password = findViewById(R.id.loading_layout_password);
+		EditText password = (EditText) findViewById(R.id.loading_layout_password);
 		Drawable drawable2=getResources().getDrawable(R.drawable.icon_lock);
 		drawable2.setBounds(0,0,64,64);//max size
 		password.setCompoundDrawables(drawable2,null,null,null);// use as drawableLeft
 
 		// init login with password
-		Button loginWithPassword = findViewById(R.id.loading_layout_loginBtn);
+		Button loginWithPassword = (Button) findViewById(R.id.loading_layout_loginBtn);
 		loginWithPassword.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				EditText username = findViewById(R.id.loading_layout_username);
-				EditText password = findViewById(R.id.loading_layout_password);
+				EditText username = (EditText) findViewById(R.id.loading_layout_username);
+				EditText password = (EditText) findViewById(R.id.loading_layout_password);
 				String result = loginWithPassword_Post(username.getText().toString(), password.getText().toString());
 				Log.d("loginWithPasswordResult", "_____________________" + result + "_____________________");
 			}
