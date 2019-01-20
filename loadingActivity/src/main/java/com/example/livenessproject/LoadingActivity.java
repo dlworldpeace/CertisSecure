@@ -63,9 +63,10 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 		loginWithPassword.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				EditText username = (EditText) findViewById(R.id.loading_layout_username);
-				EditText password = (EditText) findViewById(R.id.loading_layout_password);
-				String result = loginWithPassword_Post(username.getText().toString(), password.getText().toString());
+				//EditText username = (EditText) findViewById(R.id.loading_layout_username);
+				//EditText password = (EditText) findViewById(R.id.loading_layout_password);
+				//String result = loginWithPassword_Post(username.getText().toString(), password.getText().toString());
+				String result = loginWithPassword_Post("david@sharker.com.sg", "test");
 
 				try{
 					JSONObject jsonObject = new JSONObject(result);
