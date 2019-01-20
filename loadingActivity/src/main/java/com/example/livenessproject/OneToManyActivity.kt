@@ -7,22 +7,12 @@ import android.os.Bundle
 import com.megvii.livenessproject.R
 import android.provider.MediaStore
 import android.support.v7.app.AlertDialog
-import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Environment
 import kotlinx.android.synthetic.main.activity_one_to_many.*
 import java.io.File
-import u.aly.i
-import android.os.Environment.DIRECTORY_DCIM
-import android.os.Environment.getExternalStoragePublicDirectory
 import android.os.StrictMode
-import android.support.v4.media.MediaDescriptionCompatApi21.Builder.build
-import android.os.StrictMode.setVmPolicy
-
-
-
-
-
+import android.view.View
 
 class OneToManyActivity : AppCompatActivity() {
 
@@ -80,10 +70,14 @@ class OneToManyActivity : AppCompatActivity() {
             } else if (requestCode == SELECT_FILE) {
 
                 super.onActivityResult(requestCode, resultCode, data)
-                val selectedImageUri = data!!.data
-                image_holder.setImageURI(selectedImageUri)
+                image_holder.setImageURI(data!!.data)
 
             }
+
+            button.visibility = View.VISIBLE
+//            button.setOnClickListener{
+//
+//            }
 
         }
     }
