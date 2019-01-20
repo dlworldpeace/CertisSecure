@@ -4,19 +4,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
     <item
-        android:id="@+id/action_cut"
-        android:title="Cut"
+        android:id="@+id/description_name"
+        android:title="Name"
         />
     <item
-        android:id="@+id/action_copy"
-        android:title="Copy"
+        android:id="@+id/description_mobile"
+        android:title="Mobile"
         />
     <item
-        android:id="@+id/action_paste"
-        android:title="Paste"
+        android:id="@+id/description_email"
+        android:title="Email"
         />
     <item
-        android:id="@+id/action_new"
-        android:title="New"
+        android:id="@+id/action_logout"
+        android:title="Logout"
+        />
+    <item
+        android:id="@+id/action_usermanagement"
+        android:title="User Management"
         />
 </menu>

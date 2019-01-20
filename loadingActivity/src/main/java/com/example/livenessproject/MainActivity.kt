@@ -1,6 +1,7 @@
 package com.example.livenessproject
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
@@ -59,13 +60,12 @@ class MainActivity : AppCompatActivity() {
         // Set navigation view navigation item selected listener
         navigation_view.setNavigationItemSelectedListener{
             when (it.itemId){
-                R.id.action_cut -> toast("Cut clicked")
-                R.id.action_copy -> toast("Copy clicked")
-                R.id.action_paste -> toast("Paste clicked")
-                R.id.action_new ->{
+                R.id.action_logout -> toast("Logout clicked")
+                R.id.action_usermanagement ->{
                     // Multiline action
-                    toast("New clicked")
-                    drawer_layout.setBackgroundColor(Color.RED)
+                    toast("User Management clicked")
+                    val intent = Intent(this, UserManagementActivity::class.java)
+                    startActivity(intent)
                 }
 
             }
