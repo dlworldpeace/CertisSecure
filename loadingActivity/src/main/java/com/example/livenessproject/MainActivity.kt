@@ -9,6 +9,7 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
+import com.example.livenessproject.viewpager.CustomPagerAdapter
 import com.megvii.livenessproject.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         init()
         val ss:String = intent.getStringExtra("json")
-        text_view.setText(ss)
+        //text_view.setText(ss)
     }
 
     private fun init() {
@@ -72,6 +73,9 @@ class MainActivity : AppCompatActivity() {
             drawer_layout.closeDrawer(GravityCompat.START)
             true
         }
+
+        // Inflate viewPager with pictures and OnclickListener
+        view_pager.adapter = CustomPagerAdapter(this)
     }
 
     override fun onBackPressed() {

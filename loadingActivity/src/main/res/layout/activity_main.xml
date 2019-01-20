@@ -22,14 +22,14 @@
             android:elevation="4dp"
             android:fitsSystemWindows="true" />
 
-        <TextView
-            android:id="@+id/text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:textSize="30sp"
-            android:layout_margin="25dp" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </android.support.constraint.ConstraintLayout>
 
     </LinearLayout>
 
@@ -44,7 +44,7 @@
             android:id="@+id/drawer_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Drawer Header"
+            android:text="User Name"
             android:padding="50dp"
             android:textSize="25sp"
             android:textStyle="bold"
