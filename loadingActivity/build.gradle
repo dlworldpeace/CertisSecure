@@ -45,4 +45,5 @@ dependencies {
     implementation 'com.jakewharton:butterknife:7.0.1'
     // main page
     implementation 'com.android.support:appcompat-v7:22.2.1'
+    implementation 'com.android.support:design:22.2.1'
 }
