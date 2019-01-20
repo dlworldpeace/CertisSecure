@@ -13,19 +13,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.livenessproject.httpUtil.HttpHelper;
 import com.megvii.livenesslib.LivenessActivity;
 import com.megvii.livenessproject.R;
 import com.megvii.livenessdetection.Detector;
 import com.umeng.analytics.MobclickAgent;
 
 import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
 public class LoadingActivity extends Activity implements View.OnClickListener {
 
@@ -65,8 +59,8 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 			public void onClick(View view) {
 				//EditText username = (EditText) findViewById(R.id.loading_layout_username);
 				//EditText password = (EditText) findViewById(R.id.loading_layout_password);
-				//String result = loginWithPassword_Post(username.getText().toString(), password.getText().toString());
-				String result = loginWithPassword_Post("david@sharker.com.sg", "test");
+				//String result = HttpHelper.Companion.loginWithPassword_Post(username.getText().toString(), password.getText().toString());
+				String result = HttpHelper.Companion.loginWithPassword_Post("david@sharker.com.sg", "test");
 
 				try{
 					JSONObject jsonObject = new JSONObject(result);
@@ -117,50 +111,4 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 		}
 	}
 
-	private String loginWithPassword_Post(String username, String password) {
-		// HttpClient 6.0 is already outdated
-		String result = "";
-		BufferedReader reader = null;
-
-		try {
-			URL url = new URL("http://3.0.121.132:3000/auth/login");
-			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-			conn.setRequestMethod("POST");
-			conn.setDoOutput(true);
-			conn.setDoInput(true);
-			conn.setUseCaches(false);
-			conn.setRequestProperty("Connection", "Keep-Alive");
-			conn.setRequestProperty("Charset", "UTF-8");
-			conn.setRequestProperty("Content-Type","application/json");
-			// Set accept type here, if not will receive Error 415
-			// You can use conn.setRequestProperty("accept","*/*") to accept all types
-			conn.setRequestProperty("accept","application/json");
-
-            String Json = "{\"username\":\""+ username +"\", \"password\":\"" + password + "\"}";
-            byte[] writebytes = Json.getBytes();
-            conn.setRequestProperty("Content-Length", String.valueOf(writebytes.length));
-            OutputStream outwritestream = conn.getOutputStream();
-            outwritestream.write(Json.getBytes());
-            outwritestream.flush();
-            outwritestream.close();
-            Log.d("Login_usrnm&pswd", "doJsonPost: conn"+conn.getResponseCode());
-
-			if (conn.getResponseCode() == 200) {
-				reader = new BufferedReader(
-						new InputStreamReader(conn.getInputStream()));
-				result = reader.readLine();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			if (reader != null) {
-				try {
-					reader.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-		return result;
-	}
 }
