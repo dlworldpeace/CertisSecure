@@ -2,7 +2,6 @@ package com.example.livenessproject
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.support.v4.view.GravityCompat
@@ -39,23 +38,12 @@ class MainActivity : AppCompatActivity() {
                 toolbar,
                 R.string.drawer_open,
                 R.string.drawer_close
-        ){
-            override fun onDrawerClosed(view: View){
-                super.onDrawerClosed(view)
-                //toast("Drawer closed")
-            }
-
-            override fun onDrawerOpened(drawerView: View){
-                super.onDrawerOpened(drawerView)
-                //toast("Drawer opened")
-            }
-        }
+        ){}
 
         // Configure the drawer layout to add listener and show icon on toolbar
         drawerToggle.isDrawerIndicatorEnabled = true
         drawer_layout.setDrawerListener(drawerToggle)
         drawerToggle.syncState()
-
 
         // Set navigation view navigation item selected listener
         navigation_view.setNavigationItemSelectedListener{
