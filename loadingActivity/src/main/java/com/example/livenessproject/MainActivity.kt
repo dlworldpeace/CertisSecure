@@ -7,7 +7,6 @@ import android.os.Handler
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
-import android.view.View
 import android.widget.Toast
 import com.example.livenessproject.viewpager.CustomPagerAdapter
 import com.megvii.livenessproject.R
@@ -55,8 +54,8 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this, UserManagementActivity::class.java)
                     startActivity(intent)
                 }
-
             }
+
             // Close the drawer
             drawer_layout.closeDrawer(GravityCompat.START)
             true
