@@ -1,4 +1,4 @@
-package com.example.livenessproject.viewpager
+package com.example.livenessproject.viewPager
 
 import com.megvii.livenessproject.R
 
