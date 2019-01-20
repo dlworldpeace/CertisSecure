@@ -9,9 +9,19 @@ package com.megvii.livenessproject;
 
 public final class R {
   public static final class anim {
-    public static final int liveness_leftout=0x7f010000;
-    public static final int liveness_rightin=0x7f010001;
-    public static final int scaleoutin=0x7f010002;
+    public static final int abc_fade_in=0x7f010000;
+    public static final int abc_fade_out=0x7f010001;
+    public static final int abc_grow_fade_in_from_bottom=0x7f010002;
+    public static final int abc_popup_enter=0x7f010003;
+    public static final int abc_popup_exit=0x7f010004;
+    public static final int abc_shrink_fade_out_from_bottom=0x7f010005;
+    public static final int abc_slide_in_bottom=0x7f010006;
+    public static final int abc_slide_in_top=0x7f010007;
+    public static final int abc_slide_out_bottom=0x7f010008;
+    public static final int abc_slide_out_top=0x7f010009;
+    public static final int liveness_leftout=0x7f01000a;
+    public static final int liveness_rightin=0x7f01000b;
+    public static final int scaleoutin=0x7f01000c;
   }
   public static final class array {
     public static final int detect_result=0x7f020000;
@@ -19,14 +29,345 @@ public final class R {
   }
   public static final class attr {
     /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int alpha=0x7f030000;
+    public static final int actionBarDivider=0x7f030000;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionBarItemBackground=0x7f030001;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionBarPopupTheme=0x7f030002;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>wrap_content</td><td>0</td><td></td></tr>
+     * </table>
+     */
+    public static final int actionBarSize=0x7f030003;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionBarSplitStyle=0x7f030004;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionBarStyle=0x7f030005;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionBarTabBarStyle=0x7f030006;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionBarTabStyle=0x7f030007;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionBarTabTextStyle=0x7f030008;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionBarTheme=0x7f030009;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionBarWidgetTheme=0x7f03000a;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionButtonStyle=0x7f03000b;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionDropDownStyle=0x7f03000c;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionLayout=0x7f03000d;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionMenuTextAppearance=0x7f03000e;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int actionMenuTextColor=0x7f03000f;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionModeBackground=0x7f030010;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionModeCloseButtonStyle=0x7f030011;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionModeCloseDrawable=0x7f030012;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionModeCopyDrawable=0x7f030013;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionModeCutDrawable=0x7f030014;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionModeFindDrawable=0x7f030015;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionModePasteDrawable=0x7f030016;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionModePopupWindowStyle=0x7f030017;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionModeSelectAllDrawable=0x7f030018;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionModeShareDrawable=0x7f030019;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionModeSplitBackground=0x7f03001a;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionModeStyle=0x7f03001b;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionModeWebSearchDrawable=0x7f03001c;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionOverflowButtonStyle=0x7f03001d;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int actionOverflowMenuStyle=0x7f03001e;
+    /**
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int actionProviderClass=0x7f03001f;
+    /**
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int actionViewClass=0x7f030020;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int activityChooserViewStyle=0x7f030021;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int alertDialogButtonGroupStyle=0x7f030022;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int barrierAllowsGoneWidgets=0x7f030001;
+    public static final int alertDialogCenterButtons=0x7f030023;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int alertDialogStyle=0x7f030024;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int alertDialogTheme=0x7f030025;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int autoCompleteTextViewStyle=0x7f030026;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int background=0x7f030027;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int backgroundSplit=0x7f030028;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int backgroundStacked=0x7f030029;
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int backgroundTint=0x7f03002a;
+    /**
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * </table>
+     */
+    public static final int backgroundTintMode=0x7f03002b;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int barSize=0x7f03002c;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int barrierAllowsGoneWidgets=0x7f03002d;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -42,38 +383,367 @@ public final class R {
      * <tr><td>top</td><td>2</td><td></td></tr>
      * </table>
      */
-    public static final int barrierDirection=0x7f030002;
+    public static final int barrierDirection=0x7f03002e;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int borderlessButtonStyle=0x7f03002f;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int buttonBarButtonStyle=0x7f030030;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int buttonBarNegativeButtonStyle=0x7f030031;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int buttonBarNeutralButtonStyle=0x7f030032;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int buttonBarPositiveButtonStyle=0x7f030033;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int buttonBarStyle=0x7f030034;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int buttonPanelSideLayout=0x7f030035;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int buttonStyle=0x7f030036;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int buttonStyleSmall=0x7f030037;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int chainUseRtl=0x7f030003;
+    public static final int chainUseRtl=0x7f030038;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int constraintSet=0x7f030004;
+    public static final int checkboxStyle=0x7f030039;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int checkedTextViewStyle=0x7f03003a;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int closeIcon=0x7f03003b;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int closeItemLayout=0x7f03003c;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int constraint_referenced_ids=0x7f030005;
+    public static final int collapseContentDescription=0x7f03003d;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int content=0x7f030006;
+    public static final int collapseIcon=0x7f03003e;
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int color=0x7f03003f;
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int colorAccent=0x7f030040;
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int colorButtonNormal=0x7f030041;
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int colorControlActivated=0x7f030042;
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int colorControlHighlight=0x7f030043;
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int colorControlNormal=0x7f030044;
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int colorPrimary=0x7f030045;
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int colorPrimaryDark=0x7f030046;
+    /**
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int colorSwitchThumbNormal=0x7f030047;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int coordinatorLayoutStyle=0x7f030007;
+    public static final int commitIcon=0x7f030048;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int constraintSet=0x7f030049;
+    /**
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int constraint_referenced_ids=0x7f03004a;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int content=0x7f03004b;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int contentInsetEnd=0x7f03004c;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int contentInsetLeft=0x7f03004d;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int contentInsetRight=0x7f03004e;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int contentInsetStart=0x7f03004f;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int customNavigationLayout=0x7f030050;
+    /**
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int defaultQueryHint=0x7f030051;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int dialogPreferredPadding=0x7f030052;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int dialogTheme=0x7f030053;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int disableChildrenWhenDisabled=0x7f030054;
+    /**
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>disableHome</td><td>20</td><td></td></tr>
+     * <tr><td>homeAsUp</td><td>4</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>showCustom</td><td>10</td><td></td></tr>
+     * <tr><td>showHome</td><td>2</td><td></td></tr>
+     * <tr><td>showTitle</td><td>8</td><td></td></tr>
+     * <tr><td>useLogo</td><td>1</td><td></td></tr>
+     * </table>
+     */
+    public static final int displayOptions=0x7f030055;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int divider=0x7f030056;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int dividerHorizontal=0x7f030057;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int dividerPadding=0x7f030058;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int dividerVertical=0x7f030059;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int drawableSize=0x7f03005a;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int drawerArrowStyle=0x7f03005b;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int dropDownListViewStyle=0x7f03005c;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int dropdownListPreferredItemHeight=0x7f03005d;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int editTextBackground=0x7f03005e;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     */
+    public static final int editTextColor=0x7f03005f;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int editTextStyle=0x7f030060;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int elevation=0x7f030061;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -85,211 +755,114 @@ public final class R {
      * <tr><td>invisible</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int emptyVisibility=0x7f030008;
+    public static final int emptyVisibility=0x7f030062;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int font=0x7f030009;
+    public static final int expandActivityOverflowButtonDrawable=0x7f030063;
     /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
      */
-    public static final int fontProviderAuthority=0x7f03000a;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int fontProviderCerts=0x7f03000b;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>async</td><td>1</td><td></td></tr>
-     * <tr><td>blocking</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int fontProviderFetchStrategy=0x7f03000c;
-    /**
-     * <p>May be an integer value, such as "<code>100</code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>forever</td><td>ffffffff</td><td></td></tr>
-     * </table>
-     */
-    public static final int fontProviderFetchTimeout=0x7f03000d;
-    /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     */
-    public static final int fontProviderPackage=0x7f03000e;
-    /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     */
-    public static final int fontProviderQuery=0x7f03000f;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>italic</td><td>1</td><td></td></tr>
-     * <tr><td>normal</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int fontStyle=0x7f030010;
-    /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     */
-    public static final int fontVariationSettings=0x7f030011;
-    /**
-     * <p>May be an integer value, such as "<code>100</code>".
-     */
-    public static final int fontWeight=0x7f030012;
+    public static final int gapBetweenBars=0x7f030064;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int keylines=0x7f030013;
+    public static final int goIcon=0x7f030065;
     /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
      */
-    public static final int layout_anchor=0x7f030014;
-    /**
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>center</td><td>11</td><td></td></tr>
-     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
-     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
-     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>fill</td><td>77</td><td></td></tr>
-     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
-     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
-     * </table>
-     */
-    public static final int layout_anchorGravity=0x7f030015;
-    /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     */
-    public static final int layout_behavior=0x7f030016;
+    public static final int height=0x7f030066;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int layout_constrainedHeight=0x7f030017;
+    public static final int hideOnContentScroll=0x7f030067;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int homeAsUpIndicator=0x7f030068;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int homeLayout=0x7f030069;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int icon=0x7f03006a;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int layout_constrainedWidth=0x7f030018;
-    /**
-     * <p>May be an integer value, such as "<code>100</code>".
-     */
-    public static final int layout_constraintBaseline_creator=0x7f030019;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int layout_constraintBaseline_toBaselineOf=0x7f03001a;
-    /**
-     * <p>May be an integer value, such as "<code>100</code>".
-     */
-    public static final int layout_constraintBottom_creator=0x7f03001b;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int layout_constraintBottom_toBottomOf=0x7f03001c;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int layout_constraintBottom_toTopOf=0x7f03001d;
+    public static final int iconifiedByDefault=0x7f03006b;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int layout_constraintCircle=0x7f03001e;
-    /**
-     * <p>May be an integer value, such as "<code>100</code>".
-     */
-    public static final int layout_constraintCircleAngle=0x7f03001f;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int layout_constraintCircleRadius=0x7f030020;
+    public static final int indeterminateProgressStyle=0x7f03006c;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int layout_constraintDimensionRatio=0x7f030021;
+    public static final int initialActivityCount=0x7f03006d;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int isLightTheme=0x7f03006e;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int itemPadding=0x7f03006f;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int layout=0x7f030070;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int layout_constrainedHeight=0x7f030071;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int layout_constrainedWidth=0x7f030072;
+    /**
+     * <p>May be an integer value, such as "<code>100</code>".
+     */
+    public static final int layout_constraintBaseline_creator=0x7f030073;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -304,7 +877,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintEnd_toEndOf=0x7f030022;
+    public static final int layout_constraintBaseline_toBaselineOf=0x7f030074;
+    /**
+     * <p>May be an integer value, such as "<code>100</code>".
+     */
+    public static final int layout_constraintBottom_creator=0x7f030075;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -319,7 +896,33 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintEnd_toStartOf=0x7f030023;
+    public static final int layout_constraintBottom_toBottomOf=0x7f030076;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>parent</td><td>0</td><td></td></tr>
+     * </table>
+     */
+    public static final int layout_constraintBottom_toTopOf=0x7f030077;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int layout_constraintCircle=0x7f030078;
+    /**
+     * <p>May be an integer value, such as "<code>100</code>".
+     */
+    public static final int layout_constraintCircleAngle=0x7f030079;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -327,7 +930,42 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_constraintGuide_begin=0x7f030024;
+    public static final int layout_constraintCircleRadius=0x7f03007a;
+    /**
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int layout_constraintDimensionRatio=0x7f03007b;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>parent</td><td>0</td><td></td></tr>
+     * </table>
+     */
+    public static final int layout_constraintEnd_toEndOf=0x7f03007c;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>parent</td><td>0</td><td></td></tr>
+     * </table>
+     */
+    public static final int layout_constraintEnd_toStartOf=0x7f03007d;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -335,11 +973,19 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_constraintGuide_end=0x7f030025;
+    public static final int layout_constraintGuide_begin=0x7f03007e;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int layout_constraintGuide_end=0x7f03007f;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int layout_constraintGuide_percent=0x7f030026;
+    public static final int layout_constraintGuide_percent=0x7f030080;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -352,7 +998,7 @@ public final class R {
      * <tr><td>wrap</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintHeight_default=0x7f030027;
+    public static final int layout_constraintHeight_default=0x7f030081;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -368,7 +1014,7 @@ public final class R {
      * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintHeight_max=0x7f030028;
+    public static final int layout_constraintHeight_max=0x7f030082;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -384,15 +1030,15 @@ public final class R {
      * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintHeight_min=0x7f030029;
+    public static final int layout_constraintHeight_min=0x7f030083;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int layout_constraintHeight_percent=0x7f03002a;
+    public static final int layout_constraintHeight_percent=0x7f030084;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int layout_constraintHorizontal_bias=0x7f03002b;
+    public static final int layout_constraintHorizontal_bias=0x7f030085;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -405,15 +1051,15 @@ public final class R {
      * <tr><td>spread_inside</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintHorizontal_chainStyle=0x7f03002c;
+    public static final int layout_constraintHorizontal_chainStyle=0x7f030086;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int layout_constraintHorizontal_weight=0x7f03002d;
+    public static final int layout_constraintHorizontal_weight=0x7f030087;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int layout_constraintLeft_creator=0x7f03002e;
+    public static final int layout_constraintLeft_creator=0x7f030088;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -428,7 +1074,7 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintLeft_toLeftOf=0x7f03002f;
+    public static final int layout_constraintLeft_toLeftOf=0x7f030089;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -443,11 +1089,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintLeft_toRightOf=0x7f030030;
+    public static final int layout_constraintLeft_toRightOf=0x7f03008a;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int layout_constraintRight_creator=0x7f030031;
+    public static final int layout_constraintRight_creator=0x7f03008b;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -462,7 +1108,7 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintRight_toLeftOf=0x7f030032;
+    public static final int layout_constraintRight_toLeftOf=0x7f03008c;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -477,7 +1123,7 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintRight_toRightOf=0x7f030033;
+    public static final int layout_constraintRight_toRightOf=0x7f03008d;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -492,7 +1138,7 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintStart_toEndOf=0x7f030034;
+    public static final int layout_constraintStart_toEndOf=0x7f03008e;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -507,11 +1153,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintStart_toStartOf=0x7f030035;
+    public static final int layout_constraintStart_toStartOf=0x7f03008f;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int layout_constraintTop_creator=0x7f030036;
+    public static final int layout_constraintTop_creator=0x7f030090;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -526,7 +1172,7 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintTop_toBottomOf=0x7f030037;
+    public static final int layout_constraintTop_toBottomOf=0x7f030091;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -541,11 +1187,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintTop_toTopOf=0x7f030038;
+    public static final int layout_constraintTop_toTopOf=0x7f030092;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int layout_constraintVertical_bias=0x7f030039;
+    public static final int layout_constraintVertical_bias=0x7f030093;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -558,11 +1204,11 @@ public final class R {
      * <tr><td>spread_inside</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintVertical_chainStyle=0x7f03003a;
+    public static final int layout_constraintVertical_chainStyle=0x7f030094;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int layout_constraintVertical_weight=0x7f03003b;
+    public static final int layout_constraintVertical_weight=0x7f030095;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -575,7 +1221,7 @@ public final class R {
      * <tr><td>wrap</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintWidth_default=0x7f03003c;
+    public static final int layout_constraintWidth_default=0x7f030096;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -591,7 +1237,7 @@ public final class R {
      * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintWidth_max=0x7f03003d;
+    public static final int layout_constraintWidth_max=0x7f030097;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -607,29 +1253,11 @@ public final class R {
      * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintWidth_min=0x7f03003e;
+    public static final int layout_constraintWidth_min=0x7f030098;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int layout_constraintWidth_percent=0x7f03003f;
-    /**
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>all</td><td>77</td><td></td></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
-     * </table>
-     */
-    public static final int layout_dodgeInsetEdges=0x7f030040;
+    public static final int layout_constraintWidth_percent=0x7f030099;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -637,7 +1265,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_editor_absoluteX=0x7f030041;
+    public static final int layout_editor_absoluteX=0x7f03009a;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -645,7 +1273,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_editor_absoluteY=0x7f030042;
+    public static final int layout_editor_absoluteY=0x7f03009b;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -653,7 +1281,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_goneMarginBottom=0x7f030043;
+    public static final int layout_goneMarginBottom=0x7f03009c;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -661,7 +1289,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_goneMarginEnd=0x7f030044;
+    public static final int layout_goneMarginEnd=0x7f03009d;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -669,7 +1297,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_goneMarginLeft=0x7f030045;
+    public static final int layout_goneMarginLeft=0x7f03009e;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -677,7 +1305,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_goneMarginRight=0x7f030046;
+    public static final int layout_goneMarginRight=0x7f03009f;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -685,7 +1313,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_goneMarginStart=0x7f030047;
+    public static final int layout_goneMarginStart=0x7f0300a0;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -693,28 +1321,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_goneMarginTop=0x7f030048;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
-     * </table>
-     */
-    public static final int layout_insetEdge=0x7f030049;
-    /**
-     * <p>May be an integer value, such as "<code>100</code>".
-     */
-    public static final int layout_keyline=0x7f03004a;
+    public static final int layout_goneMarginTop=0x7f0300a1;
     /**
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -731,15 +1338,505 @@ public final class R {
      * <tr><td>standard</td><td>7</td><td></td></tr>
      * </table>
      */
-    public static final int layout_optimizationLevel=0x7f03004b;
+    public static final int layout_optimizationLevel=0x7f0300a2;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int listChoiceBackgroundIndicator=0x7f0300a3;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int listDividerAlertDialog=0x7f0300a4;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int listItemLayout=0x7f0300a5;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int listLayout=0x7f0300a6;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int listPopupWindowStyle=0x7f0300a7;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int listPreferredItemHeight=0x7f0300a8;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int listPreferredItemHeightLarge=0x7f0300a9;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int listPreferredItemHeightSmall=0x7f0300aa;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int listPreferredItemPaddingLeft=0x7f0300ab;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int listPreferredItemPaddingRight=0x7f0300ac;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int logo=0x7f0300ad;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int maxButtonHeight=0x7f0300ae;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int measureWithLargestChild=0x7f0300af;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int middleBarArrowSize=0x7f0300b0;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int multiChoiceItemLayout=0x7f0300b1;
+    /**
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int navigationContentDescription=0x7f0300b2;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int navigationIcon=0x7f0300b3;
+    /**
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>listMode</td><td>1</td><td></td></tr>
+     * <tr><td>normal</td><td>0</td><td></td></tr>
+     * <tr><td>tabMode</td><td>2</td><td></td></tr>
+     * </table>
+     */
+    public static final int navigationMode=0x7f0300b4;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int overlapAnchor=0x7f0300b5;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int paddingEnd=0x7f0300b6;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int paddingStart=0x7f0300b7;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int panelBackground=0x7f0300b8;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int panelMenuListTheme=0x7f0300b9;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int panelMenuListWidth=0x7f0300ba;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int popupMenuStyle=0x7f0300bb;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int popupPromptView=0x7f0300bc;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int popupTheme=0x7f0300bd;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int popupWindowStyle=0x7f0300be;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int prefer=0x7f03004c;
+    public static final int prefer=0x7f0300bf;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int preserveIconSpacing=0x7f0300c0;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int progressBarPadding=0x7f0300c1;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int progressBarStyle=0x7f0300c2;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int prompt=0x7f0300c3;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int queryBackground=0x7f0300c4;
+    /**
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int queryHint=0x7f0300c5;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int radioButtonStyle=0x7f0300c6;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int ratingBarStyle=0x7f0300c7;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int ratio=0x7f03004d;
+    public static final int ratio=0x7f0300c8;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int searchHintIcon=0x7f0300c9;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int searchIcon=0x7f0300ca;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int searchViewStyle=0x7f0300cb;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int selectableItemBackground=0x7f0300cc;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int selectableItemBackgroundBorderless=0x7f0300cd;
+    /**
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>always</td><td>2</td><td></td></tr>
+     * <tr><td>collapseActionView</td><td>8</td><td></td></tr>
+     * <tr><td>ifRoom</td><td>1</td><td></td></tr>
+     * <tr><td>never</td><td>0</td><td></td></tr>
+     * <tr><td>withText</td><td>4</td><td></td></tr>
+     * </table>
+     */
+    public static final int showAsAction=0x7f0300ce;
+    /**
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>beginning</td><td>1</td><td></td></tr>
+     * <tr><td>end</td><td>4</td><td></td></tr>
+     * <tr><td>middle</td><td>2</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * </table>
+     */
+    public static final int showDividers=0x7f0300cf;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int showText=0x7f0300d0;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int singleChoiceItemLayout=0x7f0300d1;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int spinBars=0x7f0300d2;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int spinnerDropDownItemStyle=0x7f0300d3;
+    /**
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>dialog</td><td>0</td><td></td></tr>
+     * <tr><td>dropdown</td><td>1</td><td></td></tr>
+     * </table>
+     */
+    public static final int spinnerMode=0x7f0300d4;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int spinnerStyle=0x7f0300d5;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int splitTrack=0x7f0300d6;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int state_above_anchor=0x7f0300d7;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int submitBackground=0x7f0300d8;
+    /**
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int subtitle=0x7f0300d9;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int subtitleTextAppearance=0x7f0300da;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int subtitleTextStyle=0x7f0300db;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int suggestionRowLayout=0x7f0300dc;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int switchMinWidth=0x7f0300dd;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int switchPadding=0x7f0300de;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int switchStyle=0x7f0300df;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int switchTextAppearance=0x7f0300e0;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int textAllCaps=0x7f0300e1;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceLargePopupMenu=0x7f0300e2;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceListItem=0x7f0300e3;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceListItemSmall=0x7f0300e4;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceSearchResultSubtitle=0x7f0300e5;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceSearchResultTitle=0x7f0300e6;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int textAppearanceSmallPopupMenu=0x7f0300e7;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -749,302 +1846,1816 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int statusBarBackground=0x7f03004e;
+    public static final int textColorAlertDialogListItem=0x7f0300e8;
     /**
-     * <p>May be an integer value, such as "<code>100</code>".
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int ttcIndex=0x7f03004f;
+    public static final int textColorSearchUrl=0x7f0300e9;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int theme=0x7f0300ea;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int thickness=0x7f0300eb;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int thumbTextPadding=0x7f0300ec;
+    /**
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int title=0x7f0300ed;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int titleMarginBottom=0x7f0300ee;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int titleMarginEnd=0x7f0300ef;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int titleMarginStart=0x7f0300f0;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int titleMarginTop=0x7f0300f1;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int titleMargins=0x7f0300f2;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int titleTextAppearance=0x7f0300f3;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int titleTextStyle=0x7f0300f4;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int toolbarNavigationButtonStyle=0x7f0300f5;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int toolbarStyle=0x7f0300f6;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     */
+    public static final int topBottomBarArrowSize=0x7f0300f7;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int track=0x7f0300f8;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int voiceIcon=0x7f0300f9;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int windowActionBar=0x7f0300fa;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int windowActionBarOverlay=0x7f0300fb;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int windowActionModeOverlay=0x7f0300fc;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>May be a fractional value, which is a floating point number appended with
+     * either % or %p, such as "<code>14.5%</code>".
+     * The % suffix always means a percentage of the base size;
+     * the optional %p suffix provides a size relative to some parent container.
+     */
+    public static final int windowFixedHeightMajor=0x7f0300fd;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>May be a fractional value, which is a floating point number appended with
+     * either % or %p, such as "<code>14.5%</code>".
+     * The % suffix always means a percentage of the base size;
+     * the optional %p suffix provides a size relative to some parent container.
+     */
+    public static final int windowFixedHeightMinor=0x7f0300fe;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>May be a fractional value, which is a floating point number appended with
+     * either % or %p, such as "<code>14.5%</code>".
+     * The % suffix always means a percentage of the base size;
+     * the optional %p suffix provides a size relative to some parent container.
+     */
+    public static final int windowFixedWidthMajor=0x7f0300ff;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>May be a fractional value, which is a floating point number appended with
+     * either % or %p, such as "<code>14.5%</code>".
+     * The % suffix always means a percentage of the base size;
+     * the optional %p suffix provides a size relative to some parent container.
+     */
+    public static final int windowFixedWidthMinor=0x7f030100;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>May be a fractional value, which is a floating point number appended with
+     * either % or %p, such as "<code>14.5%</code>".
+     * The % suffix always means a percentage of the base size;
+     * the optional %p suffix provides a size relative to some parent container.
+     */
+    public static final int windowMinWidthMajor=0x7f030101;
+    /**
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>May be a fractional value, which is a floating point number appended with
+     * either % or %p, such as "<code>14.5%</code>".
+     * The % suffix always means a percentage of the base size;
+     * the optional %p suffix provides a size relative to some parent container.
+     */
+    public static final int windowMinWidthMinor=0x7f030102;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int windowNoTitle=0x7f030103;
+  }
+  public static final class bool {
+    public static final int abc_action_bar_embed_tabs=0x7f040000;
+    public static final int abc_action_bar_embed_tabs_pre_jb=0x7f040001;
+    public static final int abc_action_bar_expanded_action_views_exclusive=0x7f040002;
+    public static final int abc_config_actionMenuItemAllCaps=0x7f040003;
+    public static final int abc_config_allowActionMenuItemTextWithIcon=0x7f040004;
+    public static final int abc_config_closeDialogWhenTouchOutside=0x7f040005;
+    public static final int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f040006;
   }
   public static final class color {
-    public static final int colorPrimary=0x7f040000;
-    public static final int colorSecondary=0x7f040001;
-    public static final int ic_launcher_background=0x7f040002;
-    public static final int notification_action_color_filter=0x7f040003;
-    public static final int notification_icon_bg_color=0x7f040004;
-    public static final int notification_material_background_media_default_color=0x7f040005;
-    public static final int primary_text_default_material_dark=0x7f040006;
-    public static final int ripple_material_light=0x7f040007;
-    public static final int secondary_text_default_material_dark=0x7f040008;
-    public static final int secondary_text_default_material_light=0x7f040009;
+    public static final int abc_background_cache_hint_selector_material_dark=0x7f050000;
+    public static final int abc_background_cache_hint_selector_material_light=0x7f050001;
+    public static final int abc_input_method_navigation_guard=0x7f050002;
+    public static final int abc_primary_text_disable_only_material_dark=0x7f050003;
+    public static final int abc_primary_text_disable_only_material_light=0x7f050004;
+    public static final int abc_primary_text_material_dark=0x7f050005;
+    public static final int abc_primary_text_material_light=0x7f050006;
+    public static final int abc_search_url_text=0x7f050007;
+    public static final int abc_search_url_text_normal=0x7f050008;
+    public static final int abc_search_url_text_pressed=0x7f050009;
+    public static final int abc_search_url_text_selected=0x7f05000a;
+    public static final int abc_secondary_text_material_dark=0x7f05000b;
+    public static final int abc_secondary_text_material_light=0x7f05000c;
+    public static final int accent_material_dark=0x7f05000d;
+    public static final int accent_material_light=0x7f05000e;
+    public static final int background_floating_material_dark=0x7f05000f;
+    public static final int background_floating_material_light=0x7f050010;
+    public static final int background_material_dark=0x7f050011;
+    public static final int background_material_light=0x7f050012;
+    public static final int bright_foreground_disabled_material_dark=0x7f050013;
+    public static final int bright_foreground_disabled_material_light=0x7f050014;
+    public static final int bright_foreground_inverse_material_dark=0x7f050015;
+    public static final int bright_foreground_inverse_material_light=0x7f050016;
+    public static final int bright_foreground_material_dark=0x7f050017;
+    public static final int bright_foreground_material_light=0x7f050018;
+    public static final int button_material_dark=0x7f050019;
+    public static final int button_material_light=0x7f05001a;
+    public static final int colorPrimary=0x7f05001b;
+    public static final int colorSecondary=0x7f05001c;
+    public static final int dim_foreground_disabled_material_dark=0x7f05001d;
+    public static final int dim_foreground_disabled_material_light=0x7f05001e;
+    public static final int dim_foreground_material_dark=0x7f05001f;
+    public static final int dim_foreground_material_light=0x7f050020;
+    public static final int highlighted_text_material_dark=0x7f050021;
+    public static final int highlighted_text_material_light=0x7f050022;
+    public static final int hint_foreground_material_dark=0x7f050023;
+    public static final int hint_foreground_material_light=0x7f050024;
+    public static final int ic_launcher_background=0x7f050025;
+    public static final int link_text_material_dark=0x7f050026;
+    public static final int link_text_material_light=0x7f050027;
+    public static final int material_blue_grey_800=0x7f050028;
+    public static final int material_blue_grey_900=0x7f050029;
+    public static final int material_blue_grey_950=0x7f05002a;
+    public static final int material_deep_teal_200=0x7f05002b;
+    public static final int material_deep_teal_500=0x7f05002c;
+    public static final int primary_dark_material_dark=0x7f05002d;
+    public static final int primary_dark_material_light=0x7f05002e;
+    public static final int primary_material_dark=0x7f05002f;
+    public static final int primary_material_light=0x7f050030;
+    public static final int primary_text_default_material_dark=0x7f050031;
+    public static final int primary_text_default_material_light=0x7f050032;
+    public static final int primary_text_disabled_material_dark=0x7f050033;
+    public static final int primary_text_disabled_material_light=0x7f050034;
+    public static final int ripple_material_dark=0x7f050035;
+    public static final int ripple_material_light=0x7f050036;
+    public static final int secondary_text_default_material_dark=0x7f050037;
+    public static final int secondary_text_default_material_light=0x7f050038;
+    public static final int secondary_text_disabled_material_dark=0x7f050039;
+    public static final int secondary_text_disabled_material_light=0x7f05003a;
+    public static final int switch_thumb_disabled_material_dark=0x7f05003b;
+    public static final int switch_thumb_disabled_material_light=0x7f05003c;
+    public static final int switch_thumb_material_dark=0x7f05003d;
+    public static final int switch_thumb_material_light=0x7f05003e;
+    public static final int switch_thumb_normal_material_dark=0x7f05003f;
+    public static final int switch_thumb_normal_material_light=0x7f050040;
   }
   public static final class dimen {
-    public static final int activity_horizontal_margin=0x7f050000;
-    public static final int activity_vertical_margin=0x7f050001;
-    public static final int compat_button_inset_horizontal_material=0x7f050002;
-    public static final int compat_button_inset_vertical_material=0x7f050003;
-    public static final int compat_button_padding_horizontal_material=0x7f050004;
-    public static final int compat_button_padding_vertical_material=0x7f050005;
-    public static final int compat_control_corner_material=0x7f050006;
-    public static final int compat_notification_large_icon_max_height=0x7f050007;
-    public static final int compat_notification_large_icon_max_width=0x7f050008;
-    public static final int notification_action_icon_size=0x7f050009;
-    public static final int notification_action_text_size=0x7f05000a;
-    public static final int notification_big_circle_margin=0x7f05000b;
-    public static final int notification_content_margin_start=0x7f05000c;
-    public static final int notification_large_icon_height=0x7f05000d;
-    public static final int notification_large_icon_width=0x7f05000e;
-    public static final int notification_main_column_padding_top=0x7f05000f;
-    public static final int notification_media_narrow_margin=0x7f050010;
-    public static final int notification_right_icon_size=0x7f050011;
-    public static final int notification_right_side_padding_top=0x7f050012;
-    public static final int notification_small_icon_background_padding=0x7f050013;
-    public static final int notification_small_icon_size_as_large=0x7f050014;
-    public static final int notification_subtext_size=0x7f050015;
-    public static final int notification_top_pad=0x7f050016;
-    public static final int notification_top_pad_large_text=0x7f050017;
-    public static final int subtitle_corner_radius=0x7f050018;
-    public static final int subtitle_outline_width=0x7f050019;
-    public static final int subtitle_shadow_offset=0x7f05001a;
-    public static final int subtitle_shadow_radius=0x7f05001b;
-    public static final int title_hight=0x7f05001c;
+    public static final int abc_action_bar_content_inset_material=0x7f060000;
+    public static final int abc_action_bar_default_height_material=0x7f060001;
+    public static final int abc_action_bar_default_padding_material=0x7f060002;
+    public static final int abc_action_bar_icon_vertical_padding_material=0x7f060003;
+    public static final int abc_action_bar_navigation_padding_start_material=0x7f060004;
+    public static final int abc_action_bar_overflow_padding_end_material=0x7f060005;
+    public static final int abc_action_bar_overflow_padding_start_material=0x7f060006;
+    public static final int abc_action_bar_progress_bar_size=0x7f060007;
+    public static final int abc_action_bar_stacked_max_height=0x7f060008;
+    public static final int abc_action_bar_stacked_tab_max_width=0x7f060009;
+    public static final int abc_action_bar_subtitle_bottom_margin_material=0x7f06000a;
+    public static final int abc_action_bar_subtitle_top_margin_material=0x7f06000b;
+    public static final int abc_action_button_min_height_material=0x7f06000c;
+    public static final int abc_action_button_min_width_material=0x7f06000d;
+    public static final int abc_action_button_min_width_overflow_material=0x7f06000e;
+    public static final int abc_alert_dialog_button_bar_height=0x7f06000f;
+    public static final int abc_button_inset_horizontal_material=0x7f060010;
+    public static final int abc_button_inset_vertical_material=0x7f060011;
+    public static final int abc_button_padding_horizontal_material=0x7f060012;
+    public static final int abc_button_padding_vertical_material=0x7f060013;
+    public static final int abc_config_prefDialogWidth=0x7f060014;
+    public static final int abc_control_corner_material=0x7f060015;
+    public static final int abc_control_inset_material=0x7f060016;
+    public static final int abc_control_padding_material=0x7f060017;
+    public static final int abc_dialog_list_padding_vertical_material=0x7f060018;
+    public static final int abc_dialog_min_width_major=0x7f060019;
+    public static final int abc_dialog_min_width_minor=0x7f06001a;
+    public static final int abc_dialog_padding_material=0x7f06001b;
+    public static final int abc_dialog_padding_top_material=0x7f06001c;
+    public static final int abc_disabled_alpha_material_dark=0x7f06001d;
+    public static final int abc_disabled_alpha_material_light=0x7f06001e;
+    public static final int abc_dropdownitem_icon_width=0x7f06001f;
+    public static final int abc_dropdownitem_text_padding_left=0x7f060020;
+    public static final int abc_dropdownitem_text_padding_right=0x7f060021;
+    public static final int abc_edit_text_inset_bottom_material=0x7f060022;
+    public static final int abc_edit_text_inset_horizontal_material=0x7f060023;
+    public static final int abc_edit_text_inset_top_material=0x7f060024;
+    public static final int abc_floating_window_z=0x7f060025;
+    public static final int abc_list_item_padding_horizontal_material=0x7f060026;
+    public static final int abc_panel_menu_list_width=0x7f060027;
+    public static final int abc_search_view_preferred_width=0x7f060028;
+    public static final int abc_search_view_text_min_width=0x7f060029;
+    public static final int abc_switch_padding=0x7f06002a;
+    public static final int abc_text_size_body_1_material=0x7f06002b;
+    public static final int abc_text_size_body_2_material=0x7f06002c;
+    public static final int abc_text_size_button_material=0x7f06002d;
+    public static final int abc_text_size_caption_material=0x7f06002e;
+    public static final int abc_text_size_display_1_material=0x7f06002f;
+    public static final int abc_text_size_display_2_material=0x7f060030;
+    public static final int abc_text_size_display_3_material=0x7f060031;
+    public static final int abc_text_size_display_4_material=0x7f060032;
+    public static final int abc_text_size_headline_material=0x7f060033;
+    public static final int abc_text_size_large_material=0x7f060034;
+    public static final int abc_text_size_medium_material=0x7f060035;
+    public static final int abc_text_size_menu_material=0x7f060036;
+    public static final int abc_text_size_small_material=0x7f060037;
+    public static final int abc_text_size_subhead_material=0x7f060038;
+    public static final int abc_text_size_subtitle_material_toolbar=0x7f060039;
+    public static final int abc_text_size_title_material=0x7f06003a;
+    public static final int abc_text_size_title_material_toolbar=0x7f06003b;
+    public static final int activity_horizontal_margin=0x7f06003c;
+    public static final int activity_vertical_margin=0x7f06003d;
+    public static final int dialog_fixed_height_major=0x7f06003e;
+    public static final int dialog_fixed_height_minor=0x7f06003f;
+    public static final int dialog_fixed_width_major=0x7f060040;
+    public static final int dialog_fixed_width_minor=0x7f060041;
+    public static final int disabled_alpha_material_dark=0x7f060042;
+    public static final int disabled_alpha_material_light=0x7f060043;
+    public static final int notification_large_icon_height=0x7f060044;
+    public static final int notification_large_icon_width=0x7f060045;
+    public static final int notification_subtext_size=0x7f060046;
+    public static final int title_hight=0x7f060047;
   }
   public static final class drawable {
-    public static final int bg_nothing=0x7f060000;
-    public static final int bkgd_left=0x7f060001;
-    public static final int bkgd_right=0x7f060002;
-    public static final int btn_backselect=0x7f060003;
-    public static final int btn_n=0x7f060004;
-    public static final int btn_p=0x7f060005;
-    public static final int certis_security_plus_slider_mobile=0x7f060006;
-    public static final int circle=0x7f060007;
-    public static final int faceid=0x7f060008;
-    public static final int facepp=0x7f060009;
-    public static final int ic_launcher=0x7f06000a;
-    public static final int icon_email=0x7f06000b;
-    public static final int icon_face_recognition=0x7f06000c;
-    public static final int icon_lock=0x7f06000d;
-    public static final int liveness_eye=0x7f06000e;
-    public static final int liveness_eye_open_closed=0x7f06000f;
-    public static final int liveness_faceppinside=0x7f060010;
-    public static final int liveness_head=0x7f060011;
-    public static final int liveness_head_down=0x7f060012;
-    public static final int liveness_head_left=0x7f060013;
-    public static final int liveness_head_pitch=0x7f060014;
-    public static final int liveness_head_right=0x7f060015;
-    public static final int liveness_head_up=0x7f060016;
-    public static final int liveness_head_yaw=0x7f060017;
-    public static final int liveness_layout_bottom_tips=0x7f060018;
-    public static final int liveness_layout_camera_mask=0x7f060019;
-    public static final int liveness_layout_gradient_back=0x7f06001a;
-    public static final int liveness_layout_head_mask=0x7f06001b;
-    public static final int liveness_left=0x7f06001c;
-    public static final int liveness_mouth=0x7f06001d;
-    public static final int liveness_mouth_open_closed=0x7f06001e;
-    public static final int liveness_phoneimage=0x7f06001f;
-    public static final int liveness_right=0x7f060020;
-    public static final int liveness_surfacemask=0x7f060021;
-    public static final int loading_background=0x7f060022;
-    public static final int logo=0x7f060023;
-    public static final int notification_action_background=0x7f060024;
-    public static final int notification_bg=0x7f060025;
-    public static final int notification_bg_low=0x7f060026;
-    public static final int notification_bg_low_normal=0x7f060027;
-    public static final int notification_bg_low_pressed=0x7f060028;
-    public static final int notification_bg_normal=0x7f060029;
-    public static final int notification_bg_normal_pressed=0x7f06002a;
-    public static final int notification_icon_background=0x7f06002b;
-    public static final int notification_template_icon_bg=0x7f06002c;
-    public static final int notification_template_icon_low_bg=0x7f06002d;
-    public static final int notification_tile_bg=0x7f06002e;
-    public static final int notify_panel_notification_icon_bg=0x7f06002f;
-    public static final int radius_drawable_bg=0x7f060030;
-    public static final int red=0x7f060031;
-    public static final int result_failded=0x7f060032;
-    public static final int result_img_background=0x7f060033;
-    public static final int result_success=0x7f060034;
+    public static final int abc_ab_share_pack_mtrl_alpha=0x7f070000;
+    public static final int abc_btn_borderless_material=0x7f070001;
+    public static final int abc_btn_check_material=0x7f070002;
+    public static final int abc_btn_check_to_on_mtrl_000=0x7f070003;
+    public static final int abc_btn_check_to_on_mtrl_015=0x7f070004;
+    public static final int abc_btn_default_mtrl_shape=0x7f070005;
+    public static final int abc_btn_radio_material=0x7f070006;
+    public static final int abc_btn_radio_to_on_mtrl_000=0x7f070007;
+    public static final int abc_btn_radio_to_on_mtrl_015=0x7f070008;
+    public static final int abc_btn_rating_star_off_mtrl_alpha=0x7f070009;
+    public static final int abc_btn_rating_star_on_mtrl_alpha=0x7f07000a;
+    public static final int abc_btn_switch_to_on_mtrl_00001=0x7f07000b;
+    public static final int abc_btn_switch_to_on_mtrl_00012=0x7f07000c;
+    public static final int abc_cab_background_internal_bg=0x7f07000d;
+    public static final int abc_cab_background_top_material=0x7f07000e;
+    public static final int abc_cab_background_top_mtrl_alpha=0x7f07000f;
+    public static final int abc_dialog_material_background_dark=0x7f070010;
+    public static final int abc_dialog_material_background_light=0x7f070011;
+    public static final int abc_edit_text_material=0x7f070012;
+    public static final int abc_ic_ab_back_mtrl_am_alpha=0x7f070013;
+    public static final int abc_ic_clear_mtrl_alpha=0x7f070014;
+    public static final int abc_ic_commit_search_api_mtrl_alpha=0x7f070015;
+    public static final int abc_ic_go_search_api_mtrl_alpha=0x7f070016;
+    public static final int abc_ic_menu_copy_mtrl_am_alpha=0x7f070017;
+    public static final int abc_ic_menu_cut_mtrl_alpha=0x7f070018;
+    public static final int abc_ic_menu_moreoverflow_mtrl_alpha=0x7f070019;
+    public static final int abc_ic_menu_paste_mtrl_am_alpha=0x7f07001a;
+    public static final int abc_ic_menu_selectall_mtrl_alpha=0x7f07001b;
+    public static final int abc_ic_menu_share_mtrl_alpha=0x7f07001c;
+    public static final int abc_ic_search_api_mtrl_alpha=0x7f07001d;
+    public static final int abc_ic_voice_search_api_mtrl_alpha=0x7f07001e;
+    public static final int abc_item_background_holo_dark=0x7f07001f;
+    public static final int abc_item_background_holo_light=0x7f070020;
+    public static final int abc_list_divider_mtrl_alpha=0x7f070021;
+    public static final int abc_list_focused_holo=0x7f070022;
+    public static final int abc_list_longpressed_holo=0x7f070023;
+    public static final int abc_list_pressed_holo_dark=0x7f070024;
+    public static final int abc_list_pressed_holo_light=0x7f070025;
+    public static final int abc_list_selector_background_transition_holo_dark=0x7f070026;
+    public static final int abc_list_selector_background_transition_holo_light=0x7f070027;
+    public static final int abc_list_selector_disabled_holo_dark=0x7f070028;
+    public static final int abc_list_selector_disabled_holo_light=0x7f070029;
+    public static final int abc_list_selector_holo_dark=0x7f07002a;
+    public static final int abc_list_selector_holo_light=0x7f07002b;
+    public static final int abc_menu_hardkey_panel_mtrl_mult=0x7f07002c;
+    public static final int abc_popup_background_mtrl_mult=0x7f07002d;
+    public static final int abc_ratingbar_full_material=0x7f07002e;
+    public static final int abc_spinner_mtrl_am_alpha=0x7f07002f;
+    public static final int abc_spinner_textfield_background_material=0x7f070030;
+    public static final int abc_switch_thumb_material=0x7f070031;
+    public static final int abc_switch_track_mtrl_alpha=0x7f070032;
+    public static final int abc_tab_indicator_material=0x7f070033;
+    public static final int abc_tab_indicator_mtrl_alpha=0x7f070034;
+    public static final int abc_text_cursor_mtrl_alpha=0x7f070035;
+    public static final int abc_textfield_activated_mtrl_alpha=0x7f070036;
+    public static final int abc_textfield_default_mtrl_alpha=0x7f070037;
+    public static final int abc_textfield_search_activated_mtrl_alpha=0x7f070038;
+    public static final int abc_textfield_search_default_mtrl_alpha=0x7f070039;
+    public static final int abc_textfield_search_material=0x7f07003a;
+    public static final int bg_nothing=0x7f07003b;
+    public static final int bkgd_left=0x7f07003c;
+    public static final int bkgd_right=0x7f07003d;
+    public static final int btn_backselect=0x7f07003e;
+    public static final int btn_n=0x7f07003f;
+    public static final int btn_p=0x7f070040;
+    public static final int certis_security_plus_slider_mobile=0x7f070041;
+    public static final int circle=0x7f070042;
+    public static final int faceid=0x7f070043;
+    public static final int facepp=0x7f070044;
+    public static final int ic_launcher=0x7f070045;
+    public static final int icon_email=0x7f070046;
+    public static final int icon_face_recognition=0x7f070047;
+    public static final int icon_lock=0x7f070048;
+    public static final int liveness_eye=0x7f070049;
+    public static final int liveness_eye_open_closed=0x7f07004a;
+    public static final int liveness_faceppinside=0x7f07004b;
+    public static final int liveness_head=0x7f07004c;
+    public static final int liveness_head_down=0x7f07004d;
+    public static final int liveness_head_left=0x7f07004e;
+    public static final int liveness_head_pitch=0x7f07004f;
+    public static final int liveness_head_right=0x7f070050;
+    public static final int liveness_head_up=0x7f070051;
+    public static final int liveness_head_yaw=0x7f070052;
+    public static final int liveness_layout_bottom_tips=0x7f070053;
+    public static final int liveness_layout_camera_mask=0x7f070054;
+    public static final int liveness_layout_gradient_back=0x7f070055;
+    public static final int liveness_layout_head_mask=0x7f070056;
+    public static final int liveness_left=0x7f070057;
+    public static final int liveness_mouth=0x7f070058;
+    public static final int liveness_mouth_open_closed=0x7f070059;
+    public static final int liveness_phoneimage=0x7f07005a;
+    public static final int liveness_right=0x7f07005b;
+    public static final int liveness_surfacemask=0x7f07005c;
+    public static final int loading_background=0x7f07005d;
+    public static final int logo=0x7f07005e;
+    public static final int notification_template_icon_bg=0x7f07005f;
+    public static final int radius_drawable_bg=0x7f070060;
+    public static final int red=0x7f070061;
+    public static final int result_failded=0x7f070062;
+    public static final int result_img_background=0x7f070063;
+    public static final int result_success=0x7f070064;
   }
   public static final class id {
-    public static final int action0=0x7f070000;
-    public static final int action_container=0x7f070001;
-    public static final int action_divider=0x7f070002;
-    public static final int action_image=0x7f070003;
-    public static final int action_settings=0x7f070004;
-    public static final int action_text=0x7f070005;
-    public static final int actions=0x7f070006;
-    public static final int activity_loading_rootRel=0x7f070007;
-    public static final int activity_result_bottomLinear=0x7f070008;
-    public static final int all=0x7f070009;
-    public static final int async=0x7f07000a;
-    public static final int barrier=0x7f07000b;
-    public static final int blocking=0x7f07000c;
-    public static final int bottom=0x7f07000d;
-    public static final int cancel_action=0x7f07000e;
-    public static final int center=0x7f07000f;
-    public static final int center_horizontal=0x7f070010;
-    public static final int center_vertical=0x7f070011;
-    public static final int chains=0x7f070012;
-    public static final int chronometer=0x7f070013;
-    public static final int clip_horizontal=0x7f070014;
-    public static final int clip_vertical=0x7f070015;
-    public static final int detection_step_image=0x7f070016;
-    public static final int detection_step_linear=0x7f070017;
-    public static final int detection_step_name=0x7f070018;
-    public static final int detection_step_timeout=0x7f070019;
-    public static final int detection_step_timeoutLinear=0x7f07001a;
-    public static final int dimensions=0x7f07001b;
-    public static final int direct=0x7f07001c;
-    public static final int end=0x7f07001d;
-    public static final int end_padder=0x7f07001e;
-    public static final int fill=0x7f07001f;
-    public static final int fill_horizontal=0x7f070020;
-    public static final int fill_vertical=0x7f070021;
-    public static final int forever=0x7f070022;
-    public static final int gone=0x7f070023;
-    public static final int groups=0x7f070024;
-    public static final int icon=0x7f070025;
-    public static final int icon_group=0x7f070026;
-    public static final int imageView=0x7f070027;
-    public static final int imageView2=0x7f070028;
-    public static final int info=0x7f070029;
-    public static final int invisible=0x7f07002a;
-    public static final int italic=0x7f07002b;
-    public static final int iv_entry=0x7f07002c;
-    public static final int left=0x7f07002d;
-    public static final int line1=0x7f07002e;
-    public static final int line3=0x7f07002f;
-    public static final int liveness_layout_bottom_tips_head=0x7f070030;
-    public static final int liveness_layout_facemask=0x7f070031;
-    public static final int liveness_layout_first_layout=0x7f070032;
-    public static final int liveness_layout_head_mask=0x7f070033;
-    public static final int liveness_layout_progressbar=0x7f070034;
-    public static final int liveness_layout_promptText=0x7f070035;
-    public static final int liveness_layout_rootRel=0x7f070036;
-    public static final int liveness_layout_second_layout=0x7f070037;
-    public static final int liveness_layout_textureview=0x7f070038;
-    public static final int loading_layout_icon=0x7f070039;
-    public static final int loading_layout_linearLayout2=0x7f07003a;
-    public static final int loading_layout_livenessBtn=0x7f07003b;
-    public static final int loading_layout_loginBtn=0x7f07003c;
-    public static final int loading_layout_version=0x7f07003d;
-    public static final int loading_layout_versionLinear=0x7f07003e;
-    public static final int logo=0x7f07003f;
-    public static final int main_pos_layout=0x7f070040;
-    public static final int media_actions=0x7f070041;
-    public static final int none=0x7f070042;
-    public static final int normal=0x7f070043;
-    public static final int notification_background=0x7f070044;
-    public static final int notification_main_column=0x7f070045;
-    public static final int notification_main_column_container=0x7f070046;
-    public static final int packed=0x7f070047;
-    public static final int parent=0x7f070048;
-    public static final int percent=0x7f070049;
-    public static final int relativeLayout=0x7f07004a;
-    public static final int result_next=0x7f07004b;
-    public static final int result_redolivenessdetection=0x7f07004c;
-    public static final int result_rotater=0x7f07004d;
-    public static final int result_status=0x7f07004e;
-    public static final int result_text_result=0x7f07004f;
-    public static final int right=0x7f070050;
-    public static final int right_icon=0x7f070051;
-    public static final int right_side=0x7f070052;
-    public static final int slogan=0x7f070053;
-    public static final int spread=0x7f070054;
-    public static final int spread_inside=0x7f070055;
-    public static final int standard=0x7f070056;
-    public static final int start=0x7f070057;
-    public static final int status_bar_latest_event_content=0x7f070058;
-    public static final int tag_transition_group=0x7f070059;
-    public static final int tag_unhandled_key_event_manager=0x7f07005a;
-    public static final int tag_unhandled_key_listeners=0x7f07005b;
-    public static final int text=0x7f07005c;
-    public static final int text2=0x7f07005d;
-    public static final int textView2=0x7f07005e;
-    public static final int time=0x7f07005f;
-    public static final int title=0x7f070060;
-    public static final int top=0x7f070061;
-    public static final int wrap=0x7f070062;
+    public static final int action0=0x7f080000;
+    public static final int action_bar=0x7f080001;
+    public static final int action_bar_activity_content=0x7f080002;
+    public static final int action_bar_container=0x7f080003;
+    public static final int action_bar_root=0x7f080004;
+    public static final int action_bar_spinner=0x7f080005;
+    public static final int action_bar_subtitle=0x7f080006;
+    public static final int action_bar_title=0x7f080007;
+    public static final int action_context_bar=0x7f080008;
+    public static final int action_divider=0x7f080009;
+    public static final int action_menu_divider=0x7f08000a;
+    public static final int action_menu_presenter=0x7f08000b;
+    public static final int action_mode_bar=0x7f08000c;
+    public static final int action_mode_bar_stub=0x7f08000d;
+    public static final int action_mode_close_button=0x7f08000e;
+    public static final int action_settings=0x7f08000f;
+    public static final int activity_chooser_view_content=0x7f080010;
+    public static final int activity_loading_rootRel=0x7f080011;
+    public static final int activity_result_bottomLinear=0x7f080012;
+    public static final int alertTitle=0x7f080013;
+    public static final int always=0x7f080014;
+    public static final int barrier=0x7f080015;
+    public static final int beginning=0x7f080016;
+    public static final int bottom=0x7f080017;
+    public static final int buttonPanel=0x7f080018;
+    public static final int cancel_action=0x7f080019;
+    public static final int chains=0x7f08001a;
+    public static final int checkbox=0x7f08001b;
+    public static final int chronometer=0x7f08001c;
+    public static final int collapseActionView=0x7f08001d;
+    public static final int contentPanel=0x7f08001e;
+    public static final int custom=0x7f08001f;
+    public static final int customPanel=0x7f080020;
+    public static final int decor_content_parent=0x7f080021;
+    public static final int default_activity_button=0x7f080022;
+    public static final int detection_step_image=0x7f080023;
+    public static final int detection_step_linear=0x7f080024;
+    public static final int detection_step_name=0x7f080025;
+    public static final int detection_step_timeout=0x7f080026;
+    public static final int detection_step_timeoutLinear=0x7f080027;
+    public static final int dialog=0x7f080028;
+    public static final int dimensions=0x7f080029;
+    public static final int direct=0x7f08002a;
+    public static final int disableHome=0x7f08002b;
+    public static final int dropdown=0x7f08002c;
+    public static final int edit_query=0x7f08002d;
+    public static final int end=0x7f08002e;
+    public static final int end_padder=0x7f08002f;
+    public static final int expand_activities_button=0x7f080030;
+    public static final int expanded_menu=0x7f080031;
+    public static final int gone=0x7f080032;
+    public static final int groups=0x7f080033;
+    public static final int home=0x7f080034;
+    public static final int homeAsUp=0x7f080035;
+    public static final int icon=0x7f080036;
+    public static final int ifRoom=0x7f080037;
+    public static final int image=0x7f080038;
+    public static final int info=0x7f080039;
+    public static final int invisible=0x7f08003a;
+    public static final int iv_entry=0x7f08003b;
+    public static final int layout_bkgd_imgleft=0x7f08003c;
+    public static final int layout_bkgd_imgright=0x7f08003d;
+    public static final int left=0x7f08003e;
+    public static final int line1=0x7f08003f;
+    public static final int line3=0x7f080040;
+    public static final int listMode=0x7f080041;
+    public static final int list_item=0x7f080042;
+    public static final int liveness_layout_bottom_tips_head=0x7f080043;
+    public static final int liveness_layout_facemask=0x7f080044;
+    public static final int liveness_layout_first_layout=0x7f080045;
+    public static final int liveness_layout_head_mask=0x7f080046;
+    public static final int liveness_layout_progressbar=0x7f080047;
+    public static final int liveness_layout_promptText=0x7f080048;
+    public static final int liveness_layout_rootRel=0x7f080049;
+    public static final int liveness_layout_second_layout=0x7f08004a;
+    public static final int liveness_layout_textureview=0x7f08004b;
+    public static final int loading_layout_icon=0x7f08004c;
+    public static final int loading_layout_linearLayout2=0x7f08004d;
+    public static final int loading_layout_livenessBtn=0x7f08004e;
+    public static final int loading_layout_loginBtn=0x7f08004f;
+    public static final int loading_layout_password=0x7f080050;
+    public static final int loading_layout_username=0x7f080051;
+    public static final int loading_layout_version=0x7f080052;
+    public static final int loading_layout_versionLinear=0x7f080053;
+    public static final int logo=0x7f080054;
+    public static final int main_pos_layout=0x7f080055;
+    public static final int media_actions=0x7f080056;
+    public static final int middle=0x7f080057;
+    public static final int multiply=0x7f080058;
+    public static final int never=0x7f080059;
+    public static final int none=0x7f08005a;
+    public static final int normal=0x7f08005b;
+    public static final int packed=0x7f08005c;
+    public static final int parent=0x7f08005d;
+    public static final int parentPanel=0x7f08005e;
+    public static final int percent=0x7f08005f;
+    public static final int progress_circular=0x7f080060;
+    public static final int progress_horizontal=0x7f080061;
+    public static final int radio=0x7f080062;
+    public static final int relativeLayout=0x7f080063;
+    public static final int result_next=0x7f080064;
+    public static final int result_redolivenessdetection=0x7f080065;
+    public static final int result_rotater=0x7f080066;
+    public static final int result_status=0x7f080067;
+    public static final int result_text_result=0x7f080068;
+    public static final int right=0x7f080069;
+    public static final int screen=0x7f08006a;
+    public static final int scrollView=0x7f08006b;
+    public static final int search_badge=0x7f08006c;
+    public static final int search_bar=0x7f08006d;
+    public static final int search_button=0x7f08006e;
+    public static final int search_close_btn=0x7f08006f;
+    public static final int search_edit_frame=0x7f080070;
+    public static final int search_go_btn=0x7f080071;
+    public static final int search_mag_icon=0x7f080072;
+    public static final int search_plate=0x7f080073;
+    public static final int search_src_text=0x7f080074;
+    public static final int search_voice_btn=0x7f080075;
+    public static final int select_dialog_listview=0x7f080076;
+    public static final int shortcut=0x7f080077;
+    public static final int showCustom=0x7f080078;
+    public static final int showHome=0x7f080079;
+    public static final int showTitle=0x7f08007a;
+    public static final int slogan=0x7f08007b;
+    public static final int split_action_bar=0x7f08007c;
+    public static final int spread=0x7f08007d;
+    public static final int spread_inside=0x7f08007e;
+    public static final int src_atop=0x7f08007f;
+    public static final int src_in=0x7f080080;
+    public static final int src_over=0x7f080081;
+    public static final int standard=0x7f080082;
+    public static final int start=0x7f080083;
+    public static final int status_bar_latest_event_content=0x7f080084;
+    public static final int submit_area=0x7f080085;
+    public static final int tabMode=0x7f080086;
+    public static final int text=0x7f080087;
+    public static final int text2=0x7f080088;
+    public static final int textSpacerNoButtons=0x7f080089;
+    public static final int textView2=0x7f08008a;
+    public static final int time=0x7f08008b;
+    public static final int title=0x7f08008c;
+    public static final int title_template=0x7f08008d;
+    public static final int top=0x7f08008e;
+    public static final int topPanel=0x7f08008f;
+    public static final int up=0x7f080090;
+    public static final int useLogo=0x7f080091;
+    public static final int withText=0x7f080092;
+    public static final int wrap=0x7f080093;
+    public static final int wrap_content=0x7f080094;
   }
   public static final class integer {
-    public static final int cancel_button_image_alpha=0x7f080000;
-    public static final int status_bar_notification_info_maxnum=0x7f080001;
+    public static final int abc_config_activityDefaultDur=0x7f090000;
+    public static final int abc_config_activityShortDur=0x7f090001;
+    public static final int abc_max_action_buttons=0x7f090002;
+    public static final int cancel_button_image_alpha=0x7f090003;
+    public static final int status_bar_notification_info_maxnum=0x7f090004;
   }
   public static final class layout {
-    public static final int activity_result=0x7f090000;
-    public static final int activity_welcome=0x7f090001;
-    public static final int liveness_detection_step=0x7f090002;
-    public static final int liveness_layout=0x7f090003;
-    public static final int loading_layout=0x7f090004;
-    public static final int notification_action=0x7f090005;
-    public static final int notification_action_tombstone=0x7f090006;
-    public static final int notification_media_action=0x7f090007;
-    public static final int notification_media_cancel_action=0x7f090008;
-    public static final int notification_template_big_media=0x7f090009;
-    public static final int notification_template_big_media_custom=0x7f09000a;
-    public static final int notification_template_big_media_narrow=0x7f09000b;
-    public static final int notification_template_big_media_narrow_custom=0x7f09000c;
-    public static final int notification_template_custom_big=0x7f09000d;
-    public static final int notification_template_icon_group=0x7f09000e;
-    public static final int notification_template_lines_media=0x7f09000f;
-    public static final int notification_template_media=0x7f090010;
-    public static final int notification_template_media_custom=0x7f090011;
-    public static final int notification_template_part_chronometer=0x7f090012;
-    public static final int notification_template_part_time=0x7f090013;
+    public static final int abc_action_bar_title_item=0x7f0a0000;
+    public static final int abc_action_bar_up_container=0x7f0a0001;
+    public static final int abc_action_bar_view_list_nav_layout=0x7f0a0002;
+    public static final int abc_action_menu_item_layout=0x7f0a0003;
+    public static final int abc_action_menu_layout=0x7f0a0004;
+    public static final int abc_action_mode_bar=0x7f0a0005;
+    public static final int abc_action_mode_close_item_material=0x7f0a0006;
+    public static final int abc_activity_chooser_view=0x7f0a0007;
+    public static final int abc_activity_chooser_view_list_item=0x7f0a0008;
+    public static final int abc_alert_dialog_material=0x7f0a0009;
+    public static final int abc_dialog_title_material=0x7f0a000a;
+    public static final int abc_expanded_menu_layout=0x7f0a000b;
+    public static final int abc_list_menu_item_checkbox=0x7f0a000c;
+    public static final int abc_list_menu_item_icon=0x7f0a000d;
+    public static final int abc_list_menu_item_layout=0x7f0a000e;
+    public static final int abc_list_menu_item_radio=0x7f0a000f;
+    public static final int abc_popup_menu_item_layout=0x7f0a0010;
+    public static final int abc_screen_content_include=0x7f0a0011;
+    public static final int abc_screen_simple=0x7f0a0012;
+    public static final int abc_screen_simple_overlay_action_mode=0x7f0a0013;
+    public static final int abc_screen_toolbar=0x7f0a0014;
+    public static final int abc_search_dropdown_item_icons_2line=0x7f0a0015;
+    public static final int abc_search_view=0x7f0a0016;
+    public static final int abc_select_dialog_material=0x7f0a0017;
+    public static final int abc_simple_dropdown_hint=0x7f0a0018;
+    public static final int activity_main=0x7f0a0019;
+    public static final int activity_result=0x7f0a001a;
+    public static final int activity_welcome=0x7f0a001b;
+    public static final int liveness_detection_step=0x7f0a001c;
+    public static final int liveness_layout=0x7f0a001d;
+    public static final int loading_layout=0x7f0a001e;
+    public static final int notification_media_action=0x7f0a001f;
+    public static final int notification_media_cancel_action=0x7f0a0020;
+    public static final int notification_template_big_media=0x7f0a0021;
+    public static final int notification_template_big_media_narrow=0x7f0a0022;
+    public static final int notification_template_lines=0x7f0a0023;
+    public static final int notification_template_media=0x7f0a0024;
+    public static final int notification_template_part_chronometer=0x7f0a0025;
+    public static final int notification_template_part_time=0x7f0a0026;
+    public static final int select_dialog_item_material=0x7f0a0027;
+    public static final int select_dialog_multichoice_material=0x7f0a0028;
+    public static final int select_dialog_singlechoice_material=0x7f0a0029;
+    public static final int support_simple_spinner_dropdown_item=0x7f0a002a;
   }
   public static final class menu {
-    public static final int main=0x7f0a0000;
+    public static final int main=0x7f0b0000;
   }
   public static final class mipmap {
-    public static final int ic_launcher=0x7f0b0000;
-    public static final int ic_launcher_foreground=0x7f0b0001;
-    public static final int ic_launcher_round=0x7f0b0002;
+    public static final int ic_launcher=0x7f0c0000;
+    public static final int ic_launcher_foreground=0x7f0c0001;
+    public static final int ic_launcher_round=0x7f0c0002;
   }
   public static final class raw {
-    public static final int meglive_eye_blink=0x7f0c0000;
-    public static final int meglive_failed=0x7f0c0001;
-    public static final int meglive_mouth_open=0x7f0c0002;
-    public static final int meglive_pitch_down=0x7f0c0003;
-    public static final int meglive_success=0x7f0c0004;
-    public static final int meglive_well_done=0x7f0c0005;
-    public static final int meglive_yaw=0x7f0c0006;
-    public static final int model=0x7f0c0007;
+    public static final int meglive_eye_blink=0x7f0d0000;
+    public static final int meglive_failed=0x7f0d0001;
+    public static final int meglive_mouth_open=0x7f0d0002;
+    public static final int meglive_pitch_down=0x7f0d0003;
+    public static final int meglive_success=0x7f0d0004;
+    public static final int meglive_well_done=0x7f0d0005;
+    public static final int meglive_yaw=0x7f0d0006;
+    public static final int model=0x7f0d0007;
   }
   public static final class string {
-    public static final int action_settings=0x7f0d0000;
-    public static final int app_name=0x7f0d0001;
-    public static final int aufail=0x7f0d0002;
-    public static final int authok=0x7f0d0003;
-    public static final int blink_detection=0x7f0d0004;
-    public static final int facelost=0x7f0d0005;
-    public static final int hello_world=0x7f0d0006;
-    public static final int liveness_detection_failed=0x7f0d0007;
-    public static final int liveness_detection_failed_action_blend=0x7f0d0008;
-    public static final int liveness_detection_failed_not_video=0x7f0d0009;
-    public static final int liveness_detection_failed_timeout=0x7f0d000a;
-    public static final int loading_confirm=0x7f0d000b;
-    public static final int loading_text=0x7f0d000c;
-    public static final int mouth_detection=0x7f0d000d;
-    public static final int netowrk_parse_failed=0x7f0d000e;
-    public static final int network_error=0x7f0d000f;
-    public static final int novalidframe=0x7f0d0010;
-    public static final int pos_detection=0x7f0d0011;
-    public static final int status_bar_notification_info_overflow=0x7f0d0012;
-    public static final int steps=0x7f0d0013;
-    public static final int timeout=0x7f0d0014;
-    public static final int tipblink=0x7f0d0015;
-    public static final int tippose=0x7f0d0016;
-    public static final int tipsmouth=0x7f0d0017;
-    public static final int verify_error=0x7f0d0018;
-    public static final int verify_success=0x7f0d0019;
+    public static final int abc_action_bar_home_description=0x7f0e0000;
+    public static final int abc_action_bar_home_description_format=0x7f0e0001;
+    public static final int abc_action_bar_home_subtitle_description_format=0x7f0e0002;
+    public static final int abc_action_bar_up_description=0x7f0e0003;
+    public static final int abc_action_menu_overflow_description=0x7f0e0004;
+    public static final int abc_action_mode_done=0x7f0e0005;
+    public static final int abc_activity_chooser_view_see_all=0x7f0e0006;
+    public static final int abc_activitychooserview_choose_application=0x7f0e0007;
+    public static final int abc_search_hint=0x7f0e0008;
+    public static final int abc_searchview_description_clear=0x7f0e0009;
+    public static final int abc_searchview_description_query=0x7f0e000a;
+    public static final int abc_searchview_description_search=0x7f0e000b;
+    public static final int abc_searchview_description_submit=0x7f0e000c;
+    public static final int abc_searchview_description_voice=0x7f0e000d;
+    public static final int abc_shareactionprovider_share_with=0x7f0e000e;
+    public static final int abc_shareactionprovider_share_with_application=0x7f0e000f;
+    public static final int abc_toolbar_collapse_description=0x7f0e0010;
+    public static final int action_settings=0x7f0e0011;
+    public static final int app_name=0x7f0e0012;
+    public static final int aufail=0x7f0e0013;
+    public static final int authok=0x7f0e0014;
+    public static final int blink_detection=0x7f0e0015;
+    public static final int facelost=0x7f0e0016;
+    public static final int hello_world=0x7f0e0017;
+    public static final int liveness_detection_failed=0x7f0e0018;
+    public static final int liveness_detection_failed_action_blend=0x7f0e0019;
+    public static final int liveness_detection_failed_not_video=0x7f0e001a;
+    public static final int liveness_detection_failed_timeout=0x7f0e001b;
+    public static final int loading_confirm=0x7f0e001c;
+    public static final int loading_text=0x7f0e001d;
+    public static final int mouth_detection=0x7f0e001e;
+    public static final int netowrk_parse_failed=0x7f0e001f;
+    public static final int network_error=0x7f0e0020;
+    public static final int novalidframe=0x7f0e0021;
+    public static final int pos_detection=0x7f0e0022;
+    public static final int status_bar_notification_info_overflow=0x7f0e0023;
+    public static final int steps=0x7f0e0024;
+    public static final int timeout=0x7f0e0025;
+    public static final int tipblink=0x7f0e0026;
+    public static final int tippose=0x7f0e0027;
+    public static final int tipsmouth=0x7f0e0028;
+    public static final int verify_error=0x7f0e0029;
+    public static final int verify_success=0x7f0e002a;
   }
   public static final class style {
-    public static final int AppBaseTheme=0x7f0e0000;
-    public static final int AppTheme=0x7f0e0001;
-    public static final int TextAppearance_Compat_Notification=0x7f0e0002;
-    public static final int TextAppearance_Compat_Notification_Info=0x7f0e0003;
-    public static final int TextAppearance_Compat_Notification_Info_Media=0x7f0e0004;
-    public static final int TextAppearance_Compat_Notification_Line2=0x7f0e0005;
-    public static final int TextAppearance_Compat_Notification_Line2_Media=0x7f0e0006;
-    public static final int TextAppearance_Compat_Notification_Media=0x7f0e0007;
-    public static final int TextAppearance_Compat_Notification_Time=0x7f0e0008;
-    public static final int TextAppearance_Compat_Notification_Time_Media=0x7f0e0009;
-    public static final int TextAppearance_Compat_Notification_Title=0x7f0e000a;
-    public static final int TextAppearance_Compat_Notification_Title_Media=0x7f0e000b;
-    public static final int Widget_Compat_NotificationActionContainer=0x7f0e000c;
-    public static final int Widget_Compat_NotificationActionText=0x7f0e000d;
-    public static final int Widget_Support_CoordinatorLayout=0x7f0e000e;
-    public static final int custom_button=0x7f0e000f;
+    public static final int AlertDialog_AppCompat=0x7f0f0000;
+    public static final int AlertDialog_AppCompat_Light=0x7f0f0001;
+    public static final int Animation_AppCompat_Dialog=0x7f0f0002;
+    public static final int Animation_AppCompat_DropDownUp=0x7f0f0003;
+    public static final int AppBaseTheme=0x7f0f0004;
+    public static final int AppFullScreenTheme=0x7f0f0005;
+    public static final int AppTheme=0x7f0f0006;
+    public static final int Base_AlertDialog_AppCompat=0x7f0f0007;
+    public static final int Base_AlertDialog_AppCompat_Light=0x7f0f0008;
+    public static final int Base_Animation_AppCompat_Dialog=0x7f0f0009;
+    public static final int Base_Animation_AppCompat_DropDownUp=0x7f0f000a;
+    public static final int Base_DialogWindowTitle_AppCompat=0x7f0f000b;
+    public static final int Base_DialogWindowTitleBackground_AppCompat=0x7f0f000c;
+    public static final int Base_TextAppearance_AppCompat=0x7f0f000d;
+    public static final int Base_TextAppearance_AppCompat_Body1=0x7f0f000e;
+    public static final int Base_TextAppearance_AppCompat_Body2=0x7f0f000f;
+    public static final int Base_TextAppearance_AppCompat_Button=0x7f0f0010;
+    public static final int Base_TextAppearance_AppCompat_Caption=0x7f0f0011;
+    public static final int Base_TextAppearance_AppCompat_Display1=0x7f0f0012;
+    public static final int Base_TextAppearance_AppCompat_Display2=0x7f0f0013;
+    public static final int Base_TextAppearance_AppCompat_Display3=0x7f0f0014;
+    public static final int Base_TextAppearance_AppCompat_Display4=0x7f0f0015;
+    public static final int Base_TextAppearance_AppCompat_Headline=0x7f0f0016;
+    public static final int Base_TextAppearance_AppCompat_Inverse=0x7f0f0017;
+    public static final int Base_TextAppearance_AppCompat_Large=0x7f0f0018;
+    public static final int Base_TextAppearance_AppCompat_Large_Inverse=0x7f0f0019;
+    public static final int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f0f001a;
+    public static final int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f0f001b;
+    public static final int Base_TextAppearance_AppCompat_Medium=0x7f0f001c;
+    public static final int Base_TextAppearance_AppCompat_Medium_Inverse=0x7f0f001d;
+    public static final int Base_TextAppearance_AppCompat_Menu=0x7f0f001e;
+    public static final int Base_TextAppearance_AppCompat_SearchResult=0x7f0f001f;
+    public static final int Base_TextAppearance_AppCompat_SearchResult_Subtitle=0x7f0f0020;
+    public static final int Base_TextAppearance_AppCompat_SearchResult_Title=0x7f0f0021;
+    public static final int Base_TextAppearance_AppCompat_Small=0x7f0f0022;
+    public static final int Base_TextAppearance_AppCompat_Small_Inverse=0x7f0f0023;
+    public static final int Base_TextAppearance_AppCompat_Subhead=0x7f0f0024;
+    public static final int Base_TextAppearance_AppCompat_Subhead_Inverse=0x7f0f0025;
+    public static final int Base_TextAppearance_AppCompat_Title=0x7f0f0026;
+    public static final int Base_TextAppearance_AppCompat_Title_Inverse=0x7f0f0027;
+    public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f0f0028;
+    public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f0f0029;
+    public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f0f002a;
+    public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f0f002b;
+    public static final int Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f0f002c;
+    public static final int Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f0f002d;
+    public static final int Base_TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f0f002e;
+    public static final int Base_TextAppearance_AppCompat_Widget_DropDownItem=0x7f0f002f;
+    public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f0f0030;
+    public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0f0031;
+    public static final int Base_TextAppearance_AppCompat_Widget_Switch=0x7f0f0032;
+    public static final int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0f0033;
+    public static final int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0f0034;
+    public static final int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0f0035;
+    public static final int Base_TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0f0036;
+    public static final int Base_Theme_AppCompat=0x7f0f0037;
+    public static final int Base_Theme_AppCompat_CompactMenu=0x7f0f0038;
+    public static final int Base_Theme_AppCompat_Dialog=0x7f0f0039;
+    public static final int Base_Theme_AppCompat_Dialog_Alert=0x7f0f003a;
+    public static final int Base_Theme_AppCompat_Dialog_FixedSize=0x7f0f003b;
+    public static final int Base_Theme_AppCompat_Dialog_MinWidth=0x7f0f003c;
+    public static final int Base_Theme_AppCompat_DialogWhenLarge=0x7f0f003d;
+    public static final int Base_Theme_AppCompat_Light=0x7f0f003e;
+    public static final int Base_Theme_AppCompat_Light_DarkActionBar=0x7f0f003f;
+    public static final int Base_Theme_AppCompat_Light_Dialog=0x7f0f0040;
+    public static final int Base_Theme_AppCompat_Light_Dialog_Alert=0x7f0f0041;
+    public static final int Base_Theme_AppCompat_Light_Dialog_FixedSize=0x7f0f0042;
+    public static final int Base_Theme_AppCompat_Light_Dialog_MinWidth=0x7f0f0043;
+    public static final int Base_Theme_AppCompat_Light_DialogWhenLarge=0x7f0f0044;
+    public static final int Base_ThemeOverlay_AppCompat=0x7f0f0045;
+    public static final int Base_ThemeOverlay_AppCompat_ActionBar=0x7f0f0046;
+    public static final int Base_ThemeOverlay_AppCompat_Dark=0x7f0f0047;
+    public static final int Base_ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0f0048;
+    public static final int Base_ThemeOverlay_AppCompat_Light=0x7f0f0049;
+    public static final int Base_V11_Theme_AppCompat_Dialog=0x7f0f004a;
+    public static final int Base_V11_Theme_AppCompat_Light_Dialog=0x7f0f004b;
+    public static final int Base_V12_Widget_AppCompat_AutoCompleteTextView=0x7f0f004c;
+    public static final int Base_V12_Widget_AppCompat_EditText=0x7f0f004d;
+    public static final int Base_V21_Theme_AppCompat=0x7f0f004e;
+    public static final int Base_V21_Theme_AppCompat_Dialog=0x7f0f004f;
+    public static final int Base_V21_Theme_AppCompat_Light=0x7f0f0050;
+    public static final int Base_V21_Theme_AppCompat_Light_Dialog=0x7f0f0051;
+    public static final int Base_V7_Theme_AppCompat=0x7f0f0052;
+    public static final int Base_V7_Theme_AppCompat_Dialog=0x7f0f0053;
+    public static final int Base_V7_Theme_AppCompat_Light=0x7f0f0054;
+    public static final int Base_V7_Theme_AppCompat_Light_Dialog=0x7f0f0055;
+    public static final int Base_V7_Widget_AppCompat_AutoCompleteTextView=0x7f0f0056;
+    public static final int Base_V7_Widget_AppCompat_EditText=0x7f0f0057;
+    public static final int Base_Widget_AppCompat_ActionBar=0x7f0f0058;
+    public static final int Base_Widget_AppCompat_ActionBar_Solid=0x7f0f0059;
+    public static final int Base_Widget_AppCompat_ActionBar_TabBar=0x7f0f005a;
+    public static final int Base_Widget_AppCompat_ActionBar_TabText=0x7f0f005b;
+    public static final int Base_Widget_AppCompat_ActionBar_TabView=0x7f0f005c;
+    public static final int Base_Widget_AppCompat_ActionButton=0x7f0f005d;
+    public static final int Base_Widget_AppCompat_ActionButton_CloseMode=0x7f0f005e;
+    public static final int Base_Widget_AppCompat_ActionButton_Overflow=0x7f0f005f;
+    public static final int Base_Widget_AppCompat_ActionMode=0x7f0f0060;
+    public static final int Base_Widget_AppCompat_ActivityChooserView=0x7f0f0061;
+    public static final int Base_Widget_AppCompat_AutoCompleteTextView=0x7f0f0062;
+    public static final int Base_Widget_AppCompat_Button=0x7f0f0063;
+    public static final int Base_Widget_AppCompat_Button_Borderless=0x7f0f0064;
+    public static final int Base_Widget_AppCompat_Button_Borderless_Colored=0x7f0f0065;
+    public static final int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0f0066;
+    public static final int Base_Widget_AppCompat_Button_Small=0x7f0f0067;
+    public static final int Base_Widget_AppCompat_ButtonBar=0x7f0f0068;
+    public static final int Base_Widget_AppCompat_ButtonBar_AlertDialog=0x7f0f0069;
+    public static final int Base_Widget_AppCompat_CompoundButton_CheckBox=0x7f0f006a;
+    public static final int Base_Widget_AppCompat_CompoundButton_RadioButton=0x7f0f006b;
+    public static final int Base_Widget_AppCompat_CompoundButton_Switch=0x7f0f006c;
+    public static final int Base_Widget_AppCompat_DrawerArrowToggle=0x7f0f006d;
+    public static final int Base_Widget_AppCompat_DrawerArrowToggle_Common=0x7f0f006e;
+    public static final int Base_Widget_AppCompat_DropDownItem_Spinner=0x7f0f006f;
+    public static final int Base_Widget_AppCompat_EditText=0x7f0f0070;
+    public static final int Base_Widget_AppCompat_Light_ActionBar=0x7f0f0071;
+    public static final int Base_Widget_AppCompat_Light_ActionBar_Solid=0x7f0f0072;
+    public static final int Base_Widget_AppCompat_Light_ActionBar_TabBar=0x7f0f0073;
+    public static final int Base_Widget_AppCompat_Light_ActionBar_TabText=0x7f0f0074;
+    public static final int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f0f0075;
+    public static final int Base_Widget_AppCompat_Light_ActionBar_TabView=0x7f0f0076;
+    public static final int Base_Widget_AppCompat_Light_PopupMenu=0x7f0f0077;
+    public static final int Base_Widget_AppCompat_Light_PopupMenu_Overflow=0x7f0f0078;
+    public static final int Base_Widget_AppCompat_ListPopupWindow=0x7f0f0079;
+    public static final int Base_Widget_AppCompat_ListView=0x7f0f007a;
+    public static final int Base_Widget_AppCompat_ListView_DropDown=0x7f0f007b;
+    public static final int Base_Widget_AppCompat_ListView_Menu=0x7f0f007c;
+    public static final int Base_Widget_AppCompat_PopupMenu=0x7f0f007d;
+    public static final int Base_Widget_AppCompat_PopupMenu_Overflow=0x7f0f007e;
+    public static final int Base_Widget_AppCompat_PopupWindow=0x7f0f007f;
+    public static final int Base_Widget_AppCompat_ProgressBar=0x7f0f0080;
+    public static final int Base_Widget_AppCompat_ProgressBar_Horizontal=0x7f0f0081;
+    public static final int Base_Widget_AppCompat_RatingBar=0x7f0f0082;
+    public static final int Base_Widget_AppCompat_SearchView=0x7f0f0083;
+    public static final int Base_Widget_AppCompat_SearchView_ActionBar=0x7f0f0084;
+    public static final int Base_Widget_AppCompat_Spinner=0x7f0f0085;
+    public static final int Base_Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0f0086;
+    public static final int Base_Widget_AppCompat_Spinner_Underlined=0x7f0f0087;
+    public static final int Base_Widget_AppCompat_TextView_SpinnerItem=0x7f0f0088;
+    public static final int Base_Widget_AppCompat_Toolbar=0x7f0f0089;
+    public static final int Base_Widget_AppCompat_Toolbar_Button_Navigation=0x7f0f008a;
+    public static final int Platform_AppCompat=0x7f0f008b;
+    public static final int Platform_AppCompat_Light=0x7f0f008c;
+    public static final int Platform_ThemeOverlay_AppCompat_Dark=0x7f0f008d;
+    public static final int Platform_ThemeOverlay_AppCompat_Light=0x7f0f008e;
+    public static final int Platform_V11_AppCompat=0x7f0f008f;
+    public static final int Platform_V11_AppCompat_Light=0x7f0f0090;
+    public static final int Platform_V14_AppCompat=0x7f0f0091;
+    public static final int Platform_V14_AppCompat_Light=0x7f0f0092;
+    public static final int RtlOverlay_DialogWindowTitle_AppCompat=0x7f0f0093;
+    public static final int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem=0x7f0f0094;
+    public static final int RtlOverlay_Widget_AppCompat_ActionButton_Overflow=0x7f0f0095;
+    public static final int RtlOverlay_Widget_AppCompat_DialogTitle_Icon=0x7f0f0096;
+    public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem=0x7f0f0097;
+    public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup=0x7f0f0098;
+    public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text=0x7f0f0099;
+    public static final int RtlOverlay_Widget_AppCompat_Search_DropDown=0x7f0f009a;
+    public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1=0x7f0f009b;
+    public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2=0x7f0f009c;
+    public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Query=0x7f0f009d;
+    public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Text=0x7f0f009e;
+    public static final int RtlOverlay_Widget_AppCompat_SearchView_MagIcon=0x7f0f009f;
+    public static final int RtlOverlay_Widget_AppCompat_Toolbar_Button_Navigation=0x7f0f00a0;
+    public static final int TextAppearance_AppCompat=0x7f0f00a1;
+    public static final int TextAppearance_AppCompat_Body1=0x7f0f00a2;
+    public static final int TextAppearance_AppCompat_Body2=0x7f0f00a3;
+    public static final int TextAppearance_AppCompat_Button=0x7f0f00a4;
+    public static final int TextAppearance_AppCompat_Caption=0x7f0f00a5;
+    public static final int TextAppearance_AppCompat_Display1=0x7f0f00a6;
+    public static final int TextAppearance_AppCompat_Display2=0x7f0f00a7;
+    public static final int TextAppearance_AppCompat_Display3=0x7f0f00a8;
+    public static final int TextAppearance_AppCompat_Display4=0x7f0f00a9;
+    public static final int TextAppearance_AppCompat_Headline=0x7f0f00aa;
+    public static final int TextAppearance_AppCompat_Inverse=0x7f0f00ab;
+    public static final int TextAppearance_AppCompat_Large=0x7f0f00ac;
+    public static final int TextAppearance_AppCompat_Large_Inverse=0x7f0f00ad;
+    public static final int TextAppearance_AppCompat_Light_SearchResult_Subtitle=0x7f0f00ae;
+    public static final int TextAppearance_AppCompat_Light_SearchResult_Title=0x7f0f00af;
+    public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f0f00b0;
+    public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f0f00b1;
+    public static final int TextAppearance_AppCompat_Medium=0x7f0f00b2;
+    public static final int TextAppearance_AppCompat_Medium_Inverse=0x7f0f00b3;
+    public static final int TextAppearance_AppCompat_Menu=0x7f0f00b4;
+    public static final int TextAppearance_AppCompat_SearchResult_Subtitle=0x7f0f00b5;
+    public static final int TextAppearance_AppCompat_SearchResult_Title=0x7f0f00b6;
+    public static final int TextAppearance_AppCompat_Small=0x7f0f00b7;
+    public static final int TextAppearance_AppCompat_Small_Inverse=0x7f0f00b8;
+    public static final int TextAppearance_AppCompat_Subhead=0x7f0f00b9;
+    public static final int TextAppearance_AppCompat_Subhead_Inverse=0x7f0f00ba;
+    public static final int TextAppearance_AppCompat_Title=0x7f0f00bb;
+    public static final int TextAppearance_AppCompat_Title_Inverse=0x7f0f00bc;
+    public static final int TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f0f00bd;
+    public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f0f00be;
+    public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f0f00bf;
+    public static final int TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f0f00c0;
+    public static final int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f0f00c1;
+    public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f0f00c2;
+    public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse=0x7f0f00c3;
+    public static final int TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f0f00c4;
+    public static final int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse=0x7f0f00c5;
+    public static final int TextAppearance_AppCompat_Widget_DropDownItem=0x7f0f00c6;
+    public static final int TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f0f00c7;
+    public static final int TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0f00c8;
+    public static final int TextAppearance_AppCompat_Widget_Switch=0x7f0f00c9;
+    public static final int TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0f00ca;
+    public static final int TextAppearance_StatusBar_EventContent=0x7f0f00cb;
+    public static final int TextAppearance_StatusBar_EventContent_Info=0x7f0f00cc;
+    public static final int TextAppearance_StatusBar_EventContent_Line2=0x7f0f00cd;
+    public static final int TextAppearance_StatusBar_EventContent_Time=0x7f0f00ce;
+    public static final int TextAppearance_StatusBar_EventContent_Title=0x7f0f00cf;
+    public static final int TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0f00d0;
+    public static final int TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0f00d1;
+    public static final int TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0f00d2;
+    public static final int Theme_AppCompat=0x7f0f00d3;
+    public static final int Theme_AppCompat_CompactMenu=0x7f0f00d4;
+    public static final int Theme_AppCompat_Dialog=0x7f0f00d5;
+    public static final int Theme_AppCompat_Dialog_Alert=0x7f0f00d6;
+    public static final int Theme_AppCompat_Dialog_MinWidth=0x7f0f00d7;
+    public static final int Theme_AppCompat_DialogWhenLarge=0x7f0f00d8;
+    public static final int Theme_AppCompat_Light=0x7f0f00d9;
+    public static final int Theme_AppCompat_Light_DarkActionBar=0x7f0f00da;
+    public static final int Theme_AppCompat_Light_Dialog=0x7f0f00db;
+    public static final int Theme_AppCompat_Light_Dialog_Alert=0x7f0f00dc;
+    public static final int Theme_AppCompat_Light_Dialog_MinWidth=0x7f0f00dd;
+    public static final int Theme_AppCompat_Light_DialogWhenLarge=0x7f0f00de;
+    public static final int Theme_AppCompat_Light_NoActionBar=0x7f0f00df;
+    public static final int Theme_AppCompat_NoActionBar=0x7f0f00e0;
+    public static final int ThemeOverlay_AppCompat=0x7f0f00e1;
+    public static final int ThemeOverlay_AppCompat_ActionBar=0x7f0f00e2;
+    public static final int ThemeOverlay_AppCompat_Dark=0x7f0f00e3;
+    public static final int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0f00e4;
+    public static final int ThemeOverlay_AppCompat_Light=0x7f0f00e5;
+    public static final int Widget_AppCompat_ActionBar=0x7f0f00e6;
+    public static final int Widget_AppCompat_ActionBar_Solid=0x7f0f00e7;
+    public static final int Widget_AppCompat_ActionBar_TabBar=0x7f0f00e8;
+    public static final int Widget_AppCompat_ActionBar_TabText=0x7f0f00e9;
+    public static final int Widget_AppCompat_ActionBar_TabView=0x7f0f00ea;
+    public static final int Widget_AppCompat_ActionButton=0x7f0f00eb;
+    public static final int Widget_AppCompat_ActionButton_CloseMode=0x7f0f00ec;
+    public static final int Widget_AppCompat_ActionButton_Overflow=0x7f0f00ed;
+    public static final int Widget_AppCompat_ActionMode=0x7f0f00ee;
+    public static final int Widget_AppCompat_ActivityChooserView=0x7f0f00ef;
+    public static final int Widget_AppCompat_AutoCompleteTextView=0x7f0f00f0;
+    public static final int Widget_AppCompat_Button=0x7f0f00f1;
+    public static final int Widget_AppCompat_Button_Borderless=0x7f0f00f2;
+    public static final int Widget_AppCompat_Button_Borderless_Colored=0x7f0f00f3;
+    public static final int Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0f00f4;
+    public static final int Widget_AppCompat_Button_Small=0x7f0f00f5;
+    public static final int Widget_AppCompat_ButtonBar=0x7f0f00f6;
+    public static final int Widget_AppCompat_ButtonBar_AlertDialog=0x7f0f00f7;
+    public static final int Widget_AppCompat_CompoundButton_CheckBox=0x7f0f00f8;
+    public static final int Widget_AppCompat_CompoundButton_RadioButton=0x7f0f00f9;
+    public static final int Widget_AppCompat_CompoundButton_Switch=0x7f0f00fa;
+    public static final int Widget_AppCompat_DrawerArrowToggle=0x7f0f00fb;
+    public static final int Widget_AppCompat_DropDownItem_Spinner=0x7f0f00fc;
+    public static final int Widget_AppCompat_EditText=0x7f0f00fd;
+    public static final int Widget_AppCompat_Light_ActionBar=0x7f0f00fe;
+    public static final int Widget_AppCompat_Light_ActionBar_Solid=0x7f0f00ff;
+    public static final int Widget_AppCompat_Light_ActionBar_Solid_Inverse=0x7f0f0100;
+    public static final int Widget_AppCompat_Light_ActionBar_TabBar=0x7f0f0101;
+    public static final int Widget_AppCompat_Light_ActionBar_TabBar_Inverse=0x7f0f0102;
+    public static final int Widget_AppCompat_Light_ActionBar_TabText=0x7f0f0103;
+    public static final int Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f0f0104;
+    public static final int Widget_AppCompat_Light_ActionBar_TabView=0x7f0f0105;
+    public static final int Widget_AppCompat_Light_ActionBar_TabView_Inverse=0x7f0f0106;
+    public static final int Widget_AppCompat_Light_ActionButton=0x7f0f0107;
+    public static final int Widget_AppCompat_Light_ActionButton_CloseMode=0x7f0f0108;
+    public static final int Widget_AppCompat_Light_ActionButton_Overflow=0x7f0f0109;
+    public static final int Widget_AppCompat_Light_ActionMode_Inverse=0x7f0f010a;
+    public static final int Widget_AppCompat_Light_ActivityChooserView=0x7f0f010b;
+    public static final int Widget_AppCompat_Light_AutoCompleteTextView=0x7f0f010c;
+    public static final int Widget_AppCompat_Light_DropDownItem_Spinner=0x7f0f010d;
+    public static final int Widget_AppCompat_Light_ListPopupWindow=0x7f0f010e;
+    public static final int Widget_AppCompat_Light_ListView_DropDown=0x7f0f010f;
+    public static final int Widget_AppCompat_Light_PopupMenu=0x7f0f0110;
+    public static final int Widget_AppCompat_Light_PopupMenu_Overflow=0x7f0f0111;
+    public static final int Widget_AppCompat_Light_SearchView=0x7f0f0112;
+    public static final int Widget_AppCompat_Light_Spinner_DropDown_ActionBar=0x7f0f0113;
+    public static final int Widget_AppCompat_ListPopupWindow=0x7f0f0114;
+    public static final int Widget_AppCompat_ListView=0x7f0f0115;
+    public static final int Widget_AppCompat_ListView_DropDown=0x7f0f0116;
+    public static final int Widget_AppCompat_ListView_Menu=0x7f0f0117;
+    public static final int Widget_AppCompat_PopupMenu=0x7f0f0118;
+    public static final int Widget_AppCompat_PopupMenu_Overflow=0x7f0f0119;
+    public static final int Widget_AppCompat_PopupWindow=0x7f0f011a;
+    public static final int Widget_AppCompat_ProgressBar=0x7f0f011b;
+    public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f0f011c;
+    public static final int Widget_AppCompat_RatingBar=0x7f0f011d;
+    public static final int Widget_AppCompat_SearchView=0x7f0f011e;
+    public static final int Widget_AppCompat_SearchView_ActionBar=0x7f0f011f;
+    public static final int Widget_AppCompat_Spinner=0x7f0f0120;
+    public static final int Widget_AppCompat_Spinner_DropDown=0x7f0f0121;
+    public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0f0122;
+    public static final int Widget_AppCompat_Spinner_Underlined=0x7f0f0123;
+    public static final int Widget_AppCompat_TextView_SpinnerItem=0x7f0f0124;
+    public static final int Widget_AppCompat_Toolbar=0x7f0f0125;
+    public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f0f0126;
+    public static final int custom_button=0x7f0f0127;
   }
   public static final class styleable {
+    /**
+     * Attributes that can be used with a ActionBar.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #ActionBar_background com.megvii.livenessproject:background}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_backgroundSplit com.megvii.livenessproject:backgroundSplit}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_backgroundStacked com.megvii.livenessproject:backgroundStacked}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetEnd com.megvii.livenessproject:contentInsetEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetLeft com.megvii.livenessproject:contentInsetLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetRight com.megvii.livenessproject:contentInsetRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetStart com.megvii.livenessproject:contentInsetStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_customNavigationLayout com.megvii.livenessproject:customNavigationLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_displayOptions com.megvii.livenessproject:displayOptions}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_divider com.megvii.livenessproject:divider}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_elevation com.megvii.livenessproject:elevation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_height com.megvii.livenessproject:height}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_hideOnContentScroll com.megvii.livenessproject:hideOnContentScroll}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.megvii.livenessproject:homeAsUpIndicator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_homeLayout com.megvii.livenessproject:homeLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_icon com.megvii.livenessproject:icon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.megvii.livenessproject:indeterminateProgressStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_itemPadding com.megvii.livenessproject:itemPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_logo com.megvii.livenessproject:logo}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_navigationMode com.megvii.livenessproject:navigationMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_popupTheme com.megvii.livenessproject:popupTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_progressBarPadding com.megvii.livenessproject:progressBarPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_progressBarStyle com.megvii.livenessproject:progressBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_subtitle com.megvii.livenessproject:subtitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_subtitleTextStyle com.megvii.livenessproject:subtitleTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_title com.megvii.livenessproject:title}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_titleTextStyle com.megvii.livenessproject:titleTextStyle}</code></td><td></td></tr>
+     * </table>
+     * @see #ActionBar_background
+     * @see #ActionBar_backgroundSplit
+     * @see #ActionBar_backgroundStacked
+     * @see #ActionBar_contentInsetEnd
+     * @see #ActionBar_contentInsetLeft
+     * @see #ActionBar_contentInsetRight
+     * @see #ActionBar_contentInsetStart
+     * @see #ActionBar_customNavigationLayout
+     * @see #ActionBar_displayOptions
+     * @see #ActionBar_divider
+     * @see #ActionBar_elevation
+     * @see #ActionBar_height
+     * @see #ActionBar_hideOnContentScroll
+     * @see #ActionBar_homeAsUpIndicator
+     * @see #ActionBar_homeLayout
+     * @see #ActionBar_icon
+     * @see #ActionBar_indeterminateProgressStyle
+     * @see #ActionBar_itemPadding
+     * @see #ActionBar_logo
+     * @see #ActionBar_navigationMode
+     * @see #ActionBar_popupTheme
+     * @see #ActionBar_progressBarPadding
+     * @see #ActionBar_progressBarStyle
+     * @see #ActionBar_subtitle
+     * @see #ActionBar_subtitleTextStyle
+     * @see #ActionBar_title
+     * @see #ActionBar_titleTextStyle
+     */
+    public static final int[] ActionBar={
+      0x7f030027, 0x7f030028, 0x7f030029, 0x7f03004c, 
+      0x7f03004d, 0x7f03004e, 0x7f03004f, 0x7f030050, 
+      0x7f030055, 0x7f030056, 0x7f030061, 0x7f030066, 
+      0x7f030067, 0x7f030068, 0x7f030069, 0x7f03006a, 
+      0x7f03006c, 0x7f03006f, 0x7f0300ad, 0x7f0300b4, 
+      0x7f0300bd, 0x7f0300c1, 0x7f0300c2, 0x7f0300d9, 
+      0x7f0300db, 0x7f0300ed, 0x7f0300f4
+    };
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#background}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:background
+     */
+    public static final int ActionBar_background=0;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#backgroundSplit}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:backgroundSplit
+     */
+    public static final int ActionBar_backgroundSplit=1;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#backgroundStacked}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:backgroundStacked
+     */
+    public static final int ActionBar_backgroundStacked=2;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#contentInsetEnd}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:contentInsetEnd
+     */
+    public static final int ActionBar_contentInsetEnd=3;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#contentInsetLeft}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:contentInsetLeft
+     */
+    public static final int ActionBar_contentInsetLeft=4;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#contentInsetRight}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:contentInsetRight
+     */
+    public static final int ActionBar_contentInsetRight=5;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#contentInsetStart}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:contentInsetStart
+     */
+    public static final int ActionBar_contentInsetStart=6;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#customNavigationLayout}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:customNavigationLayout
+     */
+    public static final int ActionBar_customNavigationLayout=7;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#displayOptions}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>disableHome</td><td>20</td><td></td></tr>
+     * <tr><td>homeAsUp</td><td>4</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>showCustom</td><td>10</td><td></td></tr>
+     * <tr><td>showHome</td><td>2</td><td></td></tr>
+     * <tr><td>showTitle</td><td>8</td><td></td></tr>
+     * <tr><td>useLogo</td><td>1</td><td></td></tr>
+     * </table>
+     *
+     * @attr name com.megvii.livenessproject:displayOptions
+     */
+    public static final int ActionBar_displayOptions=8;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#divider}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:divider
+     */
+    public static final int ActionBar_divider=9;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#elevation}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:elevation
+     */
+    public static final int ActionBar_elevation=10;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#height}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:height
+     */
+    public static final int ActionBar_height=11;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#hideOnContentScroll}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.megvii.livenessproject:hideOnContentScroll
+     */
+    public static final int ActionBar_hideOnContentScroll=12;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#homeAsUpIndicator}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:homeAsUpIndicator
+     */
+    public static final int ActionBar_homeAsUpIndicator=13;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#homeLayout}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:homeLayout
+     */
+    public static final int ActionBar_homeLayout=14;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#icon}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:icon
+     */
+    public static final int ActionBar_icon=15;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#indeterminateProgressStyle}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:indeterminateProgressStyle
+     */
+    public static final int ActionBar_indeterminateProgressStyle=16;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#itemPadding}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:itemPadding
+     */
+    public static final int ActionBar_itemPadding=17;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#logo}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:logo
+     */
+    public static final int ActionBar_logo=18;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#navigationMode}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>listMode</td><td>1</td><td></td></tr>
+     * <tr><td>normal</td><td>0</td><td></td></tr>
+     * <tr><td>tabMode</td><td>2</td><td></td></tr>
+     * </table>
+     *
+     * @attr name com.megvii.livenessproject:navigationMode
+     */
+    public static final int ActionBar_navigationMode=19;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#popupTheme}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:popupTheme
+     */
+    public static final int ActionBar_popupTheme=20;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#progressBarPadding}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:progressBarPadding
+     */
+    public static final int ActionBar_progressBarPadding=21;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#progressBarStyle}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:progressBarStyle
+     */
+    public static final int ActionBar_progressBarStyle=22;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#subtitle}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.megvii.livenessproject:subtitle
+     */
+    public static final int ActionBar_subtitle=23;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#subtitleTextStyle}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:subtitleTextStyle
+     */
+    public static final int ActionBar_subtitleTextStyle=24;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#title}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.megvii.livenessproject:title
+     */
+    public static final int ActionBar_title=25;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#titleTextStyle}
+     * attribute's value can be found in the {@link #ActionBar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:titleTextStyle
+     */
+    public static final int ActionBar_titleTextStyle=26;
+    /**
+     * Attributes that can be used with a ActionBarLayout.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #ActionBarLayout_android_layout_gravity android:layout_gravity}</code></td><td></td></tr>
+     * </table>
+     * @see #ActionBarLayout_android_layout_gravity
+     */
+    public static final int[] ActionBarLayout={
+      0x010100b3
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
+     * attribute's value can be found in the {@link #ActionBarLayout} array.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>center</td><td>11</td><td></td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
+     * <tr><td>fill</td><td>77</td><td></td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:layout_gravity
+     */
+    public static final int ActionBarLayout_android_layout_gravity=0;
+    /**
+     * Attributes that can be used with a ActionMenuItemView.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #ActionMenuItemView_android_minWidth android:minWidth}</code></td><td></td></tr>
+     * </table>
+     * @see #ActionMenuItemView_android_minWidth
+     */
+    public static final int[] ActionMenuItemView={
+      0x0101013f
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#minWidth}
+     * attribute's value can be found in the {@link #ActionMenuItemView} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name android:minWidth
+     */
+    public static final int ActionMenuItemView_android_minWidth=0;
+    public static final int[] ActionMenuView={
+    };
+    /**
+     * Attributes that can be used with a ActionMode.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #ActionMode_background com.megvii.livenessproject:background}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_backgroundSplit com.megvii.livenessproject:backgroundSplit}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_closeItemLayout com.megvii.livenessproject:closeItemLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_height com.megvii.livenessproject:height}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_subtitleTextStyle com.megvii.livenessproject:subtitleTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_titleTextStyle com.megvii.livenessproject:titleTextStyle}</code></td><td></td></tr>
+     * </table>
+     * @see #ActionMode_background
+     * @see #ActionMode_backgroundSplit
+     * @see #ActionMode_closeItemLayout
+     * @see #ActionMode_height
+     * @see #ActionMode_subtitleTextStyle
+     * @see #ActionMode_titleTextStyle
+     */
+    public static final int[] ActionMode={
+      0x7f030027, 0x7f030028, 0x7f03003c, 0x7f030066, 
+      0x7f0300db, 0x7f0300f4
+    };
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#background}
+     * attribute's value can be found in the {@link #ActionMode} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:background
+     */
+    public static final int ActionMode_background=0;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#backgroundSplit}
+     * attribute's value can be found in the {@link #ActionMode} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:backgroundSplit
+     */
+    public static final int ActionMode_backgroundSplit=1;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#closeItemLayout}
+     * attribute's value can be found in the {@link #ActionMode} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:closeItemLayout
+     */
+    public static final int ActionMode_closeItemLayout=2;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#height}
+     * attribute's value can be found in the {@link #ActionMode} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:height
+     */
+    public static final int ActionMode_height=3;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#subtitleTextStyle}
+     * attribute's value can be found in the {@link #ActionMode} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:subtitleTextStyle
+     */
+    public static final int ActionMode_subtitleTextStyle=4;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#titleTextStyle}
+     * attribute's value can be found in the {@link #ActionMode} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:titleTextStyle
+     */
+    public static final int ActionMode_titleTextStyle=5;
+    /**
+     * Attributes that can be used with a ActivityChooserView.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.megvii.livenessproject:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.megvii.livenessproject:initialActivityCount}</code></td><td></td></tr>
+     * </table>
+     * @see #ActivityChooserView_expandActivityOverflowButtonDrawable
+     * @see #ActivityChooserView_initialActivityCount
+     */
+    public static final int[] ActivityChooserView={
+      0x7f030063, 0x7f03006d
+    };
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#expandActivityOverflowButtonDrawable}
+     * attribute's value can be found in the {@link #ActivityChooserView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:expandActivityOverflowButtonDrawable
+     */
+    public static final int ActivityChooserView_expandActivityOverflowButtonDrawable=0;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#initialActivityCount}
+     * attribute's value can be found in the {@link #ActivityChooserView} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.megvii.livenessproject:initialActivityCount
+     */
+    public static final int ActivityChooserView_initialActivityCount=1;
+    /**
+     * Attributes that can be used with a AlertDialog.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #AlertDialog_android_layout android:layout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.megvii.livenessproject:buttonPanelSideLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_listItemLayout com.megvii.livenessproject:listItemLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_listLayout com.megvii.livenessproject:listLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.megvii.livenessproject:multiChoiceItemLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.megvii.livenessproject:singleChoiceItemLayout}</code></td><td></td></tr>
+     * </table>
+     * @see #AlertDialog_android_layout
+     * @see #AlertDialog_buttonPanelSideLayout
+     * @see #AlertDialog_listItemLayout
+     * @see #AlertDialog_listLayout
+     * @see #AlertDialog_multiChoiceItemLayout
+     * @see #AlertDialog_singleChoiceItemLayout
+     */
+    public static final int[] AlertDialog={
+      0x010100f2, 0x7f030035, 0x7f0300a5, 0x7f0300a6, 
+      0x7f0300b1, 0x7f0300d1
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#layout}
+     * attribute's value can be found in the {@link #AlertDialog} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name android:layout
+     */
+    public static final int AlertDialog_android_layout=0;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#buttonPanelSideLayout}
+     * attribute's value can be found in the {@link #AlertDialog} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:buttonPanelSideLayout
+     */
+    public static final int AlertDialog_buttonPanelSideLayout=1;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#listItemLayout}
+     * attribute's value can be found in the {@link #AlertDialog} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:listItemLayout
+     */
+    public static final int AlertDialog_listItemLayout=2;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#listLayout}
+     * attribute's value can be found in the {@link #AlertDialog} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:listLayout
+     */
+    public static final int AlertDialog_listLayout=3;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#multiChoiceItemLayout}
+     * attribute's value can be found in the {@link #AlertDialog} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:multiChoiceItemLayout
+     */
+    public static final int AlertDialog_multiChoiceItemLayout=4;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#singleChoiceItemLayout}
+     * attribute's value can be found in the {@link #AlertDialog} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:singleChoiceItemLayout
+     */
+    public static final int AlertDialog_singleChoiceItemLayout=5;
+    /**
+     * Attributes that can be used with a AppCompatTextView.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #AppCompatTextView_android_textAppearance android:textAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_textAllCaps com.megvii.livenessproject:textAllCaps}</code></td><td></td></tr>
+     * </table>
+     * @see #AppCompatTextView_android_textAppearance
+     * @see #AppCompatTextView_textAllCaps
+     */
+    public static final int[] AppCompatTextView={
+      0x01010034, 0x7f0300e1
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#textAppearance}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name android:textAppearance
+     */
+    public static final int AppCompatTextView_android_textAppearance=0;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#textAllCaps}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.megvii.livenessproject:textAllCaps
+     */
+    public static final int AppCompatTextView_textAllCaps=1;
     /**
      * Attributes that can be used with a AutoRatioImageView.
      * <p>Includes the following attributes:</p>
@@ -1052,80 +3663,33 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #AutoRatioImageView_prefer com.certissecurity.certissecure_com.megvii:prefer}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AutoRatioImageView_ratio com.certissecurity.certissecure_com.megvii:ratio}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AutoRatioImageView_prefer com.megvii.livenessproject:prefer}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AutoRatioImageView_ratio com.megvii.livenessproject:ratio}</code></td><td></td></tr>
      * </table>
      * @see #AutoRatioImageView_prefer
      * @see #AutoRatioImageView_ratio
      */
     public static final int[] AutoRatioImageView={
-      0x7f03004c, 0x7f03004d
+      0x7f0300bf, 0x7f0300c8
     };
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#prefer}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#prefer}
      * attribute's value can be found in the {@link #AutoRatioImageView} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:prefer
+     * @attr name com.megvii.livenessproject:prefer
      */
     public static final int AutoRatioImageView_prefer=0;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#ratio}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#ratio}
      * attribute's value can be found in the {@link #AutoRatioImageView} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:ratio
+     * @attr name com.megvii.livenessproject:ratio
      */
     public static final int AutoRatioImageView_ratio=1;
-    /**
-     * Attributes that can be used with a ColorStateListItem.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ColorStateListItem_android_color android:color}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ColorStateListItem_android_alpha android:alpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ColorStateListItem_alpha com.certissecurity.certissecure_com.megvii:alpha}</code></td><td></td></tr>
-     * </table>
-     * @see #ColorStateListItem_android_color
-     * @see #ColorStateListItem_android_alpha
-     * @see #ColorStateListItem_alpha
-     */
-    public static final int[] ColorStateListItem={
-      0x010101a5, 0x0101031f, 0x7f030000
-    };
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#color}
-     * attribute's value can be found in the {@link #ColorStateListItem} array.
-     *
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     *
-     * @attr name android:color
-     */
-    public static final int ColorStateListItem_android_color=0;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#alpha}
-     * attribute's value can be found in the {@link #ColorStateListItem} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:alpha
-     */
-    public static final int ColorStateListItem_android_alpha=1;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#alpha}
-     * attribute's value can be found in the {@link #ColorStateListItem} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:alpha
-     */
-    public static final int ColorStateListItem_alpha=2;
     /**
      * Attributes that can be used with a ConstraintLayout_Layout.
      * <p>Includes the following attributes:</p>
@@ -1138,61 +3702,61 @@ public final class R {
      * <tr><td><code>{@link #ConstraintLayout_Layout_android_maxHeight android:maxHeight}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_android_minWidth android:minWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_android_minHeight android:minHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_barrierAllowsGoneWidgets com.certissecurity.certissecure_com.megvii:barrierAllowsGoneWidgets}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_barrierDirection com.certissecurity.certissecure_com.megvii:barrierDirection}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_chainUseRtl com.certissecurity.certissecure_com.megvii:chainUseRtl}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_constraintSet com.certissecurity.certissecure_com.megvii:constraintSet}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_constraint_referenced_ids com.certissecurity.certissecure_com.megvii:constraint_referenced_ids}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constrainedHeight com.certissecurity.certissecure_com.megvii:layout_constrainedHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constrainedWidth com.certissecurity.certissecure_com.megvii:layout_constrainedWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintBaseline_creator com.certissecurity.certissecure_com.megvii:layout_constraintBaseline_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintBaseline_toBaselineOf com.certissecurity.certissecure_com.megvii:layout_constraintBaseline_toBaselineOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintBottom_creator com.certissecurity.certissecure_com.megvii:layout_constraintBottom_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintBottom_toBottomOf com.certissecurity.certissecure_com.megvii:layout_constraintBottom_toBottomOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintBottom_toTopOf com.certissecurity.certissecure_com.megvii:layout_constraintBottom_toTopOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintCircle com.certissecurity.certissecure_com.megvii:layout_constraintCircle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintCircleAngle com.certissecurity.certissecure_com.megvii:layout_constraintCircleAngle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintCircleRadius com.certissecurity.certissecure_com.megvii:layout_constraintCircleRadius}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintDimensionRatio com.certissecurity.certissecure_com.megvii:layout_constraintDimensionRatio}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintEnd_toEndOf com.certissecurity.certissecure_com.megvii:layout_constraintEnd_toEndOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintEnd_toStartOf com.certissecurity.certissecure_com.megvii:layout_constraintEnd_toStartOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintGuide_begin com.certissecurity.certissecure_com.megvii:layout_constraintGuide_begin}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintGuide_end com.certissecurity.certissecure_com.megvii:layout_constraintGuide_end}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintGuide_percent com.certissecurity.certissecure_com.megvii:layout_constraintGuide_percent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintHeight_default com.certissecurity.certissecure_com.megvii:layout_constraintHeight_default}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintHeight_max com.certissecurity.certissecure_com.megvii:layout_constraintHeight_max}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintHeight_min com.certissecurity.certissecure_com.megvii:layout_constraintHeight_min}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintHeight_percent com.certissecurity.certissecure_com.megvii:layout_constraintHeight_percent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintHorizontal_bias com.certissecurity.certissecure_com.megvii:layout_constraintHorizontal_bias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintHorizontal_chainStyle com.certissecurity.certissecure_com.megvii:layout_constraintHorizontal_chainStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintHorizontal_weight com.certissecurity.certissecure_com.megvii:layout_constraintHorizontal_weight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintLeft_creator com.certissecurity.certissecure_com.megvii:layout_constraintLeft_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintLeft_toLeftOf com.certissecurity.certissecure_com.megvii:layout_constraintLeft_toLeftOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintLeft_toRightOf com.certissecurity.certissecure_com.megvii:layout_constraintLeft_toRightOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintRight_creator com.certissecurity.certissecure_com.megvii:layout_constraintRight_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintRight_toLeftOf com.certissecurity.certissecure_com.megvii:layout_constraintRight_toLeftOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintRight_toRightOf com.certissecurity.certissecure_com.megvii:layout_constraintRight_toRightOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintStart_toEndOf com.certissecurity.certissecure_com.megvii:layout_constraintStart_toEndOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintStart_toStartOf com.certissecurity.certissecure_com.megvii:layout_constraintStart_toStartOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintTop_creator com.certissecurity.certissecure_com.megvii:layout_constraintTop_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintTop_toBottomOf com.certissecurity.certissecure_com.megvii:layout_constraintTop_toBottomOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintTop_toTopOf com.certissecurity.certissecure_com.megvii:layout_constraintTop_toTopOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintVertical_bias com.certissecurity.certissecure_com.megvii:layout_constraintVertical_bias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintVertical_chainStyle com.certissecurity.certissecure_com.megvii:layout_constraintVertical_chainStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintVertical_weight com.certissecurity.certissecure_com.megvii:layout_constraintVertical_weight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintWidth_default com.certissecurity.certissecure_com.megvii:layout_constraintWidth_default}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintWidth_max com.certissecurity.certissecure_com.megvii:layout_constraintWidth_max}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintWidth_min com.certissecurity.certissecure_com.megvii:layout_constraintWidth_min}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintWidth_percent com.certissecurity.certissecure_com.megvii:layout_constraintWidth_percent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_editor_absoluteX com.certissecurity.certissecure_com.megvii:layout_editor_absoluteX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_editor_absoluteY com.certissecurity.certissecure_com.megvii:layout_editor_absoluteY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_goneMarginBottom com.certissecurity.certissecure_com.megvii:layout_goneMarginBottom}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_goneMarginEnd com.certissecurity.certissecure_com.megvii:layout_goneMarginEnd}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_goneMarginLeft com.certissecurity.certissecure_com.megvii:layout_goneMarginLeft}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_goneMarginRight com.certissecurity.certissecure_com.megvii:layout_goneMarginRight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_goneMarginStart com.certissecurity.certissecure_com.megvii:layout_goneMarginStart}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_goneMarginTop com.certissecurity.certissecure_com.megvii:layout_goneMarginTop}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_optimizationLevel com.certissecurity.certissecure_com.megvii:layout_optimizationLevel}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_barrierAllowsGoneWidgets com.megvii.livenessproject:barrierAllowsGoneWidgets}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_barrierDirection com.megvii.livenessproject:barrierDirection}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_chainUseRtl com.megvii.livenessproject:chainUseRtl}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_constraintSet com.megvii.livenessproject:constraintSet}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_constraint_referenced_ids com.megvii.livenessproject:constraint_referenced_ids}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constrainedHeight com.megvii.livenessproject:layout_constrainedHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constrainedWidth com.megvii.livenessproject:layout_constrainedWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintBaseline_creator com.megvii.livenessproject:layout_constraintBaseline_creator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintBaseline_toBaselineOf com.megvii.livenessproject:layout_constraintBaseline_toBaselineOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintBottom_creator com.megvii.livenessproject:layout_constraintBottom_creator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintBottom_toBottomOf com.megvii.livenessproject:layout_constraintBottom_toBottomOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintBottom_toTopOf com.megvii.livenessproject:layout_constraintBottom_toTopOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintCircle com.megvii.livenessproject:layout_constraintCircle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintCircleAngle com.megvii.livenessproject:layout_constraintCircleAngle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintCircleRadius com.megvii.livenessproject:layout_constraintCircleRadius}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintDimensionRatio com.megvii.livenessproject:layout_constraintDimensionRatio}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintEnd_toEndOf com.megvii.livenessproject:layout_constraintEnd_toEndOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintEnd_toStartOf com.megvii.livenessproject:layout_constraintEnd_toStartOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintGuide_begin com.megvii.livenessproject:layout_constraintGuide_begin}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintGuide_end com.megvii.livenessproject:layout_constraintGuide_end}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintGuide_percent com.megvii.livenessproject:layout_constraintGuide_percent}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintHeight_default com.megvii.livenessproject:layout_constraintHeight_default}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintHeight_max com.megvii.livenessproject:layout_constraintHeight_max}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintHeight_min com.megvii.livenessproject:layout_constraintHeight_min}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintHeight_percent com.megvii.livenessproject:layout_constraintHeight_percent}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintHorizontal_bias com.megvii.livenessproject:layout_constraintHorizontal_bias}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintHorizontal_chainStyle com.megvii.livenessproject:layout_constraintHorizontal_chainStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintHorizontal_weight com.megvii.livenessproject:layout_constraintHorizontal_weight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintLeft_creator com.megvii.livenessproject:layout_constraintLeft_creator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintLeft_toLeftOf com.megvii.livenessproject:layout_constraintLeft_toLeftOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintLeft_toRightOf com.megvii.livenessproject:layout_constraintLeft_toRightOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintRight_creator com.megvii.livenessproject:layout_constraintRight_creator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintRight_toLeftOf com.megvii.livenessproject:layout_constraintRight_toLeftOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintRight_toRightOf com.megvii.livenessproject:layout_constraintRight_toRightOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintStart_toEndOf com.megvii.livenessproject:layout_constraintStart_toEndOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintStart_toStartOf com.megvii.livenessproject:layout_constraintStart_toStartOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintTop_creator com.megvii.livenessproject:layout_constraintTop_creator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintTop_toBottomOf com.megvii.livenessproject:layout_constraintTop_toBottomOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintTop_toTopOf com.megvii.livenessproject:layout_constraintTop_toTopOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintVertical_bias com.megvii.livenessproject:layout_constraintVertical_bias}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintVertical_chainStyle com.megvii.livenessproject:layout_constraintVertical_chainStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintVertical_weight com.megvii.livenessproject:layout_constraintVertical_weight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintWidth_default com.megvii.livenessproject:layout_constraintWidth_default}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintWidth_max com.megvii.livenessproject:layout_constraintWidth_max}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintWidth_min com.megvii.livenessproject:layout_constraintWidth_min}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintWidth_percent com.megvii.livenessproject:layout_constraintWidth_percent}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_editor_absoluteX com.megvii.livenessproject:layout_editor_absoluteX}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_editor_absoluteY com.megvii.livenessproject:layout_editor_absoluteY}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_goneMarginBottom com.megvii.livenessproject:layout_goneMarginBottom}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_goneMarginEnd com.megvii.livenessproject:layout_goneMarginEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_goneMarginLeft com.megvii.livenessproject:layout_goneMarginLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_goneMarginRight com.megvii.livenessproject:layout_goneMarginRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_goneMarginStart com.megvii.livenessproject:layout_goneMarginStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_goneMarginTop com.megvii.livenessproject:layout_goneMarginTop}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_optimizationLevel com.megvii.livenessproject:layout_optimizationLevel}</code></td><td></td></tr>
      * </table>
      * @see #ConstraintLayout_Layout_android_orientation
      * @see #ConstraintLayout_Layout_android_maxWidth
@@ -1257,20 +3821,20 @@ public final class R {
      */
     public static final int[] ConstraintLayout_Layout={
       0x010100c4, 0x0101011f, 0x01010120, 0x0101013f, 
-      0x01010140, 0x7f030001, 0x7f030002, 0x7f030003, 
-      0x7f030004, 0x7f030005, 0x7f030017, 0x7f030018, 
-      0x7f030019, 0x7f03001a, 0x7f03001b, 0x7f03001c, 
-      0x7f03001d, 0x7f03001e, 0x7f03001f, 0x7f030020, 
-      0x7f030021, 0x7f030022, 0x7f030023, 0x7f030024, 
-      0x7f030025, 0x7f030026, 0x7f030027, 0x7f030028, 
-      0x7f030029, 0x7f03002a, 0x7f03002b, 0x7f03002c, 
-      0x7f03002d, 0x7f03002e, 0x7f03002f, 0x7f030030, 
-      0x7f030031, 0x7f030032, 0x7f030033, 0x7f030034, 
-      0x7f030035, 0x7f030036, 0x7f030037, 0x7f030038, 
-      0x7f030039, 0x7f03003a, 0x7f03003b, 0x7f03003c, 
-      0x7f03003d, 0x7f03003e, 0x7f03003f, 0x7f030041, 
-      0x7f030042, 0x7f030043, 0x7f030044, 0x7f030045, 
-      0x7f030046, 0x7f030047, 0x7f030048, 0x7f03004b
+      0x01010140, 0x7f03002d, 0x7f03002e, 0x7f030038, 
+      0x7f030049, 0x7f03004a, 0x7f030071, 0x7f030072, 
+      0x7f030073, 0x7f030074, 0x7f030075, 0x7f030076, 
+      0x7f030077, 0x7f030078, 0x7f030079, 0x7f03007a, 
+      0x7f03007b, 0x7f03007c, 0x7f03007d, 0x7f03007e, 
+      0x7f03007f, 0x7f030080, 0x7f030081, 0x7f030082, 
+      0x7f030083, 0x7f030084, 0x7f030085, 0x7f030086, 
+      0x7f030087, 0x7f030088, 0x7f030089, 0x7f03008a, 
+      0x7f03008b, 0x7f03008c, 0x7f03008d, 0x7f03008e, 
+      0x7f03008f, 0x7f030090, 0x7f030091, 0x7f030092, 
+      0x7f030093, 0x7f030094, 0x7f030095, 0x7f030096, 
+      0x7f030097, 0x7f030098, 0x7f030099, 0x7f03009a, 
+      0x7f03009b, 0x7f03009c, 0x7f03009d, 0x7f03009e, 
+      0x7f03009f, 0x7f0300a0, 0x7f0300a1, 0x7f0300a2
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#orientation}
@@ -1342,17 +3906,17 @@ public final class R {
      */
     public static final int ConstraintLayout_Layout_android_minHeight=4;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#barrierAllowsGoneWidgets}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#barrierAllowsGoneWidgets}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:barrierAllowsGoneWidgets
+     * @attr name com.megvii.livenessproject:barrierAllowsGoneWidgets
      */
     public static final int ConstraintLayout_Layout_barrierAllowsGoneWidgets=5;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#barrierDirection}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#barrierDirection}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -1369,21 +3933,21 @@ public final class R {
      * <tr><td>top</td><td>2</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:barrierDirection
+     * @attr name com.megvii.livenessproject:barrierDirection
      */
     public static final int ConstraintLayout_Layout_barrierDirection=6;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#chainUseRtl}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#chainUseRtl}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:chainUseRtl
+     * @attr name com.megvii.livenessproject:chainUseRtl
      */
     public static final int ConstraintLayout_Layout_chainUseRtl=7;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#constraintSet}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#constraintSet}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1391,50 +3955,50 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:constraintSet
+     * @attr name com.megvii.livenessproject:constraintSet
      */
     public static final int ConstraintLayout_Layout_constraintSet=8;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#constraint_referenced_ids}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#constraint_referenced_ids}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:constraint_referenced_ids
+     * @attr name com.megvii.livenessproject:constraint_referenced_ids
      */
     public static final int ConstraintLayout_Layout_constraint_referenced_ids=9;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constrainedHeight}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constrainedHeight}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constrainedHeight
+     * @attr name com.megvii.livenessproject:layout_constrainedHeight
      */
     public static final int ConstraintLayout_Layout_layout_constrainedHeight=10;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constrainedWidth}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constrainedWidth}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constrainedWidth
+     * @attr name com.megvii.livenessproject:layout_constrainedWidth
      */
     public static final int ConstraintLayout_Layout_layout_constrainedWidth=11;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintBaseline_creator}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintBaseline_creator}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintBaseline_creator
+     * @attr name com.megvii.livenessproject:layout_constraintBaseline_creator
      */
     public static final int ConstraintLayout_Layout_layout_constraintBaseline_creator=12;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintBaseline_toBaselineOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintBaseline_toBaselineOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1450,20 +4014,20 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintBaseline_toBaselineOf
+     * @attr name com.megvii.livenessproject:layout_constraintBaseline_toBaselineOf
      */
     public static final int ConstraintLayout_Layout_layout_constraintBaseline_toBaselineOf=13;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintBottom_creator}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintBottom_creator}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintBottom_creator
+     * @attr name com.megvii.livenessproject:layout_constraintBottom_creator
      */
     public static final int ConstraintLayout_Layout_layout_constraintBottom_creator=14;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintBottom_toBottomOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintBottom_toBottomOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1479,11 +4043,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintBottom_toBottomOf
+     * @attr name com.megvii.livenessproject:layout_constraintBottom_toBottomOf
      */
     public static final int ConstraintLayout_Layout_layout_constraintBottom_toBottomOf=15;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintBottom_toTopOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintBottom_toTopOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1499,11 +4063,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintBottom_toTopOf
+     * @attr name com.megvii.livenessproject:layout_constraintBottom_toTopOf
      */
     public static final int ConstraintLayout_Layout_layout_constraintBottom_toTopOf=16;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintCircle}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintCircle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1511,20 +4075,20 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintCircle
+     * @attr name com.megvii.livenessproject:layout_constraintCircle
      */
     public static final int ConstraintLayout_Layout_layout_constraintCircle=17;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintCircleAngle}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintCircleAngle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintCircleAngle
+     * @attr name com.megvii.livenessproject:layout_constraintCircleAngle
      */
     public static final int ConstraintLayout_Layout_layout_constraintCircleAngle=18;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintCircleRadius}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintCircleRadius}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1533,21 +4097,21 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintCircleRadius
+     * @attr name com.megvii.livenessproject:layout_constraintCircleRadius
      */
     public static final int ConstraintLayout_Layout_layout_constraintCircleRadius=19;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintDimensionRatio}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintDimensionRatio}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintDimensionRatio
+     * @attr name com.megvii.livenessproject:layout_constraintDimensionRatio
      */
     public static final int ConstraintLayout_Layout_layout_constraintDimensionRatio=20;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintEnd_toEndOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintEnd_toEndOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1563,11 +4127,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintEnd_toEndOf
+     * @attr name com.megvii.livenessproject:layout_constraintEnd_toEndOf
      */
     public static final int ConstraintLayout_Layout_layout_constraintEnd_toEndOf=21;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintEnd_toStartOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintEnd_toStartOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1583,11 +4147,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintEnd_toStartOf
+     * @attr name com.megvii.livenessproject:layout_constraintEnd_toStartOf
      */
     public static final int ConstraintLayout_Layout_layout_constraintEnd_toStartOf=22;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintGuide_begin}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintGuide_begin}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1596,11 +4160,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintGuide_begin
+     * @attr name com.megvii.livenessproject:layout_constraintGuide_begin
      */
     public static final int ConstraintLayout_Layout_layout_constraintGuide_begin=23;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintGuide_end}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintGuide_end}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1609,20 +4173,20 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintGuide_end
+     * @attr name com.megvii.livenessproject:layout_constraintGuide_end
      */
     public static final int ConstraintLayout_Layout_layout_constraintGuide_end=24;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintGuide_percent}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintGuide_percent}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintGuide_percent
+     * @attr name com.megvii.livenessproject:layout_constraintGuide_percent
      */
     public static final int ConstraintLayout_Layout_layout_constraintGuide_percent=25;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintHeight_default}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintHeight_default}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -1636,11 +4200,11 @@ public final class R {
      * <tr><td>wrap</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintHeight_default
+     * @attr name com.megvii.livenessproject:layout_constraintHeight_default
      */
     public static final int ConstraintLayout_Layout_layout_constraintHeight_default=26;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintHeight_max}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintHeight_max}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1657,11 +4221,11 @@ public final class R {
      * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintHeight_max
+     * @attr name com.megvii.livenessproject:layout_constraintHeight_max
      */
     public static final int ConstraintLayout_Layout_layout_constraintHeight_max=27;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintHeight_min}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintHeight_min}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1678,29 +4242,29 @@ public final class R {
      * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintHeight_min
+     * @attr name com.megvii.livenessproject:layout_constraintHeight_min
      */
     public static final int ConstraintLayout_Layout_layout_constraintHeight_min=28;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintHeight_percent}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintHeight_percent}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintHeight_percent
+     * @attr name com.megvii.livenessproject:layout_constraintHeight_percent
      */
     public static final int ConstraintLayout_Layout_layout_constraintHeight_percent=29;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintHorizontal_bias}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintHorizontal_bias}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintHorizontal_bias
+     * @attr name com.megvii.livenessproject:layout_constraintHorizontal_bias
      */
     public static final int ConstraintLayout_Layout_layout_constraintHorizontal_bias=30;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintHorizontal_chainStyle}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintHorizontal_chainStyle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -1714,29 +4278,29 @@ public final class R {
      * <tr><td>spread_inside</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintHorizontal_chainStyle
+     * @attr name com.megvii.livenessproject:layout_constraintHorizontal_chainStyle
      */
     public static final int ConstraintLayout_Layout_layout_constraintHorizontal_chainStyle=31;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintHorizontal_weight}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintHorizontal_weight}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintHorizontal_weight
+     * @attr name com.megvii.livenessproject:layout_constraintHorizontal_weight
      */
     public static final int ConstraintLayout_Layout_layout_constraintHorizontal_weight=32;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintLeft_creator}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintLeft_creator}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintLeft_creator
+     * @attr name com.megvii.livenessproject:layout_constraintLeft_creator
      */
     public static final int ConstraintLayout_Layout_layout_constraintLeft_creator=33;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintLeft_toLeftOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintLeft_toLeftOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1752,11 +4316,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintLeft_toLeftOf
+     * @attr name com.megvii.livenessproject:layout_constraintLeft_toLeftOf
      */
     public static final int ConstraintLayout_Layout_layout_constraintLeft_toLeftOf=34;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintLeft_toRightOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintLeft_toRightOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1772,20 +4336,20 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintLeft_toRightOf
+     * @attr name com.megvii.livenessproject:layout_constraintLeft_toRightOf
      */
     public static final int ConstraintLayout_Layout_layout_constraintLeft_toRightOf=35;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintRight_creator}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintRight_creator}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintRight_creator
+     * @attr name com.megvii.livenessproject:layout_constraintRight_creator
      */
     public static final int ConstraintLayout_Layout_layout_constraintRight_creator=36;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintRight_toLeftOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintRight_toLeftOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1801,11 +4365,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintRight_toLeftOf
+     * @attr name com.megvii.livenessproject:layout_constraintRight_toLeftOf
      */
     public static final int ConstraintLayout_Layout_layout_constraintRight_toLeftOf=37;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintRight_toRightOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintRight_toRightOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1821,11 +4385,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintRight_toRightOf
+     * @attr name com.megvii.livenessproject:layout_constraintRight_toRightOf
      */
     public static final int ConstraintLayout_Layout_layout_constraintRight_toRightOf=38;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintStart_toEndOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintStart_toEndOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1841,11 +4405,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintStart_toEndOf
+     * @attr name com.megvii.livenessproject:layout_constraintStart_toEndOf
      */
     public static final int ConstraintLayout_Layout_layout_constraintStart_toEndOf=39;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintStart_toStartOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintStart_toStartOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1861,20 +4425,20 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintStart_toStartOf
+     * @attr name com.megvii.livenessproject:layout_constraintStart_toStartOf
      */
     public static final int ConstraintLayout_Layout_layout_constraintStart_toStartOf=40;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintTop_creator}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintTop_creator}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintTop_creator
+     * @attr name com.megvii.livenessproject:layout_constraintTop_creator
      */
     public static final int ConstraintLayout_Layout_layout_constraintTop_creator=41;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintTop_toBottomOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintTop_toBottomOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1890,11 +4454,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintTop_toBottomOf
+     * @attr name com.megvii.livenessproject:layout_constraintTop_toBottomOf
      */
     public static final int ConstraintLayout_Layout_layout_constraintTop_toBottomOf=42;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintTop_toTopOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintTop_toTopOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1910,20 +4474,20 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintTop_toTopOf
+     * @attr name com.megvii.livenessproject:layout_constraintTop_toTopOf
      */
     public static final int ConstraintLayout_Layout_layout_constraintTop_toTopOf=43;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintVertical_bias}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintVertical_bias}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintVertical_bias
+     * @attr name com.megvii.livenessproject:layout_constraintVertical_bias
      */
     public static final int ConstraintLayout_Layout_layout_constraintVertical_bias=44;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintVertical_chainStyle}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintVertical_chainStyle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -1937,20 +4501,20 @@ public final class R {
      * <tr><td>spread_inside</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintVertical_chainStyle
+     * @attr name com.megvii.livenessproject:layout_constraintVertical_chainStyle
      */
     public static final int ConstraintLayout_Layout_layout_constraintVertical_chainStyle=45;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintVertical_weight}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintVertical_weight}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintVertical_weight
+     * @attr name com.megvii.livenessproject:layout_constraintVertical_weight
      */
     public static final int ConstraintLayout_Layout_layout_constraintVertical_weight=46;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintWidth_default}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintWidth_default}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -1964,11 +4528,11 @@ public final class R {
      * <tr><td>wrap</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintWidth_default
+     * @attr name com.megvii.livenessproject:layout_constraintWidth_default
      */
     public static final int ConstraintLayout_Layout_layout_constraintWidth_default=47;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintWidth_max}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintWidth_max}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1985,11 +4549,11 @@ public final class R {
      * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintWidth_max
+     * @attr name com.megvii.livenessproject:layout_constraintWidth_max
      */
     public static final int ConstraintLayout_Layout_layout_constraintWidth_max=48;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintWidth_min}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintWidth_min}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2006,20 +4570,20 @@ public final class R {
      * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintWidth_min
+     * @attr name com.megvii.livenessproject:layout_constraintWidth_min
      */
     public static final int ConstraintLayout_Layout_layout_constraintWidth_min=49;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintWidth_percent}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintWidth_percent}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintWidth_percent
+     * @attr name com.megvii.livenessproject:layout_constraintWidth_percent
      */
     public static final int ConstraintLayout_Layout_layout_constraintWidth_percent=50;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_editor_absoluteX}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_editor_absoluteX}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2028,11 +4592,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_editor_absoluteX
+     * @attr name com.megvii.livenessproject:layout_editor_absoluteX
      */
     public static final int ConstraintLayout_Layout_layout_editor_absoluteX=51;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_editor_absoluteY}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_editor_absoluteY}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2041,11 +4605,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_editor_absoluteY
+     * @attr name com.megvii.livenessproject:layout_editor_absoluteY
      */
     public static final int ConstraintLayout_Layout_layout_editor_absoluteY=52;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_goneMarginBottom}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_goneMarginBottom}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2054,11 +4618,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_goneMarginBottom
+     * @attr name com.megvii.livenessproject:layout_goneMarginBottom
      */
     public static final int ConstraintLayout_Layout_layout_goneMarginBottom=53;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_goneMarginEnd}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_goneMarginEnd}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2067,11 +4631,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_goneMarginEnd
+     * @attr name com.megvii.livenessproject:layout_goneMarginEnd
      */
     public static final int ConstraintLayout_Layout_layout_goneMarginEnd=54;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_goneMarginLeft}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_goneMarginLeft}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2080,11 +4644,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_goneMarginLeft
+     * @attr name com.megvii.livenessproject:layout_goneMarginLeft
      */
     public static final int ConstraintLayout_Layout_layout_goneMarginLeft=55;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_goneMarginRight}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_goneMarginRight}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2093,11 +4657,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_goneMarginRight
+     * @attr name com.megvii.livenessproject:layout_goneMarginRight
      */
     public static final int ConstraintLayout_Layout_layout_goneMarginRight=56;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_goneMarginStart}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_goneMarginStart}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2106,11 +4670,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_goneMarginStart
+     * @attr name com.megvii.livenessproject:layout_goneMarginStart
      */
     public static final int ConstraintLayout_Layout_layout_goneMarginStart=57;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_goneMarginTop}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_goneMarginTop}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2119,11 +4683,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_goneMarginTop
+     * @attr name com.megvii.livenessproject:layout_goneMarginTop
      */
     public static final int ConstraintLayout_Layout_layout_goneMarginTop=58;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_optimizationLevel}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_optimizationLevel}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -2141,7 +4705,7 @@ public final class R {
      * <tr><td>standard</td><td>7</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_optimizationLevel
+     * @attr name com.megvii.livenessproject:layout_optimizationLevel
      */
     public static final int ConstraintLayout_Layout_layout_optimizationLevel=59;
     /**
@@ -2151,17 +4715,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ConstraintLayout_placeholder_content com.certissecurity.certissecure_com.megvii:content}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_placeholder_emptyVisibility com.certissecurity.certissecure_com.megvii:emptyVisibility}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_placeholder_content com.megvii.livenessproject:content}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_placeholder_emptyVisibility com.megvii.livenessproject:emptyVisibility}</code></td><td></td></tr>
      * </table>
      * @see #ConstraintLayout_placeholder_content
      * @see #ConstraintLayout_placeholder_emptyVisibility
      */
     public static final int[] ConstraintLayout_placeholder={
-      0x7f030006, 0x7f030008
+      0x7f03004b, 0x7f030062
     };
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#content}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#content}
      * attribute's value can be found in the {@link #ConstraintLayout_placeholder} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -2169,11 +4733,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:content
+     * @attr name com.megvii.livenessproject:content
      */
     public static final int ConstraintLayout_placeholder_content=0;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#emptyVisibility}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#emptyVisibility}
      * attribute's value can be found in the {@link #ConstraintLayout_placeholder} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -2186,7 +4750,7 @@ public final class R {
      * <tr><td>invisible</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:emptyVisibility
+     * @attr name com.megvii.livenessproject:emptyVisibility
      */
     public static final int ConstraintLayout_placeholder_emptyVisibility=1;
     /**
@@ -2223,59 +4787,59 @@ public final class R {
      * <tr><td><code>{@link #ConstraintSet_android_layout_marginEnd android:layout_marginEnd}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_android_translationZ android:translationZ}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_android_elevation android:elevation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_barrierAllowsGoneWidgets com.certissecurity.certissecure_com.megvii:barrierAllowsGoneWidgets}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_barrierDirection com.certissecurity.certissecure_com.megvii:barrierDirection}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_chainUseRtl com.certissecurity.certissecure_com.megvii:chainUseRtl}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_constraint_referenced_ids com.certissecurity.certissecure_com.megvii:constraint_referenced_ids}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constrainedHeight com.certissecurity.certissecure_com.megvii:layout_constrainedHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constrainedWidth com.certissecurity.certissecure_com.megvii:layout_constrainedWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintBaseline_creator com.certissecurity.certissecure_com.megvii:layout_constraintBaseline_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintBaseline_toBaselineOf com.certissecurity.certissecure_com.megvii:layout_constraintBaseline_toBaselineOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintBottom_creator com.certissecurity.certissecure_com.megvii:layout_constraintBottom_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintBottom_toBottomOf com.certissecurity.certissecure_com.megvii:layout_constraintBottom_toBottomOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintBottom_toTopOf com.certissecurity.certissecure_com.megvii:layout_constraintBottom_toTopOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintCircle com.certissecurity.certissecure_com.megvii:layout_constraintCircle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintCircleAngle com.certissecurity.certissecure_com.megvii:layout_constraintCircleAngle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintCircleRadius com.certissecurity.certissecure_com.megvii:layout_constraintCircleRadius}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintDimensionRatio com.certissecurity.certissecure_com.megvii:layout_constraintDimensionRatio}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintEnd_toEndOf com.certissecurity.certissecure_com.megvii:layout_constraintEnd_toEndOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintEnd_toStartOf com.certissecurity.certissecure_com.megvii:layout_constraintEnd_toStartOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintGuide_begin com.certissecurity.certissecure_com.megvii:layout_constraintGuide_begin}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintGuide_end com.certissecurity.certissecure_com.megvii:layout_constraintGuide_end}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintGuide_percent com.certissecurity.certissecure_com.megvii:layout_constraintGuide_percent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintHeight_default com.certissecurity.certissecure_com.megvii:layout_constraintHeight_default}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintHeight_max com.certissecurity.certissecure_com.megvii:layout_constraintHeight_max}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintHeight_min com.certissecurity.certissecure_com.megvii:layout_constraintHeight_min}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintHeight_percent com.certissecurity.certissecure_com.megvii:layout_constraintHeight_percent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintHorizontal_bias com.certissecurity.certissecure_com.megvii:layout_constraintHorizontal_bias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintHorizontal_chainStyle com.certissecurity.certissecure_com.megvii:layout_constraintHorizontal_chainStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintHorizontal_weight com.certissecurity.certissecure_com.megvii:layout_constraintHorizontal_weight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintLeft_creator com.certissecurity.certissecure_com.megvii:layout_constraintLeft_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintLeft_toLeftOf com.certissecurity.certissecure_com.megvii:layout_constraintLeft_toLeftOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintLeft_toRightOf com.certissecurity.certissecure_com.megvii:layout_constraintLeft_toRightOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintRight_creator com.certissecurity.certissecure_com.megvii:layout_constraintRight_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintRight_toLeftOf com.certissecurity.certissecure_com.megvii:layout_constraintRight_toLeftOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintRight_toRightOf com.certissecurity.certissecure_com.megvii:layout_constraintRight_toRightOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintStart_toEndOf com.certissecurity.certissecure_com.megvii:layout_constraintStart_toEndOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintStart_toStartOf com.certissecurity.certissecure_com.megvii:layout_constraintStart_toStartOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintTop_creator com.certissecurity.certissecure_com.megvii:layout_constraintTop_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintTop_toBottomOf com.certissecurity.certissecure_com.megvii:layout_constraintTop_toBottomOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintTop_toTopOf com.certissecurity.certissecure_com.megvii:layout_constraintTop_toTopOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintVertical_bias com.certissecurity.certissecure_com.megvii:layout_constraintVertical_bias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintVertical_chainStyle com.certissecurity.certissecure_com.megvii:layout_constraintVertical_chainStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintVertical_weight com.certissecurity.certissecure_com.megvii:layout_constraintVertical_weight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintWidth_default com.certissecurity.certissecure_com.megvii:layout_constraintWidth_default}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintWidth_max com.certissecurity.certissecure_com.megvii:layout_constraintWidth_max}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintWidth_min com.certissecurity.certissecure_com.megvii:layout_constraintWidth_min}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintWidth_percent com.certissecurity.certissecure_com.megvii:layout_constraintWidth_percent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_editor_absoluteX com.certissecurity.certissecure_com.megvii:layout_editor_absoluteX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_editor_absoluteY com.certissecurity.certissecure_com.megvii:layout_editor_absoluteY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_goneMarginBottom com.certissecurity.certissecure_com.megvii:layout_goneMarginBottom}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_goneMarginEnd com.certissecurity.certissecure_com.megvii:layout_goneMarginEnd}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_goneMarginLeft com.certissecurity.certissecure_com.megvii:layout_goneMarginLeft}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_goneMarginRight com.certissecurity.certissecure_com.megvii:layout_goneMarginRight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_goneMarginStart com.certissecurity.certissecure_com.megvii:layout_goneMarginStart}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_goneMarginTop com.certissecurity.certissecure_com.megvii:layout_goneMarginTop}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_barrierAllowsGoneWidgets com.megvii.livenessproject:barrierAllowsGoneWidgets}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_barrierDirection com.megvii.livenessproject:barrierDirection}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_chainUseRtl com.megvii.livenessproject:chainUseRtl}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_constraint_referenced_ids com.megvii.livenessproject:constraint_referenced_ids}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constrainedHeight com.megvii.livenessproject:layout_constrainedHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constrainedWidth com.megvii.livenessproject:layout_constrainedWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintBaseline_creator com.megvii.livenessproject:layout_constraintBaseline_creator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintBaseline_toBaselineOf com.megvii.livenessproject:layout_constraintBaseline_toBaselineOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintBottom_creator com.megvii.livenessproject:layout_constraintBottom_creator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintBottom_toBottomOf com.megvii.livenessproject:layout_constraintBottom_toBottomOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintBottom_toTopOf com.megvii.livenessproject:layout_constraintBottom_toTopOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintCircle com.megvii.livenessproject:layout_constraintCircle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintCircleAngle com.megvii.livenessproject:layout_constraintCircleAngle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintCircleRadius com.megvii.livenessproject:layout_constraintCircleRadius}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintDimensionRatio com.megvii.livenessproject:layout_constraintDimensionRatio}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintEnd_toEndOf com.megvii.livenessproject:layout_constraintEnd_toEndOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintEnd_toStartOf com.megvii.livenessproject:layout_constraintEnd_toStartOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintGuide_begin com.megvii.livenessproject:layout_constraintGuide_begin}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintGuide_end com.megvii.livenessproject:layout_constraintGuide_end}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintGuide_percent com.megvii.livenessproject:layout_constraintGuide_percent}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintHeight_default com.megvii.livenessproject:layout_constraintHeight_default}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintHeight_max com.megvii.livenessproject:layout_constraintHeight_max}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintHeight_min com.megvii.livenessproject:layout_constraintHeight_min}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintHeight_percent com.megvii.livenessproject:layout_constraintHeight_percent}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintHorizontal_bias com.megvii.livenessproject:layout_constraintHorizontal_bias}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintHorizontal_chainStyle com.megvii.livenessproject:layout_constraintHorizontal_chainStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintHorizontal_weight com.megvii.livenessproject:layout_constraintHorizontal_weight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintLeft_creator com.megvii.livenessproject:layout_constraintLeft_creator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintLeft_toLeftOf com.megvii.livenessproject:layout_constraintLeft_toLeftOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintLeft_toRightOf com.megvii.livenessproject:layout_constraintLeft_toRightOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintRight_creator com.megvii.livenessproject:layout_constraintRight_creator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintRight_toLeftOf com.megvii.livenessproject:layout_constraintRight_toLeftOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintRight_toRightOf com.megvii.livenessproject:layout_constraintRight_toRightOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintStart_toEndOf com.megvii.livenessproject:layout_constraintStart_toEndOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintStart_toStartOf com.megvii.livenessproject:layout_constraintStart_toStartOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintTop_creator com.megvii.livenessproject:layout_constraintTop_creator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintTop_toBottomOf com.megvii.livenessproject:layout_constraintTop_toBottomOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintTop_toTopOf com.megvii.livenessproject:layout_constraintTop_toTopOf}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintVertical_bias com.megvii.livenessproject:layout_constraintVertical_bias}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintVertical_chainStyle com.megvii.livenessproject:layout_constraintVertical_chainStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintVertical_weight com.megvii.livenessproject:layout_constraintVertical_weight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintWidth_default com.megvii.livenessproject:layout_constraintWidth_default}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintWidth_max com.megvii.livenessproject:layout_constraintWidth_max}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintWidth_min com.megvii.livenessproject:layout_constraintWidth_min}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_constraintWidth_percent com.megvii.livenessproject:layout_constraintWidth_percent}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_editor_absoluteX com.megvii.livenessproject:layout_editor_absoluteX}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_editor_absoluteY com.megvii.livenessproject:layout_editor_absoluteY}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_goneMarginBottom com.megvii.livenessproject:layout_goneMarginBottom}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_goneMarginEnd com.megvii.livenessproject:layout_goneMarginEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_goneMarginLeft com.megvii.livenessproject:layout_goneMarginLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_goneMarginRight com.megvii.livenessproject:layout_goneMarginRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_goneMarginStart com.megvii.livenessproject:layout_goneMarginStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintSet_layout_goneMarginTop com.megvii.livenessproject:layout_goneMarginTop}</code></td><td></td></tr>
      * </table>
      * @see #ConstraintSet_android_orientation
      * @see #ConstraintSet_android_id
@@ -2365,20 +4929,20 @@ public final class R {
       0x01010140, 0x0101031f, 0x01010320, 0x01010321, 
       0x01010322, 0x01010323, 0x01010324, 0x01010325, 
       0x01010326, 0x01010327, 0x01010328, 0x010103b5, 
-      0x010103b6, 0x010103fa, 0x01010440, 0x7f030001, 
-      0x7f030002, 0x7f030003, 0x7f030005, 0x7f030017, 
-      0x7f030018, 0x7f030019, 0x7f03001a, 0x7f03001b, 
-      0x7f03001c, 0x7f03001d, 0x7f03001e, 0x7f03001f, 
-      0x7f030020, 0x7f030021, 0x7f030022, 0x7f030023, 
-      0x7f030024, 0x7f030025, 0x7f030026, 0x7f030027, 
-      0x7f030028, 0x7f030029, 0x7f03002a, 0x7f03002b, 
-      0x7f03002c, 0x7f03002d, 0x7f03002e, 0x7f03002f, 
-      0x7f030030, 0x7f030031, 0x7f030032, 0x7f030033, 
-      0x7f030034, 0x7f030035, 0x7f030036, 0x7f030037, 
-      0x7f030038, 0x7f030039, 0x7f03003a, 0x7f03003b, 
-      0x7f03003c, 0x7f03003d, 0x7f03003e, 0x7f03003f, 
-      0x7f030041, 0x7f030042, 0x7f030043, 0x7f030044, 
-      0x7f030045, 0x7f030046, 0x7f030047, 0x7f030048
+      0x010103b6, 0x010103fa, 0x01010440, 0x7f03002d, 
+      0x7f03002e, 0x7f030038, 0x7f03004a, 0x7f030071, 
+      0x7f030072, 0x7f030073, 0x7f030074, 0x7f030075, 
+      0x7f030076, 0x7f030077, 0x7f030078, 0x7f030079, 
+      0x7f03007a, 0x7f03007b, 0x7f03007c, 0x7f03007d, 
+      0x7f03007e, 0x7f03007f, 0x7f030080, 0x7f030081, 
+      0x7f030082, 0x7f030083, 0x7f030084, 0x7f030085, 
+      0x7f030086, 0x7f030087, 0x7f030088, 0x7f030089, 
+      0x7f03008a, 0x7f03008b, 0x7f03008c, 0x7f03008d, 
+      0x7f03008e, 0x7f03008f, 0x7f030090, 0x7f030091, 
+      0x7f030092, 0x7f030093, 0x7f030094, 0x7f030095, 
+      0x7f030096, 0x7f030097, 0x7f030098, 0x7f030099, 
+      0x7f03009a, 0x7f03009b, 0x7f03009c, 0x7f03009d, 
+      0x7f03009e, 0x7f03009f, 0x7f0300a0, 0x7f0300a1
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#orientation}
@@ -2442,9 +5006,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
      * <tr><td>fill_parent</td><td>ffffffff</td><td></td></tr>
      * <tr><td>match_parent</td><td>ffffffff</td><td></td></tr>
-     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
      * </table>
      *
      * @attr name android:layout_width
@@ -2465,9 +5029,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
      * <tr><td>fill_parent</td><td>ffffffff</td><td></td></tr>
      * <tr><td>match_parent</td><td>ffffffff</td><td></td></tr>
-     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
      * </table>
      *
      * @attr name android:layout_height
@@ -2736,17 +5300,17 @@ public final class R {
      */
     public static final int ConstraintSet_android_elevation=26;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#barrierAllowsGoneWidgets}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#barrierAllowsGoneWidgets}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:barrierAllowsGoneWidgets
+     * @attr name com.megvii.livenessproject:barrierAllowsGoneWidgets
      */
     public static final int ConstraintSet_barrierAllowsGoneWidgets=27;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#barrierDirection}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#barrierDirection}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -2763,60 +5327,60 @@ public final class R {
      * <tr><td>top</td><td>2</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:barrierDirection
+     * @attr name com.megvii.livenessproject:barrierDirection
      */
     public static final int ConstraintSet_barrierDirection=28;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#chainUseRtl}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#chainUseRtl}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:chainUseRtl
+     * @attr name com.megvii.livenessproject:chainUseRtl
      */
     public static final int ConstraintSet_chainUseRtl=29;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#constraint_referenced_ids}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#constraint_referenced_ids}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:constraint_referenced_ids
+     * @attr name com.megvii.livenessproject:constraint_referenced_ids
      */
     public static final int ConstraintSet_constraint_referenced_ids=30;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constrainedHeight}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constrainedHeight}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constrainedHeight
+     * @attr name com.megvii.livenessproject:layout_constrainedHeight
      */
     public static final int ConstraintSet_layout_constrainedHeight=31;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constrainedWidth}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constrainedWidth}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constrainedWidth
+     * @attr name com.megvii.livenessproject:layout_constrainedWidth
      */
     public static final int ConstraintSet_layout_constrainedWidth=32;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintBaseline_creator}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintBaseline_creator}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintBaseline_creator
+     * @attr name com.megvii.livenessproject:layout_constraintBaseline_creator
      */
     public static final int ConstraintSet_layout_constraintBaseline_creator=33;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintBaseline_toBaselineOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintBaseline_toBaselineOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -2832,20 +5396,20 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintBaseline_toBaselineOf
+     * @attr name com.megvii.livenessproject:layout_constraintBaseline_toBaselineOf
      */
     public static final int ConstraintSet_layout_constraintBaseline_toBaselineOf=34;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintBottom_creator}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintBottom_creator}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintBottom_creator
+     * @attr name com.megvii.livenessproject:layout_constraintBottom_creator
      */
     public static final int ConstraintSet_layout_constraintBottom_creator=35;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintBottom_toBottomOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintBottom_toBottomOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -2861,11 +5425,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintBottom_toBottomOf
+     * @attr name com.megvii.livenessproject:layout_constraintBottom_toBottomOf
      */
     public static final int ConstraintSet_layout_constraintBottom_toBottomOf=36;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintBottom_toTopOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintBottom_toTopOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -2881,11 +5445,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintBottom_toTopOf
+     * @attr name com.megvii.livenessproject:layout_constraintBottom_toTopOf
      */
     public static final int ConstraintSet_layout_constraintBottom_toTopOf=37;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintCircle}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintCircle}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -2893,20 +5457,20 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintCircle
+     * @attr name com.megvii.livenessproject:layout_constraintCircle
      */
     public static final int ConstraintSet_layout_constraintCircle=38;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintCircleAngle}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintCircleAngle}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintCircleAngle
+     * @attr name com.megvii.livenessproject:layout_constraintCircleAngle
      */
     public static final int ConstraintSet_layout_constraintCircleAngle=39;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintCircleRadius}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintCircleRadius}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2915,21 +5479,21 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintCircleRadius
+     * @attr name com.megvii.livenessproject:layout_constraintCircleRadius
      */
     public static final int ConstraintSet_layout_constraintCircleRadius=40;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintDimensionRatio}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintDimensionRatio}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintDimensionRatio
+     * @attr name com.megvii.livenessproject:layout_constraintDimensionRatio
      */
     public static final int ConstraintSet_layout_constraintDimensionRatio=41;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintEnd_toEndOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintEnd_toEndOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -2945,11 +5509,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintEnd_toEndOf
+     * @attr name com.megvii.livenessproject:layout_constraintEnd_toEndOf
      */
     public static final int ConstraintSet_layout_constraintEnd_toEndOf=42;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintEnd_toStartOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintEnd_toStartOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -2965,11 +5529,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintEnd_toStartOf
+     * @attr name com.megvii.livenessproject:layout_constraintEnd_toStartOf
      */
     public static final int ConstraintSet_layout_constraintEnd_toStartOf=43;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintGuide_begin}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintGuide_begin}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2978,11 +5542,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintGuide_begin
+     * @attr name com.megvii.livenessproject:layout_constraintGuide_begin
      */
     public static final int ConstraintSet_layout_constraintGuide_begin=44;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintGuide_end}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintGuide_end}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2991,20 +5555,20 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintGuide_end
+     * @attr name com.megvii.livenessproject:layout_constraintGuide_end
      */
     public static final int ConstraintSet_layout_constraintGuide_end=45;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintGuide_percent}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintGuide_percent}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintGuide_percent
+     * @attr name com.megvii.livenessproject:layout_constraintGuide_percent
      */
     public static final int ConstraintSet_layout_constraintGuide_percent=46;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintHeight_default}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintHeight_default}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -3018,11 +5582,11 @@ public final class R {
      * <tr><td>wrap</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintHeight_default
+     * @attr name com.megvii.livenessproject:layout_constraintHeight_default
      */
     public static final int ConstraintSet_layout_constraintHeight_default=47;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintHeight_max}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintHeight_max}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3039,11 +5603,11 @@ public final class R {
      * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintHeight_max
+     * @attr name com.megvii.livenessproject:layout_constraintHeight_max
      */
     public static final int ConstraintSet_layout_constraintHeight_max=48;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintHeight_min}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintHeight_min}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3060,29 +5624,29 @@ public final class R {
      * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintHeight_min
+     * @attr name com.megvii.livenessproject:layout_constraintHeight_min
      */
     public static final int ConstraintSet_layout_constraintHeight_min=49;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintHeight_percent}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintHeight_percent}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintHeight_percent
+     * @attr name com.megvii.livenessproject:layout_constraintHeight_percent
      */
     public static final int ConstraintSet_layout_constraintHeight_percent=50;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintHorizontal_bias}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintHorizontal_bias}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintHorizontal_bias
+     * @attr name com.megvii.livenessproject:layout_constraintHorizontal_bias
      */
     public static final int ConstraintSet_layout_constraintHorizontal_bias=51;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintHorizontal_chainStyle}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintHorizontal_chainStyle}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -3096,29 +5660,29 @@ public final class R {
      * <tr><td>spread_inside</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintHorizontal_chainStyle
+     * @attr name com.megvii.livenessproject:layout_constraintHorizontal_chainStyle
      */
     public static final int ConstraintSet_layout_constraintHorizontal_chainStyle=52;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintHorizontal_weight}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintHorizontal_weight}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintHorizontal_weight
+     * @attr name com.megvii.livenessproject:layout_constraintHorizontal_weight
      */
     public static final int ConstraintSet_layout_constraintHorizontal_weight=53;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintLeft_creator}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintLeft_creator}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintLeft_creator
+     * @attr name com.megvii.livenessproject:layout_constraintLeft_creator
      */
     public static final int ConstraintSet_layout_constraintLeft_creator=54;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintLeft_toLeftOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintLeft_toLeftOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3134,11 +5698,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintLeft_toLeftOf
+     * @attr name com.megvii.livenessproject:layout_constraintLeft_toLeftOf
      */
     public static final int ConstraintSet_layout_constraintLeft_toLeftOf=55;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintLeft_toRightOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintLeft_toRightOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3154,20 +5718,20 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintLeft_toRightOf
+     * @attr name com.megvii.livenessproject:layout_constraintLeft_toRightOf
      */
     public static final int ConstraintSet_layout_constraintLeft_toRightOf=56;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintRight_creator}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintRight_creator}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintRight_creator
+     * @attr name com.megvii.livenessproject:layout_constraintRight_creator
      */
     public static final int ConstraintSet_layout_constraintRight_creator=57;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintRight_toLeftOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintRight_toLeftOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3183,11 +5747,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintRight_toLeftOf
+     * @attr name com.megvii.livenessproject:layout_constraintRight_toLeftOf
      */
     public static final int ConstraintSet_layout_constraintRight_toLeftOf=58;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintRight_toRightOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintRight_toRightOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3203,11 +5767,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintRight_toRightOf
+     * @attr name com.megvii.livenessproject:layout_constraintRight_toRightOf
      */
     public static final int ConstraintSet_layout_constraintRight_toRightOf=59;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintStart_toEndOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintStart_toEndOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3223,11 +5787,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintStart_toEndOf
+     * @attr name com.megvii.livenessproject:layout_constraintStart_toEndOf
      */
     public static final int ConstraintSet_layout_constraintStart_toEndOf=60;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintStart_toStartOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintStart_toStartOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3243,20 +5807,20 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintStart_toStartOf
+     * @attr name com.megvii.livenessproject:layout_constraintStart_toStartOf
      */
     public static final int ConstraintSet_layout_constraintStart_toStartOf=61;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintTop_creator}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintTop_creator}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintTop_creator
+     * @attr name com.megvii.livenessproject:layout_constraintTop_creator
      */
     public static final int ConstraintSet_layout_constraintTop_creator=62;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintTop_toBottomOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintTop_toBottomOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3272,11 +5836,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintTop_toBottomOf
+     * @attr name com.megvii.livenessproject:layout_constraintTop_toBottomOf
      */
     public static final int ConstraintSet_layout_constraintTop_toBottomOf=63;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintTop_toTopOf}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintTop_toTopOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -3292,20 +5856,20 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintTop_toTopOf
+     * @attr name com.megvii.livenessproject:layout_constraintTop_toTopOf
      */
     public static final int ConstraintSet_layout_constraintTop_toTopOf=64;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintVertical_bias}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintVertical_bias}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintVertical_bias
+     * @attr name com.megvii.livenessproject:layout_constraintVertical_bias
      */
     public static final int ConstraintSet_layout_constraintVertical_bias=65;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintVertical_chainStyle}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintVertical_chainStyle}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -3319,20 +5883,20 @@ public final class R {
      * <tr><td>spread_inside</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintVertical_chainStyle
+     * @attr name com.megvii.livenessproject:layout_constraintVertical_chainStyle
      */
     public static final int ConstraintSet_layout_constraintVertical_chainStyle=66;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintVertical_weight}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintVertical_weight}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintVertical_weight
+     * @attr name com.megvii.livenessproject:layout_constraintVertical_weight
      */
     public static final int ConstraintSet_layout_constraintVertical_weight=67;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintWidth_default}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintWidth_default}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -3346,11 +5910,11 @@ public final class R {
      * <tr><td>wrap</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintWidth_default
+     * @attr name com.megvii.livenessproject:layout_constraintWidth_default
      */
     public static final int ConstraintSet_layout_constraintWidth_default=68;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintWidth_max}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintWidth_max}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3367,11 +5931,11 @@ public final class R {
      * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintWidth_max
+     * @attr name com.megvii.livenessproject:layout_constraintWidth_max
      */
     public static final int ConstraintSet_layout_constraintWidth_max=69;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintWidth_min}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintWidth_min}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3388,20 +5952,20 @@ public final class R {
      * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
      * </table>
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintWidth_min
+     * @attr name com.megvii.livenessproject:layout_constraintWidth_min
      */
     public static final int ConstraintSet_layout_constraintWidth_min=70;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_constraintWidth_percent}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_constraintWidth_percent}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_constraintWidth_percent
+     * @attr name com.megvii.livenessproject:layout_constraintWidth_percent
      */
     public static final int ConstraintSet_layout_constraintWidth_percent=71;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_editor_absoluteX}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_editor_absoluteX}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3410,11 +5974,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_editor_absoluteX
+     * @attr name com.megvii.livenessproject:layout_editor_absoluteX
      */
     public static final int ConstraintSet_layout_editor_absoluteX=72;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_editor_absoluteY}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_editor_absoluteY}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3423,11 +5987,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_editor_absoluteY
+     * @attr name com.megvii.livenessproject:layout_editor_absoluteY
      */
     public static final int ConstraintSet_layout_editor_absoluteY=73;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_goneMarginBottom}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_goneMarginBottom}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3436,11 +6000,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_goneMarginBottom
+     * @attr name com.megvii.livenessproject:layout_goneMarginBottom
      */
     public static final int ConstraintSet_layout_goneMarginBottom=74;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_goneMarginEnd}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_goneMarginEnd}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3449,11 +6013,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_goneMarginEnd
+     * @attr name com.megvii.livenessproject:layout_goneMarginEnd
      */
     public static final int ConstraintSet_layout_goneMarginEnd=75;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_goneMarginLeft}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_goneMarginLeft}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3462,11 +6026,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_goneMarginLeft
+     * @attr name com.megvii.livenessproject:layout_goneMarginLeft
      */
     public static final int ConstraintSet_layout_goneMarginLeft=76;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_goneMarginRight}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_goneMarginRight}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3475,11 +6039,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_goneMarginRight
+     * @attr name com.megvii.livenessproject:layout_goneMarginRight
      */
     public static final int ConstraintSet_layout_goneMarginRight=77;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_goneMarginStart}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_goneMarginStart}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3488,11 +6052,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_goneMarginStart
+     * @attr name com.megvii.livenessproject:layout_goneMarginStart
      */
     public static final int ConstraintSet_layout_goneMarginStart=78;
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_goneMarginTop}
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout_goneMarginTop}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3501,686 +6065,137 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_goneMarginTop
+     * @attr name com.megvii.livenessproject:layout_goneMarginTop
      */
     public static final int ConstraintSet_layout_goneMarginTop=79;
     /**
-     * Attributes that can be used with a CoordinatorLayout.
+     * Attributes that can be used with a DrawerArrowToggle.
      * <p>Includes the following attributes:</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_keylines com.certissecurity.certissecure_com.megvii:keylines}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_statusBarBackground com.certissecurity.certissecure_com.megvii:statusBarBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_barSize com.megvii.livenessproject:barSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_color com.megvii.livenessproject:color}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.megvii.livenessproject:drawableSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.megvii.livenessproject:gapBetweenBars}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_middleBarArrowSize com.megvii.livenessproject:middleBarArrowSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_spinBars com.megvii.livenessproject:spinBars}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_thickness com.megvii.livenessproject:thickness}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_topBottomBarArrowSize com.megvii.livenessproject:topBottomBarArrowSize}</code></td><td></td></tr>
      * </table>
-     * @see #CoordinatorLayout_keylines
-     * @see #CoordinatorLayout_statusBarBackground
+     * @see #DrawerArrowToggle_barSize
+     * @see #DrawerArrowToggle_color
+     * @see #DrawerArrowToggle_drawableSize
+     * @see #DrawerArrowToggle_gapBetweenBars
+     * @see #DrawerArrowToggle_middleBarArrowSize
+     * @see #DrawerArrowToggle_spinBars
+     * @see #DrawerArrowToggle_thickness
+     * @see #DrawerArrowToggle_topBottomBarArrowSize
      */
-    public static final int[] CoordinatorLayout={
-      0x7f030013, 0x7f03004e
+    public static final int[] DrawerArrowToggle={
+      0x7f03002c, 0x7f03003f, 0x7f03005a, 0x7f030064, 
+      0x7f0300b0, 0x7f0300d2, 0x7f0300eb, 0x7f0300f7
     };
     /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#keylines}
-     * attribute's value can be found in the {@link #CoordinatorLayout} array.
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#barSize}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:keylines
-     */
-    public static final int CoordinatorLayout_keylines=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#statusBarBackground}
-     * attribute's value can be found in the {@link #CoordinatorLayout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:statusBarBackground
-     */
-    public static final int CoordinatorLayout_statusBarBackground=1;
-    /**
-     * Attributes that can be used with a CoordinatorLayout_Layout.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_android_layout_gravity android:layout_gravity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchor com.certissecurity.certissecure_com.megvii:layout_anchor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchorGravity com.certissecurity.certissecure_com.megvii:layout_anchorGravity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_behavior com.certissecurity.certissecure_com.megvii:layout_behavior}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_dodgeInsetEdges com.certissecurity.certissecure_com.megvii:layout_dodgeInsetEdges}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_insetEdge com.certissecurity.certissecure_com.megvii:layout_insetEdge}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_keyline com.certissecurity.certissecure_com.megvii:layout_keyline}</code></td><td></td></tr>
-     * </table>
-     * @see #CoordinatorLayout_Layout_android_layout_gravity
-     * @see #CoordinatorLayout_Layout_layout_anchor
-     * @see #CoordinatorLayout_Layout_layout_anchorGravity
-     * @see #CoordinatorLayout_Layout_layout_behavior
-     * @see #CoordinatorLayout_Layout_layout_dodgeInsetEdges
-     * @see #CoordinatorLayout_Layout_layout_insetEdge
-     * @see #CoordinatorLayout_Layout_layout_keyline
-     */
-    public static final int[] CoordinatorLayout_Layout={
-      0x010100b3, 0x7f030014, 0x7f030015, 0x7f030016, 
-      0x7f030040, 0x7f030049, 0x7f03004a
-    };
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
-     *
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>center</td><td>11</td><td></td></tr>
-     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
-     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
-     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>fill</td><td>77</td><td></td></tr>
-     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
-     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
-     * </table>
-     *
-     * @attr name android:layout_gravity
-     */
-    public static final int CoordinatorLayout_Layout_android_layout_gravity=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_anchor}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_anchor
-     */
-    public static final int CoordinatorLayout_Layout_layout_anchor=1;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_anchorGravity}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
-     *
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>center</td><td>11</td><td></td></tr>
-     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
-     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
-     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>fill</td><td>77</td><td></td></tr>
-     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
-     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_anchorGravity
-     */
-    public static final int CoordinatorLayout_Layout_layout_anchorGravity=2;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_behavior}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_behavior
-     */
-    public static final int CoordinatorLayout_Layout_layout_behavior=3;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_dodgeInsetEdges}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
-     *
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>all</td><td>77</td><td></td></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_dodgeInsetEdges
-     */
-    public static final int CoordinatorLayout_Layout_layout_dodgeInsetEdges=4;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_insetEdge}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td></td></tr>
-     * <tr><td>end</td><td>800005</td><td></td></tr>
-     * <tr><td>left</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>5</td><td></td></tr>
-     * <tr><td>start</td><td>800003</td><td></td></tr>
-     * <tr><td>top</td><td>30</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_insetEdge
-     */
-    public static final int CoordinatorLayout_Layout_layout_insetEdge=5;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#layout_keyline}
-     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:layout_keyline
-     */
-    public static final int CoordinatorLayout_Layout_layout_keyline=6;
-    /**
-     * Attributes that can be used with a FontFamily.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderAuthority com.certissecurity.certissecure_com.megvii:fontProviderAuthority}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderCerts com.certissecurity.certissecure_com.megvii:fontProviderCerts}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy com.certissecurity.certissecure_com.megvii:fontProviderFetchStrategy}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.certissecurity.certissecure_com.megvii:fontProviderFetchTimeout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderPackage com.certissecurity.certissecure_com.megvii:fontProviderPackage}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderQuery com.certissecurity.certissecure_com.megvii:fontProviderQuery}</code></td><td></td></tr>
-     * </table>
-     * @see #FontFamily_fontProviderAuthority
-     * @see #FontFamily_fontProviderCerts
-     * @see #FontFamily_fontProviderFetchStrategy
-     * @see #FontFamily_fontProviderFetchTimeout
-     * @see #FontFamily_fontProviderPackage
-     * @see #FontFamily_fontProviderQuery
-     */
-    public static final int[] FontFamily={
-      0x7f03000a, 0x7f03000b, 0x7f03000c, 0x7f03000d, 
-      0x7f03000e, 0x7f03000f
-    };
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#fontProviderAuthority}
-     * attribute's value can be found in the {@link #FontFamily} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:fontProviderAuthority
-     */
-    public static final int FontFamily_fontProviderAuthority=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#fontProviderCerts}
-     * attribute's value can be found in the {@link #FontFamily} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:fontProviderCerts
-     */
-    public static final int FontFamily_fontProviderCerts=1;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#fontProviderFetchStrategy}
-     * attribute's value can be found in the {@link #FontFamily} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>async</td><td>1</td><td></td></tr>
-     * <tr><td>blocking</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:fontProviderFetchStrategy
-     */
-    public static final int FontFamily_fontProviderFetchStrategy=2;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#fontProviderFetchTimeout}
-     * attribute's value can be found in the {@link #FontFamily} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>forever</td><td>ffffffff</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:fontProviderFetchTimeout
-     */
-    public static final int FontFamily_fontProviderFetchTimeout=3;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#fontProviderPackage}
-     * attribute's value can be found in the {@link #FontFamily} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:fontProviderPackage
-     */
-    public static final int FontFamily_fontProviderPackage=4;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#fontProviderQuery}
-     * attribute's value can be found in the {@link #FontFamily} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:fontProviderQuery
-     */
-    public static final int FontFamily_fontProviderQuery=5;
-    /**
-     * Attributes that can be used with a FontFamilyFont.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FontFamilyFont_android_font android:font}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_android_fontWeight android:fontWeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_android_fontStyle android:fontStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_android_ttcIndex android:ttcIndex}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_android_fontVariationSettings android:fontVariationSettings}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_font com.certissecurity.certissecure_com.megvii:font}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontStyle com.certissecurity.certissecure_com.megvii:fontStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings com.certissecurity.certissecure_com.megvii:fontVariationSettings}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontWeight com.certissecurity.certissecure_com.megvii:fontWeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_ttcIndex com.certissecurity.certissecure_com.megvii:ttcIndex}</code></td><td></td></tr>
-     * </table>
-     * @see #FontFamilyFont_android_font
-     * @see #FontFamilyFont_android_fontWeight
-     * @see #FontFamilyFont_android_fontStyle
-     * @see #FontFamilyFont_android_ttcIndex
-     * @see #FontFamilyFont_android_fontVariationSettings
-     * @see #FontFamilyFont_font
-     * @see #FontFamilyFont_fontStyle
-     * @see #FontFamilyFont_fontVariationSettings
-     * @see #FontFamilyFont_fontWeight
-     * @see #FontFamilyFont_ttcIndex
-     */
-    public static final int[] FontFamilyFont={
-      0x01010532, 0x01010533, 0x0101053f, 0x0101056f, 
-      0x01010570, 0x7f030009, 0x7f030010, 0x7f030011, 
-      0x7f030012, 0x7f03004f
-    };
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#font}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name android:font
-     */
-    public static final int FontFamilyFont_android_font=0;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#fontWeight}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name android:fontWeight
-     */
-    public static final int FontFamilyFont_android_fontWeight=1;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#fontStyle}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>italic</td><td>1</td><td></td></tr>
-     * <tr><td>normal</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name android:fontStyle
-     */
-    public static final int FontFamilyFont_android_fontStyle=2;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#ttcIndex}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name android:ttcIndex
-     */
-    public static final int FontFamilyFont_android_ttcIndex=3;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#fontVariationSettings}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name android:fontVariationSettings
-     */
-    public static final int FontFamilyFont_android_fontVariationSettings=4;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#font}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:font
-     */
-    public static final int FontFamilyFont_font=5;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#fontStyle}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>italic</td><td>1</td><td></td></tr>
-     * <tr><td>normal</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:fontStyle
-     */
-    public static final int FontFamilyFont_fontStyle=6;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#fontVariationSettings}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:fontVariationSettings
-     */
-    public static final int FontFamilyFont_fontVariationSettings=7;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#fontWeight}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:fontWeight
-     */
-    public static final int FontFamilyFont_fontWeight=8;
-    /**
-     * <p>This symbol is the offset where the {@link com.certissecurity.certissecure_com.megvii.R.attr#ttcIndex}
-     * attribute's value can be found in the {@link #FontFamilyFont} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.certissecurity.certissecure_com.megvii:ttcIndex
-     */
-    public static final int FontFamilyFont_ttcIndex=9;
-    /**
-     * Attributes that can be used with a GradientColor.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #GradientColor_android_startColor android:startColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GradientColor_android_endColor android:endColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GradientColor_android_type android:type}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GradientColor_android_centerX android:centerX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GradientColor_android_centerY android:centerY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GradientColor_android_gradientRadius android:gradientRadius}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GradientColor_android_tileMode android:tileMode}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GradientColor_android_centerColor android:centerColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GradientColor_android_startX android:startX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GradientColor_android_startY android:startY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GradientColor_android_endX android:endX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GradientColor_android_endY android:endY}</code></td><td></td></tr>
-     * </table>
-     * @see #GradientColor_android_startColor
-     * @see #GradientColor_android_endColor
-     * @see #GradientColor_android_type
-     * @see #GradientColor_android_centerX
-     * @see #GradientColor_android_centerY
-     * @see #GradientColor_android_gradientRadius
-     * @see #GradientColor_android_tileMode
-     * @see #GradientColor_android_centerColor
-     * @see #GradientColor_android_startX
-     * @see #GradientColor_android_startY
-     * @see #GradientColor_android_endX
-     * @see #GradientColor_android_endY
-     */
-    public static final int[] GradientColor={
-      0x0101019d, 0x0101019e, 0x010101a1, 0x010101a2, 
-      0x010101a3, 0x010101a4, 0x01010201, 0x0101020b, 
-      0x01010510, 0x01010511, 0x01010512, 0x01010513
-    };
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#startColor}
-     * attribute's value can be found in the {@link #GradientColor} array.
-     *
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     *
-     * @attr name android:startColor
-     */
-    public static final int GradientColor_android_startColor=0;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#endColor}
-     * attribute's value can be found in the {@link #GradientColor} array.
-     *
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     *
-     * @attr name android:endColor
-     */
-    public static final int GradientColor_android_endColor=1;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#type}
-     * attribute's value can be found in the {@link #GradientColor} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>linear</td><td>0</td><td></td></tr>
-     * <tr><td>radial</td><td>1</td><td></td></tr>
-     * <tr><td>sweep</td><td>2</td><td></td></tr>
-     * </table>
-     *
-     * @attr name android:type
-     */
-    public static final int GradientColor_android_type=2;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#centerX}
-     * attribute's value can be found in the {@link #GradientColor} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     * <p>May be a fractional value, which is a floating point number appended with
-     * either % or %p, such as "<code>14.5%</code>".
-     * The % suffix always means a percentage of the base size;
-     * the optional %p suffix provides a size relative to some parent container.
-     *
-     * @attr name android:centerX
-     */
-    public static final int GradientColor_android_centerX=3;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#centerY}
-     * attribute's value can be found in the {@link #GradientColor} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     * <p>May be a fractional value, which is a floating point number appended with
-     * either % or %p, such as "<code>14.5%</code>".
-     * The % suffix always means a percentage of the base size;
-     * the optional %p suffix provides a size relative to some parent container.
-     *
-     * @attr name android:centerY
-     */
-    public static final int GradientColor_android_centerY=4;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#gradientRadius}
-     * attribute's value can be found in the {@link #GradientColor} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
-     * <p>May be a fractional value, which is a floating point number appended with
-     * either % or %p, such as "<code>14.5%</code>".
-     * The % suffix always means a percentage of the base size;
-     * the optional %p suffix provides a size relative to some parent container.
      *
-     * @attr name android:gradientRadius
+     * @attr name com.megvii.livenessproject:barSize
      */
-    public static final int GradientColor_android_gradientRadius=5;
+    public static final int DrawerArrowToggle_barSize=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#tileMode}
-     * attribute's value can be found in the {@link #GradientColor} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>clamp</td><td>0</td><td></td></tr>
-     * <tr><td>disabled</td><td>ffffffff</td><td></td></tr>
-     * <tr><td>mirror</td><td>2</td><td></td></tr>
-     * <tr><td>repeat</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name android:tileMode
-     */
-    public static final int GradientColor_android_tileMode=6;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#centerColor}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#color}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name android:centerColor
+     * @attr name com.megvii.livenessproject:color
      */
-    public static final int GradientColor_android_centerColor=7;
+    public static final int DrawerArrowToggle_color=1;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#startX}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#drawableSize}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
      *
-     * @attr name android:startX
+     * @attr name com.megvii.livenessproject:drawableSize
      */
-    public static final int GradientColor_android_startX=8;
+    public static final int DrawerArrowToggle_drawableSize=2;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#startY}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#gapBetweenBars}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
      *
-     * @attr name android:startY
+     * @attr name com.megvii.livenessproject:gapBetweenBars
      */
-    public static final int GradientColor_android_startY=9;
+    public static final int DrawerArrowToggle_gapBetweenBars=3;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#endX}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#middleBarArrowSize}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
      *
-     * @attr name android:endX
+     * @attr name com.megvii.livenessproject:middleBarArrowSize
      */
-    public static final int GradientColor_android_endX=10;
+    public static final int DrawerArrowToggle_middleBarArrowSize=4;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#endY}
-     * attribute's value can be found in the {@link #GradientColor} array.
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#spinBars}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
      *
-     * @attr name android:endY
+     * @attr name com.megvii.livenessproject:spinBars
      */
-    public static final int GradientColor_android_endY=11;
+    public static final int DrawerArrowToggle_spinBars=5;
     /**
-     * Attributes that can be used with a GradientColorItem.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #GradientColorItem_android_color android:color}</code></td><td></td></tr>
-     * <tr><td><code>{@link #GradientColorItem_android_offset android:offset}</code></td><td></td></tr>
-     * </table>
-     * @see #GradientColorItem_android_color
-     * @see #GradientColorItem_android_offset
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#thickness}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:thickness
      */
-    public static final int[] GradientColorItem={
-      0x010101a5, 0x01010514
-    };
+    public static final int DrawerArrowToggle_thickness=6;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#color}
-     * attribute's value can be found in the {@link #GradientColorItem} array.
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#topBottomBarArrowSize}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
      *
-     * @attr name android:color
+     * @attr name com.megvii.livenessproject:topBottomBarArrowSize
      */
-    public static final int GradientColorItem_android_color=0;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#offset}
-     * attribute's value can be found in the {@link #GradientColorItem} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:offset
-     */
-    public static final int GradientColorItem_android_offset=1;
+    public static final int DrawerArrowToggle_topBottomBarArrowSize=7;
     /**
      * Attributes that can be used with a LinearConstraintLayout.
      * <p>Includes the following attributes:</p>
@@ -4212,5 +6227,3689 @@ public final class R {
      * @attr name android:orientation
      */
     public static final int LinearConstraintLayout_android_orientation=0;
+    /**
+     * Attributes that can be used with a LinearLayoutCompat.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_android_gravity android:gravity}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_android_orientation android:orientation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_android_baselineAligned android:baselineAligned}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_android_baselineAlignedChildIndex android:baselineAlignedChildIndex}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_android_weightSum android:weightSum}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_divider com.megvii.livenessproject:divider}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.megvii.livenessproject:dividerPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.megvii.livenessproject:measureWithLargestChild}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_showDividers com.megvii.livenessproject:showDividers}</code></td><td></td></tr>
+     * </table>
+     * @see #LinearLayoutCompat_android_gravity
+     * @see #LinearLayoutCompat_android_orientation
+     * @see #LinearLayoutCompat_android_baselineAligned
+     * @see #LinearLayoutCompat_android_baselineAlignedChildIndex
+     * @see #LinearLayoutCompat_android_weightSum
+     * @see #LinearLayoutCompat_divider
+     * @see #LinearLayoutCompat_dividerPadding
+     * @see #LinearLayoutCompat_measureWithLargestChild
+     * @see #LinearLayoutCompat_showDividers
+     */
+    public static final int[] LinearLayoutCompat={
+      0x010100af, 0x010100c4, 0x01010126, 0x01010127, 
+      0x01010128, 0x7f030056, 0x7f030058, 0x7f0300af, 
+      0x7f0300cf
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#gravity}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>center</td><td>11</td><td></td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
+     * <tr><td>fill</td><td>77</td><td></td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:gravity
+     */
+    public static final int LinearLayoutCompat_android_gravity=0;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#orientation}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>horizontal</td><td>0</td><td></td></tr>
+     * <tr><td>vertical</td><td>1</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:orientation
+     */
+    public static final int LinearLayoutCompat_android_orientation=1;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#baselineAligned}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name android:baselineAligned
+     */
+    public static final int LinearLayoutCompat_android_baselineAligned=2;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#baselineAlignedChildIndex}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     *
+     * <p>May be an integer value, such as "<code>100</code>".
+     *
+     * @attr name android:baselineAlignedChildIndex
+     */
+    public static final int LinearLayoutCompat_android_baselineAlignedChildIndex=3;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#weightSum}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name android:weightSum
+     */
+    public static final int LinearLayoutCompat_android_weightSum=4;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#divider}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:divider
+     */
+    public static final int LinearLayoutCompat_divider=5;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#dividerPadding}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:dividerPadding
+     */
+    public static final int LinearLayoutCompat_dividerPadding=6;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#measureWithLargestChild}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.megvii.livenessproject:measureWithLargestChild
+     */
+    public static final int LinearLayoutCompat_measureWithLargestChild=7;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#showDividers}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>beginning</td><td>1</td><td></td></tr>
+     * <tr><td>end</td><td>4</td><td></td></tr>
+     * <tr><td>middle</td><td>2</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * </table>
+     *
+     * @attr name com.megvii.livenessproject:showDividers
+     */
+    public static final int LinearLayoutCompat_showDividers=8;
+    /**
+     * Attributes that can be used with a LinearLayoutCompat_Layout.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_Layout_android_layout_gravity android:layout_gravity}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_Layout_android_layout_width android:layout_width}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_Layout_android_layout_height android:layout_height}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_Layout_android_layout_weight android:layout_weight}</code></td><td></td></tr>
+     * </table>
+     * @see #LinearLayoutCompat_Layout_android_layout_gravity
+     * @see #LinearLayoutCompat_Layout_android_layout_width
+     * @see #LinearLayoutCompat_Layout_android_layout_height
+     * @see #LinearLayoutCompat_Layout_android_layout_weight
+     */
+    public static final int[] LinearLayoutCompat_Layout={
+      0x010100b3, 0x010100f4, 0x010100f5, 0x01010181
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
+     * attribute's value can be found in the {@link #LinearLayoutCompat_Layout} array.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>center</td><td>11</td><td></td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
+     * <tr><td>fill</td><td>77</td><td></td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:layout_gravity
+     */
+    public static final int LinearLayoutCompat_Layout_android_layout_gravity=0;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#layout_width}
+     * attribute's value can be found in the {@link #LinearLayoutCompat_Layout} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
+     * <tr><td>fill_parent</td><td>ffffffff</td><td></td></tr>
+     * <tr><td>match_parent</td><td>ffffffff</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:layout_width
+     */
+    public static final int LinearLayoutCompat_Layout_android_layout_width=1;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#layout_height}
+     * attribute's value can be found in the {@link #LinearLayoutCompat_Layout} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
+     * <tr><td>fill_parent</td><td>ffffffff</td><td></td></tr>
+     * <tr><td>match_parent</td><td>ffffffff</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:layout_height
+     */
+    public static final int LinearLayoutCompat_Layout_android_layout_height=2;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#layout_weight}
+     * attribute's value can be found in the {@link #LinearLayoutCompat_Layout} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name android:layout_weight
+     */
+    public static final int LinearLayoutCompat_Layout_android_layout_weight=3;
+    /**
+     * Attributes that can be used with a ListPopupWindow.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #ListPopupWindow_android_dropDownHorizontalOffset android:dropDownHorizontalOffset}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ListPopupWindow_android_dropDownVerticalOffset android:dropDownVerticalOffset}</code></td><td></td></tr>
+     * </table>
+     * @see #ListPopupWindow_android_dropDownHorizontalOffset
+     * @see #ListPopupWindow_android_dropDownVerticalOffset
+     */
+    public static final int[] ListPopupWindow={
+      0x010102ac, 0x010102ad
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#dropDownHorizontalOffset}
+     * attribute's value can be found in the {@link #ListPopupWindow} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name android:dropDownHorizontalOffset
+     */
+    public static final int ListPopupWindow_android_dropDownHorizontalOffset=0;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#dropDownVerticalOffset}
+     * attribute's value can be found in the {@link #ListPopupWindow} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name android:dropDownVerticalOffset
+     */
+    public static final int ListPopupWindow_android_dropDownVerticalOffset=1;
+    /**
+     * Attributes that can be used with a MenuGroup.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #MenuGroup_android_enabled android:enabled}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuGroup_android_id android:id}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuGroup_android_visible android:visible}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuGroup_android_menuCategory android:menuCategory}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuGroup_android_orderInCategory android:orderInCategory}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuGroup_android_checkableBehavior android:checkableBehavior}</code></td><td></td></tr>
+     * </table>
+     * @see #MenuGroup_android_enabled
+     * @see #MenuGroup_android_id
+     * @see #MenuGroup_android_visible
+     * @see #MenuGroup_android_menuCategory
+     * @see #MenuGroup_android_orderInCategory
+     * @see #MenuGroup_android_checkableBehavior
+     */
+    public static final int[] MenuGroup={
+      0x0101000e, 0x010100d0, 0x01010194, 0x010101de, 
+      0x010101df, 0x010101e0
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#enabled}
+     * attribute's value can be found in the {@link #MenuGroup} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name android:enabled
+     */
+    public static final int MenuGroup_android_enabled=0;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#id}
+     * attribute's value can be found in the {@link #MenuGroup} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name android:id
+     */
+    public static final int MenuGroup_android_id=1;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#visible}
+     * attribute's value can be found in the {@link #MenuGroup} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name android:visible
+     */
+    public static final int MenuGroup_android_visible=2;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#menuCategory}
+     * attribute's value can be found in the {@link #MenuGroup} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>alternative</td><td>40000</td><td></td></tr>
+     * <tr><td>container</td><td>10000</td><td></td></tr>
+     * <tr><td>secondary</td><td>30000</td><td></td></tr>
+     * <tr><td>system</td><td>20000</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:menuCategory
+     */
+    public static final int MenuGroup_android_menuCategory=3;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#orderInCategory}
+     * attribute's value can be found in the {@link #MenuGroup} array.
+     *
+     * <p>May be an integer value, such as "<code>100</code>".
+     *
+     * @attr name android:orderInCategory
+     */
+    public static final int MenuGroup_android_orderInCategory=4;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#checkableBehavior}
+     * attribute's value can be found in the {@link #MenuGroup} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>all</td><td>1</td><td></td></tr>
+     * <tr><td>single</td><td>2</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:checkableBehavior
+     */
+    public static final int MenuGroup_android_checkableBehavior=5;
+    /**
+     * Attributes that can be used with a MenuItem.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #MenuItem_android_icon android:icon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_android_enabled android:enabled}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_android_id android:id}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_android_checked android:checked}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_android_visible android:visible}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_android_menuCategory android:menuCategory}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_android_orderInCategory android:orderInCategory}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_android_title android:title}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_android_titleCondensed android:titleCondensed}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_android_alphabeticShortcut android:alphabeticShortcut}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_android_numericShortcut android:numericShortcut}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_android_onClick android:onClick}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_actionLayout com.megvii.livenessproject:actionLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_actionProviderClass com.megvii.livenessproject:actionProviderClass}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_actionViewClass com.megvii.livenessproject:actionViewClass}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_showAsAction com.megvii.livenessproject:showAsAction}</code></td><td></td></tr>
+     * </table>
+     * @see #MenuItem_android_icon
+     * @see #MenuItem_android_enabled
+     * @see #MenuItem_android_id
+     * @see #MenuItem_android_checked
+     * @see #MenuItem_android_visible
+     * @see #MenuItem_android_menuCategory
+     * @see #MenuItem_android_orderInCategory
+     * @see #MenuItem_android_title
+     * @see #MenuItem_android_titleCondensed
+     * @see #MenuItem_android_alphabeticShortcut
+     * @see #MenuItem_android_numericShortcut
+     * @see #MenuItem_android_checkable
+     * @see #MenuItem_android_onClick
+     * @see #MenuItem_actionLayout
+     * @see #MenuItem_actionProviderClass
+     * @see #MenuItem_actionViewClass
+     * @see #MenuItem_showAsAction
+     */
+    public static final int[] MenuItem={
+      0x01010002, 0x0101000e, 0x010100d0, 0x01010106, 
+      0x01010194, 0x010101de, 0x010101df, 0x010101e1, 
+      0x010101e2, 0x010101e3, 0x010101e4, 0x010101e5, 
+      0x0101026f, 0x7f03000d, 0x7f03001f, 0x7f030020, 
+      0x7f0300ce
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#icon}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name android:icon
+     */
+    public static final int MenuItem_android_icon=0;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#enabled}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name android:enabled
+     */
+    public static final int MenuItem_android_enabled=1;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#id}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name android:id
+     */
+    public static final int MenuItem_android_id=2;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#checked}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name android:checked
+     */
+    public static final int MenuItem_android_checked=3;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#visible}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name android:visible
+     */
+    public static final int MenuItem_android_visible=4;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#menuCategory}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>alternative</td><td>40000</td><td></td></tr>
+     * <tr><td>container</td><td>10000</td><td></td></tr>
+     * <tr><td>secondary</td><td>30000</td><td></td></tr>
+     * <tr><td>system</td><td>20000</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:menuCategory
+     */
+    public static final int MenuItem_android_menuCategory=5;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#orderInCategory}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>May be an integer value, such as "<code>100</code>".
+     *
+     * @attr name android:orderInCategory
+     */
+    public static final int MenuItem_android_orderInCategory=6;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#title}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name android:title
+     */
+    public static final int MenuItem_android_title=7;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#titleCondensed}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name android:titleCondensed
+     */
+    public static final int MenuItem_android_titleCondensed=8;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#alphabeticShortcut}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name android:alphabeticShortcut
+     */
+    public static final int MenuItem_android_alphabeticShortcut=9;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#numericShortcut}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name android:numericShortcut
+     */
+    public static final int MenuItem_android_numericShortcut=10;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#checkable}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name android:checkable
+     */
+    public static final int MenuItem_android_checkable=11;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#onClick}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name android:onClick
+     */
+    public static final int MenuItem_android_onClick=12;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionLayout}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionLayout
+     */
+    public static final int MenuItem_actionLayout=13;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionProviderClass}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.megvii.livenessproject:actionProviderClass
+     */
+    public static final int MenuItem_actionProviderClass=14;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionViewClass}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.megvii.livenessproject:actionViewClass
+     */
+    public static final int MenuItem_actionViewClass=15;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#showAsAction}
+     * attribute's value can be found in the {@link #MenuItem} array.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>always</td><td>2</td><td></td></tr>
+     * <tr><td>collapseActionView</td><td>8</td><td></td></tr>
+     * <tr><td>ifRoom</td><td>1</td><td></td></tr>
+     * <tr><td>never</td><td>0</td><td></td></tr>
+     * <tr><td>withText</td><td>4</td><td></td></tr>
+     * </table>
+     *
+     * @attr name com.megvii.livenessproject:showAsAction
+     */
+    public static final int MenuItem_showAsAction=16;
+    /**
+     * Attributes that can be used with a MenuView.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #MenuView_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuView_android_itemTextAppearance android:itemTextAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuView_android_horizontalDivider android:horizontalDivider}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuView_android_verticalDivider android:verticalDivider}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuView_android_headerBackground android:headerBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuView_android_itemBackground android:itemBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuView_android_itemIconDisabledAlpha android:itemIconDisabledAlpha}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuView_preserveIconSpacing com.megvii.livenessproject:preserveIconSpacing}</code></td><td></td></tr>
+     * </table>
+     * @see #MenuView_android_windowAnimationStyle
+     * @see #MenuView_android_itemTextAppearance
+     * @see #MenuView_android_horizontalDivider
+     * @see #MenuView_android_verticalDivider
+     * @see #MenuView_android_headerBackground
+     * @see #MenuView_android_itemBackground
+     * @see #MenuView_android_itemIconDisabledAlpha
+     * @see #MenuView_preserveIconSpacing
+     */
+    public static final int[] MenuView={
+      0x010100ae, 0x0101012c, 0x0101012d, 0x0101012e, 
+      0x0101012f, 0x01010130, 0x01010131, 0x7f0300c0
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#windowAnimationStyle}
+     * attribute's value can be found in the {@link #MenuView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name android:windowAnimationStyle
+     */
+    public static final int MenuView_android_windowAnimationStyle=0;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#itemTextAppearance}
+     * attribute's value can be found in the {@link #MenuView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name android:itemTextAppearance
+     */
+    public static final int MenuView_android_itemTextAppearance=1;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#horizontalDivider}
+     * attribute's value can be found in the {@link #MenuView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name android:horizontalDivider
+     */
+    public static final int MenuView_android_horizontalDivider=2;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#verticalDivider}
+     * attribute's value can be found in the {@link #MenuView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name android:verticalDivider
+     */
+    public static final int MenuView_android_verticalDivider=3;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#headerBackground}
+     * attribute's value can be found in the {@link #MenuView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name android:headerBackground
+     */
+    public static final int MenuView_android_headerBackground=4;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#itemBackground}
+     * attribute's value can be found in the {@link #MenuView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name android:itemBackground
+     */
+    public static final int MenuView_android_itemBackground=5;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#itemIconDisabledAlpha}
+     * attribute's value can be found in the {@link #MenuView} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name android:itemIconDisabledAlpha
+     */
+    public static final int MenuView_android_itemIconDisabledAlpha=6;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#preserveIconSpacing}
+     * attribute's value can be found in the {@link #MenuView} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.megvii.livenessproject:preserveIconSpacing
+     */
+    public static final int MenuView_preserveIconSpacing=7;
+    /**
+     * Attributes that can be used with a PopupWindow.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #PopupWindow_android_popupBackground android:popupBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #PopupWindow_overlapAnchor com.megvii.livenessproject:overlapAnchor}</code></td><td></td></tr>
+     * </table>
+     * @see #PopupWindow_android_popupBackground
+     * @see #PopupWindow_overlapAnchor
+     */
+    public static final int[] PopupWindow={
+      0x01010176, 0x7f0300b5
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#popupBackground}
+     * attribute's value can be found in the {@link #PopupWindow} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name android:popupBackground
+     */
+    public static final int PopupWindow_android_popupBackground=0;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#overlapAnchor}
+     * attribute's value can be found in the {@link #PopupWindow} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.megvii.livenessproject:overlapAnchor
+     */
+    public static final int PopupWindow_overlapAnchor=1;
+    /**
+     * Attributes that can be used with a PopupWindowBackgroundState.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.megvii.livenessproject:state_above_anchor}</code></td><td></td></tr>
+     * </table>
+     * @see #PopupWindowBackgroundState_state_above_anchor
+     */
+    public static final int[] PopupWindowBackgroundState={
+      0x7f0300d7
+    };
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#state_above_anchor}
+     * attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.megvii.livenessproject:state_above_anchor
+     */
+    public static final int PopupWindowBackgroundState_state_above_anchor=0;
+    /**
+     * Attributes that can be used with a SearchView.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #SearchView_android_focusable android:focusable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_closeIcon com.megvii.livenessproject:closeIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_commitIcon com.megvii.livenessproject:commitIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_defaultQueryHint com.megvii.livenessproject:defaultQueryHint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_goIcon com.megvii.livenessproject:goIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_iconifiedByDefault com.megvii.livenessproject:iconifiedByDefault}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_layout com.megvii.livenessproject:layout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_queryBackground com.megvii.livenessproject:queryBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_queryHint com.megvii.livenessproject:queryHint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_searchHintIcon com.megvii.livenessproject:searchHintIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_searchIcon com.megvii.livenessproject:searchIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_submitBackground com.megvii.livenessproject:submitBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_suggestionRowLayout com.megvii.livenessproject:suggestionRowLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_voiceIcon com.megvii.livenessproject:voiceIcon}</code></td><td></td></tr>
+     * </table>
+     * @see #SearchView_android_focusable
+     * @see #SearchView_android_maxWidth
+     * @see #SearchView_android_inputType
+     * @see #SearchView_android_imeOptions
+     * @see #SearchView_closeIcon
+     * @see #SearchView_commitIcon
+     * @see #SearchView_defaultQueryHint
+     * @see #SearchView_goIcon
+     * @see #SearchView_iconifiedByDefault
+     * @see #SearchView_layout
+     * @see #SearchView_queryBackground
+     * @see #SearchView_queryHint
+     * @see #SearchView_searchHintIcon
+     * @see #SearchView_searchIcon
+     * @see #SearchView_submitBackground
+     * @see #SearchView_suggestionRowLayout
+     * @see #SearchView_voiceIcon
+     */
+    public static final int[] SearchView={
+      0x010100da, 0x0101011f, 0x01010220, 0x01010264, 
+      0x7f03003b, 0x7f030048, 0x7f030051, 0x7f030065, 
+      0x7f03006b, 0x7f030070, 0x7f0300c4, 0x7f0300c5, 
+      0x7f0300c9, 0x7f0300ca, 0x7f0300d8, 0x7f0300dc, 
+      0x7f0300f9
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#focusable}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name android:focusable
+     */
+    public static final int SearchView_android_focusable=0;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#maxWidth}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name android:maxWidth
+     */
+    public static final int SearchView_android_maxWidth=1;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#inputType}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>date</td><td>14</td><td></td></tr>
+     * <tr><td>datetime</td><td>4</td><td></td></tr>
+     * <tr><td>number</td><td>2</td><td></td></tr>
+     * <tr><td>numberDecimal</td><td>2002</td><td></td></tr>
+     * <tr><td>numberPassword</td><td>12</td><td></td></tr>
+     * <tr><td>numberSigned</td><td>1002</td><td></td></tr>
+     * <tr><td>phone</td><td>3</td><td></td></tr>
+     * <tr><td>text</td><td>1</td><td></td></tr>
+     * <tr><td>textAutoComplete</td><td>10001</td><td></td></tr>
+     * <tr><td>textAutoCorrect</td><td>8001</td><td></td></tr>
+     * <tr><td>textCapCharacters</td><td>1001</td><td></td></tr>
+     * <tr><td>textCapSentences</td><td>4001</td><td></td></tr>
+     * <tr><td>textCapWords</td><td>2001</td><td></td></tr>
+     * <tr><td>textEmailAddress</td><td>21</td><td></td></tr>
+     * <tr><td>textEmailSubject</td><td>31</td><td></td></tr>
+     * <tr><td>textFilter</td><td>b1</td><td></td></tr>
+     * <tr><td>textImeMultiLine</td><td>40001</td><td></td></tr>
+     * <tr><td>textLongMessage</td><td>51</td><td></td></tr>
+     * <tr><td>textMultiLine</td><td>20001</td><td></td></tr>
+     * <tr><td>textNoSuggestions</td><td>80001</td><td></td></tr>
+     * <tr><td>textPassword</td><td>81</td><td></td></tr>
+     * <tr><td>textPersonName</td><td>61</td><td></td></tr>
+     * <tr><td>textPhonetic</td><td>c1</td><td></td></tr>
+     * <tr><td>textPostalAddress</td><td>71</td><td></td></tr>
+     * <tr><td>textShortMessage</td><td>41</td><td></td></tr>
+     * <tr><td>textUri</td><td>11</td><td></td></tr>
+     * <tr><td>textVisiblePassword</td><td>91</td><td></td></tr>
+     * <tr><td>textWebEditText</td><td>a1</td><td></td></tr>
+     * <tr><td>textWebEmailAddress</td><td>d1</td><td></td></tr>
+     * <tr><td>textWebPassword</td><td>e1</td><td></td></tr>
+     * <tr><td>time</td><td>24</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:inputType
+     */
+    public static final int SearchView_android_inputType=2;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#imeOptions}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>normal</td><td>0</td><td></td></tr>
+     * <tr><td>actionDone</td><td>6</td><td></td></tr>
+     * <tr><td>actionGo</td><td>2</td><td></td></tr>
+     * <tr><td>actionNext</td><td>5</td><td></td></tr>
+     * <tr><td>actionNone</td><td>1</td><td></td></tr>
+     * <tr><td>actionPrevious</td><td>7</td><td></td></tr>
+     * <tr><td>actionSearch</td><td>3</td><td></td></tr>
+     * <tr><td>actionSend</td><td>4</td><td></td></tr>
+     * <tr><td>actionUnspecified</td><td>0</td><td></td></tr>
+     * <tr><td>flagForceAscii</td><td>80000000</td><td></td></tr>
+     * <tr><td>flagNavigateNext</td><td>8000000</td><td></td></tr>
+     * <tr><td>flagNavigatePrevious</td><td>4000000</td><td></td></tr>
+     * <tr><td>flagNoAccessoryAction</td><td>20000000</td><td></td></tr>
+     * <tr><td>flagNoEnterAction</td><td>40000000</td><td></td></tr>
+     * <tr><td>flagNoExtractUi</td><td>10000000</td><td></td></tr>
+     * <tr><td>flagNoFullscreen</td><td>2000000</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:imeOptions
+     */
+    public static final int SearchView_android_imeOptions=3;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#closeIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:closeIcon
+     */
+    public static final int SearchView_closeIcon=4;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#commitIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:commitIcon
+     */
+    public static final int SearchView_commitIcon=5;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#defaultQueryHint}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.megvii.livenessproject:defaultQueryHint
+     */
+    public static final int SearchView_defaultQueryHint=6;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#goIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:goIcon
+     */
+    public static final int SearchView_goIcon=7;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#iconifiedByDefault}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.megvii.livenessproject:iconifiedByDefault
+     */
+    public static final int SearchView_iconifiedByDefault=8;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#layout}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:layout
+     */
+    public static final int SearchView_layout=9;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#queryBackground}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:queryBackground
+     */
+    public static final int SearchView_queryBackground=10;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#queryHint}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.megvii.livenessproject:queryHint
+     */
+    public static final int SearchView_queryHint=11;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#searchHintIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:searchHintIcon
+     */
+    public static final int SearchView_searchHintIcon=12;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#searchIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:searchIcon
+     */
+    public static final int SearchView_searchIcon=13;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#submitBackground}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:submitBackground
+     */
+    public static final int SearchView_submitBackground=14;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#suggestionRowLayout}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:suggestionRowLayout
+     */
+    public static final int SearchView_suggestionRowLayout=15;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#voiceIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:voiceIcon
+     */
+    public static final int SearchView_voiceIcon=16;
+    /**
+     * Attributes that can be used with a Spinner.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #Spinner_android_gravity android:gravity}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Spinner_android_background android:background}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Spinner_android_dropDownSelector android:dropDownSelector}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Spinner_android_dropDownHorizontalOffset android:dropDownHorizontalOffset}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Spinner_android_dropDownVerticalOffset android:dropDownVerticalOffset}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled com.megvii.livenessproject:disableChildrenWhenDisabled}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Spinner_popupPromptView com.megvii.livenessproject:popupPromptView}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Spinner_prompt com.megvii.livenessproject:prompt}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Spinner_spinnerMode com.megvii.livenessproject:spinnerMode}</code></td><td></td></tr>
+     * </table>
+     * @see #Spinner_android_gravity
+     * @see #Spinner_android_background
+     * @see #Spinner_android_dropDownSelector
+     * @see #Spinner_android_popupBackground
+     * @see #Spinner_android_dropDownWidth
+     * @see #Spinner_android_dropDownHorizontalOffset
+     * @see #Spinner_android_dropDownVerticalOffset
+     * @see #Spinner_disableChildrenWhenDisabled
+     * @see #Spinner_popupPromptView
+     * @see #Spinner_prompt
+     * @see #Spinner_spinnerMode
+     */
+    public static final int[] Spinner={
+      0x010100af, 0x010100d4, 0x01010175, 0x01010176, 
+      0x01010262, 0x010102ac, 0x010102ad, 0x7f030054, 
+      0x7f0300bc, 0x7f0300c3, 0x7f0300d4
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#gravity}
+     * attribute's value can be found in the {@link #Spinner} array.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>center</td><td>11</td><td></td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
+     * <tr><td>fill</td><td>77</td><td></td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:gravity
+     */
+    public static final int Spinner_android_gravity=0;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#background}
+     * attribute's value can be found in the {@link #Spinner} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name android:background
+     */
+    public static final int Spinner_android_background=1;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#dropDownSelector}
+     * attribute's value can be found in the {@link #Spinner} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name android:dropDownSelector
+     */
+    public static final int Spinner_android_dropDownSelector=2;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#popupBackground}
+     * attribute's value can be found in the {@link #Spinner} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name android:popupBackground
+     */
+    public static final int Spinner_android_popupBackground=3;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#dropDownWidth}
+     * attribute's value can be found in the {@link #Spinner} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
+     * <tr><td>fill_parent</td><td>ffffffff</td><td></td></tr>
+     * <tr><td>match_parent</td><td>ffffffff</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:dropDownWidth
+     */
+    public static final int Spinner_android_dropDownWidth=4;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#dropDownHorizontalOffset}
+     * attribute's value can be found in the {@link #Spinner} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name android:dropDownHorizontalOffset
+     */
+    public static final int Spinner_android_dropDownHorizontalOffset=5;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#dropDownVerticalOffset}
+     * attribute's value can be found in the {@link #Spinner} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name android:dropDownVerticalOffset
+     */
+    public static final int Spinner_android_dropDownVerticalOffset=6;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#disableChildrenWhenDisabled}
+     * attribute's value can be found in the {@link #Spinner} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.megvii.livenessproject:disableChildrenWhenDisabled
+     */
+    public static final int Spinner_disableChildrenWhenDisabled=7;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#popupPromptView}
+     * attribute's value can be found in the {@link #Spinner} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:popupPromptView
+     */
+    public static final int Spinner_popupPromptView=8;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#prompt}
+     * attribute's value can be found in the {@link #Spinner} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:prompt
+     */
+    public static final int Spinner_prompt=9;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#spinnerMode}
+     * attribute's value can be found in the {@link #Spinner} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>dialog</td><td>0</td><td></td></tr>
+     * <tr><td>dropdown</td><td>1</td><td></td></tr>
+     * </table>
+     *
+     * @attr name com.megvii.livenessproject:spinnerMode
+     */
+    public static final int Spinner_spinnerMode=10;
+    /**
+     * Attributes that can be used with a SwitchCompat.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #SwitchCompat_android_textOn android:textOn}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_android_textOff android:textOff}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_android_thumb android:thumb}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_showText com.megvii.livenessproject:showText}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_splitTrack com.megvii.livenessproject:splitTrack}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchMinWidth com.megvii.livenessproject:switchMinWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchPadding com.megvii.livenessproject:switchPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.megvii.livenessproject:switchTextAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.megvii.livenessproject:thumbTextPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_track com.megvii.livenessproject:track}</code></td><td></td></tr>
+     * </table>
+     * @see #SwitchCompat_android_textOn
+     * @see #SwitchCompat_android_textOff
+     * @see #SwitchCompat_android_thumb
+     * @see #SwitchCompat_showText
+     * @see #SwitchCompat_splitTrack
+     * @see #SwitchCompat_switchMinWidth
+     * @see #SwitchCompat_switchPadding
+     * @see #SwitchCompat_switchTextAppearance
+     * @see #SwitchCompat_thumbTextPadding
+     * @see #SwitchCompat_track
+     */
+    public static final int[] SwitchCompat={
+      0x01010124, 0x01010125, 0x01010142, 0x7f0300d0, 
+      0x7f0300d6, 0x7f0300dd, 0x7f0300de, 0x7f0300e0, 
+      0x7f0300ec, 0x7f0300f8
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#textOn}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name android:textOn
+     */
+    public static final int SwitchCompat_android_textOn=0;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#textOff}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name android:textOff
+     */
+    public static final int SwitchCompat_android_textOff=1;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#thumb}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name android:thumb
+     */
+    public static final int SwitchCompat_android_thumb=2;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#showText}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.megvii.livenessproject:showText
+     */
+    public static final int SwitchCompat_showText=3;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#splitTrack}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.megvii.livenessproject:splitTrack
+     */
+    public static final int SwitchCompat_splitTrack=4;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#switchMinWidth}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:switchMinWidth
+     */
+    public static final int SwitchCompat_switchMinWidth=5;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#switchPadding}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:switchPadding
+     */
+    public static final int SwitchCompat_switchPadding=6;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#switchTextAppearance}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:switchTextAppearance
+     */
+    public static final int SwitchCompat_switchTextAppearance=7;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#thumbTextPadding}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:thumbTextPadding
+     */
+    public static final int SwitchCompat_thumbTextPadding=8;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#track}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:track
+     */
+    public static final int SwitchCompat_track=9;
+    /**
+     * Attributes that can be used with a TextAppearance.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #TextAppearance_android_textSize android:textSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #TextAppearance_android_typeface android:typeface}</code></td><td></td></tr>
+     * <tr><td><code>{@link #TextAppearance_android_textStyle android:textStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #TextAppearance_android_textColor android:textColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #TextAppearance_textAllCaps com.megvii.livenessproject:textAllCaps}</code></td><td></td></tr>
+     * </table>
+     * @see #TextAppearance_android_textSize
+     * @see #TextAppearance_android_typeface
+     * @see #TextAppearance_android_textStyle
+     * @see #TextAppearance_android_textColor
+     * @see #TextAppearance_textAllCaps
+     */
+    public static final int[] TextAppearance={
+      0x01010095, 0x01010096, 0x01010097, 0x01010098, 
+      0x7f0300e1
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#textSize}
+     * attribute's value can be found in the {@link #TextAppearance} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name android:textSize
+     */
+    public static final int TextAppearance_android_textSize=0;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#typeface}
+     * attribute's value can be found in the {@link #TextAppearance} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>monospace</td><td>3</td><td></td></tr>
+     * <tr><td>normal</td><td>0</td><td></td></tr>
+     * <tr><td>sans</td><td>1</td><td></td></tr>
+     * <tr><td>serif</td><td>2</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:typeface
+     */
+    public static final int TextAppearance_android_typeface=1;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#textStyle}
+     * attribute's value can be found in the {@link #TextAppearance} array.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>normal</td><td>0</td><td></td></tr>
+     * <tr><td>bold</td><td>1</td><td></td></tr>
+     * <tr><td>italic</td><td>2</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:textStyle
+     */
+    public static final int TextAppearance_android_textStyle=2;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#textColor}
+     * attribute's value can be found in the {@link #TextAppearance} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name android:textColor
+     */
+    public static final int TextAppearance_android_textColor=3;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#textAllCaps}
+     * attribute's value can be found in the {@link #TextAppearance} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.megvii.livenessproject:textAllCaps
+     */
+    public static final int TextAppearance_textAllCaps=4;
+    /**
+     * Attributes that can be used with a Theme.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #Theme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionBarDivider com.megvii.livenessproject:actionBarDivider}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionBarItemBackground com.megvii.livenessproject:actionBarItemBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionBarPopupTheme com.megvii.livenessproject:actionBarPopupTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionBarSize com.megvii.livenessproject:actionBarSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionBarSplitStyle com.megvii.livenessproject:actionBarSplitStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionBarStyle com.megvii.livenessproject:actionBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionBarTabBarStyle com.megvii.livenessproject:actionBarTabBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionBarTabStyle com.megvii.livenessproject:actionBarTabStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionBarTabTextStyle com.megvii.livenessproject:actionBarTabTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionBarTheme com.megvii.livenessproject:actionBarTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionBarWidgetTheme com.megvii.livenessproject:actionBarWidgetTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionButtonStyle com.megvii.livenessproject:actionButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionDropDownStyle com.megvii.livenessproject:actionDropDownStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionMenuTextAppearance com.megvii.livenessproject:actionMenuTextAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionMenuTextColor com.megvii.livenessproject:actionMenuTextColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionModeBackground com.megvii.livenessproject:actionModeBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionModeCloseButtonStyle com.megvii.livenessproject:actionModeCloseButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionModeCloseDrawable com.megvii.livenessproject:actionModeCloseDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionModeCopyDrawable com.megvii.livenessproject:actionModeCopyDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionModeCutDrawable com.megvii.livenessproject:actionModeCutDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionModeFindDrawable com.megvii.livenessproject:actionModeFindDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionModePasteDrawable com.megvii.livenessproject:actionModePasteDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionModePopupWindowStyle com.megvii.livenessproject:actionModePopupWindowStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionModeSelectAllDrawable com.megvii.livenessproject:actionModeSelectAllDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionModeShareDrawable com.megvii.livenessproject:actionModeShareDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionModeSplitBackground com.megvii.livenessproject:actionModeSplitBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionModeStyle com.megvii.livenessproject:actionModeStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionModeWebSearchDrawable com.megvii.livenessproject:actionModeWebSearchDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionOverflowButtonStyle com.megvii.livenessproject:actionOverflowButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_actionOverflowMenuStyle com.megvii.livenessproject:actionOverflowMenuStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_activityChooserViewStyle com.megvii.livenessproject:activityChooserViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_alertDialogButtonGroupStyle com.megvii.livenessproject:alertDialogButtonGroupStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_alertDialogCenterButtons com.megvii.livenessproject:alertDialogCenterButtons}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_alertDialogStyle com.megvii.livenessproject:alertDialogStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_alertDialogTheme com.megvii.livenessproject:alertDialogTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_autoCompleteTextViewStyle com.megvii.livenessproject:autoCompleteTextViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_borderlessButtonStyle com.megvii.livenessproject:borderlessButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_buttonBarButtonStyle com.megvii.livenessproject:buttonBarButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_buttonBarNegativeButtonStyle com.megvii.livenessproject:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_buttonBarNeutralButtonStyle com.megvii.livenessproject:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_buttonBarPositiveButtonStyle com.megvii.livenessproject:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_buttonBarStyle com.megvii.livenessproject:buttonBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_buttonStyle com.megvii.livenessproject:buttonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_buttonStyleSmall com.megvii.livenessproject:buttonStyleSmall}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_checkboxStyle com.megvii.livenessproject:checkboxStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_checkedTextViewStyle com.megvii.livenessproject:checkedTextViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_colorAccent com.megvii.livenessproject:colorAccent}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_colorButtonNormal com.megvii.livenessproject:colorButtonNormal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_colorControlActivated com.megvii.livenessproject:colorControlActivated}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_colorControlHighlight com.megvii.livenessproject:colorControlHighlight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_colorControlNormal com.megvii.livenessproject:colorControlNormal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_colorPrimary com.megvii.livenessproject:colorPrimary}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_colorPrimaryDark com.megvii.livenessproject:colorPrimaryDark}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_colorSwitchThumbNormal com.megvii.livenessproject:colorSwitchThumbNormal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_dialogPreferredPadding com.megvii.livenessproject:dialogPreferredPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_dialogTheme com.megvii.livenessproject:dialogTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_dividerHorizontal com.megvii.livenessproject:dividerHorizontal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_dividerVertical com.megvii.livenessproject:dividerVertical}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_dropDownListViewStyle com.megvii.livenessproject:dropDownListViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight com.megvii.livenessproject:dropdownListPreferredItemHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_editTextBackground com.megvii.livenessproject:editTextBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_editTextColor com.megvii.livenessproject:editTextColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_editTextStyle com.megvii.livenessproject:editTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_homeAsUpIndicator com.megvii.livenessproject:homeAsUpIndicator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator com.megvii.livenessproject:listChoiceBackgroundIndicator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_listDividerAlertDialog com.megvii.livenessproject:listDividerAlertDialog}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_listPopupWindowStyle com.megvii.livenessproject:listPopupWindowStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_listPreferredItemHeight com.megvii.livenessproject:listPreferredItemHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_listPreferredItemHeightLarge com.megvii.livenessproject:listPreferredItemHeightLarge}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_listPreferredItemHeightSmall com.megvii.livenessproject:listPreferredItemHeightSmall}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_listPreferredItemPaddingLeft com.megvii.livenessproject:listPreferredItemPaddingLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_listPreferredItemPaddingRight com.megvii.livenessproject:listPreferredItemPaddingRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_panelBackground com.megvii.livenessproject:panelBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_panelMenuListTheme com.megvii.livenessproject:panelMenuListTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_panelMenuListWidth com.megvii.livenessproject:panelMenuListWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_popupMenuStyle com.megvii.livenessproject:popupMenuStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_popupWindowStyle com.megvii.livenessproject:popupWindowStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_radioButtonStyle com.megvii.livenessproject:radioButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_ratingBarStyle com.megvii.livenessproject:ratingBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_searchViewStyle com.megvii.livenessproject:searchViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_selectableItemBackground com.megvii.livenessproject:selectableItemBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_selectableItemBackgroundBorderless com.megvii.livenessproject:selectableItemBackgroundBorderless}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_spinnerDropDownItemStyle com.megvii.livenessproject:spinnerDropDownItemStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_spinnerStyle com.megvii.livenessproject:spinnerStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_switchStyle com.megvii.livenessproject:switchStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_textAppearanceLargePopupMenu com.megvii.livenessproject:textAppearanceLargePopupMenu}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_textAppearanceListItem com.megvii.livenessproject:textAppearanceListItem}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_textAppearanceListItemSmall com.megvii.livenessproject:textAppearanceListItemSmall}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_textAppearanceSearchResultSubtitle com.megvii.livenessproject:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_textAppearanceSearchResultTitle com.megvii.livenessproject:textAppearanceSearchResultTitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_textAppearanceSmallPopupMenu com.megvii.livenessproject:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_textColorAlertDialogListItem com.megvii.livenessproject:textColorAlertDialogListItem}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_textColorSearchUrl com.megvii.livenessproject:textColorSearchUrl}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_toolbarNavigationButtonStyle com.megvii.livenessproject:toolbarNavigationButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_toolbarStyle com.megvii.livenessproject:toolbarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_windowActionBar com.megvii.livenessproject:windowActionBar}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_windowActionBarOverlay com.megvii.livenessproject:windowActionBarOverlay}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_windowActionModeOverlay com.megvii.livenessproject:windowActionModeOverlay}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_windowFixedHeightMajor com.megvii.livenessproject:windowFixedHeightMajor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_windowFixedHeightMinor com.megvii.livenessproject:windowFixedHeightMinor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_windowFixedWidthMajor com.megvii.livenessproject:windowFixedWidthMajor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_windowFixedWidthMinor com.megvii.livenessproject:windowFixedWidthMinor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_windowMinWidthMajor com.megvii.livenessproject:windowMinWidthMajor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_windowMinWidthMinor com.megvii.livenessproject:windowMinWidthMinor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Theme_windowNoTitle com.megvii.livenessproject:windowNoTitle}</code></td><td></td></tr>
+     * </table>
+     * @see #Theme_android_windowIsFloating
+     * @see #Theme_android_windowAnimationStyle
+     * @see #Theme_actionBarDivider
+     * @see #Theme_actionBarItemBackground
+     * @see #Theme_actionBarPopupTheme
+     * @see #Theme_actionBarSize
+     * @see #Theme_actionBarSplitStyle
+     * @see #Theme_actionBarStyle
+     * @see #Theme_actionBarTabBarStyle
+     * @see #Theme_actionBarTabStyle
+     * @see #Theme_actionBarTabTextStyle
+     * @see #Theme_actionBarTheme
+     * @see #Theme_actionBarWidgetTheme
+     * @see #Theme_actionButtonStyle
+     * @see #Theme_actionDropDownStyle
+     * @see #Theme_actionMenuTextAppearance
+     * @see #Theme_actionMenuTextColor
+     * @see #Theme_actionModeBackground
+     * @see #Theme_actionModeCloseButtonStyle
+     * @see #Theme_actionModeCloseDrawable
+     * @see #Theme_actionModeCopyDrawable
+     * @see #Theme_actionModeCutDrawable
+     * @see #Theme_actionModeFindDrawable
+     * @see #Theme_actionModePasteDrawable
+     * @see #Theme_actionModePopupWindowStyle
+     * @see #Theme_actionModeSelectAllDrawable
+     * @see #Theme_actionModeShareDrawable
+     * @see #Theme_actionModeSplitBackground
+     * @see #Theme_actionModeStyle
+     * @see #Theme_actionModeWebSearchDrawable
+     * @see #Theme_actionOverflowButtonStyle
+     * @see #Theme_actionOverflowMenuStyle
+     * @see #Theme_activityChooserViewStyle
+     * @see #Theme_alertDialogButtonGroupStyle
+     * @see #Theme_alertDialogCenterButtons
+     * @see #Theme_alertDialogStyle
+     * @see #Theme_alertDialogTheme
+     * @see #Theme_autoCompleteTextViewStyle
+     * @see #Theme_borderlessButtonStyle
+     * @see #Theme_buttonBarButtonStyle
+     * @see #Theme_buttonBarNegativeButtonStyle
+     * @see #Theme_buttonBarNeutralButtonStyle
+     * @see #Theme_buttonBarPositiveButtonStyle
+     * @see #Theme_buttonBarStyle
+     * @see #Theme_buttonStyle
+     * @see #Theme_buttonStyleSmall
+     * @see #Theme_checkboxStyle
+     * @see #Theme_checkedTextViewStyle
+     * @see #Theme_colorAccent
+     * @see #Theme_colorButtonNormal
+     * @see #Theme_colorControlActivated
+     * @see #Theme_colorControlHighlight
+     * @see #Theme_colorControlNormal
+     * @see #Theme_colorPrimary
+     * @see #Theme_colorPrimaryDark
+     * @see #Theme_colorSwitchThumbNormal
+     * @see #Theme_dialogPreferredPadding
+     * @see #Theme_dialogTheme
+     * @see #Theme_dividerHorizontal
+     * @see #Theme_dividerVertical
+     * @see #Theme_dropDownListViewStyle
+     * @see #Theme_dropdownListPreferredItemHeight
+     * @see #Theme_editTextBackground
+     * @see #Theme_editTextColor
+     * @see #Theme_editTextStyle
+     * @see #Theme_homeAsUpIndicator
+     * @see #Theme_listChoiceBackgroundIndicator
+     * @see #Theme_listDividerAlertDialog
+     * @see #Theme_listPopupWindowStyle
+     * @see #Theme_listPreferredItemHeight
+     * @see #Theme_listPreferredItemHeightLarge
+     * @see #Theme_listPreferredItemHeightSmall
+     * @see #Theme_listPreferredItemPaddingLeft
+     * @see #Theme_listPreferredItemPaddingRight
+     * @see #Theme_panelBackground
+     * @see #Theme_panelMenuListTheme
+     * @see #Theme_panelMenuListWidth
+     * @see #Theme_popupMenuStyle
+     * @see #Theme_popupWindowStyle
+     * @see #Theme_radioButtonStyle
+     * @see #Theme_ratingBarStyle
+     * @see #Theme_searchViewStyle
+     * @see #Theme_selectableItemBackground
+     * @see #Theme_selectableItemBackgroundBorderless
+     * @see #Theme_spinnerDropDownItemStyle
+     * @see #Theme_spinnerStyle
+     * @see #Theme_switchStyle
+     * @see #Theme_textAppearanceLargePopupMenu
+     * @see #Theme_textAppearanceListItem
+     * @see #Theme_textAppearanceListItemSmall
+     * @see #Theme_textAppearanceSearchResultSubtitle
+     * @see #Theme_textAppearanceSearchResultTitle
+     * @see #Theme_textAppearanceSmallPopupMenu
+     * @see #Theme_textColorAlertDialogListItem
+     * @see #Theme_textColorSearchUrl
+     * @see #Theme_toolbarNavigationButtonStyle
+     * @see #Theme_toolbarStyle
+     * @see #Theme_windowActionBar
+     * @see #Theme_windowActionBarOverlay
+     * @see #Theme_windowActionModeOverlay
+     * @see #Theme_windowFixedHeightMajor
+     * @see #Theme_windowFixedHeightMinor
+     * @see #Theme_windowFixedWidthMajor
+     * @see #Theme_windowFixedWidthMinor
+     * @see #Theme_windowMinWidthMajor
+     * @see #Theme_windowMinWidthMinor
+     * @see #Theme_windowNoTitle
+     */
+    public static final int[] Theme={
+      0x01010057, 0x010100ae, 0x7f030000, 0x7f030001, 
+      0x7f030002, 0x7f030003, 0x7f030004, 0x7f030005, 
+      0x7f030006, 0x7f030007, 0x7f030008, 0x7f030009, 
+      0x7f03000a, 0x7f03000b, 0x7f03000c, 0x7f03000e, 
+      0x7f03000f, 0x7f030010, 0x7f030011, 0x7f030012, 
+      0x7f030013, 0x7f030014, 0x7f030015, 0x7f030016, 
+      0x7f030017, 0x7f030018, 0x7f030019, 0x7f03001a, 
+      0x7f03001b, 0x7f03001c, 0x7f03001d, 0x7f03001e, 
+      0x7f030021, 0x7f030022, 0x7f030023, 0x7f030024, 
+      0x7f030025, 0x7f030026, 0x7f03002f, 0x7f030030, 
+      0x7f030031, 0x7f030032, 0x7f030033, 0x7f030034, 
+      0x7f030036, 0x7f030037, 0x7f030039, 0x7f03003a, 
+      0x7f030040, 0x7f030041, 0x7f030042, 0x7f030043, 
+      0x7f030044, 0x7f030045, 0x7f030046, 0x7f030047, 
+      0x7f030052, 0x7f030053, 0x7f030057, 0x7f030059, 
+      0x7f03005c, 0x7f03005d, 0x7f03005e, 0x7f03005f, 
+      0x7f030060, 0x7f030068, 0x7f0300a3, 0x7f0300a4, 
+      0x7f0300a7, 0x7f0300a8, 0x7f0300a9, 0x7f0300aa, 
+      0x7f0300ab, 0x7f0300ac, 0x7f0300b8, 0x7f0300b9, 
+      0x7f0300ba, 0x7f0300bb, 0x7f0300be, 0x7f0300c6, 
+      0x7f0300c7, 0x7f0300cb, 0x7f0300cc, 0x7f0300cd, 
+      0x7f0300d3, 0x7f0300d5, 0x7f0300df, 0x7f0300e2, 
+      0x7f0300e3, 0x7f0300e4, 0x7f0300e5, 0x7f0300e6, 
+      0x7f0300e7, 0x7f0300e8, 0x7f0300e9, 0x7f0300f5, 
+      0x7f0300f6, 0x7f0300fa, 0x7f0300fb, 0x7f0300fc, 
+      0x7f0300fd, 0x7f0300fe, 0x7f0300ff, 0x7f030100, 
+      0x7f030101, 0x7f030102, 0x7f030103
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#windowIsFloating}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name android:windowIsFloating
+     */
+    public static final int Theme_android_windowIsFloating=0;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#windowAnimationStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name android:windowAnimationStyle
+     */
+    public static final int Theme_android_windowAnimationStyle=1;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionBarDivider}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionBarDivider
+     */
+    public static final int Theme_actionBarDivider=2;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionBarItemBackground}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionBarItemBackground
+     */
+    public static final int Theme_actionBarItemBackground=3;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionBarPopupTheme}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionBarPopupTheme
+     */
+    public static final int Theme_actionBarPopupTheme=4;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionBarSize}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>wrap_content</td><td>0</td><td></td></tr>
+     * </table>
+     *
+     * @attr name com.megvii.livenessproject:actionBarSize
+     */
+    public static final int Theme_actionBarSize=5;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionBarSplitStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionBarSplitStyle
+     */
+    public static final int Theme_actionBarSplitStyle=6;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionBarStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionBarStyle
+     */
+    public static final int Theme_actionBarStyle=7;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionBarTabBarStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionBarTabBarStyle
+     */
+    public static final int Theme_actionBarTabBarStyle=8;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionBarTabStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionBarTabStyle
+     */
+    public static final int Theme_actionBarTabStyle=9;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionBarTabTextStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionBarTabTextStyle
+     */
+    public static final int Theme_actionBarTabTextStyle=10;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionBarTheme}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionBarTheme
+     */
+    public static final int Theme_actionBarTheme=11;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionBarWidgetTheme}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionBarWidgetTheme
+     */
+    public static final int Theme_actionBarWidgetTheme=12;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionButtonStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionButtonStyle
+     */
+    public static final int Theme_actionButtonStyle=13;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionDropDownStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionDropDownStyle
+     */
+    public static final int Theme_actionDropDownStyle=14;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionMenuTextAppearance}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionMenuTextAppearance
+     */
+    public static final int Theme_actionMenuTextAppearance=15;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionMenuTextColor}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionMenuTextColor
+     */
+    public static final int Theme_actionMenuTextColor=16;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionModeBackground}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionModeBackground
+     */
+    public static final int Theme_actionModeBackground=17;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionModeCloseButtonStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionModeCloseButtonStyle
+     */
+    public static final int Theme_actionModeCloseButtonStyle=18;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionModeCloseDrawable}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionModeCloseDrawable
+     */
+    public static final int Theme_actionModeCloseDrawable=19;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionModeCopyDrawable}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionModeCopyDrawable
+     */
+    public static final int Theme_actionModeCopyDrawable=20;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionModeCutDrawable}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionModeCutDrawable
+     */
+    public static final int Theme_actionModeCutDrawable=21;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionModeFindDrawable}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionModeFindDrawable
+     */
+    public static final int Theme_actionModeFindDrawable=22;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionModePasteDrawable}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionModePasteDrawable
+     */
+    public static final int Theme_actionModePasteDrawable=23;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionModePopupWindowStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionModePopupWindowStyle
+     */
+    public static final int Theme_actionModePopupWindowStyle=24;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionModeSelectAllDrawable}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionModeSelectAllDrawable
+     */
+    public static final int Theme_actionModeSelectAllDrawable=25;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionModeShareDrawable}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionModeShareDrawable
+     */
+    public static final int Theme_actionModeShareDrawable=26;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionModeSplitBackground}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionModeSplitBackground
+     */
+    public static final int Theme_actionModeSplitBackground=27;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionModeStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionModeStyle
+     */
+    public static final int Theme_actionModeStyle=28;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionModeWebSearchDrawable}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionModeWebSearchDrawable
+     */
+    public static final int Theme_actionModeWebSearchDrawable=29;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionOverflowButtonStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionOverflowButtonStyle
+     */
+    public static final int Theme_actionOverflowButtonStyle=30;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#actionOverflowMenuStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:actionOverflowMenuStyle
+     */
+    public static final int Theme_actionOverflowMenuStyle=31;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#activityChooserViewStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:activityChooserViewStyle
+     */
+    public static final int Theme_activityChooserViewStyle=32;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#alertDialogButtonGroupStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:alertDialogButtonGroupStyle
+     */
+    public static final int Theme_alertDialogButtonGroupStyle=33;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#alertDialogCenterButtons}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.megvii.livenessproject:alertDialogCenterButtons
+     */
+    public static final int Theme_alertDialogCenterButtons=34;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#alertDialogStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:alertDialogStyle
+     */
+    public static final int Theme_alertDialogStyle=35;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#alertDialogTheme}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:alertDialogTheme
+     */
+    public static final int Theme_alertDialogTheme=36;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#autoCompleteTextViewStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:autoCompleteTextViewStyle
+     */
+    public static final int Theme_autoCompleteTextViewStyle=37;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#borderlessButtonStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:borderlessButtonStyle
+     */
+    public static final int Theme_borderlessButtonStyle=38;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#buttonBarButtonStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:buttonBarButtonStyle
+     */
+    public static final int Theme_buttonBarButtonStyle=39;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#buttonBarNegativeButtonStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:buttonBarNegativeButtonStyle
+     */
+    public static final int Theme_buttonBarNegativeButtonStyle=40;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#buttonBarNeutralButtonStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:buttonBarNeutralButtonStyle
+     */
+    public static final int Theme_buttonBarNeutralButtonStyle=41;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#buttonBarPositiveButtonStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:buttonBarPositiveButtonStyle
+     */
+    public static final int Theme_buttonBarPositiveButtonStyle=42;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#buttonBarStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:buttonBarStyle
+     */
+    public static final int Theme_buttonBarStyle=43;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#buttonStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:buttonStyle
+     */
+    public static final int Theme_buttonStyle=44;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#buttonStyleSmall}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:buttonStyleSmall
+     */
+    public static final int Theme_buttonStyleSmall=45;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#checkboxStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:checkboxStyle
+     */
+    public static final int Theme_checkboxStyle=46;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#checkedTextViewStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:checkedTextViewStyle
+     */
+    public static final int Theme_checkedTextViewStyle=47;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#colorAccent}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:colorAccent
+     */
+    public static final int Theme_colorAccent=48;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#colorButtonNormal}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:colorButtonNormal
+     */
+    public static final int Theme_colorButtonNormal=49;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#colorControlActivated}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:colorControlActivated
+     */
+    public static final int Theme_colorControlActivated=50;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#colorControlHighlight}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:colorControlHighlight
+     */
+    public static final int Theme_colorControlHighlight=51;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#colorControlNormal}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:colorControlNormal
+     */
+    public static final int Theme_colorControlNormal=52;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#colorPrimary}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:colorPrimary
+     */
+    public static final int Theme_colorPrimary=53;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#colorPrimaryDark}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:colorPrimaryDark
+     */
+    public static final int Theme_colorPrimaryDark=54;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#colorSwitchThumbNormal}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:colorSwitchThumbNormal
+     */
+    public static final int Theme_colorSwitchThumbNormal=55;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#dialogPreferredPadding}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:dialogPreferredPadding
+     */
+    public static final int Theme_dialogPreferredPadding=56;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#dialogTheme}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:dialogTheme
+     */
+    public static final int Theme_dialogTheme=57;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#dividerHorizontal}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:dividerHorizontal
+     */
+    public static final int Theme_dividerHorizontal=58;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#dividerVertical}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:dividerVertical
+     */
+    public static final int Theme_dividerVertical=59;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#dropDownListViewStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:dropDownListViewStyle
+     */
+    public static final int Theme_dropDownListViewStyle=60;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#dropdownListPreferredItemHeight}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:dropdownListPreferredItemHeight
+     */
+    public static final int Theme_dropdownListPreferredItemHeight=61;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#editTextBackground}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:editTextBackground
+     */
+    public static final int Theme_editTextBackground=62;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#editTextColor}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:editTextColor
+     */
+    public static final int Theme_editTextColor=63;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#editTextStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:editTextStyle
+     */
+    public static final int Theme_editTextStyle=64;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#homeAsUpIndicator}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:homeAsUpIndicator
+     */
+    public static final int Theme_homeAsUpIndicator=65;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#listChoiceBackgroundIndicator}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:listChoiceBackgroundIndicator
+     */
+    public static final int Theme_listChoiceBackgroundIndicator=66;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#listDividerAlertDialog}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:listDividerAlertDialog
+     */
+    public static final int Theme_listDividerAlertDialog=67;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#listPopupWindowStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:listPopupWindowStyle
+     */
+    public static final int Theme_listPopupWindowStyle=68;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#listPreferredItemHeight}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:listPreferredItemHeight
+     */
+    public static final int Theme_listPreferredItemHeight=69;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#listPreferredItemHeightLarge}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:listPreferredItemHeightLarge
+     */
+    public static final int Theme_listPreferredItemHeightLarge=70;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#listPreferredItemHeightSmall}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:listPreferredItemHeightSmall
+     */
+    public static final int Theme_listPreferredItemHeightSmall=71;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#listPreferredItemPaddingLeft}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:listPreferredItemPaddingLeft
+     */
+    public static final int Theme_listPreferredItemPaddingLeft=72;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#listPreferredItemPaddingRight}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:listPreferredItemPaddingRight
+     */
+    public static final int Theme_listPreferredItemPaddingRight=73;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#panelBackground}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:panelBackground
+     */
+    public static final int Theme_panelBackground=74;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#panelMenuListTheme}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:panelMenuListTheme
+     */
+    public static final int Theme_panelMenuListTheme=75;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#panelMenuListWidth}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:panelMenuListWidth
+     */
+    public static final int Theme_panelMenuListWidth=76;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#popupMenuStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:popupMenuStyle
+     */
+    public static final int Theme_popupMenuStyle=77;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#popupWindowStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:popupWindowStyle
+     */
+    public static final int Theme_popupWindowStyle=78;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#radioButtonStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:radioButtonStyle
+     */
+    public static final int Theme_radioButtonStyle=79;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#ratingBarStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:ratingBarStyle
+     */
+    public static final int Theme_ratingBarStyle=80;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#searchViewStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:searchViewStyle
+     */
+    public static final int Theme_searchViewStyle=81;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#selectableItemBackground}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:selectableItemBackground
+     */
+    public static final int Theme_selectableItemBackground=82;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#selectableItemBackgroundBorderless}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:selectableItemBackgroundBorderless
+     */
+    public static final int Theme_selectableItemBackgroundBorderless=83;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#spinnerDropDownItemStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:spinnerDropDownItemStyle
+     */
+    public static final int Theme_spinnerDropDownItemStyle=84;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#spinnerStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:spinnerStyle
+     */
+    public static final int Theme_spinnerStyle=85;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#switchStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:switchStyle
+     */
+    public static final int Theme_switchStyle=86;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#textAppearanceLargePopupMenu}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:textAppearanceLargePopupMenu
+     */
+    public static final int Theme_textAppearanceLargePopupMenu=87;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#textAppearanceListItem}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:textAppearanceListItem
+     */
+    public static final int Theme_textAppearanceListItem=88;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#textAppearanceListItemSmall}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:textAppearanceListItemSmall
+     */
+    public static final int Theme_textAppearanceListItemSmall=89;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#textAppearanceSearchResultSubtitle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:textAppearanceSearchResultSubtitle
+     */
+    public static final int Theme_textAppearanceSearchResultSubtitle=90;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#textAppearanceSearchResultTitle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:textAppearanceSearchResultTitle
+     */
+    public static final int Theme_textAppearanceSearchResultTitle=91;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#textAppearanceSmallPopupMenu}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:textAppearanceSmallPopupMenu
+     */
+    public static final int Theme_textAppearanceSmallPopupMenu=92;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#textColorAlertDialogListItem}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:textColorAlertDialogListItem
+     */
+    public static final int Theme_textColorAlertDialogListItem=93;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#textColorSearchUrl}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:textColorSearchUrl
+     */
+    public static final int Theme_textColorSearchUrl=94;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#toolbarNavigationButtonStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:toolbarNavigationButtonStyle
+     */
+    public static final int Theme_toolbarNavigationButtonStyle=95;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#toolbarStyle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:toolbarStyle
+     */
+    public static final int Theme_toolbarStyle=96;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#windowActionBar}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.megvii.livenessproject:windowActionBar
+     */
+    public static final int Theme_windowActionBar=97;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#windowActionBarOverlay}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.megvii.livenessproject:windowActionBarOverlay
+     */
+    public static final int Theme_windowActionBarOverlay=98;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#windowActionModeOverlay}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.megvii.livenessproject:windowActionModeOverlay
+     */
+    public static final int Theme_windowActionModeOverlay=99;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#windowFixedHeightMajor}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>May be a fractional value, which is a floating point number appended with
+     * either % or %p, such as "<code>14.5%</code>".
+     * The % suffix always means a percentage of the base size;
+     * the optional %p suffix provides a size relative to some parent container.
+     *
+     * @attr name com.megvii.livenessproject:windowFixedHeightMajor
+     */
+    public static final int Theme_windowFixedHeightMajor=100;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#windowFixedHeightMinor}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>May be a fractional value, which is a floating point number appended with
+     * either % or %p, such as "<code>14.5%</code>".
+     * The % suffix always means a percentage of the base size;
+     * the optional %p suffix provides a size relative to some parent container.
+     *
+     * @attr name com.megvii.livenessproject:windowFixedHeightMinor
+     */
+    public static final int Theme_windowFixedHeightMinor=101;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#windowFixedWidthMajor}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>May be a fractional value, which is a floating point number appended with
+     * either % or %p, such as "<code>14.5%</code>".
+     * The % suffix always means a percentage of the base size;
+     * the optional %p suffix provides a size relative to some parent container.
+     *
+     * @attr name com.megvii.livenessproject:windowFixedWidthMajor
+     */
+    public static final int Theme_windowFixedWidthMajor=102;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#windowFixedWidthMinor}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>May be a fractional value, which is a floating point number appended with
+     * either % or %p, such as "<code>14.5%</code>".
+     * The % suffix always means a percentage of the base size;
+     * the optional %p suffix provides a size relative to some parent container.
+     *
+     * @attr name com.megvii.livenessproject:windowFixedWidthMinor
+     */
+    public static final int Theme_windowFixedWidthMinor=103;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#windowMinWidthMajor}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>May be a fractional value, which is a floating point number appended with
+     * either % or %p, such as "<code>14.5%</code>".
+     * The % suffix always means a percentage of the base size;
+     * the optional %p suffix provides a size relative to some parent container.
+     *
+     * @attr name com.megvii.livenessproject:windowMinWidthMajor
+     */
+    public static final int Theme_windowMinWidthMajor=104;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#windowMinWidthMinor}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     * <p>May be a fractional value, which is a floating point number appended with
+     * either % or %p, such as "<code>14.5%</code>".
+     * The % suffix always means a percentage of the base size;
+     * the optional %p suffix provides a size relative to some parent container.
+     *
+     * @attr name com.megvii.livenessproject:windowMinWidthMinor
+     */
+    public static final int Theme_windowMinWidthMinor=105;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#windowNoTitle}
+     * attribute's value can be found in the {@link #Theme} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.megvii.livenessproject:windowNoTitle
+     */
+    public static final int Theme_windowNoTitle=106;
+    /**
+     * Attributes that can be used with a Toolbar.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_collapseContentDescription com.megvii.livenessproject:collapseContentDescription}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_collapseIcon com.megvii.livenessproject:collapseIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetEnd com.megvii.livenessproject:contentInsetEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetLeft com.megvii.livenessproject:contentInsetLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetRight com.megvii.livenessproject:contentInsetRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetStart com.megvii.livenessproject:contentInsetStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_maxButtonHeight com.megvii.livenessproject:maxButtonHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_navigationContentDescription com.megvii.livenessproject:navigationContentDescription}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_navigationIcon com.megvii.livenessproject:navigationIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_popupTheme com.megvii.livenessproject:popupTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_subtitle com.megvii.livenessproject:subtitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.megvii.livenessproject:subtitleTextAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_title com.megvii.livenessproject:title}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginBottom com.megvii.livenessproject:titleMarginBottom}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginEnd com.megvii.livenessproject:titleMarginEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginStart com.megvii.livenessproject:titleMarginStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginTop com.megvii.livenessproject:titleMarginTop}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMargins com.megvii.livenessproject:titleMargins}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleTextAppearance com.megvii.livenessproject:titleTextAppearance}</code></td><td></td></tr>
+     * </table>
+     * @see #Toolbar_android_gravity
+     * @see #Toolbar_android_minHeight
+     * @see #Toolbar_collapseContentDescription
+     * @see #Toolbar_collapseIcon
+     * @see #Toolbar_contentInsetEnd
+     * @see #Toolbar_contentInsetLeft
+     * @see #Toolbar_contentInsetRight
+     * @see #Toolbar_contentInsetStart
+     * @see #Toolbar_maxButtonHeight
+     * @see #Toolbar_navigationContentDescription
+     * @see #Toolbar_navigationIcon
+     * @see #Toolbar_popupTheme
+     * @see #Toolbar_subtitle
+     * @see #Toolbar_subtitleTextAppearance
+     * @see #Toolbar_title
+     * @see #Toolbar_titleMarginBottom
+     * @see #Toolbar_titleMarginEnd
+     * @see #Toolbar_titleMarginStart
+     * @see #Toolbar_titleMarginTop
+     * @see #Toolbar_titleMargins
+     * @see #Toolbar_titleTextAppearance
+     */
+    public static final int[] Toolbar={
+      0x010100af, 0x01010140, 0x7f03003d, 0x7f03003e, 
+      0x7f03004c, 0x7f03004d, 0x7f03004e, 0x7f03004f, 
+      0x7f0300ae, 0x7f0300b2, 0x7f0300b3, 0x7f0300bd, 
+      0x7f0300d9, 0x7f0300da, 0x7f0300ed, 0x7f0300ee, 
+      0x7f0300ef, 0x7f0300f0, 0x7f0300f1, 0x7f0300f2, 
+      0x7f0300f3
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#gravity}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>Must be one or more (separated by '|') of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>center</td><td>11</td><td></td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
+     * <tr><td>fill</td><td>77</td><td></td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
+     * </table>
+     *
+     * @attr name android:gravity
+     */
+    public static final int Toolbar_android_gravity=0;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#minHeight}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name android:minHeight
+     */
+    public static final int Toolbar_android_minHeight=1;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#collapseContentDescription}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.megvii.livenessproject:collapseContentDescription
+     */
+    public static final int Toolbar_collapseContentDescription=2;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#collapseIcon}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:collapseIcon
+     */
+    public static final int Toolbar_collapseIcon=3;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#contentInsetEnd}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:contentInsetEnd
+     */
+    public static final int Toolbar_contentInsetEnd=4;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#contentInsetLeft}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:contentInsetLeft
+     */
+    public static final int Toolbar_contentInsetLeft=5;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#contentInsetRight}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:contentInsetRight
+     */
+    public static final int Toolbar_contentInsetRight=6;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#contentInsetStart}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:contentInsetStart
+     */
+    public static final int Toolbar_contentInsetStart=7;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#maxButtonHeight}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:maxButtonHeight
+     */
+    public static final int Toolbar_maxButtonHeight=8;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#navigationContentDescription}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.megvii.livenessproject:navigationContentDescription
+     */
+    public static final int Toolbar_navigationContentDescription=9;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#navigationIcon}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:navigationIcon
+     */
+    public static final int Toolbar_navigationIcon=10;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#popupTheme}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:popupTheme
+     */
+    public static final int Toolbar_popupTheme=11;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#subtitle}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.megvii.livenessproject:subtitle
+     */
+    public static final int Toolbar_subtitle=12;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#subtitleTextAppearance}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:subtitleTextAppearance
+     */
+    public static final int Toolbar_subtitleTextAppearance=13;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#title}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.megvii.livenessproject:title
+     */
+    public static final int Toolbar_title=14;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#titleMarginBottom}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:titleMarginBottom
+     */
+    public static final int Toolbar_titleMarginBottom=15;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#titleMarginEnd}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:titleMarginEnd
+     */
+    public static final int Toolbar_titleMarginEnd=16;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#titleMarginStart}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:titleMarginStart
+     */
+    public static final int Toolbar_titleMarginStart=17;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#titleMarginTop}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:titleMarginTop
+     */
+    public static final int Toolbar_titleMarginTop=18;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#titleMargins}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:titleMargins
+     */
+    public static final int Toolbar_titleMargins=19;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#titleTextAppearance}
+     * attribute's value can be found in the {@link #Toolbar} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:titleTextAppearance
+     */
+    public static final int Toolbar_titleTextAppearance=20;
+    /**
+     * Attributes that can be used with a View.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #View_android_theme android:theme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #View_backgroundTint com.megvii.livenessproject:backgroundTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #View_backgroundTintMode com.megvii.livenessproject:backgroundTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #View_paddingEnd com.megvii.livenessproject:paddingEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #View_paddingStart com.megvii.livenessproject:paddingStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #View_theme com.megvii.livenessproject:theme}</code></td><td></td></tr>
+     * </table>
+     * @see #View_android_theme
+     * @see #View_android_focusable
+     * @see #View_backgroundTint
+     * @see #View_backgroundTintMode
+     * @see #View_paddingEnd
+     * @see #View_paddingStart
+     * @see #View_theme
+     */
+    public static final int[] View={
+      0x01010000, 0x010100da, 0x7f03002a, 0x7f03002b, 
+      0x7f0300b6, 0x7f0300b7, 0x7f0300ea
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#theme}
+     * attribute's value can be found in the {@link #View} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name android:theme
+     */
+    public static final int View_android_theme=0;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#focusable}
+     * attribute's value can be found in the {@link #View} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name android:focusable
+     */
+    public static final int View_android_focusable=1;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#backgroundTint}
+     * attribute's value can be found in the {@link #View} array.
+     *
+     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
+     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
+     * "<code>#<i>aarrggbb</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:backgroundTint
+     */
+    public static final int View_backgroundTint=2;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#backgroundTintMode}
+     * attribute's value can be found in the {@link #View} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
+     * </table>
+     *
+     * @attr name com.megvii.livenessproject:backgroundTintMode
+     */
+    public static final int View_backgroundTintMode=3;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#paddingEnd}
+     * attribute's value can be found in the {@link #View} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:paddingEnd
+     */
+    public static final int View_paddingEnd=4;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#paddingStart}
+     * attribute's value can be found in the {@link #View} array.
+     *
+     * <p>May be a dimension value, which is a floating point number appended with a
+     * unit such as "<code>14.5sp</code>".
+     * Available units are: px (pixels), dp (density-independent pixels),
+     * sp (scaled pixels based on preferred font size), in (inches), and
+     * mm (millimeters).
+     *
+     * @attr name com.megvii.livenessproject:paddingStart
+     */
+    public static final int View_paddingStart=5;
+    /**
+     * <p>This symbol is the offset where the {@link com.megvii.livenessproject.R.attr#theme}
+     * attribute's value can be found in the {@link #View} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.megvii.livenessproject:theme
+     */
+    public static final int View_theme=6;
+    /**
+     * Attributes that can be used with a ViewStubCompat.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #ViewStubCompat_android_id android:id}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ViewStubCompat_android_layout android:layout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ViewStubCompat_android_inflatedId android:inflatedId}</code></td><td></td></tr>
+     * </table>
+     * @see #ViewStubCompat_android_id
+     * @see #ViewStubCompat_android_layout
+     * @see #ViewStubCompat_android_inflatedId
+     */
+    public static final int[] ViewStubCompat={
+      0x010100d0, 0x010100f2, 0x010100f3
+    };
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#id}
+     * attribute's value can be found in the {@link #ViewStubCompat} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name android:id
+     */
+    public static final int ViewStubCompat_android_id=0;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#layout}
+     * attribute's value can be found in the {@link #ViewStubCompat} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name android:layout
+     */
+    public static final int ViewStubCompat_android_layout=1;
+    /**
+     * <p>This symbol is the offset where the {@link android.R.attr#inflatedId}
+     * attribute's value can be found in the {@link #ViewStubCompat} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name android:inflatedId
+     */
+    public static final int ViewStubCompat_android_inflatedId=2;
   }
 }

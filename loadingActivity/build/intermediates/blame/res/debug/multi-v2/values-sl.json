@@ -4,13 +4,20 @@
             "outputFile": "D:\\CertisApp\\demo\\LivenessProject\\loadingActivity\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sl\\values-sl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b7f35940311d7ada00b236befde1cbb5\\res\\values-sl\\values-sl.xml",
+                    "source": "C:\\Users\\dlwor\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.1.aar\\d8d5cedc1ba0707eddfc29d7ff1ad421\\res\\values-sl\\values-sl.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "291,398,505,613,700,803,922,1030,1139,1239,1352,1459,1563",
+                        "endColumns": "106,106,107,86,102,118,107,108,99,112,106,103,116",
+                        "endOffsets": "393,500,608,695,798,917,1025,1134,1234,1347,1454,1558,1675"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,162,269,377,464,567,686,794,903,1003,1116,1223,1327",
+                        "endColumns": "106,106,107,86,102,118,107,108,99,112,106,103,116",
+                        "endOffsets": "157,264,372,459,562,681,789,898,998,1111,1218,1322,1439"
                     }
                 }
             ]

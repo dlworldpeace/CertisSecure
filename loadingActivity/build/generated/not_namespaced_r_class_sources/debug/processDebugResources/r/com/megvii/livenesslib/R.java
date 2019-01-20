@@ -12,8 +12,8 @@ public final class R {
     public static final class anim {
         private anim() {}
 
-        public static final int liveness_leftout = 0x7f010000;
-        public static final int liveness_rightin = 0x7f010001;
+        public static final int liveness_leftout = 0x7f01000a;
+        public static final int liveness_rightin = 0x7f01000b;
     }
     public static final class array {
         private array() {}
@@ -24,117 +24,117 @@ public final class R {
     public static final class attr {
         private attr() {}
 
-        public static final int prefer = 0x7f03004c;
-        public static final int ratio = 0x7f03004d;
+        public static final int prefer = 0x7f0300bf;
+        public static final int ratio = 0x7f0300c8;
     }
     public static final class dimen {
         private dimen() {}
 
-        public static final int activity_horizontal_margin = 0x7f050000;
-        public static final int activity_vertical_margin = 0x7f050001;
-        public static final int title_hight = 0x7f05001c;
+        public static final int activity_horizontal_margin = 0x7f06003c;
+        public static final int activity_vertical_margin = 0x7f06003d;
+        public static final int title_hight = 0x7f060047;
     }
     public static final class drawable {
         private drawable() {}
 
-        public static final int bg_nothing = 0x7f060000;
-        public static final int ic_launcher = 0x7f06000a;
-        public static final int liveness_eye = 0x7f06000e;
-        public static final int liveness_eye_open_closed = 0x7f06000f;
-        public static final int liveness_faceppinside = 0x7f060010;
-        public static final int liveness_head = 0x7f060011;
-        public static final int liveness_head_down = 0x7f060012;
-        public static final int liveness_head_left = 0x7f060013;
-        public static final int liveness_head_pitch = 0x7f060014;
-        public static final int liveness_head_right = 0x7f060015;
-        public static final int liveness_head_up = 0x7f060016;
-        public static final int liveness_head_yaw = 0x7f060017;
-        public static final int liveness_layout_bottom_tips = 0x7f060018;
-        public static final int liveness_layout_camera_mask = 0x7f060019;
-        public static final int liveness_layout_gradient_back = 0x7f06001a;
-        public static final int liveness_layout_head_mask = 0x7f06001b;
-        public static final int liveness_left = 0x7f06001c;
-        public static final int liveness_mouth = 0x7f06001d;
-        public static final int liveness_mouth_open_closed = 0x7f06001e;
-        public static final int liveness_phoneimage = 0x7f06001f;
-        public static final int liveness_right = 0x7f060020;
-        public static final int liveness_surfacemask = 0x7f060021;
-        public static final int red = 0x7f060031;
+        public static final int bg_nothing = 0x7f07003b;
+        public static final int ic_launcher = 0x7f070045;
+        public static final int liveness_eye = 0x7f070049;
+        public static final int liveness_eye_open_closed = 0x7f07004a;
+        public static final int liveness_faceppinside = 0x7f07004b;
+        public static final int liveness_head = 0x7f07004c;
+        public static final int liveness_head_down = 0x7f07004d;
+        public static final int liveness_head_left = 0x7f07004e;
+        public static final int liveness_head_pitch = 0x7f07004f;
+        public static final int liveness_head_right = 0x7f070050;
+        public static final int liveness_head_up = 0x7f070051;
+        public static final int liveness_head_yaw = 0x7f070052;
+        public static final int liveness_layout_bottom_tips = 0x7f070053;
+        public static final int liveness_layout_camera_mask = 0x7f070054;
+        public static final int liveness_layout_gradient_back = 0x7f070055;
+        public static final int liveness_layout_head_mask = 0x7f070056;
+        public static final int liveness_left = 0x7f070057;
+        public static final int liveness_mouth = 0x7f070058;
+        public static final int liveness_mouth_open_closed = 0x7f070059;
+        public static final int liveness_phoneimage = 0x7f07005a;
+        public static final int liveness_right = 0x7f07005b;
+        public static final int liveness_surfacemask = 0x7f07005c;
+        public static final int red = 0x7f070061;
     }
     public static final class id {
         private id() {}
 
-        public static final int detection_step_image = 0x7f070016;
-        public static final int detection_step_linear = 0x7f070017;
-        public static final int detection_step_name = 0x7f070018;
-        public static final int detection_step_timeout = 0x7f070019;
-        public static final int detection_step_timeoutLinear = 0x7f07001a;
-        public static final int liveness_layout_bottom_tips_head = 0x7f070030;
-        public static final int liveness_layout_facemask = 0x7f070031;
-        public static final int liveness_layout_first_layout = 0x7f070032;
-        public static final int liveness_layout_head_mask = 0x7f070033;
-        public static final int liveness_layout_progressbar = 0x7f070034;
-        public static final int liveness_layout_promptText = 0x7f070035;
-        public static final int liveness_layout_rootRel = 0x7f070036;
-        public static final int liveness_layout_second_layout = 0x7f070037;
-        public static final int liveness_layout_textureview = 0x7f070038;
-        public static final int main_pos_layout = 0x7f070040;
+        public static final int detection_step_image = 0x7f080023;
+        public static final int detection_step_linear = 0x7f080024;
+        public static final int detection_step_name = 0x7f080025;
+        public static final int detection_step_timeout = 0x7f080026;
+        public static final int detection_step_timeoutLinear = 0x7f080027;
+        public static final int liveness_layout_bottom_tips_head = 0x7f080043;
+        public static final int liveness_layout_facemask = 0x7f080044;
+        public static final int liveness_layout_first_layout = 0x7f080045;
+        public static final int liveness_layout_head_mask = 0x7f080046;
+        public static final int liveness_layout_progressbar = 0x7f080047;
+        public static final int liveness_layout_promptText = 0x7f080048;
+        public static final int liveness_layout_rootRel = 0x7f080049;
+        public static final int liveness_layout_second_layout = 0x7f08004a;
+        public static final int liveness_layout_textureview = 0x7f08004b;
+        public static final int main_pos_layout = 0x7f080055;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int liveness_detection_step = 0x7f090002;
-        public static final int liveness_layout = 0x7f090003;
+        public static final int liveness_detection_step = 0x7f0a001c;
+        public static final int liveness_layout = 0x7f0a001d;
     }
     public static final class raw {
         private raw() {}
 
-        public static final int meglive_eye_blink = 0x7f0c0000;
-        public static final int meglive_failed = 0x7f0c0001;
-        public static final int meglive_mouth_open = 0x7f0c0002;
-        public static final int meglive_pitch_down = 0x7f0c0003;
-        public static final int meglive_success = 0x7f0c0004;
-        public static final int meglive_well_done = 0x7f0c0005;
-        public static final int meglive_yaw = 0x7f0c0006;
-        public static final int model = 0x7f0c0007;
+        public static final int meglive_eye_blink = 0x7f0d0000;
+        public static final int meglive_failed = 0x7f0d0001;
+        public static final int meglive_mouth_open = 0x7f0d0002;
+        public static final int meglive_pitch_down = 0x7f0d0003;
+        public static final int meglive_success = 0x7f0d0004;
+        public static final int meglive_well_done = 0x7f0d0005;
+        public static final int meglive_yaw = 0x7f0d0006;
+        public static final int model = 0x7f0d0007;
     }
     public static final class string {
         private string() {}
 
-        public static final int app_name = 0x7f0d0001;
-        public static final int aufail = 0x7f0d0002;
-        public static final int authok = 0x7f0d0003;
-        public static final int blink_detection = 0x7f0d0004;
-        public static final int facelost = 0x7f0d0005;
-        public static final int liveness_detection_failed = 0x7f0d0007;
-        public static final int liveness_detection_failed_action_blend = 0x7f0d0008;
-        public static final int liveness_detection_failed_not_video = 0x7f0d0009;
-        public static final int liveness_detection_failed_timeout = 0x7f0d000a;
-        public static final int loading_confirm = 0x7f0d000b;
-        public static final int loading_text = 0x7f0d000c;
-        public static final int mouth_detection = 0x7f0d000d;
-        public static final int netowrk_parse_failed = 0x7f0d000e;
-        public static final int network_error = 0x7f0d000f;
-        public static final int novalidframe = 0x7f0d0010;
-        public static final int pos_detection = 0x7f0d0011;
-        public static final int steps = 0x7f0d0013;
-        public static final int timeout = 0x7f0d0014;
-        public static final int tipblink = 0x7f0d0015;
-        public static final int tippose = 0x7f0d0016;
-        public static final int tipsmouth = 0x7f0d0017;
-        public static final int verify_error = 0x7f0d0018;
-        public static final int verify_success = 0x7f0d0019;
+        public static final int app_name = 0x7f0e0012;
+        public static final int aufail = 0x7f0e0013;
+        public static final int authok = 0x7f0e0014;
+        public static final int blink_detection = 0x7f0e0015;
+        public static final int facelost = 0x7f0e0016;
+        public static final int liveness_detection_failed = 0x7f0e0018;
+        public static final int liveness_detection_failed_action_blend = 0x7f0e0019;
+        public static final int liveness_detection_failed_not_video = 0x7f0e001a;
+        public static final int liveness_detection_failed_timeout = 0x7f0e001b;
+        public static final int loading_confirm = 0x7f0e001c;
+        public static final int loading_text = 0x7f0e001d;
+        public static final int mouth_detection = 0x7f0e001e;
+        public static final int netowrk_parse_failed = 0x7f0e001f;
+        public static final int network_error = 0x7f0e0020;
+        public static final int novalidframe = 0x7f0e0021;
+        public static final int pos_detection = 0x7f0e0022;
+        public static final int steps = 0x7f0e0024;
+        public static final int timeout = 0x7f0e0025;
+        public static final int tipblink = 0x7f0e0026;
+        public static final int tippose = 0x7f0e0027;
+        public static final int tipsmouth = 0x7f0e0028;
+        public static final int verify_error = 0x7f0e0029;
+        public static final int verify_success = 0x7f0e002a;
     }
     public static final class style {
         private style() {}
 
-        public static final int AppBaseTheme = 0x7f0e0000;
-        public static final int AppTheme = 0x7f0e0001;
+        public static final int AppBaseTheme = 0x7f0f0004;
+        public static final int AppTheme = 0x7f0f0006;
     }
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] AutoRatioImageView = { 0x7f03004c, 0x7f03004d };
+        public static final int[] AutoRatioImageView = { 0x7f0300bf, 0x7f0300c8 };
         public static final int AutoRatioImageView_prefer = 0;
         public static final int AutoRatioImageView_ratio = 1;
     }

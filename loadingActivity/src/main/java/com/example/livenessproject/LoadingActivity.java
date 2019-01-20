@@ -6,16 +6,19 @@ import android.content.pm.ActivityInfo;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.megvii.livenesslib.LivenessActivity;
 import com.megvii.livenessproject.R;
 import com.megvii.livenessdetection.Detector;
 import com.umeng.analytics.MobclickAgent;
+
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -63,7 +66,21 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 				EditText username = (EditText) findViewById(R.id.loading_layout_username);
 				EditText password = (EditText) findViewById(R.id.loading_layout_password);
 				String result = loginWithPassword_Post(username.getText().toString(), password.getText().toString());
-				Log.d("loginWithPasswordResult", "_____________________" + result + "_____________________");
+
+				try{
+					JSONObject jsonObject = new JSONObject(result);
+					Boolean invalidLogin = jsonObject.has("message");
+					if(invalidLogin) {
+						Toast.makeText(getApplicationContext(), "Incorrect Username or Password,",
+								Toast.LENGTH_SHORT).show();
+					} else {
+						Intent intent = new Intent(LoadingActivity.this, MainActivity.class);
+						intent.putExtra("json", jsonObject.toString());
+						startActivity(intent);
+					}
+				}catch(org.json.JSONException e){
+					e.printStackTrace();
+				}
 			}
 		});
 	}
