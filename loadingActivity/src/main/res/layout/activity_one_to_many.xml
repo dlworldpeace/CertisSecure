@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/image_holder"
+        android:id="@+id/image_holder1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:minHeight="30dp"
@@ -39,7 +39,7 @@
         android:layout_marginBottom="20dp"
         android:text="@string/layout_two"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/image_holder"
+        app:layout_constraintBottom_toBottomOf="@+id/image_holder1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

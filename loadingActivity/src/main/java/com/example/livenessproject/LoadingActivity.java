@@ -6,7 +6,6 @@ import android.content.pm.ActivityInfo;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -60,7 +59,7 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 				//EditText username = (EditText) findViewById(R.id.loading_layout_username);
 				//EditText password = (EditText) findViewById(R.id.loading_layout_password);
 				//String result = HttpHelper.Companion.loginWithPassword_Post(username.getText().toString(), password.getText().toString());
-				String result = HttpHelper.Companion.loginWithPassword_Post("david@sharker.com.sg", "test");
+				String result = HttpHelper.Companion.loginWithPassword("david@sharker.com.sg", "test");
 
 				try{
 					JSONObject jsonObject = new JSONObject(result);

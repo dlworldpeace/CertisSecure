@@ -65,12 +65,12 @@ class OneToManyActivity : AppCompatActivity() {
 
             if (requestCode == CONTENT_REQUEST) {
 
-                image_holder.setImageURI(Uri.fromFile(cameraOutput))
+                image_holder1.setImageURI(Uri.fromFile(cameraOutput))
 
             } else if (requestCode == SELECT_FILE) {
 
                 super.onActivityResult(requestCode, resultCode, data)
-                image_holder.setImageURI(data!!.data)
+                image_holder1.setImageURI(data!!.data)
 
             }
 
