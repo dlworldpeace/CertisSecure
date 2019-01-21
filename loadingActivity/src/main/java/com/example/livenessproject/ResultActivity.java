@@ -48,6 +48,7 @@ public class ResultActivity extends Activity implements View.OnClickListener {
 			int resID = result.getInt("resultcode");
 			if (resID == R.string.verify_success) {
 				doPlay(R.raw.meglive_success);
+				//result.getJSONArray("imgs").get(0).toString(); use this to login
 			} else if (resID == R.string.liveness_detection_failed_not_video) {
 				doPlay(R.raw.meglive_failed);
 			} else if (resID == R.string.liveness_detection_failed_timeout) {

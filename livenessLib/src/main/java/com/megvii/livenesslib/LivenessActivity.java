@@ -15,6 +15,7 @@ import android.hardware.Camera.PreviewCallback;
 import android.hardware.Camera.Size;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Base64;
 import android.view.TextureView;
 import android.view.View;
 import android.view.animation.Animation;
@@ -32,6 +33,7 @@ import com.megvii.livenessdetection.Detector.DetectionListener;
 import com.megvii.livenessdetection.Detector.DetectionType;
 import com.megvii.livenessdetection.FaceQualityManager;
 import com.megvii.livenessdetection.FaceQualityManager.FaceQualityErrorType;
+import com.megvii.livenessdetection.bean.FaceIDDataStruct;
 import com.megvii.livenessdetection.bean.FaceInfo;
 import com.megvii.livenesslib.R;
 import com.megvii.livenesslib.util.ConUtil;
@@ -221,6 +223,17 @@ public class LivenessActivity extends Activity implements PreviewCallback,
 		mFaceMask.setFaceInfo(null);
 
 		if (mCurStep >= mIDetection.mDetectionSteps.size()) {
+
+			FaceIDDataStruct idDataStruct = mDetector.getFaceIDDataStruct();
+			byte[] imageBest = idDataStruct.images.get("image_best"); //获取最好的一张图片
+			String imageBestBase64 = Base64.encodeToString(imageBest, Base64.NO_WRAP);
+			try{
+				JSONArray imgArray = jsonObject.getJSONArray("imgs");
+				imgArray.put(imageBestBase64); // 返回最好的一张图片在jsonObject{imgs: [...]}里
+			}catch (JSONException e) {
+				e.printStackTrace();
+			}
+
 			mProgressBar.setVisibility(View.VISIBLE);
 			handleResult(R.string.verify_success);
 		} else
