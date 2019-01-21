@@ -118,7 +118,7 @@ class OneToOneActivity : AppCompatActivity() {
                     val img1 = imageViewToBase64(image_holder1)
                     val img2 = imageViewToBase64(image_holder2)
                     val result = HttpHelper.oneToOneComparison(img1,img2)
-                    if(result == "null") {
+                    if(result == "null" || result == "") {
                         toast("These 2 images cannot be compared.")
                     } else {
                         try {
