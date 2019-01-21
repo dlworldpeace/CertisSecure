@@ -18,6 +18,7 @@ import com.example.livenessproject.util.ImageHelper.Companion.imageViewToBase64
 import com.megvii.livenessproject.R
 import java.io.File
 import kotlinx.android.synthetic.main.activity_one_to_one.*
+import org.json.JSONObject
 
 class OneToOneActivity : AppCompatActivity() {
 
@@ -114,30 +115,25 @@ class OneToOneActivity : AppCompatActivity() {
             if(imageOneAdded && imageTwoAdded) {
                 button.visibility = View.VISIBLE
                 button.setOnClickListener {
-                    Log.d("oneToOneComparison", "uploading to compare..........")
                     val img1 = imageViewToBase64(image_holder1)
-                    val maxLogSize = 2000
-                    for (i in 0..img1.length / maxLogSize) {
-                        val start = i * maxLogSize
-                        var end = (i + 1) * maxLogSize
-                        end = if (end > img1.length) img1.length else end
-                        Log.d("oneToOneComparison", img1.substring(start, end))
-                    }
                     val img2 = imageViewToBase64(image_holder2)
-                    Log.d("Switch", "img2 is:.............." )
-                    for (i in 0..img2.length / maxLogSize) {
-                        val start = i * maxLogSize
-                        var end = (i + 1) * maxLogSize
-                        end = if (end > img2.length) img2.length else end
-                        Log.d("oneToOneComparison", img2.substring(start, end))
-                    }
                     val result = HttpHelper.oneToOneComparison(img1,img2)
-                    Log.d("oneToOneComparison", "uploaded finish, waiting for results..........")
-                    Log.d("oneToOneComparison", result)
-                    Log.d("oneToOneComparison", "done")
+                    if(result == "null") {
+                        toast("These 2 images cannot be compared.")
+                    } else {
+                        try {
+                            Log.d("result", result)
+                            val jsonObject = JSONObject(result)
+                            val timeUsed = jsonObject.get("time_used")
+                            val confidence = jsonObject.get("confidence")
+
+                            toast("time used: $timeUsed ms. confidence: $confidence %")
+                        } catch (e: org.json.JSONException) {
+                            e.printStackTrace()
+                        }
+                    }
                 }
             }
-
         }
     }
 
