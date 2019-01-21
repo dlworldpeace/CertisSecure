@@ -47,7 +47,10 @@ class MainActivity : AppCompatActivity() {
         // Set navigation view navigation item selected listener
         navigation_view.setNavigationItemSelectedListener{
             when (it.itemId){
-                R.id.action_logout -> toast("Logout clicked")
+                R.id.action_logout -> {
+                    val intent = Intent(this, LoadingActivity::class.java)
+                    startActivity(intent)
+                }
                 R.id.action_usermanagement ->{
                     // Multiline action
                     toast("User Management clicked")
