@@ -21,12 +21,17 @@
 
     <ImageView
         android:id="@+id/image_holder1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:minHeight="30dp"
+        android:layout_width="273dp"
+        android:layout_height="379dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:minWidth="30dp"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="119dp" />
+        android:minHeight="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="74dp" />
 
     <Button
         android:id="@+id/button"
@@ -34,13 +39,29 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="20dp"
         android:text="@string/layout_two"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/image_holder1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_holder1" />
+
+    <EditText
+        android:id="@+id/result_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </android.support.constraint.ConstraintLayout>

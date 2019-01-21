@@ -1,9 +1,8 @@
 package com.example.livenessproject
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -11,15 +10,14 @@ import android.os.Environment
 import android.os.StrictMode
 import android.provider.MediaStore
 import android.support.v7.app.AlertDialog
-import android.util.Base64
 import android.util.Log
 import android.view.View
-import android.widget.ImageView
-import com.example.livenessproject.httpUtil.HttpHelper
+import android.widget.Toast
+import com.example.livenessproject.util.HttpHelper
+import com.example.livenessproject.util.ImageHelper.Companion.imageViewToBase64
 import com.megvii.livenessproject.R
 import java.io.File
 import kotlinx.android.synthetic.main.activity_one_to_one.*
-import java.io.ByteArrayOutputStream
 
 class OneToOneActivity : AppCompatActivity() {
 
@@ -112,7 +110,6 @@ class OneToOneActivity : AppCompatActivity() {
                         imageTwoAdded = true
                     }
                 }
-
             }
             if(imageOneAdded && imageTwoAdded) {
                 button.visibility = View.VISIBLE
@@ -144,11 +141,8 @@ class OneToOneActivity : AppCompatActivity() {
         }
     }
 
-    private fun imageViewToBase64(image_holder: ImageView): String {
-        val bitmap = (image_holder.drawable as BitmapDrawable).bitmap
-        val stream = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 40, stream)
-        val bytes = stream.toByteArray()
-        return Base64.encodeToString(bytes, Base64.DEFAULT)
+    // Extension function to show toast message easily
+    private fun Context.toast(message:String){
+        Toast.makeText(applicationContext,message, Toast.LENGTH_SHORT).show()
     }
 }

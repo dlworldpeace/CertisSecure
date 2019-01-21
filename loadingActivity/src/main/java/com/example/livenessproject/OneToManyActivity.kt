@@ -1,6 +1,7 @@
 package com.example.livenessproject
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -12,7 +13,13 @@ import android.os.Environment
 import kotlinx.android.synthetic.main.activity_one_to_many.*
 import java.io.File
 import android.os.StrictMode
+import android.util.Log
 import android.view.View
+import android.widget.Toast
+import com.example.livenessproject.util.HttpHelper
+import com.example.livenessproject.util.ImageHelper
+import org.json.JSONArray
+import org.json.JSONObject
 
 class OneToManyActivity : AppCompatActivity() {
 
@@ -75,10 +82,34 @@ class OneToManyActivity : AppCompatActivity() {
             }
 
             button.visibility = View.VISIBLE
-//            button.setOnClickListener{
-//
-//            }
+            button.setOnClickListener{
+                val img = ImageHelper.imageViewToBase64(image_holder1)
+                val result = HttpHelper.oneToManyComparison(img)
+
+                if(result.isEmpty()) {
+                    toast("No match found.")
+                } else {
+                    try {
+                        val jsonObject = JSONObject(result)
+                        val user = jsonObject.getJSONObject("user")
+                        val id = user.get("_id")
+                        val displayName = user.get("displayName")
+                        val mobile = user.get("mobile")
+
+                        toast("Match found.")
+                        result_display.setText("id: $id\ndisplayName: $displayName\nmobile: $mobile")
+                        result_display.visibility = View.VISIBLE
+                    } catch (e: org.json.JSONException) {
+                        e.printStackTrace()
+                    }
+                }
+            }
 
         }
+    }
+
+    // Extension function to show toast message easily
+    private fun Context.toast(message:String){
+        Toast.makeText(applicationContext,message, Toast.LENGTH_SHORT).show()
     }
 }
