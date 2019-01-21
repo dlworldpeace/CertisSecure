@@ -6,14 +6,14 @@ import android.util.Base64
 import android.widget.ImageView
 import java.io.ByteArrayOutputStream
 
-class imageHelper {
+class ImageHelper {
     companion object {
-        fun imageViewToBase64(image_holder: ImageView): String {
-            val bitmap = (image_holder.drawable as BitmapDrawable).bitmap
+        fun imageViewToBase64(imageView: ImageView): String {
+            val bitmap = (imageView.drawable as BitmapDrawable).bitmap
             val stream = ByteArrayOutputStream()
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 40, stream)
-            val bytes = stream.toByteArray()
-            return Base64.encodeToString(bytes, Base64.DEFAULT)
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 20, stream)
+            val byteArray = stream.toByteArray()
+            return Base64.encodeToString(byteArray, Base64.NO_WRAP) //NO_WRAP because the string will be used in json, which does not recognize \n
         }
     }
 }

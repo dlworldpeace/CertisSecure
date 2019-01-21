@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.livenessproject.httpUtil.HttpHelper;
+import com.example.livenessproject.util.HttpHelper;
 import com.megvii.livenesslib.LivenessActivity;
 import com.megvii.livenessproject.R;
 import com.megvii.livenessdetection.Detector;
