@@ -122,7 +122,6 @@ class OneToOneActivity : AppCompatActivity() {
                         toast("These 2 images cannot be compared.")
                     } else {
                         try {
-                            Log.d("result", result)
                             val jsonObject = JSONObject(result)
                             val timeUsed = jsonObject.get("time_used")
                             val confidence = jsonObject.get("confidence")
