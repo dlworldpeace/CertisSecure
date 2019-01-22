@@ -46,4 +46,6 @@ dependencies {
     // main page
     implementation 'com.android.support:appcompat-v7:22.2.1'
     implementation 'com.android.support:design:22.2.1'
+    // user management page
+    implementation 'com.baoyz.swipemenulistview:library:1.3.0'
 }
