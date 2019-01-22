@@ -73,7 +73,12 @@ class UserManagementActivity : AppCompatActivity() {
         swipe_list_view.adapter = mListDataAdapter
 
         val creator = SwipeMenuCreator { menu ->
-//            editItem.background = ColorDrawable(Color.rgb(0x30, 0xB1,0xF5)) // This is part of edit button that is not used anymore
+            // add "edit" button to swipe menu
+            val editItem = SwipeMenuItem(applicationContext)
+            editItem.background = ColorDrawable(Color.rgb(0x30, 0xB1,0xF5))
+            editItem.width = dpTopx(90)
+            editItem.setIcon(R.drawable.ic_writing)
+            menu.addMenuItem(editItem)
 
             // add "delete" button to swipe menu
             val deleteItem = SwipeMenuItem(applicationContext)
@@ -88,6 +93,9 @@ class UserManagementActivity : AppCompatActivity() {
         swipe_list_view.setOnMenuItemClickListener { position, menu, index ->
             when (index) {
                 0 -> {
+
+                }
+                1 -> {
                     mArrayList.removeAt(position)
                     mListDataAdapter!!.notifyDataSetChanged()
                     toast("Item deleted")
