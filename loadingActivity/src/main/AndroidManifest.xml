@@ -21,9 +21,10 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppFullScreenTheme">
+        <activity android:name="com.example.livenessproject.AddEditUserActivity"></activity>
         <activity android:name="com.example.livenessproject.OneToManyActivity" />
         <activity android:name="com.example.livenessproject.OneToOneActivity" />
-        <activity android:name="com.example.livenessproject.UserManagementActivity" >
+        <activity android:name="com.example.livenessproject.UserManagementActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
