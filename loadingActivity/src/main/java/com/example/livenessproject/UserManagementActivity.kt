@@ -1,12 +1,13 @@
 package com.example.livenessproject
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.os.StrictMode
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.util.TypedValue
 import android.view.Menu
 import android.view.MenuItem
@@ -24,12 +25,12 @@ import java.util.ArrayList
 import kotlinx.android.synthetic.main.activity_user_management.*
 import kotlinx.android.synthetic.main.activity_user_management_list_item.view.*
 import org.json.JSONArray
-import org.json.JSONObject
 
 class UserManagementActivity : AppCompatActivity() {
 
     private val mArrayList = ArrayList<ArrayList<String>>()
     private var mListDataAdapter: ListDataAdapter? = null
+    private val PAGE_INTO_CREATE_USER = 100
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -129,7 +130,11 @@ class UserManagementActivity : AppCompatActivity() {
         val id = item.itemId
 
         if (id == R.id.action_add) {
-            //TODO add item to list from here
+
+            val intent = Intent(this, AddEditUserActivity::class.java)
+            startActivityForResult(intent, PAGE_INTO_CREATE_USER)
+            //refresh activity after getting
+
             //mArrayList.add("List item --> " + mArrayList.size)
             //mListDataAdapter!!.notifyDataSetChanged()
         }
@@ -177,6 +182,13 @@ class UserManagementActivity : AppCompatActivity() {
 
     private fun dpTopx(dp: Int): Int {
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(), resources.displayMetrics).toInt()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == PAGE_INTO_CREATE_USER && resultCode == Activity.RESULT_OK) {
+            recreate()
+        }
     }
 
     // Extension function to show toast message easily
