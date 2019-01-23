@@ -25,6 +25,8 @@ import java.util.ArrayList
 import kotlinx.android.synthetic.main.activity_user_management.*
 import kotlinx.android.synthetic.main.activity_user_management_list_item.view.*
 import org.json.JSONArray
+import org.json.JSONException
+import org.json.JSONObject
 
 class UserManagementActivity : AppCompatActivity() {
 
@@ -94,12 +96,21 @@ class UserManagementActivity : AppCompatActivity() {
         swipe_list_view.setOnMenuItemClickListener { position, menu, index ->
             when (index) {
                 0 -> {
-
+                    toast("Edit clicked, but not available yet.")
                 }
                 1 -> {
-                    mArrayList.removeAt(position)
-                    mListDataAdapter!!.notifyDataSetChanged()
-                    toast("Item deleted")
+                    try{
+                        val result = HttpHelper.deleteUserById(mArrayList[position][1])
+                        val jsonObject = JSONObject(result)
+                        val okMessage = jsonObject.optString("ok")
+                        if(okMessage != "") {
+                            mArrayList.removeAt(position)
+                            mListDataAdapter!!.notifyDataSetChanged()
+                            toast(okMessage)
+                        }
+                    } catch (e: JSONException) {
+                        e.printStackTrace()
+                    }
                 }
             }
             true
