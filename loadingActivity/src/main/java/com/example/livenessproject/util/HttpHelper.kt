@@ -11,21 +11,21 @@ class HttpHelper {
     companion object {
         fun loginWithPassword(username: String, password: String): String {
             val json = "{\"username\":\"$username\", \"password\":\"$password\"}"
-            return httpRequestWrapper("http://3.0.121.132:3000/auth/login", json)
+            return httpRequestWrapper("http://3.0.121.132:3000/auth/login", "POST", json)
         }
 
         fun oneToOneComparison(img1base64: String, img2base64: String): String {
             val json = "{\"img1\":\"data:image/jpeg;base64,$img1base64\", \"img2\":\"data:image/jpeg;base64,$img2base64\"}"
-            return httpRequestWrapper("http://3.0.121.132:3000/test/compare", json)
+            return httpRequestWrapper("http://3.0.121.132:3000/test/compare", "POST", json)
         }
 
         fun oneToManyComparison(imgbase64: String): String {
             val json = "{\"img\":\"data:image/jpeg;base64,$imgbase64\"}"
-            return httpRequestWrapper("http://3.0.121.132:3000/auth/loginface", json)
+            return httpRequestWrapper("http://3.0.121.132:3000/auth/loginface", "POST", json)
         }
 
         fun listAllUsers(): String {
-            return httpRequestWrapper("http://3.0.121.132:3000/users", null)
+            return httpRequestWrapper("http://3.0.121.132:3000/users", "GET", null)
         }
 
         fun createNewUser(loginName : String, password: String, displayName: String, email: String,
@@ -33,19 +33,22 @@ class HttpHelper {
             val json = "{\"loginName\" : \"$loginName\",\"password\" : \"$password\",\"displayName\"" +
                     ": \"$displayName\",\"email\" : \"$email\",\"mobile\" : \"$mobile\",\"photoURI\" :" +
                     " \"data:image/jpeg;base64,$photoURIBase64\"}"
-            return httpRequestWrapper("http://3.0.121.132:3000/users", json)
+            return httpRequestWrapper("http://3.0.121.132:3000/users", "POST", json)
         }
 
-        private fun httpRequestWrapper(url: String, json: String?): String{
+        fun deleteUserById(id: String): String {
+            return httpRequestWrapper("http://3.0.121.132:3000/users/$id", "DELETE", null)
+        }
+
+        private fun httpRequestWrapper(url: String, requestMethod: String, json: String?): String{
             var result = ""
             var reader: BufferedReader? = null
 
             try {
                 val conn = URL(url).openConnection() as HttpURLConnection
-                conn.requestMethod = "GET"
+                conn.requestMethod = requestMethod
 
-                if (null != json) {
-                    conn.requestMethod = "POST"
+                if (requestMethod == "DELETE" || requestMethod == "POST") {
                     conn.doOutput = true
                     conn.doInput = true
                     conn.useCaches = false
@@ -55,7 +58,10 @@ class HttpHelper {
                     // Set accept type here, if not will receive Error 415
                     // You can use conn.setRequestProperty("accept","*/*") to accept all types
                     conn.setRequestProperty("accept", "application/json")
-                    val writeBytes = json.toByteArray()
+                }
+
+                if (requestMethod == "POST") {
+                    val writeBytes = json!!.toByteArray()
                     conn.setRequestProperty("Content-Length", writeBytes.size.toString())
                     val outWriteStream = conn.outputStream
                     outWriteStream.write(json.toByteArray())
