@@ -15,9 +15,11 @@ import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.livenessproject.util.HttpHelper;
 import com.example.livenessproject.view.RotaterView;
 import com.megvii.livenessproject.R;
 
@@ -38,7 +40,7 @@ public class ResultActivity extends Activity implements View.OnClickListener {
 	private void init() {
 		mImageView = (ImageView) findViewById(R.id.result_status);
 		textView = (TextView) findViewById(R.id.result_text_result);
-		findViewById(R.id.result_next).setOnClickListener(this);
+		Button button_next = (Button) findViewById(R.id.result_next);
 		String resultOBJ = getIntent().getStringExtra("result");
 
 		try {
@@ -48,7 +50,6 @@ public class ResultActivity extends Activity implements View.OnClickListener {
 			int resID = result.getInt("resultcode");
 			if (resID == R.string.verify_success) {
 				doPlay(R.raw.meglive_success);
-				//result.getJSONArray("imgs").get(0).toString(); use this to login
 			} else if (resID == R.string.liveness_detection_failed_not_video) {
 				doPlay(R.raw.meglive_failed);
 			} else if (resID == R.string.liveness_detection_failed_timeout) {
@@ -64,6 +65,25 @@ public class ResultActivity extends Activity implements View.OnClickListener {
 			mImageView.setImageResource(isSuccess ? R.drawable.result_success
 					: R.drawable.result_failded);
 			doRotate(isSuccess);
+
+			String bestImageBase64 = result.getJSONArray("imgs").get(0).toString();
+			String faceLoginResult = HttpHelper.Companion.oneToManyComparison(bestImageBase64);
+			if(isSuccess && !faceLoginResult.isEmpty()) {
+				JSONObject jsonObject = new JSONObject(faceLoginResult);
+				final String user = jsonObject.getString("user");
+				button_next.setText("直接登陆");
+				button_next.setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						Intent intent = new Intent(ResultActivity.this, MainActivity.class);
+						intent.putExtra("json", user);
+						startActivity(intent);
+					}
+				});
+			} else {
+				button_next.setText("返回首页");
+				button_next.setOnClickListener(this);
+			}
 
 		} catch (JSONException e) {
 			e.printStackTrace();
@@ -105,9 +125,7 @@ public class ResultActivity extends Activity implements View.OnClickListener {
 		objectAnimator.setDuration(600);
 		objectAnimator.addListener(new Animator.AnimatorListener() {
 			@Override
-			public void onAnimationStart(Animator animation) {
-
-			}
+			public void onAnimationStart(Animator animation) {}
 
 			@Override
 			public void onAnimationEnd(Animator animation) {
@@ -118,14 +136,10 @@ public class ResultActivity extends Activity implements View.OnClickListener {
 			}
 
 			@Override
-			public void onAnimationCancel(Animator animation) {
-
-			}
+			public void onAnimationCancel(Animator animation) {}
 
 			@Override
-			public void onAnimationRepeat(Animator animation) {
-
-			}
+			public void onAnimationRepeat(Animator animation) {}
 		});
 		objectAnimator.start();
 	}
