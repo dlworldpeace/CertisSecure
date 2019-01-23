@@ -10,7 +10,7 @@ class ImageHelper {
     companion object {
         fun imageViewToBase64(imageView: ImageView): String {
             var bitmap = (imageView.drawable as BitmapDrawable).bitmap
-            while(bitmap.width > 1200) {
+            while(bitmap.width > 1300) {
                 bitmap = Bitmap.createScaledBitmap(bitmap, bitmap.width / 2, bitmap.height / 2, false)
             }
             val stream = ByteArrayOutputStream()
