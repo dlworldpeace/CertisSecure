@@ -28,6 +28,14 @@ class HttpHelper {
             return httpRequestWrapper("http://3.0.121.132:3000/users", null)
         }
 
+        fun createNewUser(loginName : String, password: String, displayName: String, email: String,
+                          mobile: String, photoURIBase64: String): String {
+            val json = "{\"loginName\" : \"$loginName\",\"password\" : \"$password\",\"displayName\"" +
+                    ": \"$displayName\",\"email\" : \"$email\",\"mobile\" : \"$mobile\",\"photoURI\" :" +
+                    " \"data:image/jpeg;base64,$photoURIBase64\"}"
+            return httpRequestWrapper("http://3.0.121.132:3000/users", json)
+        }
+
         private fun httpRequestWrapper(url: String, json: String?): String{
             var result = ""
             var reader: BufferedReader? = null
