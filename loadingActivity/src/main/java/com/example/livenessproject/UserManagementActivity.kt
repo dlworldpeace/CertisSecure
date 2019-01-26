@@ -33,6 +33,7 @@ class UserManagementActivity : AppCompatActivity() {
     private val mArrayList = ArrayList<ArrayList<String>>()
     private var mListDataAdapter: ListDataAdapter? = null
     private val PAGE_INTO_CREATE_USER = 100
+    private val PAGE_INTO_UPDATE_USER = 101
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -96,7 +97,9 @@ class UserManagementActivity : AppCompatActivity() {
         swipe_list_view.setOnMenuItemClickListener { position, menu, index ->
             when (index) {
                 0 -> {
-                    toast("Edit clicked, but not available yet.")
+                    val intent = Intent(this, AddEditUserActivity::class.java)
+                    intent.putExtra("id", mArrayList[position][1])
+                    startActivityForResult(intent, PAGE_INTO_UPDATE_USER)
                 }
                 1 -> {
                     try{
@@ -107,6 +110,8 @@ class UserManagementActivity : AppCompatActivity() {
                             mArrayList.removeAt(position)
                             mListDataAdapter!!.notifyDataSetChanged()
                             toast(okMessage)
+                        } else {
+                            toast("delete user failed")
                         }
                     } catch (e: JSONException) {
                         e.printStackTrace()
@@ -144,10 +149,6 @@ class UserManagementActivity : AppCompatActivity() {
 
             val intent = Intent(this, AddEditUserActivity::class.java)
             startActivityForResult(intent, PAGE_INTO_CREATE_USER)
-            //refresh activity after getting
-
-            //mArrayList.add("List item --> " + mArrayList.size)
-            //mListDataAdapter!!.notifyDataSetChanged()
         }
 
         return super.onOptionsItemSelected(item)
@@ -197,8 +198,10 @@ class UserManagementActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == PAGE_INTO_CREATE_USER && resultCode == Activity.RESULT_OK) {
-            recreate()
+        if (resultCode == Activity.RESULT_OK) {
+            if(requestCode == PAGE_INTO_CREATE_USER || requestCode == PAGE_INTO_UPDATE_USER) {
+                recreate()
+            }
         }
     }
 

@@ -58,7 +58,7 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 			public void onClick(View view) {
 				//EditText username = (EditText) findViewById(R.id.loading_layout_username);
 				//EditText password = (EditText) findViewById(R.id.loading_layout_password);
-				//String result = HttpHelper.Companion.loginWithPassword_Post(username.getText().toString(), password.getText().toString());
+				//String result = HttpHelper.Companion.loginWithPassword_Post(username.getText().trim().toString(), password.getText().toString().trim());
 				String result = HttpHelper.Companion.loginWithPassword("david@sharker.com.sg", "test");
 
 				try{

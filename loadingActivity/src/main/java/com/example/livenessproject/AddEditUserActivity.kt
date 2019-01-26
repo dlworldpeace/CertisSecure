@@ -14,6 +14,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.util.Patterns
+import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
@@ -31,6 +32,8 @@ class AddEditUserActivity : AppCompatActivity() {
     private var CONTENT_REQUEST: Int = 1337
     private var SELECT_FILE: Int = 0
     private var cameraOutput: File? = null
+    private var isUpdateNotCreate = false
+    private var id: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,8 +45,37 @@ class AddEditUserActivity : AppCompatActivity() {
             StrictMode.setThreadPolicy(policy)
         }
 
+        id = intent.getStringExtra("id")
+        id?.let{
+            isUpdateNotCreate = true
+            val result = HttpHelper.getUserById(id!!)
+            try {
+                val jsonObject = JSONObject(result)
+                val loginName = jsonObject.getString("loginName")
+                val displayName = jsonObject.getString("displayName")
+                val email = jsonObject.getString("email")
+                val mobile = jsonObject.getString("mobile")
+                val photoUriBase64 = jsonObject.getString("photoURI")
+
+                text_login_name.setText(loginName)
+                text_display_name.setText(displayName)
+                text_email.setText(email)
+                text_mobile.setText(mobile)
+                image_holder.setImageBitmap(ImageHelper.ExtendedBase64ToBitmap(photoUriBase64))
+
+                label_password.visibility = View.GONE
+                label_confirm_password.visibility = View.GONE
+                text_password.visibility = View.GONE
+                text_confirm_password.visibility = View.GONE
+            } catch (e: JSONException) {
+                e.printStackTrace()
+            }
+
+            finish_button.text = "UPDATE"
+        }
+
         choose_image_button.setOnClickListener { selectImage() }
-        finish_button.setOnClickListener {sendDetails() }
+        finish_button.setOnClickListener {sendToServer() }
     }
 
     private fun selectImage() {
@@ -74,7 +106,7 @@ class AddEditUserActivity : AppCompatActivity() {
         builder.show()
     }
 
-    private fun sendDetails() {
+    private fun sendToServer() {
         try {
             text_login_name.validate({ s -> s.isNotEmpty() }, "Cannot be empty!")
             text_display_name.validate({ s -> s.isNotEmpty() }, "Cannot be empty!")
@@ -82,30 +114,46 @@ class AddEditUserActivity : AppCompatActivity() {
             text_email.validate({ s -> s.isValidEmail() }, "Valid email address required")
             text_mobile.validate({ s -> s.isNotEmpty() }, "Cannot be empty!")
             text_mobile.validate({ s -> s.toIntOrNull() != null && s.length >= 8 }, "Valid mobile number required")
-            text_password.validate({ s -> s.isNotEmpty() }, "Cannot be empty!")
-            text_password.validate({ s -> s.length >= 6 }, "Minimum length = 6")
-            text_confirm_password.validate({ s -> s.isNotEmpty() }, "Cannot be empty!")
+            if (!isUpdateNotCreate) {
+                text_password.validate({ s -> s.isNotEmpty() }, "Cannot be empty!")
+                text_password.validate({ s -> s.length >= 6 }, "Minimum length = 6")
+                text_confirm_password.validate({ s -> s.isNotEmpty() }, "Cannot be empty!")
+            }
             text_confirm_password.validate({ s -> s.trim() == text_password.text.toString().trim() }, "Password is inconsistent!")
             image_holder.validateNotEmpty()
 
+
             // finally try to send user details to server
             val photoBase64 = ImageHelper.imageViewToBase64(image_holder)
-            val result = HttpHelper.createNewUser(text_login_name.text.toString().trim(),
-                    text_password.text.toString().trim(), text_display_name.text.toString().trim(),
-                    text_email.text.toString().trim(), text_mobile.text.toString().trim(), photoBase64)
-            val jsonObject = JSONObject(result)
-            val message = jsonObject.optString("message")
-            if (message != "") {
-                toast(message.toString())
+            if (isUpdateNotCreate) {
+                val result = HttpHelper.updateUserById(id!!, text_login_name.text.toString().trim(),
+                        text_display_name.text.toString().trim(), text_email.text.toString().trim(),
+                        text_mobile.text.toString().trim(), photoBase64)
+                val jsonObject = JSONObject(result)
+                val okMessage = jsonObject.optString("ok")
+                if (okMessage != "") {
+                    toast(okMessage)
+                    setResult(Activity.RESULT_OK, Intent())
+                    finish()
+                } else {
+                    toast("User not updated")
+                }
             } else {
-                toast("new user created")
-                setResult(Activity.RESULT_OK, Intent())
-                finish()
+                val result = HttpHelper.createNewUser(text_login_name.text.toString().trim(),
+                        text_password.text.toString().trim(), text_display_name.text.toString().trim(),
+                        text_email.text.toString().trim(), text_mobile.text.toString().trim(), photoBase64)
+                val jsonObject = JSONObject(result)
+                val message = jsonObject.optString("message")
+                if (message != "") {
+                    toast(message.toString())
+                } else {
+                    toast("new user created")
+                    setResult(Activity.RESULT_OK, Intent())
+                    finish()
+                }
             }
         } catch (e: ValidationException) {
             Log.d("Validation", e.message)
-        } catch (e: JSONException) {
-            e.printStackTrace()
         }
     }
 

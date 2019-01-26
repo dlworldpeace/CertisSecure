@@ -60,8 +60,7 @@ public class ResultActivity extends Activity implements View.OnClickListener {
 				doPlay(R.raw.meglive_failed);
 			}
 
-			boolean isSuccess = result.getString("result").equals(
-					getResources().getString(R.string.verify_success));
+			boolean isSuccess = result.getString("result").equals(getResources().getString(R.string.verify_success));
 			mImageView.setImageResource(isSuccess ? R.drawable.result_success
 					: R.drawable.result_failded);
 			doRotate(isSuccess);
@@ -81,10 +80,8 @@ public class ResultActivity extends Activity implements View.OnClickListener {
 					}
 				});
 			} else {
-				button_next.setText("返回首页");
 				button_next.setOnClickListener(this);
 			}
-
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
