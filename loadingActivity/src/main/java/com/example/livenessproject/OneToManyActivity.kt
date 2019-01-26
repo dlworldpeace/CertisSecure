@@ -85,23 +85,20 @@ class OneToManyActivity : AppCompatActivity() {
             button.setOnClickListener{
                 val img = ImageHelper.imageViewToBase64(image_holder1)
                 val result = HttpHelper.oneToManyComparison(img)
+                val jsonObject = JSONObject(result)
+                val message = jsonObject.optString("message")
 
-                if(result.isEmpty()) {
-                    toast("No match found.")
+                if(message != "") {
+                    toast(message)
                 } else {
-                    try {
-                        val jsonObject = JSONObject(result)
-                        val user = jsonObject.getJSONObject("user")
-                        val id = user.get("_id")
-                        val displayName = user.get("displayName")
-                        val mobile = user.get("mobile")
+                    val user = jsonObject.getJSONObject("user")
+                    val id = user.get("_id")
+                    val displayName = user.get("displayName")
+                    val mobile = user.get("mobile")
 
-                        toast("Match found.")
-                        result_display.setText("id: $id\ndisplayName: $displayName\nmobile: $mobile")
-                        result_display.visibility = View.VISIBLE
-                    } catch (e: org.json.JSONException) {
-                        e.printStackTrace()
-                    }
+                    toast("Match found.")
+                    result_display.setText("id: $id\ndisplayName: $displayName\nmobile: $mobile")
+                    result_display.visibility = View.VISIBLE
                 }
             }
 
