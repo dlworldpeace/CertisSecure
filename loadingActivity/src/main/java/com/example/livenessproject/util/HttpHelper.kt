@@ -40,6 +40,17 @@ class HttpHelper {
             return httpRequestWrapper("http://3.0.121.132:3000/users/$id", "DELETE", null)
         }
 
+        fun getUserById(id: String): String {
+            return httpRequestWrapper("http://3.0.121.132:3000/users/$id", "GET", null)
+        }
+
+        fun updateUserById(id: String, loginName: String, displayName: String, email: String,
+                           mobile: String, photoURIBase64: String): String {
+            val json = "{\"loginName\" : \"$loginName\",\"displayName\" : \"$displayName\",\"email\" : \"$email\"," +
+                    "\"mobile\" : \"$mobile\",\"photoURI\" : \"data:image/jpeg;base64,$photoURIBase64\"}"
+            return httpRequestWrapper("http://3.0.121.132:3000/users/$id", "PATCH", json)
+        }
+
         private fun httpRequestWrapper(url: String, requestMethod: String, json: String?): String{
             var result = ""
             var reader: BufferedReader? = null
@@ -48,7 +59,7 @@ class HttpHelper {
                 val conn = URL(url).openConnection() as HttpURLConnection
                 conn.requestMethod = requestMethod
 
-                if (requestMethod == "DELETE" || requestMethod == "POST") {
+                if (requestMethod == "DELETE" || requestMethod == "POST" || requestMethod == "PATCH") {
                     conn.doOutput = true
                     conn.doInput = true
                     conn.useCaches = false
@@ -60,7 +71,7 @@ class HttpHelper {
                     conn.setRequestProperty("accept", "application/json")
                 }
 
-                if (requestMethod == "POST") {
+                if (requestMethod == "POST" || requestMethod == "PATCH") {
                     val writeBytes = json!!.toByteArray()
                     conn.setRequestProperty("Content-Length", writeBytes.size.toString())
                     val outWriteStream = conn.outputStream
