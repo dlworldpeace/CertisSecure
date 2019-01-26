@@ -121,15 +121,11 @@ class OneToOneActivity : AppCompatActivity() {
                     if(result == "null" || result == "") {
                         toast("These 2 images cannot be compared.")
                     } else {
-                        try {
-                            val jsonObject = JSONObject(result)
-                            val timeUsed = jsonObject.get("time_used")
-                            val confidence = jsonObject.get("confidence")
+                        val jsonObject = JSONObject(result)
+                        val timeUsed = jsonObject.get("time_used")
+                        val confidence = jsonObject.get("confidence")
 
-                            toast("time used: $timeUsed ms. confidence: $confidence %")
-                        } catch (e: org.json.JSONException) {
-                            e.printStackTrace()
-                        }
+                        toast("time used: $timeUsed ms. confidence: $confidence %")
                     }
                 }
             }

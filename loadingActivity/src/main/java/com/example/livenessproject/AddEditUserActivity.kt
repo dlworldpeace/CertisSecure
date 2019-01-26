@@ -49,29 +49,26 @@ class AddEditUserActivity : AppCompatActivity() {
         id?.let{
             isUpdateNotCreate = true
             val result = HttpHelper.getUserById(id!!)
-            try {
-                val jsonObject = JSONObject(result)
-                val loginName = jsonObject.getString("loginName")
-                val displayName = jsonObject.getString("displayName")
-                val email = jsonObject.getString("email")
-                val mobile = jsonObject.getString("mobile")
-                val photoUriBase64 = jsonObject.getString("photoURI")
 
-                text_login_name.setText(loginName)
-                text_display_name.setText(displayName)
-                text_email.setText(email)
-                text_mobile.setText(mobile)
-                image_holder.setImageBitmap(ImageHelper.ExtendedBase64ToBitmap(photoUriBase64))
+            val jsonObject = JSONObject(result)
+            val loginName = jsonObject.getString("loginName")
+            val displayName = jsonObject.getString("displayName")
+            val email = jsonObject.getString("email")
+            val mobile = jsonObject.getString("mobile")
+            val photoUriBase64 = jsonObject.getString("photoURI")
 
-                label_password.visibility = View.GONE
-                label_confirm_password.visibility = View.GONE
-                text_password.visibility = View.GONE
-                text_confirm_password.visibility = View.GONE
-            } catch (e: JSONException) {
-                e.printStackTrace()
-            }
+            text_login_name.setText(loginName)
+            text_display_name.setText(displayName)
+            text_email.setText(email)
+            text_mobile.setText(mobile)
+            image_holder.setImageBitmap(ImageHelper.ExtendedBase64ToBitmap(photoUriBase64))
 
-            finish_button.text = "UPDATE"
+            label_password.visibility = View.GONE
+            label_confirm_password.visibility = View.GONE
+            text_password.visibility = View.GONE
+            text_confirm_password.visibility = View.GONE
+
+            finish_button.text = "UPDATE" // instead of "CREATE"
         }
 
         choose_image_button.setOnClickListener { selectImage() }

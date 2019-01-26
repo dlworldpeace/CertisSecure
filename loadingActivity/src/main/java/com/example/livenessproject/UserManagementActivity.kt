@@ -25,7 +25,6 @@ import java.util.ArrayList
 import kotlinx.android.synthetic.main.activity_user_management.*
 import kotlinx.android.synthetic.main.activity_user_management_list_item.view.*
 import org.json.JSONArray
-import org.json.JSONException
 import org.json.JSONObject
 
 class UserManagementActivity : AppCompatActivity() {
@@ -102,19 +101,15 @@ class UserManagementActivity : AppCompatActivity() {
                     startActivityForResult(intent, PAGE_INTO_UPDATE_USER)
                 }
                 1 -> {
-                    try{
-                        val result = HttpHelper.deleteUserById(mArrayList[position][1])
-                        val jsonObject = JSONObject(result)
-                        val okMessage = jsonObject.optString("ok")
-                        if(okMessage != "") {
-                            mArrayList.removeAt(position)
-                            mListDataAdapter!!.notifyDataSetChanged()
-                            toast(okMessage)
-                        } else {
-                            toast("delete user failed")
-                        }
-                    } catch (e: JSONException) {
-                        e.printStackTrace()
+                    val result = HttpHelper.deleteUserById(mArrayList[position][1])
+                    val jsonObject = JSONObject(result)
+                    val okMessage = jsonObject.optString("ok")
+                    if(okMessage != "") {
+                        mArrayList.removeAt(position)
+                        mListDataAdapter!!.notifyDataSetChanged()
+                        toast(okMessage)
+                    } else {
+                        toast("delete user failed")
                     }
                 }
             }
@@ -146,7 +141,6 @@ class UserManagementActivity : AppCompatActivity() {
         val id = item.itemId
 
         if (id == R.id.action_add) {
-
             val intent = Intent(this, AddEditUserActivity::class.java)
             startActivityForResult(intent, PAGE_INTO_CREATE_USER)
         }
@@ -182,7 +176,7 @@ class UserManagementActivity : AppCompatActivity() {
                 holder = convertView.tag as ViewHolder
             }
             holder!!.mTextView!!.text = mArrayList[position][0]
-            holder!!.mId!!.text = mArrayList[position][1]
+            holder!!.mId!!.text = mArrayList[position][1] // hide each user's id here
             return convertView
         }
 
