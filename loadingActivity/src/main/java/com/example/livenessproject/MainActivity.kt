@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     private fun init() {
         // Configure details of account logged in
         val json:String = intent.getStringExtra("json")
-        val user = JSONObject(json).getJSONObject("user")
+        val user = JSONObject(json)
         val id = user.getString("_id")
         val photoURI = user.getString("photoURI")
         val displayName = user.getString("displayName")

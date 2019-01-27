@@ -18,6 +18,7 @@ import com.megvii.livenessproject.R;
 import com.megvii.livenessdetection.Detector;
 import com.umeng.analytics.MobclickAgent;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class LoadingActivity extends Activity implements View.OnClickListener {
@@ -63,16 +64,16 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 
 				try{
 					JSONObject jsonObject = new JSONObject(result);
-					Boolean invalidLogin = jsonObject.has("message");
+					boolean invalidLogin = jsonObject.has("message");
 					if(invalidLogin) {
 						Toast.makeText(getApplicationContext(), "Incorrect Username or Password,",
 								Toast.LENGTH_SHORT).show();
 					} else {
 						Intent intent = new Intent(LoadingActivity.this, MainActivity.class);
-						intent.putExtra("json", jsonObject.toString());
+						intent.putExtra("json", jsonObject.getString("user"));
 						startActivity(intent);
 					}
-				}catch(org.json.JSONException e){
+				}catch(JSONException e){
 					e.printStackTrace();
 				}
 			}
