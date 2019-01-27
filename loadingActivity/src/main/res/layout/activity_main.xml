@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical" >
 
          <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -25,10 +25,12 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <android.support.v4.view.ViewPager
                 android:id="@+id/view_pager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
+
         </android.support.constraint.ConstraintLayout>
 
     </LinearLayout>
@@ -39,22 +41,40 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="start"
-        android:background="#ebe5ff">
-         <TextView
-            android:id="@+id/drawer_title"
+        android:background="#ebe5ff"
+        android:clickable="true">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="User Name"
-            android:padding="50dp"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:background="#dcfffe" />
+            android:orientation="vertical"
+            android:background="#dcfffe"
+            android:layout_gravity="start"
+            android:paddingTop="20dp" >
+
+            <ImageView
+                android:id="@+id/drawer_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="80dp"
+                android:maxWidth="80dp"
+                android:adjustViewBounds="true" />
+
+            <TextView
+                android:id="@+id/drawer_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <android.support.design.widget.NavigationView
             android:id="@+id/navigation_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:menu="@menu/drawer_menu" />
+            app:menu="@menu/drawer_menu"
+            android:background="@android:color/transparent"/>
 
     </LinearLayout>
 

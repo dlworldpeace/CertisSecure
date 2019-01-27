@@ -9,5 +9,6 @@
     <string name="layout_one">1:1 Comparison</string>
     <string name="layout_two">1:N Comparison</string>
     <string name="user_management">User Management</string>
+    <string name="log_out">Log Out</string>
 
 </resources>

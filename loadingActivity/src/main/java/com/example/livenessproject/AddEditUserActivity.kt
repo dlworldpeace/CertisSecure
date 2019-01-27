@@ -22,7 +22,6 @@ import com.example.livenessproject.util.HttpHelper
 import com.example.livenessproject.util.ImageHelper
 import com.megvii.livenessproject.R
 import kotlinx.android.synthetic.main.activity_add_edit_user.*
-import org.json.JSONException
 import org.json.JSONObject
 import java.io.File
 import java.lang.Exception
@@ -61,7 +60,7 @@ class AddEditUserActivity : AppCompatActivity() {
             text_display_name.setText(displayName)
             text_email.setText(email)
             text_mobile.setText(mobile)
-            image_holder.setImageBitmap(ImageHelper.ExtendedBase64ToBitmap(photoUriBase64))
+            image_holder.setImageBitmap(ImageHelper.extendedBase64ToBitmap(photoUriBase64))
 
             label_password.visibility = View.GONE
             label_confirm_password.visibility = View.GONE

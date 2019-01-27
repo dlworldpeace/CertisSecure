@@ -4,23 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
     <item
-        android:id="@+id/description_name"
-        android:title="Name"
-        />
-    <item
-        android:id="@+id/description_mobile"
-        android:title="Mobile"
-        />
-    <item
-        android:id="@+id/description_email"
-        android:title="Email"
+        android:id="@+id/action_usermanagement"
+        android:title="@string/user_management"
         />
     <item
         android:id="@+id/action_logout"
-        android:title="Logout"
-        />
-    <item
-        android:id="@+id/action_usermanagement"
-        android:title="User Management"
+        android:title="@string/log_out"
         />
 </menu>
