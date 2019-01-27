@@ -45,11 +45,11 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 		// init textbox icons
 		EditText username = (EditText) findViewById(R.id.loading_layout_username);
 		Drawable drawable=getResources().getDrawable(R.drawable.icon_email);
-		drawable.setBounds(0,0,64,64);//max size
+		drawable.setBounds(0,0,64,64);//restrict size
 		username.setCompoundDrawables(drawable,null,null,null);// use as drawableLeft
 		EditText password = (EditText) findViewById(R.id.loading_layout_password);
 		Drawable drawable2=getResources().getDrawable(R.drawable.icon_lock);
-		drawable2.setBounds(0,0,64,64);//max size
+		drawable2.setBounds(0,0,64,64);//restrict size
 		password.setCompoundDrawables(drawable2,null,null,null);// use as drawableLeft
 
 		// init login with password
@@ -59,7 +59,7 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 			public void onClick(View view) {
 				//EditText username = (EditText) findViewById(R.id.loading_layout_username);
 				//EditText password = (EditText) findViewById(R.id.loading_layout_password);
-				//String result = HttpHelper.Companion.loginWithPassword_Post(username.getText().trim().toString(), password.getText().toString().trim());
+				//String result = HttpHelper.Companion.loginWithPassword_Post(username.getText().toString().trim(), password.getText().toString().trim());
 				String result = HttpHelper.Companion.loginWithPassword("david@sharker.com.sg", "test");
 
 				try{
@@ -95,8 +95,7 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 	@Override
 	public void onClick(View v) {
 		if (v.getId() == R.id.loading_layout_livenessBtn) {
-			startActivityForResult(new Intent(this, LivenessActivity.class),
-					PAGE_INTO_LIVENESS);
+			startActivityForResult(new Intent(this, LivenessActivity.class), PAGE_INTO_LIVENESS);
 		}
 	}
 

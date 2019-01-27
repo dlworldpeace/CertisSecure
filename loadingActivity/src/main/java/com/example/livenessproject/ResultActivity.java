@@ -26,8 +26,8 @@ import com.megvii.livenessproject.R;
 /**
  * Created by binghezhouke on 14-10-24.
  */
-public class ResultActivity extends Activity implements View.OnClickListener {
-	private TextView textView;
+public class ResultActivity extends Activity {
+	private TextView mTextView;
 	private ImageView mImageView;
 
 	@Override
@@ -39,13 +39,13 @@ public class ResultActivity extends Activity implements View.OnClickListener {
 
 	private void init() {
 		mImageView = (ImageView) findViewById(R.id.result_status);
-		textView = (TextView) findViewById(R.id.result_text_result);
+		mTextView = (TextView) findViewById(R.id.result_text_result);
 		Button button_next = (Button) findViewById(R.id.result_next);
 		String resultOBJ = getIntent().getStringExtra("result");
 
 		try {
 			JSONObject result = new JSONObject(resultOBJ);
-			textView.setText(result.getString("result"));
+			mTextView.setText(result.getString("result"));
 
 			int resID = result.getInt("resultcode");
 			if (resID == R.string.verify_success) {
@@ -61,26 +61,32 @@ public class ResultActivity extends Activity implements View.OnClickListener {
 			}
 
 			boolean isSuccess = result.getString("result").equals(getResources().getString(R.string.verify_success));
-			mImageView.setImageResource(isSuccess ? R.drawable.result_success
-					: R.drawable.result_failded);
+			mImageView.setImageResource(isSuccess ? R.drawable.result_success : R.drawable.result_failded);
 			doRotate(isSuccess);
 
-			String bestImageBase64 = result.getJSONArray("imgs").get(0).toString();
-			String faceLoginResult = HttpHelper.Companion.oneToManyComparison(bestImageBase64);
-			if(isSuccess && !faceLoginResult.isEmpty()) {
-				JSONObject jsonObject = new JSONObject(faceLoginResult);
-				final String user = jsonObject.getString("user");
-				button_next.setText("直接登陆");
+			if(!isSuccess) {
 				button_next.setOnClickListener(new View.OnClickListener() {
 					@Override
 					public void onClick(View view) {
-						Intent intent = new Intent(ResultActivity.this, MainActivity.class);
-						intent.putExtra("json", user);
-						startActivity(intent);
+						finish();
 					}
 				});
 			} else {
-				button_next.setOnClickListener(this);
+				String bestImageBase64 = result.getJSONArray("imgs").get(0).toString();
+				String faceLoginResult = HttpHelper.Companion.oneToManyComparison(bestImageBase64);
+				if (!faceLoginResult.isEmpty()) {
+					JSONObject jsonObject = new JSONObject(faceLoginResult);
+					final String user = jsonObject.getString("user");
+					button_next.setText("直接登陆");
+					button_next.setOnClickListener(new View.OnClickListener() {
+						@Override
+						public void onClick(View view) {
+							Intent intent = new Intent(ResultActivity.this, MainActivity.class);
+							intent.putExtra("json", user);
+							startActivity(intent);
+						}
+					});
+				}
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();
@@ -98,14 +104,6 @@ public class ResultActivity extends Activity implements View.OnClickListener {
 		Intent intent = new Intent(context, ResultActivity.class);
 		intent.putExtra("result", status);
 		context.startActivity(intent);
-	}
-
-	@Override
-	public void onClick(View view) {
-		int id = view.getId();
-		if (id == R.id.result_next) {
-			finish();
-		}
 	}
 
 	private void doRotate(boolean success) {
