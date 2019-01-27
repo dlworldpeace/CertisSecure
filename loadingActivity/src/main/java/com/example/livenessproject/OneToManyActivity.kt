@@ -13,12 +13,10 @@ import android.os.Environment
 import kotlinx.android.synthetic.main.activity_one_to_many.*
 import java.io.File
 import android.os.StrictMode
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.example.livenessproject.util.HttpHelper
 import com.example.livenessproject.util.ImageHelper
-import org.json.JSONArray
 import org.json.JSONObject
 
 class OneToManyActivity : AppCompatActivity() {
@@ -83,7 +81,7 @@ class OneToManyActivity : AppCompatActivity() {
 
             button.visibility = View.VISIBLE
             button.setOnClickListener{
-                val img = ImageHelper.imageViewToBase64(image_holder1)
+                val img = ImageHelper.imageViewToRoundBase64(image_holder1)
                 val result = HttpHelper.oneToManyComparison(img)
                 val jsonObject = JSONObject(result)
                 val message = jsonObject.optString("message")

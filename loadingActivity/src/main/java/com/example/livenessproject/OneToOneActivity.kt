@@ -10,11 +10,10 @@ import android.os.Environment
 import android.os.StrictMode
 import android.provider.MediaStore
 import android.support.v7.app.AlertDialog
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.example.livenessproject.util.HttpHelper
-import com.example.livenessproject.util.ImageHelper.Companion.imageViewToBase64
+import com.example.livenessproject.util.ImageHelper.Companion.imageViewToRoundBase64
 import com.megvii.livenessproject.R
 import java.io.File
 import kotlinx.android.synthetic.main.activity_one_to_one.*
@@ -115,8 +114,8 @@ class OneToOneActivity : AppCompatActivity() {
             if(imageOneAdded && imageTwoAdded) {
                 button.visibility = View.VISIBLE
                 button.setOnClickListener {
-                    val img1 = imageViewToBase64(image_holder1)
-                    val img2 = imageViewToBase64(image_holder2)
+                    val img1 = imageViewToRoundBase64(image_holder1)
+                    val img2 = imageViewToRoundBase64(image_holder2)
                     val result = HttpHelper.oneToOneComparison(img1,img2)
                     if(result == "null" || result == "") {
                         toast("These 2 images cannot be compared.")

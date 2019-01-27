@@ -120,7 +120,7 @@ class AddEditUserActivity : AppCompatActivity() {
 
 
             // finally try to send user details to server
-            val photoBase64 = ImageHelper.imageViewToBase64(image_holder)
+            val photoBase64 = ImageHelper.imageViewToRoundBase64(image_holder)
             if (isUpdateNotCreate) {
                 val result = HttpHelper.updateUserById(id!!, text_login_name.text.toString().trim(),
                         text_display_name.text.toString().trim(), text_email.text.toString().trim(),

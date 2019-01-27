@@ -14,12 +14,14 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.baoyz.swipemenulistview.SwipeMenuCreator
 import com.baoyz.swipemenulistview.SwipeMenuItem
 import com.baoyz.swipemenulistview.SwipeMenuListView
 import com.example.livenessproject.util.HttpHelper
+import com.example.livenessproject.util.ImageHelper
 import com.megvii.livenessproject.R
 import java.util.ArrayList
 import kotlinx.android.synthetic.main.activity_user_management.*
@@ -63,11 +65,12 @@ class UserManagementActivity : AppCompatActivity() {
         for (i in 0..(jsonArray.length() - 1)) {
             val user = jsonArray.getJSONObject(i)
             val delFlag = user.get("delFlag") as Boolean
+            val photoURI = user.get("photoURI") as String
             val displayName = user.get("displayName") as String
             val id = user.get("_id") as String
 
             if(!delFlag) {
-                val innerList: ArrayList<String> = arrayListOf(displayName, id)
+                val innerList: ArrayList<String> = arrayListOf(photoURI, displayName, id)
                 mArrayList.add(innerList)
             }
         }
@@ -97,11 +100,11 @@ class UserManagementActivity : AppCompatActivity() {
             when (index) {
                 0 -> {
                     val intent = Intent(this, AddEditUserActivity::class.java)
-                    intent.putExtra("id", mArrayList[position][1])
+                    intent.putExtra("id", mArrayList[position][2])
                     startActivityForResult(intent, PAGE_INTO_UPDATE_USER)
                 }
                 1 -> {
-                    val result = HttpHelper.deleteUserById(mArrayList[position][1])
+                    val result = HttpHelper.deleteUserById(mArrayList[position][2])
                     val jsonObject = JSONObject(result)
                     val okMessage = jsonObject.optString("ok")
                     if(okMessage != "") {
@@ -169,19 +172,24 @@ class UserManagementActivity : AppCompatActivity() {
             if (convertView == null) {
                 holder = ViewHolder()
                 convertView = layoutInflater.inflate(R.layout.activity_user_management_list_item, null)
-                holder!!.mTextView = convertView!!.findViewById(R.id.user_management_text_view) as TextView
+                holder!!.mImage = convertView!!.findViewById(R.id.user_management_image) as ImageView
+                holder!!.mDisplayName = convertView!!.findViewById(R.id.user_management_diaplay_name) as TextView
                 holder!!.mId = convertView!!.findViewById(R.id.user_management_id) as TextView
                 convertView.tag = holder
             } else {
                 holder = convertView.tag as ViewHolder
             }
-            holder!!.mTextView!!.text = mArrayList[position][0]
-            holder!!.mId!!.text = mArrayList[position][1] // hide each user's id here
+            val photoData = ImageHelper.extendedBase64ToBitmap(mArrayList[position][0])
+            val circularPhotoData = ImageHelper.getCroppedCircleBitmap(photoData)
+            holder!!.mImage!!.setImageBitmap(circularPhotoData)
+            holder!!.mDisplayName!!.text = mArrayList[position][1]
+            holder!!.mId!!.text = mArrayList[position][2] // hide each user's id here
             return convertView
         }
 
         internal inner class ViewHolder {
-            var mTextView: TextView? = null
+            var mImage: ImageView? = null
+            var mDisplayName: TextView? = null
             var mId : TextView? = null
         }
     }
