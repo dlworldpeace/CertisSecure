@@ -1,5 +1,6 @@
 package com.example.livenessproject
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.os.Handler
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.widget.Toast
 import com.example.livenessproject.util.ImageHelper
 import com.example.livenessproject.viewPager.CustomPagerAdapter
@@ -16,6 +18,7 @@ import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
 
+    private val PAGE_INTO_VIEW_USER = 102
     private var doubleBackToExitPressedOnce = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         // Configure details of account logged in
         val json:String = intent.getStringExtra("json")
         val user = JSONObject(json).getJSONObject("user")
+        val id = user.getString("_id")
         val photoURI = user.getString("photoURI")
         val displayName = user.getString("displayName")
         val photoData = ImageHelper.extendedBase64ToBitmap(photoURI)
@@ -35,6 +39,11 @@ class MainActivity : AppCompatActivity() {
 
         drawer_image.setImageBitmap(circularPhotoData)
         drawer_user_name.text = displayName
+        drawer_header_profile.setOnClickListener {
+            val intent = Intent(this, ViewUserActivity::class.java)
+            intent.putExtra("id", id)
+            startActivityForResult(intent, PAGE_INTO_VIEW_USER)
+        }
 
         // Configure action bar
         setSupportActionBar(toolbar)
@@ -64,6 +73,15 @@ class MainActivity : AppCompatActivity() {
 
         // Inflate viewPager with pictures and OnclickListener
         view_pager.adapter = CustomPagerAdapter(this)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK) {
+            if(requestCode == PAGE_INTO_VIEW_USER) {
+                recreate()
+            }
+        }
     }
 
     override fun onBackPressed() {

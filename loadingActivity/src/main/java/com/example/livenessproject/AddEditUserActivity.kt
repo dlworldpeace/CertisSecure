@@ -44,6 +44,10 @@ class AddEditUserActivity : AppCompatActivity() {
             StrictMode.setThreadPolicy(policy)
         }
 
+        init()
+    }
+
+    private fun init() {
         id = intent.getStringExtra("id")
         id?.let{
             isUpdateNotCreate = true

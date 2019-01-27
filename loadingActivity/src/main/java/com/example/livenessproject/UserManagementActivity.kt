@@ -35,6 +35,7 @@ class UserManagementActivity : AppCompatActivity() {
     private var mListDataAdapter: ListDataAdapter? = null
     private val PAGE_INTO_CREATE_USER = 100
     private val PAGE_INTO_UPDATE_USER = 101
+    private val PAGE_INTO_VIEW_USER = 102
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -130,7 +131,9 @@ class UserManagementActivity : AppCompatActivity() {
         })
 
         swipe_list_view.setOnItemClickListener { parent, view, position, id ->
-            toast(view.user_management_id.text.toString())
+            val intent = Intent(this, ViewUserActivity::class.java)
+            intent.putExtra("id", view.user_management_id.text.toString())
+            startActivityForResult(intent, PAGE_INTO_VIEW_USER)
         }
     }
 
@@ -201,7 +204,7 @@ class UserManagementActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK) {
-            if(requestCode == PAGE_INTO_CREATE_USER || requestCode == PAGE_INTO_UPDATE_USER) {
+            if(requestCode == PAGE_INTO_CREATE_USER || requestCode == PAGE_INTO_UPDATE_USER || requestCode == PAGE_INTO_VIEW_USER) {
                 recreate()
             }
         }
