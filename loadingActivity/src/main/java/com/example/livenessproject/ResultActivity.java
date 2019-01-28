@@ -77,7 +77,7 @@ public class ResultActivity extends Activity {
 				if (!faceLoginResult.isEmpty()) {
 					JSONObject jsonObject = new JSONObject(faceLoginResult);
 					final String user = jsonObject.getString("user");
-					button_next.setText("直接登陆");
+					button_next.setText("Login");
 					button_next.setOnClickListener(new View.OnClickListener() {
 						@Override
 						public void onClick(View view) {

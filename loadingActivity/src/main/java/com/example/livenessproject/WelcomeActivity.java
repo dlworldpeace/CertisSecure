@@ -95,13 +95,12 @@ public class WelcomeActivity extends Activity {
 
         set.addListener(new AnimatorListenerAdapter()
         {
-
             @Override
             public void onAnimationEnd(Animator animation)
             {
                 sleep(1000);
                 startActivity(new Intent(WelcomeActivity.this, LoadingActivity.class));
-                WelcomeActivity.this.finish();
+                finish();
             }
         });
     }
