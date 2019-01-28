@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.livenessproject.OneToManyActivity">
+    tools:context="com.example.livenessproject.OneToManyActivity"
+    android:background="@drawable/bg_purple_gradient">
 
     <Button
         android:id="@+id/upload_button1"

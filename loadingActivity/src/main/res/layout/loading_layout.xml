@@ -6,29 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorPrimary">
-
-    <ImageView
-        android:id="@+id/layout_bkgd_imgleft"
-        android:layout_width="230dip"
-        android:layout_height="250dip"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/bkgd_left"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/layout_bkgd_imgright"
-        android:layout_width="300dip"
-        android:layout_height="230dip"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:src="@drawable/bkgd_right"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    android:background="@drawable/bg_purple_gradient">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/loading_layout_versionLinear"

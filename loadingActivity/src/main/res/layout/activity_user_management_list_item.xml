@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:maxHeight="80dp"
         android:maxWidth="80dp"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true" />
 
     <TextView
         android:id="@+id/user_management_diaplay_name"
@@ -25,6 +25,6 @@
         android:id="@+id/user_management_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
 </LinearLayout>
