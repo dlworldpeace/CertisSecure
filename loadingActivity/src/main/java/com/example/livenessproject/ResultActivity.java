@@ -96,7 +96,7 @@ public class ResultActivity extends Activity {
 	@Override
 	public void onBackPressed() {
 		super.onBackPressed();
-		Intent intent = new Intent(this, LoadingActivity.class);
+		Intent intent = new Intent(this, LoginActivity.class);
 		startActivity(intent);
 	}
 

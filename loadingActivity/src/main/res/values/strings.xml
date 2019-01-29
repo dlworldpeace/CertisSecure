@@ -10,5 +10,7 @@
     <string name="layout_two">1:N Comparison</string>
     <string name="user_management">User Management</string>
     <string name="log_out">Log Out</string>
+    <string name="password">Password</string>
+    <string name="user_name">Username</string>
 
 </resources>

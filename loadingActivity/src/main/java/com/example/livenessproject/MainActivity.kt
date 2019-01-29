@@ -8,7 +8,6 @@ import android.os.Handler
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
-import android.view.View
 import android.widget.Toast
 import com.example.livenessproject.util.ImageHelper
 import com.example.livenessproject.viewPager.CustomPagerAdapter
@@ -63,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         navigation_view.setNavigationItemSelectedListener{
             when (it.itemId){
                 R.id.action_usermanagement ->{ startActivity(Intent(this, UserManagementActivity::class.java)) }
-                R.id.action_logout -> { startActivity(Intent(this, LoadingActivity::class.java)) }
+                R.id.action_logout -> { startActivity(Intent(this, LoginActivity::class.java)) }
             }
 
             // Close the drawer

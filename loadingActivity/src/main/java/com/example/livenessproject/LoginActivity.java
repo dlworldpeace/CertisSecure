@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -21,39 +23,27 @@ import com.umeng.analytics.MobclickAgent;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class LoadingActivity extends Activity implements View.OnClickListener {
+public class LoginActivity extends Activity implements View.OnClickListener {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-		setContentView(R.layout.loading_layout);
+		setContentView(R.layout.activity_login);
 		init();
 
 		// Allow Network Connection to be made on main thread
-		if (android.os.Build.VERSION.SDK_INT > 9) {
-			StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-			StrictMode.setThreadPolicy(policy);
-		}
+		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+		StrictMode.setThreadPolicy(policy);
 	}
 
 	private void init() {
-		findViewById(R.id.loading_layout_livenessBtn).setOnClickListener(this);
+		findViewById(R.id.btn_face_id).setOnClickListener(this);
 		TextView versionNameView = (TextView) findViewById(R.id.loading_layout_version);
 		versionNameView.setText(Detector.getVersion());
 
-		// init textbox icons
-		EditText username = (EditText) findViewById(R.id.loading_layout_username);
-		Drawable drawable=getResources().getDrawable(R.drawable.icon_email);
-		drawable.setBounds(0,0,64,64);//restrict size
-		username.setCompoundDrawables(drawable,null,null,null);// use as drawableLeft
-		EditText password = (EditText) findViewById(R.id.loading_layout_password);
-		Drawable drawable2=getResources().getDrawable(R.drawable.icon_lock);
-		drawable2.setBounds(0,0,64,64);//restrict size
-		password.setCompoundDrawables(drawable2,null,null,null);// use as drawableLeft
-
 		// init login with password
-		Button loginWithPassword = (Button) findViewById(R.id.loading_layout_loginBtn);
+		Button loginWithPassword = (Button) findViewById(R.id.btn_login);
 		loginWithPassword.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -69,7 +59,7 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 						Toast.makeText(getApplicationContext(), "Incorrect Username or Password,",
 								Toast.LENGTH_SHORT).show();
 					} else {
-						Intent intent = new Intent(LoadingActivity.this, MainActivity.class);
+						Intent intent = new Intent(LoginActivity.this, MainActivity.class);
 						intent.putExtra("json", jsonObject.getString("user"));
 						startActivity(intent);
 					}
@@ -94,7 +84,7 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		if (v.getId() == R.id.loading_layout_livenessBtn) {
+		if (v.getId() == R.id.btn_face_id) {
 			startActivityForResult(new Intent(this, LivenessActivity.class), PAGE_INTO_LIVENESS);
 		}
 	}
