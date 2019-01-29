@@ -8,8 +8,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.os.SystemClock;
-import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.AnimationSet;
 import android.widget.ImageView;
@@ -17,7 +15,6 @@ import android.widget.TextView;
 
 import com.megvii.livenessproject.R;
 
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import butterknife.Bind;
@@ -35,9 +32,6 @@ public class WelcomeActivity extends Activity {
 
     @Bind(R.id.logo)
     ImageView logo;
-
-    @Bind(R.id.slogan)
-    TextView slogan;
 
     private static final int ANIM_TIME = 2000;
 
@@ -68,7 +62,6 @@ public class WelcomeActivity extends Activity {
         aa.setDuration(3000);
         aset.addAnimation(aa);
         logo.startAnimation(aset);
-        slogan.startAnimation(aset);
 
         Observable.timer(1000, TimeUnit.MILLISECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -99,7 +92,7 @@ public class WelcomeActivity extends Activity {
             public void onAnimationEnd(Animator animation)
             {
                 sleep(1000);
-                startActivity(new Intent(WelcomeActivity.this, LoadingActivity.class));
+                startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
                 finish();
             }
         });
