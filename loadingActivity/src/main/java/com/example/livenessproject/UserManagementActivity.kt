@@ -33,7 +33,7 @@ class UserManagementActivity : AppCompatActivity() {
 
     private val mArrayList = ArrayList<ArrayList<String>>()
     private var mListDataAdapter: ListDataAdapter? = null
-    private val PAGE_INTO_CREATE_USER = 100
+    private val PAGE_INTO_CREATE_USER = 103
     private val PAGE_INTO_UPDATE_USER = 101
     private val PAGE_INTO_VIEW_USER = 102
 
@@ -42,10 +42,8 @@ class UserManagementActivity : AppCompatActivity() {
         setContentView(R.layout.activity_user_management)
 
         // Allow Network Connection to be made on main thread
-        if (android.os.Build.VERSION.SDK_INT > 9) {
-            val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
-            StrictMode.setThreadPolicy(policy)
-        }
+        val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(policy)
 
         initActionBar()
         initSwipeListView()

@@ -116,10 +116,10 @@ class AddEditUserActivity : AppCompatActivity() {
             text_mobile.validate({ s -> s.toIntOrNull() != null && s.length >= 8 }, "Valid mobile number required")
             if (!isUpdateNotCreate) {
                 text_password.validate({ s -> s.isNotEmpty() }, "Cannot be empty!")
-                text_password.validate({ s -> s.length >= 6 }, "Minimum length = 6")
+                text_password.validate({ s -> s.length >= 8 }, "Minimum length = 8")
                 text_confirm_password.validate({ s -> s.isNotEmpty() }, "Cannot be empty!")
+                text_confirm_password.validate({ s -> s.trim() == text_password.text.toString().trim() }, "Password is inconsistent!")
             }
-            text_confirm_password.validate({ s -> s.trim() == text_password.text.toString().trim() }, "Password is inconsistent!")
             image_holder.validateNotEmpty()
 
 

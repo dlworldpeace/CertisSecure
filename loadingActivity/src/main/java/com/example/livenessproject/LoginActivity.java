@@ -27,6 +27,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
 
 	private static final int PAGE_INTO_LIVENESS = 100;
+	private static final int PAGE_INTO_CREATE_USER = 103;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -53,7 +54,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 				//EditText username = (EditText) findViewById(R.id.loading_layout_username);
 				//EditText password = (EditText) findViewById(R.id.loading_layout_password);
 				//String result = HttpHelper.Companion.loginWithPassword_Post(username.getText().toString().trim(), password.getText().toString().trim());
-				String result = HttpHelper.Companion.loginWithPassword("david@sharker.com.sg", "test");
+				String result = HttpHelper.Companion.loginWithPassword("david@sharker.com", "test");
 
 				try{
 					JSONObject jsonObject = new JSONObject(result);
@@ -69,6 +70,14 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 				}catch(JSONException e){
 					e.printStackTrace();
 				}
+			}
+		});
+
+		Button signUp = (Button) findViewById(R.id.btn_sign_up);
+		signUp.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick (View view) {
+				startActivityForResult(new Intent(LoginActivity.this, AddEditUserActivity.class), PAGE_INTO_CREATE_USER);
 			}
 		});
 	}
@@ -95,9 +104,13 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		if (requestCode == PAGE_INTO_LIVENESS && resultCode == RESULT_OK) {
-			String result = data.getStringExtra("result");
-			ResultActivity.startActivity(this, result);
+		if (resultCode == RESULT_OK) {
+			if(requestCode == PAGE_INTO_LIVENESS) {
+				String result = data.getStringExtra("result");
+				ResultActivity.startActivity(this, result);
+			} else if (requestCode == PAGE_INTO_CREATE_USER) {
+				Toast.makeText(this, "Account created!", Toast.LENGTH_SHORT).show();
+			}
 		}
 	}
 
