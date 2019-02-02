@@ -15,6 +15,7 @@ import com.megvii.livenessproject.R
 import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONObject
 
+
 class MainActivity : AppCompatActivity() {
 
     private val PAGE_INTO_VIEW_USER = 102
@@ -45,9 +46,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Configure action bar
-        setSupportActionBar(toolbar)
-        val actionBar = supportActionBar
-        actionBar?.title = getString(R.string.app_name)
+        //setSupportActionBar(toolbar)
+        //val actionBar = supportActionBar
+        //actionBar?.title = getString(R.string.welcome)
 
         // Configure the action bar drawer toggle instance
         val drawerToggle: ActionBarDrawerToggle = object : ActionBarDrawerToggle(
@@ -65,13 +66,13 @@ class MainActivity : AppCompatActivity() {
                 R.id.action_logout -> { startActivity(Intent(this, LoginActivity::class.java)) }
             }
 
-            // Close the drawer
             drawer_layout.closeDrawer(GravityCompat.START)
             true
         }
 
-        // Inflate viewPager with pictures and OnclickListener
+        // Inflate viewPager with pages, OnclickListener and dots indicator below
         view_pager.adapter = CustomPagerAdapter(this)
+        tab_layout.setupWithViewPager(view_pager)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
@@ -83,6 +84,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Exit app only on back button presses twice consecutively
     override fun onBackPressed() {
         if (doubleBackToExitPressedOnce) {
             moveTaskToBack(true)

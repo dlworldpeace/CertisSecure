@@ -27,16 +27,16 @@
         <activity android:name="com.example.livenessproject.OneToOneActivity" />
         <activity android:name="com.example.livenessproject.UserManagementActivity" />
         <activity android:name="com.megvii.livenesslib.LivenessActivity" />
-        <activity android:name="com.example.livenessproject.LoginActivity" />
-        <activity android:name="com.example.livenessproject.ResultActivity" />
-        <activity android:name="com.example.livenessproject.MainActivity" />
-        <activity android:name="com.example.livenessproject.WelcomeActivity" >
+        <activity android:name="com.example.livenessproject.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.livenessproject.ResultActivity" />
+        <activity android:name="com.example.livenessproject.MainActivity" />
+        <activity android:name="com.example.livenessproject.WelcomeActivity" />
 
         <meta-data
             android:name="UMENG_APPKEY"

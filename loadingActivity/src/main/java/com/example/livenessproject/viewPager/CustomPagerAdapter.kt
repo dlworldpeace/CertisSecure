@@ -15,6 +15,7 @@ class CustomPagerAdapter(private val mContext: Context) : PagerAdapter() {
         val inflater = LayoutInflater.from(mContext)
         val layout = inflater.inflate(modelObject.layoutResId, collection, false) as ViewGroup
 
+        //val button_try_it = layout.getChildAt(0)
         // Set onclick event for each page item in ViewPager
         layout.setOnClickListener {
             when (position){
@@ -33,15 +34,19 @@ class CustomPagerAdapter(private val mContext: Context) : PagerAdapter() {
         collection.addView(layout)
         return layout
     }
+
     override fun destroyItem(collection: ViewGroup, position: Int, view: Any) {
         collection.removeView(view as View)
     }
+
     override fun getCount(): Int {
         return Model.values().size
     }
+
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
         return view === `object`
     }
+
     override fun getPageTitle(position: Int): CharSequence {
         val customPagerEnum = Model.values()[position]
         return mContext.getString(customPagerEnum.titleResId)
