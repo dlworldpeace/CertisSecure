@@ -25,6 +25,9 @@ import org.json.JSONObject;
 
 public class LoginActivity extends Activity implements View.OnClickListener {
 
+
+	private static final int PAGE_INTO_LIVENESS = 100;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -88,8 +91,6 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 			startActivityForResult(new Intent(this, LivenessActivity.class), PAGE_INTO_LIVENESS);
 		}
 	}
-
-	private static final int PAGE_INTO_LIVENESS = 100;
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {

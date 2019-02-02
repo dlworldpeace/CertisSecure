@@ -18,6 +18,7 @@ import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
 
+    private val PAGE_INTO_LIVENESS = 100
     private val PAGE_INTO_VIEW_USER = 102
     private var doubleBackToExitPressedOnce = false
 
@@ -80,6 +81,9 @@ class MainActivity : AppCompatActivity() {
         if (resultCode == Activity.RESULT_OK) {
             if(requestCode == PAGE_INTO_VIEW_USER) {
                 recreate()
+            } else if(requestCode == PAGE_INTO_LIVENESS) {
+                val result = data.getStringExtra("result")
+                toast("back from liveness detection. result is: $result")
             }
         }
     }
