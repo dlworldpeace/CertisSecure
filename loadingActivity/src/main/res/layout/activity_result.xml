@@ -56,14 +56,14 @@
 
         <Button
             android:id="@+id/result_next"
-            style="@style/custom_button"
+            style="@style/transparent_button"
             android:layout_width="match_parent"
             android:layout_height="50dip"
             android:text="Return" />
 
         <Button
             android:id="@+id/result_redolivenessdetection"
-            style="@style/custom_button"
+            style="@style/transparent_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"

@@ -17,7 +17,7 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
-    <style name="custom_button" parent="android:Widget.Button">
+    <style name="transparent_button" parent="android:Widget.Button">
         <item name="android:background">@android:color/transparent</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@android:color/white</item>
