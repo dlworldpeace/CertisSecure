@@ -86,7 +86,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="start"
-        android:background="#ebe5ff"
+        android:background="@color/colorPrimary"
         android:clickable="true">
 
         <LinearLayout
@@ -94,7 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#dcfffe"
+            android:background="@android:color/white"
             android:layout_gravity="start"
             android:paddingTop="20dp" >
 
@@ -120,7 +120,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:menu="@menu/drawer_menu"
-            android:background="@android:color/transparent"/>
+            android:background="@android:color/transparent"
+            app:itemTextColor="@android:color/black"/>
 
     </LinearLayout>
 
