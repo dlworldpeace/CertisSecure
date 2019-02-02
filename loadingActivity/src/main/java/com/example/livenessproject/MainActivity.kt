@@ -46,11 +46,6 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(intent, PAGE_INTO_VIEW_USER)
         }
 
-        // Configure action bar
-        //setSupportActionBar(toolbar)
-        //val actionBar = supportActionBar
-        //actionBar?.title = getString(R.string.welcome)
-
         // Configure the action bar drawer toggle instance
         val drawerToggle: ActionBarDrawerToggle = object : ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.drawer_open, R.string.drawer_close){}
