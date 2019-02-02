@@ -29,13 +29,14 @@
 
     <Button
         android:id="@+id/choose_image_button"
-        android:layout_width="wrap_content"
+        style="@style/primary_button"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:layout_marginBottom="8dp"
         android:text="Choose Image"
         app:layout_constraintBottom_toTopOf="@+id/label_login_name"
@@ -51,6 +52,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginBottom="24dp"
         android:text="Login name:   "
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/label_display_name"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -63,6 +65,7 @@
         android:minWidth="200dp"
         android:maxLines="1"
         android:inputType="text"
+        android:textColor="@android:color/white"
         app:layout_constraintBaseline_toBaselineOf="@+id/label_login_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/label_login_name" />
@@ -75,6 +78,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginBottom="24dp"
         android:text="Display name:"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/label_email"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -87,6 +91,7 @@
         android:minWidth="200dp"
         android:maxLines="1"
         android:inputType="text"
+        android:textColor="@android:color/white"
         app:layout_constraintBaseline_toBaselineOf="@+id/label_display_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/label_display_name" />
@@ -99,6 +104,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginBottom="24dp"
         android:text="Email:              "
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/label_mobile"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -111,6 +117,7 @@
         android:minWidth="200dp"
         android:maxLines="1"
         android:inputType="textEmailAddress"
+        android:textColor="@android:color/white"
         app:layout_constraintBaseline_toBaselineOf="@+id/label_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/label_email" />
@@ -123,6 +130,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginBottom="24dp"
         android:text="Mobile:            "
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/label_password"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -135,6 +143,7 @@
         android:minWidth="200dp"
         android:maxLines="1"
         android:inputType="number"
+        android:textColor="@android:color/white"
         app:layout_constraintBaseline_toBaselineOf="@+id/label_mobile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/label_mobile" />
@@ -147,6 +156,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginBottom="24dp"
         android:text="Password:       "
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/label_confirm_password"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -159,6 +169,7 @@
         android:minWidth="200dp"
         android:maxLines="1"
         android:inputType="textPassword"
+        android:textColor="@android:color/white"
         app:layout_constraintBaseline_toBaselineOf="@+id/label_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/label_password" />
@@ -171,6 +182,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginBottom="24dp"
         android:text="Confirm password:"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/finish_button"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -183,18 +195,20 @@
         android:minWidth="200dp"
         android:maxLines="1"
         android:inputType="textPassword"
+        android:textColor="@android:color/white"
         app:layout_constraintBaseline_toBaselineOf="@+id/label_confirm_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/label_confirm_password" />
 
     <Button
         android:id="@+id/finish_button"
-        android:layout_width="wrap_content"
+        style="@style/primary_button"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:layout_marginBottom="8dp"
         android:text="CREATE"
         app:layout_constraintBottom_toBottomOf="parent"
