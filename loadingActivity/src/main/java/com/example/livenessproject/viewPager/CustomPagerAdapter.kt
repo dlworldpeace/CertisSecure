@@ -48,7 +48,10 @@ class CustomPagerAdapter(private val mContext: Context) : PagerAdapter() {
     }
 
     override fun getPageTitle(position: Int): CharSequence {
-        val customPagerEnum = Model.values()[position]
-        return mContext.getString(customPagerEnum.titleResId)
+        //val customPagerEnum = Model.values()[position]
+        //return mContext.getString(customPagerEnum.titleResId)
+
+        // hide each viewpager item's title
+        return ""
     }
 }
