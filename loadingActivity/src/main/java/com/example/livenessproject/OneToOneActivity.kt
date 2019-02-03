@@ -36,11 +36,12 @@ class OneToOneActivity : AppCompatActivity() {
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
 
-        upload_button1.setOnClickListener {
+        button.setOnClickListener { toast("You have not uploaded 2 images") }
+        image_button1.setOnClickListener {
             selectImage()
             currentHolder = 1
         }
-        upload_button2.setOnClickListener {
+        image_button2.setOnClickListener {
             selectImage()
             currentHolder = 2
         }
@@ -86,11 +87,11 @@ class OneToOneActivity : AppCompatActivity() {
 
                 when(currentHolder) {
                     1 -> {
-                        image_holder1.setImageURI(Uri.fromFile(cameraOutput))
+                        image_button1.setImageURI(Uri.fromFile(cameraOutput))
                         imageOneAdded = true
                     }
                     2 -> {
-                        image_holder2.setImageURI(Uri.fromFile(cameraOutput))
+                        image_button2.setImageURI(Uri.fromFile(cameraOutput))
                         imageTwoAdded = true
                     }
                 }
@@ -100,20 +101,19 @@ class OneToOneActivity : AppCompatActivity() {
                 super.onActivityResult(requestCode, resultCode, data)
                 when(currentHolder) {
                     1 -> {
-                        image_holder1.setImageURI(data!!.data)
+                        image_button1.setImageURI(data!!.data)
                         imageOneAdded = true
                     }
                     2 -> {
-                        image_holder2.setImageURI(data!!.data)
+                        image_button2.setImageURI(data!!.data)
                         imageTwoAdded = true
                     }
                 }
             }
             if(imageOneAdded && imageTwoAdded) {
-                button.visibility = View.VISIBLE
                 button.setOnClickListener {
-                    val img1 = imageViewToRoundBase64(image_holder1)
-                    val img2 = imageViewToRoundBase64(image_holder2)
+                    val img1 = imageViewToRoundBase64(image_button1)
+                    val img2 = imageViewToRoundBase64(image_button2)
                     val result = HttpHelper.oneToOneComparison(img1,img2)
                     if(result == "null" || result == "") {
                         toast("These 2 images cannot be compared.")
