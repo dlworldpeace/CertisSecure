@@ -3,6 +3,7 @@ package com.example.livenessproject
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.megvii.livenessproject.R
@@ -27,6 +28,7 @@ class OneToManyActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         setContentView(R.layout.activity_one_to_many)
 
         image_button.setOnClickListener { selectImage() }
