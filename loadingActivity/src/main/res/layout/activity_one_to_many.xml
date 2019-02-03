@@ -34,7 +34,7 @@
         android:background="@null"
         android:ems="10"
         android:gravity="center"
-        android:hint="Display Result"
+        android:text="Display Result"
         android:focusable="false"
         android:inputType="textMultiLine"
         android:textColor="@android:color/white"

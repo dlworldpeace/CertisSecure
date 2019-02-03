@@ -24,6 +24,11 @@ class HttpHelper {
             return httpRequestWrapper("http://3.0.121.132:3000/auth/loginface", "POST", json)
         }
 
+        fun faceDetection(imgbase64: String): String {
+            val json = "{\"img\":\"data:image/jpeg;base64,$imgbase64\"}"
+            return httpRequestWrapper("http://3.0.121.132:3000/test/detect", "POST", json)
+        }
+
         fun listAllUsers(): String {
             return httpRequestWrapper("http://3.0.121.132:3000/users", "GET", null)
         }

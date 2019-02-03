@@ -3,23 +3,22 @@ package com.example.livenessproject
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.megvii.livenessproject.R
+import android.os.Environment
+import android.os.StrictMode
 import android.provider.MediaStore
 import android.support.v7.app.AlertDialog
-import android.net.Uri
-import android.os.Environment
-import kotlinx.android.synthetic.main.activity_one_to_many.*
-import java.io.File
-import android.os.StrictMode
-import android.view.View
 import android.widget.Toast
 import com.example.livenessproject.util.HttpHelper
 import com.example.livenessproject.util.ImageHelper
+import com.megvii.livenessproject.R
+import kotlinx.android.synthetic.main.activity_detect_face.*
 import org.json.JSONObject
+import java.io.File
 
-class OneToManyActivity : AppCompatActivity() {
+class DetectFaceActivity : AppCompatActivity() {
 
     private var CONTENT_REQUEST: Int = 1337
     private var SELECT_FILE:Int = 0
@@ -27,7 +26,7 @@ class OneToManyActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_one_to_many)
+        setContentView(R.layout.activity_detect_face)
 
         image_button.setOnClickListener { selectImage() }
         button.setOnClickListener { toast("You need to upload an image first") }
@@ -82,21 +81,16 @@ class OneToManyActivity : AppCompatActivity() {
 
             button.setOnClickListener{
                 val img = ImageHelper.imageViewToRoundBase64(image_button)
-                val result = HttpHelper.oneToManyComparison(img)
+                val result = HttpHelper.faceDetection(img)
                 val jsonObject = JSONObject(result)
-                val message = jsonObject.optString("message")
+                val faces = jsonObject.optJSONArray("faces")
 
-                if(message != "") {
-                    toast(message)
+                if(faces == null) {
+                    toast("no face detected")
                 } else {
-                    val user = jsonObject.getJSONObject("user")
-                    val id = user.get("_id")
-                    val displayName = user.get("displayName")
-                    val mobile = user.get("mobile")
-
-                    toast("Match found.")
-                    result_display.setText("id: $id\ndisplayName: $displayName\nmobile: $mobile")
-                    result_display.visibility = View.VISIBLE
+                    val json = faces.get(0) as JSONObject
+                    val confidence = json.getString("Confidence")
+                    toast("Face detected with confidence level of $confidence")
                 }
             }
 

@@ -7,6 +7,7 @@ import android.support.v4.view.PagerAdapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.livenessproject.DetectFaceActivity
 import com.example.livenessproject.OneToOneActivity
 import com.example.livenessproject.OneToManyActivity
 import com.megvii.livenesslib.LivenessActivity
@@ -25,8 +26,8 @@ class CustomPagerAdapter(private val mContext: Context) : PagerAdapter() {
             0 -> {
                 val button = layout.getChildAt(0)
                 button.setOnClickListener {
-                    //val intent = Intent(mContext, FaceDetectionActivity::class.java)
-                    //mContext.startActivity(intent)
+                    val intent = Intent(mContext, DetectFaceActivity::class.java)
+                    mContext.startActivity(intent)
                 }
             }
 
