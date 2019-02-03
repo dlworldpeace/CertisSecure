@@ -29,7 +29,8 @@ class OneToManyActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_one_to_many)
 
-        fab.setOnClickListener { selectImage() }
+        image_button.setOnClickListener { selectImage() }
+        button.setOnClickListener { toast("You need to select an image first") }
     }
 
     private fun selectImage() {
@@ -70,18 +71,17 @@ class OneToManyActivity : AppCompatActivity() {
 
             if (requestCode == CONTENT_REQUEST) {
 
-                image_holder1.setImageURI(Uri.fromFile(cameraOutput))
+                image_button.setImageURI(Uri.fromFile(cameraOutput))
 
             } else if (requestCode == SELECT_FILE) {
 
                 super.onActivityResult(requestCode, resultCode, data)
-                image_holder1.setImageURI(data!!.data)
+                image_button.setImageURI(data!!.data)
 
             }
 
-            button.visibility = View.VISIBLE
             button.setOnClickListener{
-                val img = ImageHelper.imageViewToRoundBase64(image_holder1)
+                val img = ImageHelper.imageViewToRoundBase64(image_button)
                 val result = HttpHelper.oneToManyComparison(img)
                 val jsonObject = JSONObject(result)
                 val message = jsonObject.optString("message")
