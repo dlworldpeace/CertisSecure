@@ -39,10 +39,8 @@ class AddEditUserActivity : AppCompatActivity() {
         setContentView(R.layout.activity_add_edit_user)
 
         // Allow Network Connection to be made on main thread
-        if (android.os.Build.VERSION.SDK_INT > 9) {
-            val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
-            StrictMode.setThreadPolicy(policy)
-        }
+        val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(policy)
 
         init()
     }
