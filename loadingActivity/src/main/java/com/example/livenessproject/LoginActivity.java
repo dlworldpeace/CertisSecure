@@ -107,7 +107,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 		if (resultCode == RESULT_OK) {
 			if(requestCode == PAGE_INTO_LIVENESS) {
 				String result = data.getStringExtra("result");
-				ResultActivity.startActivity(this, result);
+				ResultActivity.startActivity(this, result, true);
 			} else if (requestCode == PAGE_INTO_CREATE_USER) {
 				Toast.makeText(this, "Account created!", Toast.LENGTH_SHORT).show();
 			}

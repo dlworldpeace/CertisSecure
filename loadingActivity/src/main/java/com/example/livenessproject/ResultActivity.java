@@ -43,6 +43,7 @@ public class ResultActivity extends Activity {
 		mTextView = (TextView) findViewById(R.id.result_text_result);
 		Button button_next = (Button) findViewById(R.id.result_next);
 		String resultOBJ = getIntent().getStringExtra("result");
+		boolean needLogin = getIntent().getBooleanExtra("needLogin", false);
 
 		try {
 			JSONObject result = new JSONObject(resultOBJ);
@@ -65,24 +66,17 @@ public class ResultActivity extends Activity {
 			mImageView.setImageResource(isSuccess ? R.drawable.result_success : R.drawable.result_failded);
 			doRotate(isSuccess);
 
-			if(!isSuccess) {
-				button_next.setOnClickListener(new View.OnClickListener() {
+			button_next.setOnClickListener(new View.OnClickListener() {
 					@Override
 					public void onClick(View view) {
 						finish();
 					}
 				});
-			} else {
+			if (isSuccess && needLogin){
 				String bestImageBase64 = result.getJSONArray("imgs").get(0).toString();
 				String faceLoginResult = HttpHelper.Companion.oneToManyComparison(bestImageBase64);
 				if (faceLoginResult.isEmpty() || faceLoginResult.equals("null")) {
 					Toast.makeText(this, "Unable to log in.", Toast.LENGTH_SHORT).show();
-					button_next.setOnClickListener(new View.OnClickListener() {
-						@Override
-						public void onClick(View view) {
-							finish();
-						}
-					});
 				} else {
 					JSONObject jsonObject = new JSONObject(faceLoginResult);
 					final String user = jsonObject.getString("user");
@@ -109,9 +103,10 @@ public class ResultActivity extends Activity {
 		startActivity(intent);
 	}
 
-	public static void startActivity(Context context, String status) {
+	public static void startActivity(Context context, String status, Boolean needLogin) {
 		Intent intent = new Intent(context, ResultActivity.class);
 		intent.putExtra("result", status);
+		intent.putExtra("needLogin", needLogin);
 		context.startActivity(intent);
 	}
 

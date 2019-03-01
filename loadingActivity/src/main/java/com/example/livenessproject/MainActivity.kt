@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
                 recreate()
             } else if(requestCode == PAGE_INTO_LIVENESS) {
                 val result = data.getStringExtra("result")
-                toast("back from liveness detection. result is: $result")
+                ResultActivity.startActivity(this, result, false)
             }
         }
     }
