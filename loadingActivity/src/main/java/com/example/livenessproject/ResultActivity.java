@@ -96,13 +96,6 @@ public class ResultActivity extends Activity {
 		}
 	}
 
-	@Override
-	public void onBackPressed() {
-		super.onBackPressed();
-		Intent intent = new Intent(this, LoginActivity.class);
-		startActivity(intent);
-	}
-
 	public static void startActivity(Context context, String status, Boolean needLogin) {
 		Intent intent = new Intent(context, ResultActivity.class);
 		intent.putExtra("result", status);

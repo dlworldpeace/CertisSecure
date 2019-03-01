@@ -442,4 +442,10 @@ public class LivenessActivity extends Activity implements PreviewCallback,
 		mIDetection.onDestroy();
 		sensorUtil.release();
 	}
+
+	@Override
+	public void onBackPressed() {
+		setResult(Activity.RESULT_CANCELED, getIntent());
+		finish();
+	}
 }
