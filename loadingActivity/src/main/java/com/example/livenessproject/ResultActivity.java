@@ -18,6 +18,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.livenessproject.util.HttpHelper;
 import com.example.livenessproject.view.RotaterView;
@@ -74,7 +75,15 @@ public class ResultActivity extends Activity {
 			} else {
 				String bestImageBase64 = result.getJSONArray("imgs").get(0).toString();
 				String faceLoginResult = HttpHelper.Companion.oneToManyComparison(bestImageBase64);
-				if (!faceLoginResult.isEmpty()) {
+				if (faceLoginResult.isEmpty() || faceLoginResult.equals("null")) {
+					Toast.makeText(this, "Unable to log in.", Toast.LENGTH_SHORT).show();
+					button_next.setOnClickListener(new View.OnClickListener() {
+						@Override
+						public void onClick(View view) {
+							finish();
+						}
+					});
+				} else {
 					JSONObject jsonObject = new JSONObject(faceLoginResult);
 					final String user = jsonObject.getString("user");
 					button_next.setText("Login");
