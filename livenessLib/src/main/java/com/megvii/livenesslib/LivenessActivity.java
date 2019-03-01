@@ -113,7 +113,7 @@ public class LivenessActivity extends Activity implements PreviewCallback,
 		mDetector = new Detector(this, config);
 		boolean initSuccess = mDetector.init(this, ConUtil.readModel(this), "");
 		if (!initSuccess) {
-			mDialogUtil.showDialog("检测器初始化失败");
+			mDialogUtil.showDialog("Fail to initialise detector");
 		}
 
 		new Thread(new Runnable() {
@@ -141,7 +141,7 @@ public class LivenessActivity extends Activity implements PreviewCallback,
 			mFaceQualityManager = new FaceQualityManager(1 - 0.5f, 0.5f);
 			mIDetection.mCurShowIndex = -1;
 		} else {
-			mDialogUtil.showDialog("打开前置摄像头失败");
+			mDialogUtil.showDialog("Fail to turn on front camera");
 		}
 	}
 
@@ -280,7 +280,7 @@ public class LivenessActivity extends Activity implements PreviewCallback,
 			handleNotPass(timeout);
 			mFaceMask.setFaceInfo(detectionFrame);
 		} else
-			promptText.setText("请竖直握紧手机");
+			promptText.setText("Please hold the phone vertically");
 	}
 
 	private void faceOcclusion(DetectionFrame detectionFrame) {
@@ -292,14 +292,14 @@ public class LivenessActivity extends Activity implements PreviewCallback,
 						|| faceInfo.eyeRightOcclusion > 0.5) {
 					if (mFailFrame > 10) {
 						mFailFrame = 0;
-						promptText.setText("请勿用手遮挡眼睛");
+						promptText.setText("Do not block your eyes");
 					}
 					return;
 				}
 				if (faceInfo.mouthOcclusion > 0.5) {
 					if (mFailFrame > 10) {
 						mFailFrame = 0;
-						promptText.setText("请勿用手遮挡嘴巴");
+						promptText.setText("Do not cover your mouth");
 					}
 					return;
 				}
@@ -317,23 +317,23 @@ public class LivenessActivity extends Activity implements PreviewCallback,
 			String infoStr = "";
 			FaceQualityErrorType errorType = errorTypeList.get(0);
 			if (errorType == FaceQualityErrorType.FACE_NOT_FOUND) {
-				infoStr = "请让我看到您的正脸";
+				infoStr = "Please let me see your face";
 			} else if (errorType == FaceQualityErrorType.FACE_POS_DEVIATED) {
-				infoStr = "请让我看到您的正脸";
+				infoStr = "Please let me see your face";
 			} else if (errorType == FaceQualityErrorType.FACE_NONINTEGRITY) {
-				infoStr = "请让我看到您的正脸";
+				infoStr = "Please let me see your face";
 			} else if (errorType == FaceQualityErrorType.FACE_TOO_DARK) {
-				infoStr = "请让光线再亮点";
+				infoStr = "Please ensure there is enough lighting";
 			} else if (errorType == FaceQualityErrorType.FACE_TOO_BRIGHT) {
-				infoStr = "请让光线再暗点";
+				infoStr = "Please avoid too much lighting";
 			} else if (errorType == FaceQualityErrorType.FACE_TOO_SMALL) {
-				infoStr = "请再靠近一些";
+				infoStr = "Please keep your face closer";
 			} else if (errorType == FaceQualityErrorType.FACE_TOO_LARGE) {
-				infoStr = "请再离远一些";
+				infoStr = "Please move back slightly";
 			} else if (errorType == FaceQualityErrorType.FACE_TOO_BLURRY) {
-				infoStr = "请避免侧光和背光";
+				infoStr = "Please avoid side light and backlight";
 			} else if (errorType == FaceQualityErrorType.FACE_OUT_OF_RECT) {
-				infoStr = "请保持脸在人脸框中";
+				infoStr = "Please Ensure Your Face Is In The Frame";
 			}
 
 			// mFailFrame++;

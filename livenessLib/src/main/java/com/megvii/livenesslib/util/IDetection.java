@@ -120,22 +120,22 @@ public class IDetection {
 		String detectionName = null;
 		switch (detectionType) {
 		case POS_PITCH:
-			detectionName = "缓慢点头";
+			detectionName = "Tilt Your Head Up and Down";
 			break;
 		case POS_YAW:
-			detectionName = "左右摇头";
+			detectionName = "Turn Your Head Left and Right";
 			break;
 		case MOUTH:
-			detectionName = "张嘴";
+			detectionName = "Open Close Your Mouth";
 			break;
 		case BLINK:
-			detectionName = "眨眼";
+			detectionName = "Blink Your Eyes";
 			break;
 		case POS_YAW_LEFT:
-			detectionName = "左转";
+			detectionName = "Turn Left";
 			break;
 		case POS_YAW_RIGHT:
-			detectionName = "右转";
+			detectionName = "Turn Right";
 			break;
 		}
 		return detectionName;

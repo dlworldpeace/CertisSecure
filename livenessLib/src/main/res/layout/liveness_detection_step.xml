@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:text="眨眼"
+            android:text="Blink Your Eyes"
             android:textColor="#ffffffff"
             android:textSize="24sp"
             android:visibility="visible" />

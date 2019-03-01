@@ -65,7 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dip"
-                android:text="请在光线充足的情况下进行检测"
+                android:text="Please ensure there is enough lighting"
                 android:textColor="#ffffffff"
                 android:textSize="16dp" />
 
@@ -89,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dip"
-                android:text="倒计时"
+                android:text="Last"
                 android:textColor="#ffffffff"
                 android:textSize="12dp" />
 
@@ -106,7 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dip"
-                android:text="秒"
+                android:text="s"
                 android:textColor="#ffffffff"
                 android:textSize="12dp" />
         </LinearLayout>
